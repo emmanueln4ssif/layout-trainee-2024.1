@@ -1,6 +1,6 @@
 # **Trainee 2024.1**
 
-# **Nome do seu blog**
+# **Story Stroll**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2024.1**
 
@@ -22,7 +22,7 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Letícia Quintão Costa]
 
 #### Links Úteis:
 
