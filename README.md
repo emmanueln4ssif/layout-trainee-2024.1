@@ -22,7 +22,7 @@
 
 #### Scrum Master:
 
-* [Letícia Quintão Costa]
+* Letícia Quintão Costa
 
 #### Links Úteis:
 
