@@ -1,8 +1,8 @@
-# **Trainee 2023.1**
+# **Trainee 2024.1**
 
 # **Nome do seu blog**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2023.1**
+## **Projeto Trainee, Code Jr, Grupo 000, 2024.1**
 
 | **Sumário** |
 |-------------|
@@ -17,6 +17,7 @@
 * Trainee 2
 * Trainee 3
 * Trainee 4
+* Trainee 5
 
 
 #### Scrum Master:
@@ -33,7 +34,7 @@
 
 ## Descrição do Projeto:
 
-* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2023.1;
+* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2024.1;
 * Possuirá Front-End em HTML, CSS, JavaScript, Bootstrap e Back-End em PHP (puro) no padrão MVC, com Banco de Dados MySQL;
 
 
