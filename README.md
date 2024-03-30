@@ -35,7 +35,7 @@
 ## Descrição do Projeto:
 
 * Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2024.1;
-* Possuirá Front-End em HTML, CSS, JavaScript, Bootstrap e Back-End em PHP (puro) no padrão MVC, com Banco de Dados MySQL;
+* Possuirá Front-End em HTML, CSS, JavaScript, Bootstrap e Back-End em PHP (puro), com Banco de Dados MySQL;
 
 
 
