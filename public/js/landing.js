@@ -23,7 +23,7 @@ function gerarArrayAleatorio(tamanho) {
 }
 
 
-var swiper1 = new Swiper(".bloco1", {
+const swiper1 = new Swiper(".bloco1", {
   direction: "vertical",
   loop: true,
   autoplay: {
@@ -31,7 +31,7 @@ var swiper1 = new Swiper(".bloco1", {
   disableOnInteraction: false,
 },
 });
-var swiper2 = new Swiper(".bloco2", {
+const swiper2 = new Swiper(".bloco2", {
   direction: "vertical",
   loop: true,
   autoplay: {
@@ -39,7 +39,7 @@ var swiper2 = new Swiper(".bloco2", {
   disableOnInteraction: false,
 }
 });
-var swiper3 = new Swiper(".bloco3", {
+const swiper3 = new Swiper(".bloco3", {
   direction: "vertical",
   loop: true,
   autoplay: {
@@ -47,7 +47,7 @@ var swiper3 = new Swiper(".bloco3", {
   disableOnInteraction: false,
 },
 });
-var swiper4 = new Swiper(".bloco4", {
+const swiper4 = new Swiper(".bloco4", {
   direction: "vertical",
   loop: true,
   autoplay: {
