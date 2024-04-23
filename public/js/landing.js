@@ -28,6 +28,7 @@ const swiper1 = new Swiper(".bloco1", {
   loop: true,
   autoplay: {
   delay: 4000,
+  reverseDirection: true,
   disableOnInteraction: false,
 },
 });
@@ -36,6 +37,7 @@ const swiper2 = new Swiper(".bloco2", {
   loop: true,
   autoplay: {
   delay: 4000,
+  
   disableOnInteraction: false,
 }
 });
@@ -52,10 +54,10 @@ const swiper4 = new Swiper(".bloco4", {
   loop: true,
   autoplay: {
   delay: 4000,
+  reverseDirection: true,
   disableOnInteraction: false,
 },
 });
-
 
 
 

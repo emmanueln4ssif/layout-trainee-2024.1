@@ -13,12 +13,12 @@ body {
   padding: 0;
 }
 .home{
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 180px;
+  margin-right: 180px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .navbar{
   height: 100px;
@@ -32,8 +32,8 @@ body {
   font-size: 40px;
   letter-spacing:-4px;
   color: #EE9CA8;
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .subtitulo{
   color: #72AACB;
@@ -44,21 +44,37 @@ body {
   border-width: 0.5px;
   border-color: rgba(69, 50, 50,0.25);
   border-radius: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .textsub{
-  margin-top: 15px;
-  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .mainimg{
   margin-top: 3%;
-  width: 800px;
+  width: 720px;
+  margin-right: 200px;
+}
+@media only screen and (max-width: 1026px) {
+  #mainimg-id {
+      display: none;
+  }
+}
+.livros{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 .swiper {
   margin: 0;
   height: 200px;
   width: 120px;
   margin: 10px;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(69, 50, 50,0.25);
+  border-radius: 10px;
 }
 
 .swiper-slide {
@@ -79,7 +95,7 @@ body {
   width: 600px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:  wrap;
   justify-content: center;
 }
 #fotosbaixo{
@@ -88,5 +104,6 @@ body {
 }
 .arrow{
   flex-basis: 100%;
+  margin-top: 35px;
   height: 25px;
 }

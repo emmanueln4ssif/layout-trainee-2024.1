@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Story Stroll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../../public/css/landing.css" />
@@ -14,41 +15,38 @@
 
 </head>
 
-<body>
+<body onresize="removeImg()">
     <div class="navbar"></div>
     <div class="home">
-        <img class="mainimg" src="../../../public/assets/arte1.svg">
+        <img class="mainimg" id="mainimg-id" src="../../../public/assets/arte1.svg">
         <div class="agrupamento">
             <h1 class="titulo">STORY STROLL</h1>
             <div class="subtitulo"><p class="textsub">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam mollis hendrerit quis rhoncus lorem.
             </p></div>
-            <div id="fotoscima">
-            <div class="swiper bloco1">
-                <div id="blo1" class="swiper-wrapper">
+            <div class="livros">
+                <div id="fotoscima">
+                <div class="swiper bloco1">
+                    <div id="blo1" class="swiper-wrapper"></div>
+                </div>
+                <div class="swiper bloco2">
+                    <div id="blo2" class="swiper-wrapper"></div>
                 </div>
             </div>
-            <div class="swiper bloco2">
-                <div id="blo2" class="swiper-wrapper">
+            <div id="fotosbaixo">
+                <div class="swiper bloco3">
+                    <div id="blo3" class="swiper-wrapper"></div>
                 </div>
+                <div class="swiper bloco4">
+                    <div id="blo4" class="swiper-wrapper"></div>
+                </div>  
             </div>
-        </div>
-        <div id="fotosbaixo">
-            <div class="swiper bloco3">
-                <div id="blo3" class="swiper-wrapper">
-                </div>
-            </div>
-            <div class="swiper bloco4">
-                <div id="blo4" class="swiper-wrapper">
-                </div>
-            </div>  
             </div>  
             <img class="arrow" src="../../../public/assets/arrow.svg">
         </div>
     </div>    
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- Initialize Swiper -->
         <script src="../../../public/js/landing.js"></script>
 </body>
 
