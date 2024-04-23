@@ -7,18 +7,21 @@
 body {
   background: #f5f5f5;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 2.083vw;
   color: #000;
   margin: 0;
   padding: 0;
+
 }
-.home{
+
+.home1{
   margin-left: 180px;
   margin-right: 180px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+
 }
 .navbar{
   height: 100px;

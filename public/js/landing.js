@@ -23,6 +23,8 @@ function gerarArrayAleatorio(tamanho) {
 }
 
 
+
+
 const swiper1 = new Swiper(".bloco1", {
   direction: "vertical",
   loop: true,
@@ -58,9 +60,21 @@ const swiper4 = new Swiper(".bloco4", {
   disableOnInteraction: false,
 },
 });
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 
+function mudafoto(){
+  var imagem = document.getElementById("mainimg-id");
+  imagem.src = "../../../public/assets/arte2.svg";
+  sleep(300).then(() => { imagem.src = "../../../public/assets/arte1.svg"; });
+}
+
+
+
+setInterval(function() {; mudafoto() }, 3500);
 
 
 
