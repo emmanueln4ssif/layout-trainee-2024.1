@@ -1,0 +1,19 @@
+<svg width="90" height="177" viewBox="0 0 90 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Marcador de livro" filter="url(#filter0_d_322_34)">
+<path d="M9 0H73V107.5C73 111.036 73 112.803 71.9958 113.902C70.9916 115 69.3753 115 66.1429 115H15.8571C12.6247 115 11.0084 115 10.0042 113.902C9 112.803 9 111.036 9 107.5V0Z" fill="#EF9CA9"/>
+<path d="M56.4286 160L40.0978 112.188H72.7593L56.4286 160Z" fill="#EF9CA9"/>
+<path d="M25.5714 160L9.24066 112.188H41.9022L25.5714 160Z" fill="#EF9CA9"/>
+</g>
+<defs>
+<filter id="filter0_d_322_34" x="0" y="-9" width="90" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="6.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_322_34"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_322_34" result="shape"/>
+</filter>
+</defs>
+</svg>
