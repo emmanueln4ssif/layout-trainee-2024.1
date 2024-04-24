@@ -80,4 +80,17 @@ body {
     opacity: 0.64;
     background: #E8E8E8;
 }
+.elementos_review{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#img_user{
+    width: 111px;
+    height: 104px;
+    flex-shrink: 0;
+    border-radius: 111px;
+}
 
