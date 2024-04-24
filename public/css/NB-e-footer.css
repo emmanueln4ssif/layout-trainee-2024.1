@@ -10,8 +10,13 @@ body *{
   color: #ef9ca9;
 }
 
+/*NAVBAR*/
+
 nav{
-  align-content: center;
+  /*align-content: center;*/
+  justify-content: end;
+  align-items: center;
+  display: flex;
   height: 50px;
   font-family: Poppins;
   font-weight: 500;
@@ -21,7 +26,19 @@ nav{
   background-color: #f5f5f5;
 }
 
+/*LOGO NAVBAR*/
+
+img{
+  position: relative;
+  margin-left: 150px;
+  height: 40px;
+  justify-self: start;
+}
+
+/*LISTA DE LINKS NAVBAR*/
+
 ul{
+  justify-self: end;
   display: flex;
   flex-direction: row-reverse;
   list-style-type: none;
