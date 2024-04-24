@@ -1,65 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Story Stroll</title>
     <link rel="stylesheet" href="/public/css/Login.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="esquerda">
-            <div class="logo-escrita">
-                <p>STORY STROLL</p>
+    <div class="esquerda">
+        <div class="logo-escrita">
+            <p>STORY STROLL</p>
+        </div>
+
+        <div class="imagem">
+            <img src="/public/assets/imagem-principal.svg">
+        </div>
+    </div>
+
+    <div class="formulario">
+        <div class="marcador-de-livro">
+            <img src="/public/assets/marcador-de-livro.svg">
+        </div>
+
+        <div class="logo-imagem">
+            <img src="/public/assets/logo-direita.svg">
+        </div>
+
+        <div class="titulo">
+            <p>Bem vindo de volta!</p>
+        </div>
+
+        <div class="campos">
+            <div class="email">
+                <label for="email"></label>
+                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                <div class="elipse-email">
+                    <div class="icone-email">
+                        <img src="/public/assets/icone-e-mail.svg">
+                    </div>
+                </div>
             </div>
 
-            <div class="imagem">
-                <img src="/public/assets/imagem-principal.svg">
+            <div class="senha">
+                <label for="senha"></label>
+                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                <div class="elipse-senha">
+                    <div class="icone-senha">
+                        <img src="/public/assets/icone-senha.svg">
+                    </div>
+                </div>
+                <div class="olho">
+                    <img src="/public/assets/olho-aberto.svg">
+                </div>
             </div>
         </div>
 
-        <div class="formulario">
-            <div class="marcador-de-livro">
-                <img src="/public/assets/marcador-de-livro.svg">
-            </div>
-
-            <div class="logo-imagem">
-                <img src="/public/assets/logo-direita.svg">
-            </div>
-
-            <div class="titulo">
-                <p>Bem vindo de volta!</p>
-            </div>
-
-            <div class="campos">
-                <div class="email">
-                    <label for="email"></label>
-                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                    <div class="elipse-email">
-                        <div class="icone-email">
-                            <img src="/public/assets/icone-e-mail.svg">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="senha">
-                    <label for="senha"></label>
-                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
-                    <div class="elipse-senha">
-                        <div class="icone-senha">
-                            <img src="/public/assets/cadeado.svg">
-                        </div>
-                    </div>
-                    <div class="olho">
-                        <img src="/public/assets/olho-aberto.svg">
-                    </div>
-                </div>
-            </div>
-
-            <div class="botao">
-                <button>Login</button>
-            </div>
+        <div class="botao">
+            <button>Login</button>
         </div>
     </div>
 </body>
+
 </html>

@@ -1,4 +1,20 @@
-body{
-    background-color: #F5F5F5;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    border-radius: 26px 0px 0px 0px;
+    background: linear-gradient(180deg, #376C89 0%, rgba(0, 44, 66, 0.95) 100%);
+}
