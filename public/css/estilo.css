@@ -1,6 +1,3 @@
-/* estilo.css */
-
-/* Configurações gerais */
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     width: 100%;
@@ -8,7 +5,6 @@ body {
     margin: 0;
 }
 
-/* Estilos para o contêiner principal */
 .container {
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
@@ -16,7 +12,6 @@ body {
     height: 100%;
 }
 
-/* Estilos para a imagem */
 .imagem {
     width: 268px;
     height: 401px;
@@ -24,14 +19,12 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.40);
 }
 
-/* Estilos para o conteúdo */
 .conteudo {
     display: flex;
     flex-direction: column;
     margin-left: 20px; /* Espaçamento entre a imagem e o conteúdo */
 }
 
-/* Estilos para a sinopse */
 .sinopse {
     width: 712px;
     color: #453232;
@@ -39,4 +32,30 @@ body {
     font-size: 25px;
     font-weight: 300;
     line-height: normal;
+}
+.titulo{
+    font-size: 40px;
+    font-family: Poppins;
+    color: #453232;
+    letter-spacing: -5.28px;
+    font-weight: 400;
+    
+}
+.autor{
+    font-size: 25px;
+    color: #453232;
+    font-family: Poppins;
+    letter-spacing: -2.75px;
+    line-height: normal;
+}
+.data{
+    color: #002C42;
+    font-family: Poppins;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -2px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    
 }
