@@ -4,61 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Story Stroll</title>
     <link rel="stylesheet" href="/public/css/Login.css">
+    <title>Login - Story Stroll</title>
 </head>
 
 <body>
-    <div class="esquerda">
-        <div class="logo-escrita">
-            <p>STORY STROLL</p>
+    <div class="main">
+        <div class="esquerda">
+            <a id="logo-escrita">STORY STROLL</a>
+            <img id="imagem-principal" src="/public/assets/imagem-principal.svg" alt="Três pessoas lendo um livros">
         </div>
 
-        <div class="imagem">
-            <img src="/public/assets/imagem-principal.svg" alt="3 pessoas lendo um livros">
-        </div>
-    </div>
+        <div class="formulario">
+            <img id="marcador-de-livro" src="" alt="Marcador de livro">
+            <img id="logo-imagem" src="" alt="Logo Story Stroll">
+            <p id="titulo-login">Bem vindo de volta!</p>
 
-    <div class="formulario">
-        <div class="marcador-de-livro">
-            <img src="/public/assets/marcador-de-livro.svg" alt="Marcador de livro">
-        </div>
-
-        <div class="logo-imagem">
-            <img src="/public/assets/logo-direita.svg" alt="Logo Story Stroll">
-        </div>
-
-        <div class="titulo">
-            <p>Bem vindo de volta!</p>
-        </div>
-
-        <div class="campos">
-            <div class="email">
-                <label for="email"></label>
-                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                <div class="elipse-email">
-                    <div class="icone-email">
-                        <img src="/public/assets/icone-e-mail.svg" alt="Ícone de carta representando e-mail">
+            <div class="campos">
+                <div class="email">
+                    <label for="email"></label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    <div class="elipse-email">
+                        <img id="icone-email" src="" alt="Ícone de carta representando e-mail">
                     </div>
                 </div>
-            </div>
 
-            <div class="senha">
-                <label for="senha"></label>
-                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
-                <div class="elipse-senha">
-                    <div class="icone-senha">
-                        <img src="/public/assets/icone-senha.svg" alt="Ícone de cadeado representando senha">
+                <div class="senha">
+                    <label for="senha"></label>
+                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    <div class="elipse-senha">
+                        <img id="icone-senha" src="" alt="Ícone de cadeado representando senha">
                     </div>
-                </div>
-                <div class="olho">
-                    <img src="/public/assets/olho-aberto.svg" alt="Ícone de olho representando a visibilidade da senha">
+                    <img id="icone-olho" src="" alt="Ícone de olho representando a visibilidade da senha">
                 </div>
             </div>
-        </div>
-
-        <div class="botao">
-            <button>Login</button>
+            <button id="botao">Login</button>
         </div>
     </div>
 </body>

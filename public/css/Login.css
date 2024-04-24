@@ -1,20 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-*{
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: "Poppins", sans-serif;
+    background-color: #F5F5F5;
 }
 
-body{
-    width: 100%;
+.main {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formulario{
+.esquerda {
+    width: 50vw;
+    height: 100vh;
+    border: 1px solid red;
+    padding-top: 12px;
+}
+
+#logo-escrita {
+    color: #EE9CA8;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -4.4px;
+    padding-left: 24px;
+}
+
+#imagem-principal {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.formulario {
+    width: 50vw;
+    height: 100vh;
     border-radius: 26px 0px 0px 0px;
     background: linear-gradient(180deg, #376C89 0%, rgba(0, 44, 66, 0.95) 100%);
+    border: 1px solid red;
 }
