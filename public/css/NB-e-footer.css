@@ -1,59 +1,89 @@
+/*FONTES*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/*GERAL*/
+
 *{
+  font-family: Poppins;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: #ef9ca9;
 }
 
-body *{
-  color: #ef9ca9;
+body{
+  background: #bbbbbb;
 }
 
 /*NAVBAR*/
 
-nav{
-  /*align-content: center;*/
-  justify-content: end;
-  align-items: center;
-  display: flex;
-  height: 50px;
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 25px;
-  position: fixed;
+.container{
   width: 100%;
+}
+
+header{
+  position: relative;
+  top: 0;
+  height: auto;
+  width: 100%;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
   background-color: #f5f5f5;
+  display: flex;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+nav:after{
+  clear: both;
+  content: "";
+  display: block;
+
+}
+
+.nav-container{
+  width: 100%;
+  position: relative;
+
 }
 
 /*LOGO NAVBAR*/
 
-img{
-  position: relative;
+#nav-logo{
+  height: 50px;
   margin-left: 150px;
-  height: 40px;
-  justify-self: start;
+  margin-top: 10px;
 }
 
 /*LISTA DE LINKS NAVBAR*/
 
-ul{
-  justify-self: end;
+.nav-container ul{
+  float: right;
   display: flex;
   flex-direction: row-reverse;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   gap: 50px;
-  margin-right: 50px;
+  margin-right: 150px;
+  line-height: 70px;
 }
 
-li{
+.nav-container li{
   display: inline;
 }
 
-li a{
+.nav-container li a{
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  transition: 0.25s;
+}
+
+.nav-container li a:hover{
+  color: #e87c7a;
 }
