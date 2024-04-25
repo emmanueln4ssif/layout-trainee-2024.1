@@ -10,16 +10,30 @@ body {
     align-items: center; /* Centraliza os itens verticalmente */
     height: auto;
     width: 100%;
-    flex-direction: row;
+    flex-direction: row;
 
 }
-@media screen and (min-width: 0px) and (max-width: 768px){
+
+@media screen and (min-width: 426px) and (max-width: 1020px){
     .container{
         justify-content: center;
         flex-direction: column;
         margin: 0px;
+        width: max-content;
     }
 } 
+/*Ajustar a letra/margem*/
+@media screen and (min-width: 0px) and (max-width: 320px){
+
+}
+@media screen and (min-width: 321px) and (max-width: 375px){
+
+}
+@media screen and (min-width: 376px) and (max-width: 425px){
+
+}
+
+
 /*Lembrar de ajustar as imagens*/
 .imagem {
     width: 268px;
