@@ -104,9 +104,7 @@ footer{
   height: 300px;
   background-color: #f5f5f5;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  padding-left: 50px;
-  padding-right: 50px;
+  grid-template-columns: 1.05fr 2px 3fr 2.5px 1fr;
 }
 
 .footer-titulo{
@@ -128,6 +126,8 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-left: 50px;
+  /*padding-right: 50px;*/
 }
 
 #lista-redes h1{
@@ -152,7 +152,7 @@ footer{
 
 #mis-vis-val{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 0.9fr 0.75fr;
 }
 
 #mis-vis-val div p{
@@ -160,18 +160,19 @@ footer{
 }
 
 #missao{
-  padding-right: 25px;
+  margin-left: 50px;
+  margin-right: 25px;
 }
 
 #visao{
-  padding-left: 15px;
-  padding-right: 25px;
+  margin-left: 15px;
+  margin-right: 25px;
 }
 
 #valores{
   /*grid-column-start: 3;
   grid-column-end: 4;*/
-  padding-left: 25px;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -183,8 +184,13 @@ footer{
 
 /*CRÉDITOS*/
 
+#creditos{
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
 #background-logo{
-  height: 100px;
+  height: 90px;
   background-color: #002c42;
   align-content: center;
   justify-content: center;
@@ -192,7 +198,7 @@ footer{
 }
 
 #background-logo img{
-  width: 260px;
+  width: 230px;
 }
 
 #creditos h1{
@@ -202,4 +208,14 @@ footer{
   font-size: 20px;
   margin-top: 4.5rem;
   margin-bottom: 1rem;
+}
+
+/*SEPARAÇÃO*/
+
+.separacao{
+  background-image: linear-gradient(
+    #f5f5f5 10%,
+    #002c42 50%,
+    #f5f5f5 90%
+  );
 }
