@@ -87,3 +87,119 @@ nav:after{
 .nav-container li a:hover{
   color: #e87c7a;
 }
+
+/*MAIN*/
+
+main{
+  height: 80vh;
+}
+
+/*FOOTER*/
+
+footer{
+  width: 100%;
+}
+
+#footer-content{
+  height: 300px;
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer-titulo{
+  font-weight: 600;
+  font-size: 24px;
+  color: #002c42;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-texto{
+  color: #376c89;
+  font-weight: 500;
+}
+
+/*REDES SOCIAIS*/
+
+#lista-redes{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#lista-redes h1{
+  margin-right: 30px;
+}
+
+.rede-social{
+  text-decoration: none;
+  display: inline;
+}
+
+.rede-social p{
+  font-size: 20px;
+}
+
+.rede-social img{
+  float: left;
+  width: 30px;
+}
+
+/*MISSÃO, VISÃO E VALORES*/
+
+#mis-vis-val{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#mis-vis-val div p{
+  font-size: 24px;
+}
+
+#missao{
+  padding-right: 25px;
+}
+
+#visao{
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+#valores{
+  /*grid-column-start: 3;
+  grid-column-end: 4;*/
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#valores ul li{
+  font-size: 24px;
+}
+
+/*CRÉDITOS*/
+
+#background-logo{
+  height: 100px;
+  background-color: #002c42;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#background-logo img{
+  width: 260px;
+}
+
+#creditos h1{
+  font-weight: 600;
+  text-align: center;
+  color: #376c89;
+  font-size: 20px;
+  margin-top: 4.5rem;
+  margin-bottom: 1rem;
+}
