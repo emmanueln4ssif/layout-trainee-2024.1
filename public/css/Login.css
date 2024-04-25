@@ -34,25 +34,47 @@ body {
     padding-left: 24px;
 }
 
-.formulario {
-    width: 50vw;
-    height: 100vh;
-    border-radius: 26px 0px 0px 0px;
-    background: linear-gradient(180deg, #376C89 0%, #002C42 100%);
-}
-
-.imagem-principal{
+.imagem-principal {
     display: flex;
     height: 100vh;
     justify-content: center;
 }
 
-#imagem-principal{
+#imagem-principal {
     width: 616px;
     height: 574px;
 }
 
+.direita {
+    width: 50vw;
+    height: 100vh;
+    border-radius: 26px 0px 0px 0px;
+    background: linear-gradient(180deg, #376C89 0%, #002C42 100%);
+    box-shadow: -4px 8px 10px 0px rgba(0, 0, 0, 0.95);
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+}
+
+#marcador-de-livro{
+    margin-left: 62px;
+    position: absolute;
+}
+
+#logo-imagem{
+    margin-top: 131px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: end;
+}
+
 #titulo-login {
+    margin-top: 10px;
+    margin-bottom: 64px;
     text-align: center;
     color: #F5F5F5;
     font-family: Poppins;
@@ -60,4 +82,83 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campos input{
+    width: 424px;
+    height: 78px;
+    border: none;
+    border-radius: 78px;
+    background: #F5F5F5;
+    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.40);
+    outline: none;
+    color: #376C89;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.campos input::placeholder{
+    color: #376C89;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 100px;
+}
+
+.elipse-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background-color: #002C42;
+}
+
+#email{
+    padding: 0;
+}
+
+.elipse-senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 78px;
+    border: none;
+    border-radius: 78px;
+    background-color: #002C42;
+}
+
+#senha{
+    padding: 0;
+}
+
+#botao {
+    border: none;
+    width: 424px;
+    height: 78px;
+    border-radius: 69px;
+    background: linear-gradient(180deg, #EF9CA9 -58.7%, #E87C7A 99.02%);
+    filter: drop-shadow(7px 7px 15px rgba(0, 0, 0, 0.40));
+    color: #F5F5F5;
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
 }
