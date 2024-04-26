@@ -4,11 +4,11 @@ body {
 }
 
 .container {
-    margin: 8px;
+    margin-top: 4%;
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
     gap: 50px;
-    align-items: center; /* Centraliza os itens verticalmente */
+    align-items:start; /* Centraliza os itens verticalmente */
     height: auto;
     width: 100%;
     flex-direction: row;
@@ -18,8 +18,11 @@ body {
 
 /*Lembrar de ajustar as imagens*/
 .imagem {
-    width: 268px;
-    height: 401px;
+    margin-top: 5%;
+    min-width: 268px;
+    max-width: 268px;
+    min-height: 401px;
+    max-height: 401px;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.40);
 }
@@ -30,7 +33,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: end;
-    font-family: Poppins;
+    font-family: 'Poppins';
     flex-direction: row-reverse;
 }
 .img_txt{
@@ -38,14 +41,13 @@ body {
     flex-direction: column;
 }
 .conteudo {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    height: 460px;
-    
 }
 
 .sinopse {
-    width: 712px;
+    width: 100%;
     color: #453232;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
@@ -57,7 +59,7 @@ body {
 }
 .titulo{
     font-size: 40px;
-    font-family: Poppins;
+    font-family: 'Poppins';
     color: #453232;
     letter-spacing: -5.28px;
     font-weight: 400;
@@ -66,13 +68,13 @@ body {
 .autor{
     font-size: 25px;
     color: #453232;
-    font-family: Poppins;
+    font-family: 'Poppins';
     letter-spacing: -2.75px;
     line-height: normal;
 }
 .data{
     color: #002C42;
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 20px;
     text-align: center;
     letter-spacing: -2px;
@@ -127,8 +129,6 @@ body {
 #bloco{
     margin-left: auto;
     margin-bottom: 370px;
-    width: 852px;
-    height: 386px;
     flex-shrink: 0;
     border-radius: 26px;
     border: 1px solid rgba(0, 0, 0, 0.25);
@@ -152,6 +152,7 @@ body {
 #img_user{
     align-self: flex-start;
 }
+/*
 @media screen and (min-width: 426px) and (max-width: 1020px){
     .container{
         justify-content: center;
@@ -159,7 +160,21 @@ body {
         margin: 0px;
         width: max-content;
     }
-} 
+}*/
+@media screen and (max-width: 969px)
+{
+    #bloco{
+        height: 500px;
+        width: 680px;
+        font-size: 18px;
+    }
+}    
+@media screen and (max-width: 425){
+    
+
+}
+    
+
 @media screen and (max-width: 1254px){
     .imagem{
         width: 150px;
