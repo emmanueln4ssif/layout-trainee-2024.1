@@ -98,75 +98,6 @@ body {
   margin-right: 160px;
 }
 
-@media only screen and (max-width: 1440px) {
-  .agrupamento {
-    margin-right: 80px;
-  }
-
-  .mainimg {
-    margin-left: 80px;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  #mainimg-id {
-    display: none;
-  }
-
-  .home1 {
-    background-image: url(../assets/bg1.svg);
-    background-position: left top;
-    background-size: 120px;
-    background-repeat: no-repeat;
-    justify-content: center;
-  }
-
-  #arrow-id {
-    display: none;
-  }
-
-  .livros {
-    margin-bottom: 100px;
-  }
-
-  .separador-mobile {
-    display: block;
-    text-align: center;
-  }
-
-  .separador-mobile>p {
-    margin: 5px;
-  }
-
-  .agrupamento {
-    margin-right: 0;
-  }
-}
-
-
-
-@media only screen and (max-width: 425px) {
-  .home1 {
-    background-size: 100px;
-  }
-
-  .subtitulo {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .home1 {
-    background-size: 80px;
-  }
-
-  .subtitulo {
-    font-size: 16px;
-  }
-}
-
-
-
 .livros {
   display: flex;
   flex-direction: row;
@@ -377,4 +308,91 @@ footer {
   height: 300px;
   background-color: pink;
   flex: 1;
+}
+
+@media only screen and (max-width: 1440px) {
+  .agrupamento {
+    margin-right: 80px;
+  }
+
+  .mainimg {
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #mainimg-id {
+    display: none;
+  }
+
+  .home1 {
+    background-image: url(../assets/bg1.svg);
+    background-position: left top;
+    background-size: 120px;
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  #arrow-id {
+    display: none;
+  }
+
+  .livros {
+    margin-bottom: 100px;
+  }
+
+  .separador-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .separador-mobile>p {
+    margin: 5px;
+  }
+
+  .agrupamento {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .home1 {
+    background-size: 100px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .imagpost>img {
+    width: 130px;
+    height: 210px;
+    margin-bottom: 0;
+  }
+
+  .cometario {
+    width: 130px;
+  }
+
+  .imagpost>h3 {
+    font-size: 16px;
+  }
+
+  .cometario>h3 {
+    font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .home1 {
+    background-size: 80px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
 }
