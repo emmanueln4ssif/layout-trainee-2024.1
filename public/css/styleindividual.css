@@ -44,8 +44,13 @@ body {
 .amostra{
     display: flex;
     justify-items: end;
-    color: #C42;
+    color: #002C42;
     text-align: end;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    
 }
 .img_txt{
     display: flex;
@@ -59,15 +64,26 @@ body {
 }
 
 .sinopse {
-    width: 712px;
+    width: 100%;
     color: #453232;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     font-weight: 300;
     line-height: normal;    
 }
+.texto_bloco{
+    width: 100%;
+    color:#453232;
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+    
+    
+}
+
 .resumo{
-    text-align: ;
+    text-align: center;
 }
 .titulo{
     font-size: 40px;
@@ -125,4 +141,10 @@ body {
     flex-shrink: 0;
     border-radius: 111px;
 }
-
+.elementos_review{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nome_user {
+    font-family: Poppins;
+}
