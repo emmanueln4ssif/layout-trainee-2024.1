@@ -6,33 +6,14 @@ body {
 .container {
     margin: 8px;
     display: flex;
-    justify-content: space-around; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 50px;
     align-items: center; /* Centraliza os itens verticalmente */
     height: auto;
     width: 100%;
     flex-direction: row;
 
 }
-
-@media screen and (min-width: 426px) and (max-width: 1020px){
-    .container{
-        justify-content: center;
-        flex-direction: column;
-        margin: 0px;
-        width: max-content;
-    }
-} 
-/*Ajustar a letra/margem*/
-@media screen and (min-width: 0px) and (max-width: 320px){
-
-}
-@media screen and (min-width: 321px) and (max-width: 375px){
-
-}
-@media screen and (min-width: 376px) and (max-width: 425px){
-
-}
-
 
 /*Lembrar de ajustar as imagens*/
 .imagem {
@@ -44,13 +25,8 @@ body {
 .amostra{
     display: flex;
     justify-items: end;
-    color: #002C42;
+    color: #C42;
     text-align: end;
-    flex-direction: row-reverse;
-    font-size: 20px;
-    font-family: Poppins;
-    font-weight: 600;
-    
 }
 .img_txt{
     display: flex;
@@ -64,26 +40,15 @@ body {
 }
 
 .sinopse {
-    width: 100%;
+    width: 712px;
     color: #453232;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     font-weight: 300;
     line-height: normal;    
 }
-.texto_bloco{
-    width: 100%;
-    color:#453232;
-    font-family: Poppins;
-    font-size: 19px;
-    font-weight: 400;
-    letter-spacing: 0.38px;
-    
-    
-}
-
 .resumo{
-    text-align: center;
+    text-align: left;
 }
 .titulo{
     font-size: 40px;
@@ -141,10 +106,21 @@ body {
     flex-shrink: 0;
     border-radius: 111px;
 }
-.elementos_review{
-    display: flex;
-    justify-content: space-evenly;
-}
-.nome_user {
-    font-family: Poppins;
+@media screen and (min-width: 426px) and (max-width: 1020px){
+    .container{
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        width: max-content;
+    }
+} 
+@media screen and (max-width: 1254px){
+    .imagem{
+        width: 150px;
+        height: 301px;
+    }
+    .sinopse{
+        
+    }
+
 }
