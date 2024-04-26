@@ -7,13 +7,14 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 
 }
 
 .home1 {
   display: flex;
   flex-direction: row;
-
   flex-wrap: nowrap;
   justify-content: center;
   background-image: url(../assets/bg1.svg);
@@ -54,6 +55,8 @@ body {
   border-color: rgba(69, 50, 50, 0.25);
   border-radius: 14px;
   margin-bottom: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
   background-color: #f5f5f5;
 }
 
@@ -73,11 +76,20 @@ body {
   #mainimg-id {
     display: none;
   }
-}
 
-@media only screen and (max-width: 1280px) {
+  .home1 {
+    background-image: url(../assets/bg1.svg);
+    background-position: left top;
+    background-size: 120px;
+    background-repeat: no-repeat;
+  }
+
   #arrow-id {
     display: none;
+  }
+
+  .livros {
+    margin-bottom: 100px;
   }
 }
 
@@ -90,30 +102,21 @@ body {
 
 .conteiner {
   width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  overscroll-behavior: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .p1 {
   width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
-  overscroll-behavior: none;
+
 }
 
 .p2 {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  background-color: #f5f5f5;
-  scroll-snap-align: end;
-  overscroll-behavior: none;
 }
+
+
 
 .swiper {
   margin: 0;
@@ -160,4 +163,156 @@ body {
   margin-top: 25px;
   margin-bottom: 0px;
   height: 25px;
+}
+
+
+.posts {
+  margin-top: 120px;
+  display: flex;
+  margin-bottom: 80px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 46px;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagpost {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+  margin: 0;
+}
+
+.imagpost>img {
+  width: 192px;
+  height: 270px;
+  margin-bottom: 0;
+}
+
+.imagpost>h3 {
+  background-color: #453232;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-left: 12px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.cometario {
+  width: 192px;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+}
+
+.cometario>h3 {
+  background-color: #453232;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 12px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.cometario>p {
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+}
+
+.titulo-comentario {
+  margin-top: 0px;
+}
+
+.ver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.ver>img {
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 10px;
+}
+
+.ver>p {
+  margin: 0;
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+}
+
+.bt-vermais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  width: 194px;
+}
+
+.bt-vermais>img {
+  transform: rotate(-90deg);
+  width: 40px;
+  height: 20px;
+  margin: 0;
+}
+
+.bt-vermais>p {
+  margin: 0;
+  font-size: 28px;
+  color: #72AACB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -1px;
+  padding: 5px;
+  margin: 0;
+
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: pink;
+  flex: 1;
 }
