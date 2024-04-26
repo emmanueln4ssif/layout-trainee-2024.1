@@ -1,19 +1,21 @@
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
+    width: 100%;
 }
 
 .container {
     margin-top: 4%;
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
     gap: 50px;
-    align-items:start; /* Centraliza os itens verticalmente */
+    align-items: start;
+    /* Centraliza os itens verticalmente */
     height: auto;
-    width: 100%;
+    width: 100vw;
     flex-direction: row;
     margin-bottom: 150px;
-
 }
 
 /*Lembrar de ajustar as imagens*/
@@ -26,7 +28,8 @@ body {
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.40);
 }
-.amostra{
+
+.amostra {
     display: flex;
     justify-items: end;
     color: #002C42;
@@ -36,12 +39,14 @@ body {
     font-family: 'Poppins';
     flex-direction: row-reverse;
 }
-.img_txt{
+
+.img_txt {
     display: flex;
     flex-direction: column;
 }
+
 .conteudo {
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
 }
@@ -52,27 +57,31 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     font-weight: 300;
-    line-height: normal;    
+    line-height: normal;
 }
-.resumo{
+
+.resumo {
     text-align: left;
 }
-.titulo{
+
+.titulo {
     font-size: 40px;
     font-family: 'Poppins';
     color: #453232;
     letter-spacing: -5.28px;
     font-weight: 400;
-    
+
 }
-.autor{
+
+.autor {
     font-size: 25px;
     color: #453232;
     font-family: 'Poppins';
     letter-spacing: -2.75px;
     line-height: normal;
 }
-.data{
+
+.data {
     color: #002C42;
     font-family: 'Poppins';
     font-size: 20px;
@@ -82,14 +91,15 @@ body {
     font-style: normal;
     line-height: normal;
 }
-.estrela_sinopse{
-    width: 100%;
+
+.estrela_sinopse {
     display: flex;
     flex-direction: column;
     gap: -55px;
 
 }
-#nome_user{
+
+#nome_user {
     color: #002C42;
     font-family: Poppins;
     font-size: 20px;
@@ -101,7 +111,8 @@ body {
 
 
 }
-#data{
+
+#data {
     color: #002C42;
     font-family: Poppins;
     font-size: 17px;
@@ -112,14 +123,16 @@ body {
     font-weight: 600;
 
 }
-.elementos_review{
+
+.elementos_review {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
-.estrelas_data{
+
+.estrelas_data {
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -127,7 +140,8 @@ body {
     flex-wrap: nowrap;
 }
 
-#bloco{
+#bloco {
+    width: 1000px;
     margin-left: auto;
     margin-bottom: 370px;
     flex-shrink: 0;
@@ -136,41 +150,99 @@ body {
     opacity: 0.64;
     background: #E8E8E8;
 }
-#bloco>p{
-    color:#453232;
+
+#bloco>p {
+    color: #453232;
     font-family: Poppins;
     font-size: 19px;
     font-weight: 400;
     letter-spacing: 0.38px;
 }
 
-#img_user>img{
+#img_user>img {
     width: 111px;
     height: 104px;
     flex-shrink: 0;
     border-radius: 111px;
 }
-#img_user{
+
+#img_user {
     align-self: flex-start;
 }
-/*
-@media screen and (min-width: 426px) and (max-width: 1020px){
-    .container{
-        justify-content: center;
-        flex-direction: column;
-        margin: 0px;
-        width: max-content;
+@media only screen and (max-width: 1345px){
+    #bloco {
+        width: 700px;
     }
-}*/
-@media screen and (max-width: 969px)
-{
+}
+@media only screen and (max-width: 855px){
     #bloco{
-        height: 500px;
-        width: 680px;
-        font-size: 15px;
+        width: 620px;
     }
     .sinopse{
         font-size: 20px;
     }
-}    
+}
+@media only screen and (max-width: 855px){
+    #bloco{
+        width: 560px;
 
+    }
+    #img_user>img{
+        width: 85px;
+        height: 81px;  
+    }
+    .sinopse{
+        font-size: 18px;
+    }
+    .imagem{
+        min-width: 170px;
+        max-width: 170px;
+        min-height: 250px;
+        max-height: 250px;
+    }
+}
+@media only screen and (max-width: 639px){
+    #bloco{
+        width: 420px;
+
+    }
+    #img_user>img{
+        width: 85px;
+        height: 81px;  
+    }
+    .sinopse{
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 522px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .resumo{
+        text-align:justify;
+        width: 100%;
+    }
+    #bloco{
+        width: 385px;
+
+    }
+    #img_user>img{
+        width: 85px;
+        height: 81px;  
+    }
+    .sinopse{
+        font-size: 15px;
+        width: 100%;
+    }
+    #bloco>p{
+        font-size: 15px;
+    }
+
+}
