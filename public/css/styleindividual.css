@@ -11,7 +11,8 @@ body {
     align-items: center; /* Centraliza os itens verticalmente */
     height: auto;
     width: 100%;
-    flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 150px;
 
 }
 
@@ -25,8 +26,12 @@ body {
 .amostra{
     display: flex;
     justify-items: end;
-    color: #C42;
+    color: #002C42;
+    font-size: 20px;
+    font-weight: 600;
     text-align: end;
+    font-family: Poppins;
+    flex-direction: row-reverse;
 }
 .img_txt{
     display: flex;
@@ -81,9 +86,23 @@ body {
     gap: -55px;
 
 }
+.elementos_review{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.estrelas_data{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 #bloco{
-    margin-left: 349px;
-    margin-right: 239px;
+    margin-left: auto;
     margin-bottom: 370px;
     width: 852px;
     height: 386px;
@@ -93,18 +112,22 @@ body {
     opacity: 0.64;
     background: #E8E8E8;
 }
-.elementos_review{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+#bloco>p{
+    color:#453232;
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
 }
-#img_user{
+
+#img_user>img{
     width: 111px;
     height: 104px;
     flex-shrink: 0;
     border-radius: 111px;
+}
+#img_user{
+    align-self: flex-start;
 }
 @media screen and (min-width: 426px) and (max-width: 1020px){
     .container{
