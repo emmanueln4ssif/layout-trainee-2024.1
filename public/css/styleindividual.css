@@ -94,6 +94,8 @@ body {
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1.6px;
+    font-weight: 600;
+
 
 }
 #data{
@@ -104,6 +106,8 @@ body {
     font-weight: 275;
     line-height: normal;
     letter-spacing: 0.34px;
+    font-weight: 600;
+
 }
 .elementos_review{
     display: flex;
