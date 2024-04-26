@@ -86,6 +86,25 @@ body {
     gap: -55px;
 
 }
+#nome_user{
+    color: #002C42;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.6px;
+
+}
+#data{
+    color: #002C42;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+    letter-spacing: 0.34px;
+}
 .elementos_review{
     display: flex;
     flex-direction: row;
