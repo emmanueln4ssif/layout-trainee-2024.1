@@ -70,6 +70,23 @@ body {
   width: 675px;
   height: 663px;
   margin-right: 280px;
+
+}
+
+.separador-mobile {
+  display: none;
+}
+
+
+.separador-mobile {
+  display: none;
+  text-align: center;
+  color: #72AACB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -90,6 +107,37 @@ body {
 
   .livros {
     margin-bottom: 100px;
+  }
+
+  .separador-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .separador-mobile>p {
+    margin: 5px;
+  }
+}
+
+
+
+@media only screen and (max-width: 425px) {
+  .home1 {
+    background-size: 100px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .home1 {
+    background-size: 80px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
   }
 }
 
@@ -115,8 +163,6 @@ body {
 .p2 {
   width: 100%;
 }
-
-
 
 .swiper {
   margin: 0;
@@ -151,6 +197,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 #fotosbaixo {
@@ -164,7 +212,6 @@ body {
   margin-bottom: 0px;
   height: 25px;
 }
-
 
 .posts {
   margin-top: 120px;
