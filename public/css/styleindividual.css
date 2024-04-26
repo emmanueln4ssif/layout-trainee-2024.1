@@ -41,7 +41,7 @@ body {
     flex-direction: column;
 }
 .conteudo {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -83,6 +83,7 @@ body {
     line-height: normal;
 }
 .estrela_sinopse{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: -55px;
@@ -166,22 +167,10 @@ body {
     #bloco{
         height: 500px;
         width: 680px;
-        font-size: 18px;
-    }
-}    
-@media screen and (max-width: 425){
-    
-
-}
-    
-
-@media screen and (max-width: 1254px){
-    .imagem{
-        width: 150px;
-        height: 301px;
+        font-size: 15px;
     }
     .sinopse{
-        
+        font-size: 20px;
     }
+}    
 
-}
