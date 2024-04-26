@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   background-image: url(../assets/bg1.svg);
   background-position: left top;
   background-size: 180px;
@@ -69,8 +69,7 @@ body {
   margin-top: 180px;
   width: 675px;
   height: 663px;
-  margin-right: 280px;
-  margin-left: 50px;
+  margin-left: 160px;
 }
 
 .separador-mobile {
@@ -89,6 +88,26 @@ body {
   font-size: 24px;
 }
 
+.agrupamento {
+
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 160px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .agrupamento {
+    margin-right: 80px;
+  }
+
+  .mainimg {
+    margin-left: 80px;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   #mainimg-id {
     display: none;
@@ -99,6 +118,7 @@ body {
     background-position: left top;
     background-size: 120px;
     background-repeat: no-repeat;
+    justify-content: center;
   }
 
   #arrow-id {
@@ -116,6 +136,10 @@ body {
 
   .separador-mobile>p {
     margin: 5px;
+  }
+
+  .agrupamento {
+    margin-right: 0;
   }
 }
 
@@ -140,6 +164,8 @@ body {
     font-size: 16px;
   }
 }
+
+
 
 .livros {
   display: flex;
@@ -188,17 +214,6 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.agrupamento {
-
-  width: 600px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 #fotosbaixo {
