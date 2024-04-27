@@ -25,10 +25,7 @@ body{
     justify-content: space-around;
 }
 
-        @media screen  ( max-width: 768)
-        .container
-            width:100%;
-            flex-direction:column
+        
         
 
 .
@@ -40,7 +37,9 @@ body{
 
 
 
-.linha-geral{
+.linha-geral1{
+
+content:'';
     max-width: 100%;
     position: absolute;
     content:'';
