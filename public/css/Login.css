@@ -198,19 +198,65 @@ body {
 
     .direita {
         width: 90vw;
-        height: 100vh;
+        height: 87vh;
+        border-radius: 3.5% 0% 0% 3.5%;
+    }
+
+    #marcador-de-livro {
+        height: 17%;
+        width: auto;
+        margin-left: 5vw;
+        position: absolute;
     }
 
     #titulo-login {
-        font-size: 4.5vw;
+        font-size: 6vw;
+    }
+
+    #logo-imagem {
+        width: 20%;
+        height: auto;
     }
 
     .campos input {
-        width: 65vw;
+        width: 50vw;
+        height: 8vh;
+        font-size: 4vw;
     }
 
     .campos input::placeholder {
-        font-size: 3vw;
+        font-size: 4vw;
+    }
+
+    #email {
+        padding: 0vw 6.5vw 0vw 15vw;
+    }
+
+    #senha {
+        width: 43.5vw;
+        padding: 0vw 13vw 0vw 15vw;
+    }
+
+    .circulo {
+        width: 8vh;
+        height: 8vh;
+        border-radius: 8vh;
+    }
+
+    .olho {
+        top: 3vh;
+        left: 87%;
+    }
+
+    #icone-olho {
+        width: 5vw;
+        height: auto;
+    }
+
+    #botao {
+        font-size: 5vw;
+        width: 71.5vw;
+        height: 8vh;
     }
 }
 
@@ -228,12 +274,15 @@ body {
         font-size: 4vw;
     }
 
-    #logo-imagem{
+    #logo-imagem {
         margin-top: 7%;
+        width: 15%;
+        height: auto;
     }
 
     .campos input {
         width: 57vw;
+        font-size: 3vw;
     }
 
     .campos input::placeholder {
@@ -263,8 +312,9 @@ body {
         height: auto;
     }
 
-    #botao{
-        font-size: 3vw;
+    #botao {
+        font-size: 4vw;
+        width: 78.5vw;
     }
 }
 
@@ -282,12 +332,13 @@ body {
         font-size: 4vw;
     }
 
-    #logo-imagem{
+    #logo-imagem {
         margin-top: 7%;
     }
 
     .campos input {
         width: 57vw;
+        font-size: 2.5vw;
     }
 
     .campos input::placeholder {
@@ -317,7 +368,8 @@ body {
         height: auto;
     }
 
-    #botao{
-        font-size: 2.5vw;
+    #botao {
+        font-size: 3.5vw;
+        width: 74.5vw;
     }
 }
