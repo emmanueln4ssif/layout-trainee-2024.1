@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
-
-
-
-
-    
-
-
-
 body{
-    width: 1440px;
+   
+   
+    width: 1080px;
     height: 2000px;
    
     font-family: "Poppins", sans-serif;
@@ -18,58 +11,69 @@ body{
 }
 
 
-   
-      .navbar{
-        display: flex;
-        background-color: aliceblue;
-       width: 250%;
-        padding: 40px;
-        top: -20px;
-     
-    }
 
-.navtext1{
-     color: #EF9CA9;
-    font-size: 40px; 
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: -2px;
-
-position:absolute;
-    width: 114px;
-height: 60px;
-top: 40px;
-right: 850px;
-
-}
-.navtext2{
-    color: #EF9CA9;
-    position:absolute;
-   
-    width: 225px;
-        height: 60px;
-            top: 40px;
-    right:450px;;
-                gap: 0px;
-                opacity: 0px;
-                 font-size: 40px;
-                         font-weight: 500;
-                 line-height: 60px;
-             letter-spacing: -0.05em;
-                 text-align: left;
+.linha-geral{
     
-    
+    position: absolute;
+    content:'';
+    height: 80.3%;
+    width: 1px;
+    background-color: #453232;
+    opacity: 0.8;
+left: 500px;
+top: 8%;
+display: flex;
 }
-.navtext3{
-    color: #EF9CA9;
-    position:absolute;
-    right: 150px;
-    top:40px;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 60px;
-    letter-spacing: -0.05em;
-    text-align: left;
+.linha-secundaria{
+    
+    position: absolute;
+    content:'';
+    height: 80.3%;
+    width: 1px;
+    background-color: #453232;
+    opacity: 0.8;
+right: 290px;
+top: 8%;
+display: flex;
 
 }
+
+
+.buscar-box{
+    font-family: "Poppins", sans-serif;
+    top: 8%;
+    left: 16px;
+    background-color: white;
+        width: 400px;
+    height:60px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+position: relative;
+
+
+
+
+}
+
+.buscar-box .lupa{
+    min-width: 400px;
+    height: 60px;
+    display: flex;
+   align-items: center;
+
+}
+   .buscar-box .input-buscar{
+    border: 0;
+    position: absolute;
+    left: 10%;
+    top: 28%;
+   }
+.buscar-box .input-buscar input{
+   font-size: 27px;
+    outline: 0;
+   border: 0;
+
+}
+
