@@ -79,7 +79,8 @@ opacity: 0.8;
 }
 
 .forma-post1  {
-   content: '';
+   
+    content: '';
     position: absolute;
    display: flex;
     background-color: #EF9CA9;
@@ -90,6 +91,8 @@ top: 8%;
 left: 550px;
 border-radius: 20px;
 opacity: 0.3;
+border-color: black;
+border-width: 2px;
 
 
 
@@ -115,7 +118,34 @@ display: flex;
    
     position: absolute;
     
-    left: 620px;
+    left: 640px;
 font-size: 15px;
-top:8%
+top:7%;
+}
+.fotouser{
+    position:absolute;
+    left: 560px;
+    top: 9%;
+}
+.usuario .digitado h1{
+   position: relative;
+   bottom: 30px;
+   right: 80px;
+
+}
+.usuario .estrelas img{
+    position: relative;
+    
+    top: -20px;
+    
+}
+
+.capalivro1{
+   min-width: 200px;
+   height: 235px;
+
+    position: absolute;
+   
+    left: 1255px;
+    display: flex;
 }
