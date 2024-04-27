@@ -7,7 +7,7 @@ body{
     height: 2000px;
    
     font-family: "Poppins", sans-serif;
-    background-image: linear-gradient(to bottom, #EF9CA9, white);
+    background-image: linear-gradient(to bottom, #EF9CA9, white 45%);
 }
 
 
@@ -44,13 +44,14 @@ display: flex;
     top: 8%;
     left: 16px;
     background-color: white;
-        width: 400px;
-    height:60px;
+        width: 450px;
+    height:75px;
     display: flex;
     border-radius: 20px;
     overflow: hidden;
     justify-content: space-between;
-position: relative;
+position: sticky;
+opacity: 0.8;
 
 
 
@@ -61,19 +62,60 @@ position: relative;
     min-width: 400px;
     height: 60px;
     display: flex;
-   align-items: center;
+    align-items: center;
 
 }
    .buscar-box .input-buscar{
     border: 0;
     position: absolute;
-    left: 10%;
-    top: 28%;
+    left: 13%;  
+    top: 25%;
    }
 .buscar-box .input-buscar input{
-   font-size: 27px;
+   font-size: 30px;
     outline: 0;
    border: 0;
 
 }
 
+.forma-post1  {
+   content: '';
+    position: absolute;
+   display: flex;
+    background-color: #EF9CA9;
+   width: 900px;
+height: 250px;
+flex-shrink: 0;
+top: 8%;
+left: 550px;
+border-radius: 20px;
+opacity: 0.3;
+
+
+
+   
+    
+
+}
+
+
+
+linha-pesquisa{
+    position: absolute;
+    content:'';
+    height: 50px;
+    width: 30px;
+    background-color:pink;
+    opacity: 1;
+
+display: flex;
+
+}
+.usuario{
+   
+    position: absolute;
+    
+    left: 620px;
+font-size: 15px;
+top:8%
+}
