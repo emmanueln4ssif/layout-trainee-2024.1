@@ -163,7 +163,7 @@ body {
 
 @media only screen and (max-width: 1345px) {
     #bloco {
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -171,9 +171,33 @@ body {
     #bloco {
         width: 90%;
     }
-
+    .titulo{
+        font-size: 35px;
+    }
+    .autor{
+        font-size: 20px;
+    }
     .sinopse {
         font-size: 20px;
+    }
+    #bloco > p {
+        font: 17px;
+    }
+    #data{
+        font-size: 16px;
+    }
+    #nome_user{
+        font-size: 18px;
+    }
+    .data{
+        font-size: 18px;
+    }
+    .amostra{
+        font-size: 17px;
+    }
+    #img_user>img{
+        width: 85px;
+        height: 81px;  
     }
 }
 
@@ -181,16 +205,38 @@ body {
     #bloco {
         width: 95%;
     }
-
+    .titulo{
+        font-size: 33px;
+    }
+    .autor{
+        font-size: 18px;
+    }
     #img_user>img {
         width: 85px;
         height: 81px;
+    }
+    .amostra{
+        font-size: 15px;
     }
 
     .sinopse {
         font-size: 18px;
     }
-
+    #bloco > p {
+        font: 16px;
+    }
+    #data{
+        font-size: 15px;
+    }
+    #nome_user{
+        font-size: 16px;
+    }
+    .data{
+        font-size: 16px;
+    }
+    .resumo{
+        font-size: 17px;
+    }
     .imagem {
         max-width: 170px;
         max-height: 250px;
@@ -205,10 +251,11 @@ body {
     }
 
     .titulo {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     .resumo {
+        font-size: 16px;
         text-align: justify;
         width: 100%;
     }
