@@ -168,6 +168,10 @@ body {
 }
 
 @media only screen and (max-width: 855px) {
+    .titulo{
+        letter-spacing: -4px;
+
+    }
     #bloco {
         width: 90%;
     }
@@ -207,6 +211,7 @@ body {
     }
     .titulo{
         font-size: 33px;
+        letter-spacing: -3px;
     }
     .autor{
         font-size: 18px;
@@ -244,6 +249,11 @@ body {
 }
 
 @media only screen and (max-width: 522px) {
+    .titulo{
+        letter-spacing: -2px;
+
+    }
+
     .container {
         flex-direction: column;
         justify-content: center;
