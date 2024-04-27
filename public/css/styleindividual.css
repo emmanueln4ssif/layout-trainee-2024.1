@@ -1,3 +1,4 @@
+/* CSS */
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
@@ -8,30 +9,25 @@ body {
     margin-top: 4%;
     display: flex;
     justify-content: center;
-    /* Centraliza os itens horizontalmente */
     gap: 50px;
     align-items: start;
-    /* Centraliza os itens verticalmente */
     height: auto;
     width: 100vw;
     flex-direction: row;
     margin-bottom: 150px;
 }
 
-/*Lembrar de ajustar as imagens*/
 .imagem {
     margin-top: 5%;
-    min-width: 268px;
+    width: 100%;
     max-width: 268px;
-    min-height: 401px;
+    height: auto;
     max-height: 401px;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.40);
 }
 
 .amostra {
-    display: flex;
-    justify-items: end;
     color: #002C42;
     font-size: 20px;
     font-weight: 600;
@@ -46,13 +42,12 @@ body {
 }
 
 .conteudo {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .sinopse {
-    width: 100%;
     color: #453232;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
@@ -70,7 +65,6 @@ body {
     color: #453232;
     letter-spacing: -5.28px;
     font-weight: 400;
-
 }
 
 .autor {
@@ -96,7 +90,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: -55px;
-
 }
 
 #nome_user {
@@ -108,8 +101,6 @@ body {
     line-height: normal;
     letter-spacing: -1.6px;
     font-weight: 600;
-
-
 }
 
 #data {
@@ -121,7 +112,6 @@ body {
     line-height: normal;
     letter-spacing: 0.34px;
     font-weight: 600;
-
 }
 
 .elementos_review {
@@ -141,7 +131,8 @@ body {
 }
 
 #bloco {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin-left: auto;
     margin-bottom: 370px;
     flex-shrink: 0;
@@ -169,80 +160,74 @@ body {
 #img_user {
     align-self: flex-start;
 }
-@media only screen and (max-width: 1345px){
+
+@media only screen and (max-width: 1345px) {
     #bloco {
-        width: 700px;
+        width: 70%;
     }
 }
-@media only screen and (max-width: 855px){
-    #bloco{
-        width: 620px;
+
+@media only screen and (max-width: 855px) {
+    #bloco {
+        width: 90%;
     }
-    .sinopse{
+
+    .sinopse {
         font-size: 20px;
     }
 }
-@media only screen and (max-width: 855px){
-    #bloco{
-        width: 560px;
 
+@media only screen and (max-width: 639px) {
+    #bloco {
+        width: 95%;
     }
-    #img_user>img{
+
+    #img_user>img {
         width: 85px;
-        height: 81px;  
+        height: 81px;
     }
-    .sinopse{
+
+    .sinopse {
         font-size: 18px;
     }
-    .imagem{
-        min-width: 170px;
+
+    .imagem {
         max-width: 170px;
-        min-height: 250px;
         max-height: 250px;
     }
 }
-@media only screen and (max-width: 639px){
-    #bloco{
-        width: 420px;
 
-    }
-    #img_user>img{
-        width: 85px;
-        height: 81px;  
-    }
-    .sinopse{
-        font-size: 15px;
-    }
-
-}
-
-@media only screen and (max-width: 522px){
-    .container{
+@media only screen and (max-width: 522px) {
+    .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .titulo{
+
+    .titulo {
         font-size: 30px;
     }
-    .resumo{
-        text-align:justify;
+
+    .resumo {
+        text-align: justify;
         width: 100%;
     }
-    #bloco{
-        width: 385px;
 
+    #bloco {
+        width: 95%;
     }
-    #img_user>img{
+
+    #img_user>img {
         width: 85px;
-        height: 81px;  
+        height: 81px;
     }
-    .sinopse{
+
+    .sinopse {
         font-size: 15px;
         width: 100%;
     }
-    #bloco>p{
+
+    #bloco>p {
         font-size: 15px;
     }
-
 }
