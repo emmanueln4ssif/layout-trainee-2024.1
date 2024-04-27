@@ -77,6 +77,7 @@ body {
     margin-right: auto;
     justify-content: center;
     align-items: end;
+    cursor: pointer;
 }
 
 #titulo-login {
@@ -166,12 +167,13 @@ body {
     align-items: center;
     position: absolute;
     left: 84%;
-    top: 4.5vh
+    top: 4.5vh;
 }
 
 #icone-olho {
     width: 3vw;
     height: auto;
+    cursor: pointer;
 }
 
 #botao {
