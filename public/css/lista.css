@@ -3,6 +3,7 @@
 body{
    
    
+   
     width: 1080px;
     height: 2000px;
    
@@ -11,9 +12,36 @@ body{
 }
 
 
+    #centralizar{
+        width:100%;
+        height:100%;
+        margin:auto;
+    }
+
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+        @media screen  ( max-width: 768)
+        .container
+            width:100%;
+            flex-direction:column
+        
+
+.
+
+
+
+
+    
+
+
 
 .linha-geral{
-    
+    max-width: 100%;
     position: absolute;
     content:'';
     height: 80.3%;
@@ -59,7 +87,7 @@ opacity: 0.8;
 }
 
 .buscar-box .lupa{
-    min-width: 400px;
+    min-width: 450px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -91,17 +119,8 @@ top: 8%;
 left: 550px;
 border-radius: 20px;
 opacity: 0.3;
-border-color: black;
-border-width: 2px;
-
-
-
-   
-    
 
 }
-
-
 
 linha-pesquisa{
     position: absolute;
@@ -117,6 +136,7 @@ display: flex;
 .usuario{
    
     position: absolute;
+    
     
     left: 640px;
 font-size: 15px;
@@ -141,11 +161,21 @@ top:7%;
 }
 
 .capalivro1{
-   min-width: 200px;
-   height: 235px;
-
-    position: absolute;
-   
-    left: 1255px;
+   position: absolute;
+    width: 200px;
+   margin:0;
+   height: 220px;
+top: 105px;
+   left: 1250px;
     display: flex;
+    align-items:center;
+    
+    
 }
+.capalivro1 h1{
+    margin: auto;
+    align-items:center;
+    justify-content: flex-end;
+
+}
+
