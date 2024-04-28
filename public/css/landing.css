@@ -310,6 +310,11 @@ footer {
   flex: 1;
 }
 
+.mb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @media only screen and (max-width: 1440px) {
   .agrupamento {
@@ -354,9 +359,7 @@ footer {
   .agrupamento {
     margin-right: 0;
   }
-}
 
-@media only screen and (max-width: 465px) {
   .home1 {
     background-size: 100px;
   }
@@ -404,6 +407,32 @@ footer {
     width: 20px;
   }
 
+  .posts {
+    gap: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .posts {
+    flex-direction: column;
+  }
+
+  .post {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .cometario {
+    width: 100%;
+  }
+
+  .mb {
+    width: 50%;
+    align-items: start;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -413,5 +442,9 @@ footer {
 
   .subtitulo {
     font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 14px;
   }
 }
