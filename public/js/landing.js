@@ -95,3 +95,12 @@ function mudafoto() {
 
 
 setInterval(function () { ; mudafoto() }, 3500);
+
+function posts(){
+  window.open("https://www.youraddress.com","_self")
+}
+
+function scrolla() { 
+  let bt1 = document.getElementById("p"); 
+  bt1.scrollIntoView({ behavior: 'smooth' }); 
+} 
