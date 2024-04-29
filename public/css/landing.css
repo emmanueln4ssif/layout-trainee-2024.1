@@ -420,22 +420,36 @@ footer {
 
   .post {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 10px;
-  }
-
-  .cometario {
-    width: 100%;
+    height: 229px;
   }
 
   .mb {
     width: 50%;
+    height: 100%;
     align-items: start;
+  }
+
+  .cometario {
+    width: 100%;
+    height: 200px;
+  }
+
+  .cometario {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cometario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 410px) {
   .home1 {
     background-size: 80px;
   }
@@ -446,5 +460,19 @@ footer {
 
   .cometario>p {
     font-size: 14.5px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .home1 {
+    background-size: 80px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 13.5px;
   }
 }
