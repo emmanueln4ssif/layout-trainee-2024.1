@@ -193,7 +193,147 @@ body {
     cursor: pointer;
 }
 
-@media screen and (min-width:0px) and (max-width:503px) {
+@media screen and (min-width:0px) and (max-width:350px) {
+    .esquerda {
+        display: none;
+    }
+
+    .direita {
+        width: 90vw;
+        height: 80vh;
+        border-radius: 3.5% 0% 0% 3.5%;
+    }
+
+    #marcador-de-livro {
+        height: 17%;
+        width: auto;
+        margin-left: 5vw;
+        position: absolute;
+    }
+
+    #titulo-login {
+        font-size: 6vw;
+    }
+
+    #logo-imagem {
+        margin-top: 18%;
+        width: 20%;
+        height: auto;
+    }
+
+    .campos input {
+        width: 45vw;
+        height: 10vh;
+        font-size: 4vw;
+    }
+
+    .campos input::placeholder {
+        font-size: 4vw;
+    }
+
+    #email {
+        padding: 0vw 6.5vw 0vw 20vw;
+    }
+
+    #senha {
+        width: 38.5vw;
+        padding: 0vw 13vw 0vw 20vw;
+    }
+
+    .circulo {
+        width: 10vh;
+        height: 10vh;
+        border-radius: 8vh;
+    }
+
+    .olho {
+        top: 4vh;
+        left: 87%;
+    }
+
+    #icone-olho {
+        width: 5vw;
+        height: auto;
+    }
+
+    #botao {
+        font-size: 5vw;
+        width: 71.5vw;
+        height: 10vh;
+    }
+}
+
+@media screen and (min-width:350px) and (max-width:400px) {
+    .esquerda {
+        display: none;
+    }
+
+    .direita {
+        width: 90vw;
+        height: 88vh;
+        border-radius: 3.5% 0% 0% 3.5%;
+    }
+
+    #marcador-de-livro {
+        height: 17%;
+        width: auto;
+        margin-left: 5vw;
+        position: absolute;
+    }
+
+    #titulo-login {
+        font-size: 6vw;
+    }
+
+    #logo-imagem {
+        margin-top: 18%;
+        width: 20%;
+        height: auto;
+    }
+
+    .campos input {
+        width: 48vw;
+        height: 10vh;
+        font-size: 4vw;
+    }
+
+    .campos input::placeholder {
+        font-size: 4vw;
+    }
+
+    #email {
+        padding: 0vw 6.5vw 0vw 17vw;
+    }
+
+    #senha {
+        width: 41.5vw;
+        padding: 0vw 13vw 0vw 17vw;
+    }
+
+    .circulo {
+        width: 10vh;
+        height: 10vh;
+        border-radius: 8vh;
+    }
+
+    .olho {
+        top: 4vh;
+        left: 87%;
+    }
+
+    #icone-olho {
+        width: 5vw;
+        height: auto;
+    }
+
+    #botao {
+        font-size: 5vw;
+        width: 71.5vw;
+        height: 10vh;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:503px) {
     .esquerda {
         display: none;
     }
@@ -216,13 +356,14 @@ body {
     }
 
     #logo-imagem {
+        margin-top: 16%;
         width: 20%;
         height: auto;
     }
 
     .campos input {
-        width: 50vw;
-        height: 8vh;
+        width: 49vw;
+        height: 10vh;
         font-size: 4vw;
     }
 
@@ -231,22 +372,22 @@ body {
     }
 
     #email {
-        padding: 0vw 6.5vw 0vw 15vw;
+        padding: 0vw 6.5vw 0vw 16vw;
     }
 
     #senha {
-        width: 43.5vw;
-        padding: 0vw 13vw 0vw 15vw;
+        width: 42.5vw;
+        padding: 0vw 13vw 0vw 16vw;
     }
 
     .circulo {
-        width: 8vh;
-        height: 8vh;
+        width: 10vh;
+        height: 10vh;
         border-radius: 8vh;
     }
 
     .olho {
-        top: 3vh;
+        top: 4vh;
         left: 87%;
     }
 
@@ -258,7 +399,7 @@ body {
     #botao {
         font-size: 5vw;
         width: 71.5vw;
-        height: 8vh;
+        height: 10vh;
     }
 }
 
@@ -373,5 +514,21 @@ body {
     #botao {
         font-size: 3.5vw;
         width: 74.5vw;
+    }
+}
+
+@media screen and (min-width:937px) and (max-width:1171px) {
+    .campos input {
+        width: 23vw;
+        font-size: 1.6vw;
+    }
+
+    #email {
+        padding: 0vw 3.5vw 0vw 10vw;
+    }
+    
+    #senha {
+        width: 18.5vw;
+        padding: 0vw 8vw 0vw 10vw;
     }
 }
