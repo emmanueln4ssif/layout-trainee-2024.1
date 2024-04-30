@@ -35,34 +35,37 @@ body {
     margin-top: 8%;
     margin-left: 2%;
     border-right: 2px solid #453232;
-    padding-right: 2%;
+    padding-right: 5%;
     flex-direction: column;
+    column-gap: 10%;
+    
 }
 
 
 .usuario h1 {
-    
+
     display: flex;
     justify-content: start;
     align-items: start;
     padding-left: 6%;
     padding-top: 3%;
     margin: 0%;
+    min-width: 300px;
 
 
 }
 
-    .fotouser{
-    
+.fotouser {
+
     height: fit-content;
-        display: flex;
-        justify-content: start;
+    display: flex;
+    justify-content: start;
     align-items: start;
     padding-left: 2%;
     padding-top: 2%;
 }
 
-.espasso{
+.espasso {
     display: flex;
 }
 
@@ -145,12 +148,28 @@ body {
     display: flex;
     background-color: rgb(239, 156, 169, 0.3);
     width: 900px;
-    max-height: 250px;
+    height: 270px;
     flex-shrink: 0;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
+    stroke-width: 1px;
 
+
+}
+
+
+
+
+
+
+
+.fotouser2 {
+    height: 20px;
+
+}
+.espasso2{
+    display: flex;
 }
 
 
@@ -159,7 +178,7 @@ body {
 .usuario {
 
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     font-size: 15px;
     top: 5px;
 }
@@ -178,22 +197,30 @@ flex-direction: column;
     padding-left: 5.7%;
     padding-top: -10%;
 
-    
+
 }
 
 .capalivro1 {
 
-    width: 200px;
+    width: 100px;
     margin: 0;
-    height: 220px;
-    right: 10px;
-    top: 10px;
+   
+   right: 10px;
+    padding-top: 1%;
+    padding-right: 10%;
+
 
 
 
 
 
 }
+
+.capalivro1 img{
+    min-height: 220px;
+}
+
+
 
 .digitado {
 
@@ -201,8 +228,10 @@ flex-direction: column;
     font-size: 12px;
     padding: 3%;
     margin-top: -10%;
+    
 
 
 
 
 }
+
