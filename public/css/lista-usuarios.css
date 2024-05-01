@@ -6,24 +6,21 @@
 
 
 
-/*body{
-  background: rgb(236,209,224);
-  background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);
-}*/
-
-#container-table{
-  width: 60%;
-  margin-top: 100px;
-  margin-left: 20%;
-  margin-right: 20%;
+body{
+  background-color: #b4b4b4;
+  /*background: rgb(236,209,224);
+  background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);*/
 }
 
-table td, table th{
-  border: 1px solid black;
-  padding: 5px;
+#container-table{
+  width: 70%;
+  margin-top: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 table{
+  background-color: #002c42;
   border: 1px solid black;
   width: 100%;
   text-align: center;
@@ -34,4 +31,17 @@ table caption{
   text-align: center;
   font-size: 20px;
   margin-bottom: 5px;
+}
+
+thead{
+  color: #ef9ca9;
+}
+
+tbody{
+  color: #f5f5f5;
+}
+
+table td, table th{
+  border: 1px solid black;
+  padding: 15px;
 }
