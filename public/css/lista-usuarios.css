@@ -100,6 +100,10 @@ table td button:hover{
   float:right;
 }
 
+#adicionar{
+  float: left;
+}
+
 .btn{
   text-align: center;
   /*width: 140px;*/
@@ -114,4 +118,9 @@ table td button:hover{
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#adicionar .btn{
+ margin-bottom: 10px;
+ margin-top: 0;
 }
