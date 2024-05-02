@@ -23,7 +23,7 @@ body {
 .coluna1 {
     display: flex;
     height: 100%;
-    margin-top: 8%;
+   
     border-right: 2px solid #453232;
     padding-right: 2%;
 
@@ -32,7 +32,7 @@ body {
 .coluna2 {
     display: flex;
     height: 100%;
-    margin-top: 8%;
+    
     margin-left: 2%;
     border-right: 2px solid #453232;
     padding-right: 5%;
@@ -169,11 +169,53 @@ body {
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
-    margin-top: 5%;
+margin-top: 5%;
 
 
 
 }
+
+.forma-post3 {
+    content: '';
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(239, 156, 169, 0.3);
+    width: 900px;
+    height: 270px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+    justify-content: space-between;
+margin-top: 5%;
+}
+.forma-post4 {
+    content: '';
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(239, 156, 169, 0.3);
+    width: 900px;
+    height: 270px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+    justify-content: space-between;
+margin-top: 5%;
+}
+
+.forma-post5 {
+    content: '';
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(239, 156, 169, 0.3);
+    width: 900px;
+    height: 270px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+    justify-content: space-between;
+margin-top: 5%;
+}
+
 
 
 
@@ -249,4 +291,7 @@ body {
 
 
 
+}
+.main-lista{
+    margin-top: 10vh;
 }
