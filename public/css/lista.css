@@ -38,7 +38,7 @@ body {
     padding-right: 5%;
     flex-direction: column;
     column-gap: 10%;
-    
+
 }
 
 
@@ -169,7 +169,8 @@ body {
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
- 
+    margin-top: 5%;
+
 
 
 }
@@ -182,7 +183,8 @@ body {
     height: 20px;
 
 }
-.espasso2{
+
+.espasso2 {
     display: flex;
 }
 
@@ -218,8 +220,8 @@ body {
 
     width: 100px;
     margin: 0;
-   
-   right: 10px;
+
+    right: 10px;
     padding-top: 1%;
     padding-right: 10%;
 
@@ -230,7 +232,7 @@ body {
 
 }
 
-.capalivro1 img{
+.capalivro1 img {
     min-height: 220px;
 }
 
@@ -242,10 +244,9 @@ body {
     font-size: 12px;
     padding: 3%;
     margin-top: -10%;
-    
+
 
 
 
 
 }
-
