@@ -10,9 +10,13 @@
 }
 
 body{
-  background-color: #b4b4b4;
-  /*background: rgb(236,209,224);
-  background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);*/
+  /*background-color: #b4b4b4;*/
+  background: rgb(236,209,224);
+  background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);
+}
+
+main{
+  height: 90vh;
 }
 
 #container-table{
@@ -27,17 +31,6 @@ table{
   width: 100%;
   text-align: center;
   border-radius: 20px;
-}
-
-table caption{
-  color: #002c42;
-  caption-side: top;
-  font-weight: 600;
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 5px;
-  text-align: left;
-  padding-left: 20px;
 }
 
 thead{
@@ -62,8 +55,8 @@ table td, table th{
   margin: 0;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 table td button{
@@ -97,30 +90,62 @@ table td button:hover{
 }
 
 #alternador{
+  margin-top: 10px;
   float:right;
+}
+
+.btn-voltar{
+  width: 110px;
+}
+
+.btn-avancar{
+  width: 135px;
+}
+
+.btn-avancar:hover, .btn-voltar:hover{
+  font-weight: 600;
+  color: #ef9ca9;
+}
+
+.btn{
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #002c42;
+  border: none;
+  color: #e87c7a;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#cabecalho{
+  height: 50px;
 }
 
 #adicionar{
   float: left;
 }
 
-.btn{
-  text-align: center;
-  /*width: 140px;*/
-  border-radius: 10px;
-  text-decoration: none;
-  background: #002c42;
-  border: none;
-  margin-top: 10px;
-  color: #e87c7a;
-  font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 #adicionar .btn{
  margin-bottom: 10px;
  margin-top: 0;
+ width: 230px;
+}
+
+#adicionar .btn:hover{
+  font-weight: 600;
+  color: #ef9ca9;
+}
+
+#titulo-table{
+  align-items: baseline;
+  justify-content: center;
+  color: #002c42;
+  font-weight: 600;
+  font-size: 32px;
+  padding-right: 20px;
+  float: right;
 }

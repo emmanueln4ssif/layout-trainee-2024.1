@@ -3,83 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/public/css/lista-usuarios.css">
   <title>Story Stroll</title>
 </head>
 <body>
-  <div id="container-table">
+  <main>
+    <div id="container-table">
 
-    <div id="adicionar">
-      <button class="btn btn-adicionar">+ Adicionar usuário</button>
+      <div id="cabecalho">
+
+        <div id="adicionar">
+          <button class="btn">+ Adicionar usuário</button>
+        </div>
+
+        <div id="titulo-table">
+          <p>Lista de Usuários</p>
+        </div>
+
+      </div>
+
+      <table>
+
+        <thead>
+          <tr class="linha cabecalho">
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="linha dado">
+            <td>01</td>
+            <td>Usuário Um</td>
+            <td>usuarioum@storystroll.com</td>
+            <td><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+            <td><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+            <td class="ultimoDado"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+          </tr>
+
+          <tr class="linha dado">
+            <td>02</td>
+            <td>Usuário Dois</td>
+            <td>usuariodois@storystroll.com</td>
+            <td><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+            <td><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+            <td class="ultimoDado"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+          </tr>
+
+          <tr class="linha dado">
+            <td>03</td>
+            <td>Usuário Três</td>
+            <td>usuariotres@storystroll.com</td>
+            <td><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+            <td><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+            <td class="ultimoDado"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+          </tr>
+
+          <tr class="linha dado">
+            <td>04</td>
+            <td>Usuário Quatro Quatro Quatro Quatro Quatro</td>
+            <td>usuarioquatro@storystroll.com</td>
+            <td><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+            <td><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+            <td class="ultimoDado"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+          </tr>
+
+          <tr class="linha dado">
+            <td>05</td>
+            <td>Usuário Cinco</td>
+            <td>usuariocinco@storystroll.com</td>
+            <td><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+            <td><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+            <td class="ultimoDado"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <div id="alternador">
+        <button class="btn btn-voltar">&lt Voltar</button>
+        <button class="btn btn-avancar">Avançar &gt</button>
+      </div>
+
     </div>
-
-    <table>
-
-      <thead>
-        <tr class="linha cabecalho">
-          <th>ID</th>
-          <th>Nome</th>
-          <th>E-mail</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr class="linha dado">
-          <td>01</td>
-          <td>Usuário Um</td>
-          <td>usuarioum@storystroll.com</td>
-          <td><button class="visualizar">Visualizar</button></td>
-          <td><button class="editar">Editar</button></td>
-          <td class="ultimoDado"><button class="deletar">Deletar</button></td>
-        </tr>
-
-        <tr class="linha dado">
-          <td>02</td>
-          <td>Usuário Dois</td>
-          <td>usuariodois@storystroll.com</td>
-          <td><button class="visualizar">Visualizar</button></td>
-          <td><button class="editar">Editar</button></td>
-          <td class="ultimoDado"><button class="deletar">Deletar</button></td>
-        </tr>
-
-        <tr class="linha dado">
-          <td>03</td>
-          <td>Usuário Três</td>
-          <td>usuariotres@storystroll.com</td>
-          <td><button class="visualizar">Visualizar</button></td>
-          <td><button class="editar">Editar</button></td>
-          <td class="ultimoDado"><button class="deletar">Deletar</button></td>
-        </tr>
-
-        <tr class="linha dado">
-          <td>04</td>
-          <td>Usuário Quatro Quatro Quatro Quatro Quatro</td>
-          <td>usuarioquatro@storystroll.com</td>
-          <td><button class="visualizar">Visualizar</button></td>
-          <td><button class="editar">Editar</button></td>
-          <td class="ultimoDado"><button class="deletar">Deletar</button></td>
-        </tr>
-
-        <tr class="linha dado">
-          <td>05</td>
-          <td>Usuário Cinco</td>
-          <td>usuariocinco@storystroll.com</td>
-          <td><button class="visualizar">Visualizar</button></td>
-          <td><button class="editar">Editar</button></td>
-          <td class="ultimoDado"><button class="deletar">Deletar</button></td>
-        </tr>
-      </tbody>
-
-    </table>
-
-    <div id="alternador">
-      <button class="btn btn-voltar">&lt Voltar</button>
-      <button class="btn btn-avancar">Avançar &gt</button>
-    </div>
-
-  </div>
+  </main>
 </body>
 </html>
