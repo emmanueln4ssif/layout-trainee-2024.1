@@ -3,17 +3,13 @@
 main {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: fit-content;
 
 }
 
 body {
 
-   height: 100vh;
-    max-height: 2000px;
-
-
-
+   height: fit-content;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to bottom, #EF9CA9, white 55%);
 }
@@ -23,20 +19,22 @@ body {
 
 .coluna1 {
     display: flex;
-    height: 100vh;
+    height: 100%;
+    margin-right: 2%;
+    margin-left: 1%;
+    
    
-    border-right: 2px solid #453232;
-    padding-right: 2%;
 
 }
 
 .coluna2 {
     display: flex;
-    height: 100%;
-    
-    margin-left: 4%;
+    height: fit-content;
+    border-left: 2px solid #453232;
+
     border-right: 2px solid #453232;
     padding-right: 5%;
+    padding-left: 5%;
     flex-direction: column;
     column-gap: 10%;
 
@@ -71,39 +69,7 @@ body {
 }
 
 
-.linha-geral1 {
 
-    content: '';
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 30%;
-    display: flex;
-
-
-    height: 75.3%;
-    width: 1px;
-    background-color: #453232;
-    opacity: 0.8;
-
-
-
-
-}
-
-.linha-secundaria {
-    display: flex;
-    margin-right: 20%;
-
-    content: '';
-    height: 80.3%;
-    width: 1px;
-    background-color: #453232;
-    opacity: 0.8;
-
-    top: 8%;
-
-
-}
 
 
 .buscar-box {
@@ -170,7 +136,7 @@ body {
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
-margin-top: 5%;
+    margin-top: 5%;
 
 
 
@@ -187,7 +153,7 @@ margin-top: 5%;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
-margin-top: 5%;
+    margin-top: 5%;
 }
 .forma-post4 {
     content: '';
@@ -200,7 +166,7 @@ margin-top: 5%;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
-margin-top: 5%;
+    margin-top: 5%;
 }
 
 .forma-post5 {
@@ -214,7 +180,7 @@ margin-top: 5%;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
-margin-top: 5%;
+    margin-top: 5%;
 }
 
 
@@ -295,4 +261,6 @@ margin-top: 5%;
 }
 .main-lista{
     margin-top: 10vh;
+    height: fit-content;
+   
 }
