@@ -22,8 +22,7 @@ main{
 .cabecalho{
     display: flex;
     justify-content: space-between;
-    align-items: end;
-    margin-bottom: 2vh;
+    margin-bottom: 2%;
 }
 
 .container-tabela{
@@ -46,6 +45,12 @@ main{
     padding-right: 2vw;
 }
 
+.botao-fora-tabela:hover{
+    font-weight: 600;
+    color: #ef9ca9;
+    transition: 0.15s;
+}
+
 #titulo{
     margin: 0;
     color: #002c42;
@@ -53,9 +58,23 @@ main{
     font-size: 2vw;
 }
 
+
+
+
+
+
+
 .paginacao{
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 2vh;
+    margin-top: 2%;
+}
+
+#botao-voltar{
+    margin-right: 1%;
+}
+
+#botao-avancar{
+    margin-left: 1%;
 }
