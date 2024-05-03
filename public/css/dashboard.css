@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
+    width: 100%;
 }
 
 .corpo {
@@ -8,10 +9,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    height: 100vh;
-    width: 100vw;
-    margin-top: 0;
 }
 
 #mainimg {
