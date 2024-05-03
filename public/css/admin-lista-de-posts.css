@@ -22,7 +22,7 @@ main{
 .cabecalho{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .container-tabela{
@@ -31,7 +31,8 @@ main{
     align-items: center;
 }
 
-.botao-fora-tabela{
+.botoes-fora-tabela{
+    width: 19.5%;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -45,7 +46,7 @@ main{
     padding-right: 2vw;
 }
 
-.botao-fora-tabela:hover{
+.botoes-fora-tabela:hover{
     font-weight: 600;
     color: #ef9ca9;
     transition: 0.15s;
@@ -58,11 +59,18 @@ main{
     font-size: 2vw;
 }
 
+.tabela-posts{
+    width: 100%;
+    text-align: center;
+    background-color: #002c42;
+    border-radius: 1.5vh;
+}
+
 .paginacao{
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 #botao-voltar{
