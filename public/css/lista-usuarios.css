@@ -64,11 +64,15 @@ table td button{
   background: #ffffff00;
   border: none;
   color: #e87c7a;
-  font-size: 20px;
   transition: 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
 }
 
-.visualizar{
+/*.visualizar{
   width: 100px;
 }
 
@@ -78,7 +82,7 @@ table td button{
 
 .deletar{
   width: 75px;
-}
+}*/
 
 .ultimoDado{
   border-right: none;
@@ -96,6 +100,7 @@ table td button:hover{
 
 .btn-voltar{
   width: 110px;
+  margin-right: 10px;
 }
 
 .btn-avancar{
@@ -119,6 +124,10 @@ table td button:hover{
   padding-bottom: 5px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.container-btn{
+  align-items: center;
 }
 
 #cabecalho{
@@ -148,4 +157,32 @@ table td button:hover{
   font-size: 32px;
   padding-right: 20px;
   float: right;
+}
+
+/*.editar, .visualizar, .deletar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+}*/
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+  thead{
+    font-size: 16px;
+  }
+  
+  tbody{
+    font-size: 16px;
+  }
+
+  #titulo-table{
+    font-size: 28px;
+  }
+
+  .btn{
+    font-size: 16px;
+  }
+
 }
