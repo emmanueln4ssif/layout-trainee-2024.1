@@ -9,21 +9,20 @@
   font-family: Poppins;
 }
 
-body{
-  /*background-color: #b4b4b4;*/
+/*body{
+  /*background-color: #b4b4b4;
   background: rgb(236,209,224);
   background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);
-}
+}*/
 
-main{
+/*main{
   height: 90vh;
-}
+}*/
 
 #container-table{
   width: 70%;
+  margin: auto;
   margin-top: 100px;
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 table{
@@ -72,8 +71,8 @@ table td button{
   font-size: 16px;
 }
 
-/*.visualizar{
-  width: 100px;
+.visualizar{
+  width: 80px;
 }
 
 .editar{
@@ -82,7 +81,7 @@ table td button{
 
 .deletar{
   width: 75px;
-}*/
+}
 
 .ultimoDado{
   border-right: none;
@@ -94,7 +93,7 @@ table td button:hover{
 }
 
 #alternador{
-  margin-top: 10px;
+  margin-top: 5px;
   float:right;
 }
 
@@ -126,12 +125,8 @@ table td button:hover{
   padding-right: 15px;
 }
 
-.container-btn{
-  align-items: center;
-}
-
 #cabecalho{
-  height: 50px;
+  height: 30px;
 }
 
 #adicionar{
@@ -160,10 +155,10 @@ table td button:hover{
 }
 
 /*.editar, .visualizar, .deletar{
+  /*border: 1px solid greenyellow;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   font-size: 16px;
 }*/
 
@@ -183,6 +178,235 @@ table td button:hover{
 
   .btn{
     font-size: 16px;
+  }
+
+  table td, table th{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+
+}
+
+@media screen and (min-width:427px) and (max-width:768px){
+
+  thead{
+    font-size: 12px;
+  }
+  
+  tbody{
+    font-size: 12px;
+  }
+
+  #titulo-table{
+    font-size: 20px;
+  }
+
+  .btn{
+    font-size: 12px;
+  }
+
+  table td, table th{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  
+  table td button{
+    text-decoration: none;
+    background: #ffffff00;
+    border: none;
+    color: #e87c7a;
+    transition: 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  #adicionar .btn{
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 160px;
+  }
+
+  .btn-voltar{
+    width: 80px;
+    margin-right: 5px;
+  }
+  
+  .btn-avancar{
+    width: 95px;
+  }
+
+}
+
+@media screen and (min-width:321px) and (max-width:426px){
+
+  #container-table{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  table{
+    border-radius: 10px;
+  }
+
+  thead{
+    font-size: 10px;
+  }
+  
+  tbody{
+    font-size: 10px;
+  }
+
+  #cabecalho{
+    align-content: center;
+    height: 45px;
+  }
+
+  #titulo-table{
+    padding-right: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .btn{
+    font-size: 10px;
+  }
+
+  table td, table th{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  
+  table td button{
+    width: 100%;
+    font-size: 0px;
+    color: #ffffff00;
+  }
+
+  table td button i{
+    font-size: 12px;
+    color: #e87c7a;
+  }
+
+  table td button i:hover{
+    font-weight: 600;
+    color: #ef9ca9;
+  }
+  
+  #adicionar .btn{
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 88px;
+  }
+
+  .btn-voltar{
+    width: 68px;
+    margin-right: 5px;
+  }
+  
+  .btn-avancar{
+    width: 81px;
+  }
+
+  td.container-btn{
+    width: 30px;
+  }
+
+  .editar, .visualizar, .deletar{
+    width: 15px;
+  }
+
+}
+
+@media screen and (min-width:0px) and (max-width:320px){
+
+  #container-table{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  table{
+    border-radius: 10px;
+  }
+
+  thead{
+    font-size: 10px;
+  }
+  
+  tbody{
+    font-size: 10px;
+  }
+
+  #cabecalho{
+    align-content: center;
+    height: 45px;
+  }
+
+  #titulo-table{
+    padding-right: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .btn{
+    font-size: 10px;
+  }
+
+  table td, table th{
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  
+  table td button{
+    width: 100%;
+    font-size: 0px;
+    color: #ffffff00;
+  }
+
+  table td button i{
+    font-size: 12px;
+    color: #e87c7a;
+  }
+
+  table td button i:hover{
+    font-weight: 600;
+    color: #ef9ca9;
+  }
+  
+  #adicionar .btn{
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 89px;
+  }
+
+  .btn-voltar{
+    width: 70px;
+    margin-right: 5px;
+  }
+  
+  .btn-avancar{
+    width: 82px;
+  }
+
+  td.container-btn{
+    width: 30px;
+  }
+
+  .editar, .visualizar, .deletar{
+    width: 15px;
   }
 
 }
