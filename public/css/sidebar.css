@@ -3,17 +3,6 @@ body {
     height: 100vh;
 }
 
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 .sidebar {
     position: absolute;
@@ -27,8 +16,6 @@ body {
     margin: 0;
     padding: 0;
     border-radius: 14px;
-    transition: display 2s;
-
 }
 
 .sidebar>div {
@@ -49,9 +36,6 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #f5f5f5;
-    animation: aparecer 2s forwards;
-    opacity: 0;
-
 }
 
 .sideimg {
