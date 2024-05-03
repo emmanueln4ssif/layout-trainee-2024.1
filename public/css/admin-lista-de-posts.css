@@ -82,10 +82,6 @@ main{
     border-right: 2px solid #ef9ca9;
 }
 
-.ultima-celula{
-    border-right: none;
-}
-
 .tabela-posts tbody td, .tabela-posts tbody th{
     margin: 0;
     padding-left: 10px;
