@@ -13,13 +13,11 @@
 <body>
     <main>
         <div class="cabecalho">
-            <p>Lista de posts</p>
-            <p>Administrador</p>
-            <img src="/public/assets/logo.svg" alt="Logo Story Stroll">
-            <button type="button" class="btn btn-primary btn-lg"><i class="bi bi-plus-lg"></i> Criar post</button>
+            <p id="titulo">Lista de posts</p>
+            <button type="button" id="botao-criar-post"><i class="bi bi-plus-lg"></i> Criar post</button>
         </div>
 
-        <table class="table table-striped table-hover">
+        <table class="tabela-posts">
             <thead>
                 <th>Número</th>
                 <th>Título</th>
@@ -79,7 +77,10 @@
                 </tr>
             </tbody>
         </table>
-        <div class="paginacao"></div>
+        <div class="paginacao">
+            <button class="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
+            <button class="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
+        </div>
     </main>
 </body>
 
