@@ -23,7 +23,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.2%;
+    margin-bottom: 1%;
 }
 
 .container-tabela{
@@ -44,7 +44,6 @@ main{
     font-size: 1.3vw;
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
-    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.9));
 }
 
 .botoes-fora-tabela:hover{
@@ -65,7 +64,6 @@ main{
     text-align: center;
     background-color: #002c42;
     border-radius: 2.8vh;
-    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.9));
 }
 
 thead{
@@ -119,7 +117,7 @@ table td, table th{
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-top: 1.5%;
+    margin-top: 1%;
 }
 
 #botao-voltar{
