@@ -124,6 +124,7 @@ table td button:hover{
 }
 
 .btn-avancar:hover, .btn-voltar:hover{
+  background: #002c42;
   font-weight: 600;
   color: #ef9ca9;
 }
@@ -157,6 +158,7 @@ table td button:hover{
 }
 
 #adicionar .btn:hover{
+  background:#002c42;
   font-weight: 600;
   color: #ef9ca9;
 }
