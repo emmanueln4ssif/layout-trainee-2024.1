@@ -131,9 +131,14 @@ main{
     height: 80%;
 }
 
-@media screen and (min-width:937px) and (max-width:1171px) {
+@media screen and (min-width:0px) and (max-width:1171px) {
     main{
         display: flex;
         flex-direction: column;
+    }
+
+    .coluna2{
+        width: 100vw;
+        border: none;
     }
 }
