@@ -4,27 +4,20 @@ main {
     display: flex;
     flex-direction: row;
     height: fit-content;
-
 }
 
 body {
-width: fit-content;
-   height: fit-content;
+    width: fit-content;
+    height: fit-content;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to bottom, #EF9CA9, white 55%);
 }
-
-
-
 
 .coluna1 {
     display: flex;
     height: 100%;
     margin-right: 2%;
     margin-left: 1%;
-    
-   
-
 }
 
 .coluna2 {
@@ -32,18 +25,13 @@ width: fit-content;
     height: fit-content;
     max-width: 900px;
     border-left: 2px solid #453232;
-
     border-right: 2px solid #453232;
     padding-right: 2%;
     padding-left: 2%;
     flex-direction: column;
-    
-
 }
 
-
 .usuario h1 {
-
     display: flex;
     justify-content: start;
     align-items: start;
@@ -51,12 +39,9 @@ width: fit-content;
     padding-top: 3%;
     margin: 0%;
     width: 10vh;
-
-
 }
 
 .fotouser {
-
     height: fit-content;
     display: flex;
     justify-content: start;
@@ -69,13 +54,8 @@ width: fit-content;
     display: flex;
 }
 
-
-
-
-
 .buscar-box {
     font-family: "Poppins", sans-serif;
-
     display: flex;
     align-items: center;
     background-color: white;
@@ -83,22 +63,14 @@ width: fit-content;
     height: 6vh;
     border-radius: 20px;
     opacity: 0.8;
-
-
-
-
 }
 
 .buscar-box .lupa img {
-
     height: 15%;
-
-
 }
 
 .buscar-box .input-buscar {
     border: 0;
-
 }
 
 .buscar-box .input-buscar input {
@@ -106,8 +78,6 @@ width: fit-content;
     outline: 0;
     border: 0;
     font-family: "poppins";
-
-
 }
 
 .forma-post1 {
@@ -122,8 +92,6 @@ width: fit-content;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
     stroke-width: 1px;
-
-
 }
 
 .forma-post2 {
@@ -131,16 +99,13 @@ width: fit-content;
     flex-direction: row;
     display: flex;
     background-color: rgb(239, 156, 169, 0.3);
-    max-width:100%;
+    max-width: 100%;
     height: 22vh;
     flex-shrink: 0;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;
     justify-content: space-between;
     margin-top: 5%;
-
-
-
 }
 
 .forma-post3 {
@@ -156,6 +121,7 @@ width: fit-content;
     justify-content: space-between;
     margin-top: 5%;
 }
+
 .forma-post4 {
     content: '';
     flex-direction: row;
@@ -184,36 +150,20 @@ width: fit-content;
     margin-top: 5%;
 }
 
-
-
-
-
-
 .fotouser2 {
     height: 20px;
-
 }
 
 .espasso2 {
     display: flex;
 }
 
-
-
-
 .usuario {
-
     display: flex;
     flex-direction: column;
     font-size: 15px;
     top: 5px;
 }
-
-
-
-
-
-
 
 .estrelas {
     width: 30%;
@@ -222,23 +172,14 @@ width: fit-content;
     flex-direction: row;
     padding-left: 5.7%;
     padding-top: -10%;
-
-
 }
 
 .capalivro1 {
-
     width: 100px;
     margin: 0;
     right: 10px;
     padding-top: 1%;
     padding-right: 10%;
-
-
-
-
-
-
 }
 
 .capalivro1 img {
@@ -246,26 +187,21 @@ width: fit-content;
     display: fit-content;
 }
 
-
-
 .digitado {
     display: flex;
     font-size: 12px;
     padding: 3%;
     margin-top: -10%;
     height: auto;
-width: 80;
+    width: 80;
 }
-.main-lista{
-  
-  height: fit-content;
-   
+
+.main-lista {
+    height: fit-content;
 }
 
 @media screen and (min-width:937px) and (max-width:1171px) {
-    .coluna1{
+    .coluna1 {
         display: none;
     }
 }
-      
-    
