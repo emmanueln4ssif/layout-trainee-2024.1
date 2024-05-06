@@ -9,17 +9,15 @@
   font-family: Poppins;
 }
 
-/*body{
-  /*background-color: #b4b4b4;
+body{
   background: rgb(236,209,224);
-  background: linear-gradient(rgba(236,209,224,1) 0%, rgba(245,245,245,1) 100%);
-}*/
+}
 
 /*main{
   height: 90vh;
 }*/
 
-#container-table{
+#crud-usuario{
   width: 70%;
   margin: auto;
   margin-top: 100px;
@@ -71,12 +69,23 @@ table td button{
   font-size: 16px;
 }
 
+.table-id{
+  width: 60px;
+}
+
 .nome{
-  width: 100px;
+  width: 300px;
 }
 
 .email{
-  width: 100px;
+  max-width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td.container-btn{
+  width: 30px;
 }
 
 .visualizar{
@@ -84,11 +93,11 @@ table td button{
 }
 
 .editar{
-  width: 60px;
+  width: 50px;
 }
 
 .deletar{
-  width: 75px;
+  width: 60px;
 }
 
 .ultimoDado{
@@ -101,7 +110,7 @@ table td button:hover{
 }
 
 #alternador{
-  margin-top: 5px;
+  margin-top: 10px;
   float:right;
 }
 
@@ -172,7 +181,7 @@ table td button:hover{
 
 @media screen and (min-width:769px) and (max-width:1024px){
   
-  #container-table{
+  #crud-usuario{
     width: 80%;
     margin: auto;
     margin-top: 100px;
@@ -186,12 +195,28 @@ table td button:hover{
     font-size: 16px;
   }
 
+  table td button{
+    font-size: 12px;
+  }
+
   #titulo-table{
     font-size: 28px;
   }
 
   .btn{
     font-size: 16px;
+  }
+
+  .visualizar{
+    width: 60px;
+  }
+  
+  .editar{
+    width: 40px;
+  }
+  
+  .deletar{
+    width: 50px;
   }
 
   table td, table th{
@@ -202,11 +227,15 @@ table td button:hover{
     padding-bottom: 2.5px;
   }
 
+  .table-id{
+    width: 45px;
+  }
+
 }
 
 @media screen and (min-width:427px) and (max-width:768px){
 
-  #container-table{
+  #crud-usuario{
     width: 80%;
     margin: auto;
     margin-top: 100px;
@@ -247,6 +276,26 @@ table td button:hover{
     width: 100%;
     font-size: 12px;
   }
+
+  .table-id{
+    width: 45px;
+  }
+  
+  .nome{
+    width: 225px;
+  }
+
+  .visualizar{
+    width: 60px;
+  }
+  
+  .editar{
+    width: 35px;
+  }
+  
+  .deletar{
+    width: 45px;
+  }
   
   #adicionar .btn{
     margin-bottom: 5px;
@@ -267,10 +316,16 @@ table td button:hover{
 
 @media screen and (min-width:321px) and (max-width:426px){
 
-  #container-table{
-    width: 90%;
-    margin: auto;
+  #crud-usuario{
+    width: auto;
+    margin-left: 15%;
+    margin-right: 1%;
     margin-top: 100px;
+  }
+
+  #container-table{
+    width: 100%;
+    overflow-x: auto;
   }
 
   table{
@@ -278,33 +333,47 @@ table td button:hover{
   }
 
   thead{
-    font-size: 10px;
+    font-size: 16px;
   }
   
   tbody{
-    font-size: 10px;
+    font-size: 16px;
   }
 
   #cabecalho{
     align-content: center;
     height: 45px;
+    margin-bottom: 10px;
   }
 
   #titulo-table{
     padding-right: 5px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .btn{
-    font-size: 10px;
+    font-size: 12px;
   }
 
   table td, table th{
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width: max-content;
+  }
+
+  .nome{
+    text-wrap: nowrap;
+    width: 150px;
+  }
+
+  .email{
+    max-width: none;
+    overflow: none;
+    text-overflow: none;
+    white-space: nowrap;
   }
   
   table td button{
@@ -326,16 +395,16 @@ table td button:hover{
   #adicionar .btn{
     margin-bottom: 5px;
     margin-top: 0;
-    width: 88px;
+    width: 101px;
   }
 
   .btn-voltar{
-    width: 68px;
+    width: 78px;
     margin-right: 5px;
   }
   
   .btn-avancar{
-    width: 81px;
+    width: 92px;
   }
 
   td.container-btn{
@@ -350,10 +419,15 @@ table td button:hover{
 
 @media screen and (min-width:0px) and (max-width:320px){
 
+  #crud-usuario{
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 15%;
+  }
+
   #container-table{
     width: 100%;
-    margin: auto;
-    margin-top: 100px;
+    overflow-x: auto;
   }
 
   table{
@@ -361,33 +435,47 @@ table td button:hover{
   }
 
   thead{
-    font-size: 10px;
+    font-size: 16px;
   }
   
   tbody{
-    font-size: 10px;
+    font-size: 16px;
   }
 
   #cabecalho{
     align-content: center;
     height: 45px;
+    margin-bottom: 10px;
   }
 
   #titulo-table{
     padding-right: 5px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .btn{
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 600;
   }
 
   table td, table th{
-    padding-left: 2.5px;
-    padding-right: 2.5px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .nome{
+    text-wrap: nowrap;
+    width: 150px;
+  }
+
+  .email{
+    max-width: none;
+    overflow: none;
+    text-overflow: none;
+    white-space: nowrap;
   }
   
   table td button{
@@ -409,16 +497,16 @@ table td button:hover{
   #adicionar .btn{
     margin-bottom: 5px;
     margin-top: 0;
-    width: 89px;
+    width: 101px;
   }
 
   .btn-voltar{
-    width: 70px;
+    width: 78px;
     margin-right: 5px;
   }
   
   .btn-avancar{
-    width: 82px;
+    width: 92px;
   }
 
   td.container-btn{
