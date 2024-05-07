@@ -20,7 +20,14 @@ body {
     text-decoration: none;
 }
 
-.esquerda{
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.campos{
     width: 100%;
 }
 
@@ -53,14 +60,6 @@ body {
     right: 10px;
     font-size: 30px;
     text-decoration: none;
-}
-
-.formulario {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 40px;
-
 }
 
 input {
@@ -100,6 +99,30 @@ a {
 
 a:visited {
     color: #453232;
+}
+
+.senha-e-olho{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+#senha{
+    position: relative;
+}
+
+.olho{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: 5vh;
+    cursor: pointer;
+}
+
+#icone-olho{
+    width: 4vh;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 470px) {
