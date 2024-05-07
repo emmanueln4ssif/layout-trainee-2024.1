@@ -39,9 +39,20 @@ main {
 }
 
 .coluna3 {
-    width: 40vh;
-    margin-right: 1%;
-    margin-left: 1%;
+    display: flex;
+    height: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+}
+
+.coluna-box {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+
+    width: 20vw;
+    height: 6vh;
 }
 
 .buscar-box {
@@ -49,7 +60,7 @@ main {
     display: flex;
     align-items: center;
     background-color: white;
-    width: 40vh;
+    width: 20vw;
     height: 6vh;
     border-radius: 1.5vw;
     opacity: 0.8;
@@ -57,13 +68,13 @@ main {
 
 .buscar-box .lupa img {
     padding-left: 0.5vw;
-    height: 1.7vw;
+    height: 30px;
 }
 
 .buscar-box .input-buscar input {
     padding-left: 0.3vw;
     width: 88%;
-    font-size: 1.2vw;
+    font-size: 22px;
     border: none;
     outline: none;
 }
@@ -139,14 +150,72 @@ main {
     height: 80%;
 }
 
-@media screen and (min-width:0px) and (max-width:1171px) {
+.digitado>h1 {
+    margin: 5px;
+}
+
+@media screen and (min-width:900px) and (max-width:1171px) {
+    .coluna3 {
+        display: none;
+    }
+
     main {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .coluna2 {
         width: 100vw;
         border: none;
+    }
+
+    .buscar-box {
+        width: 857px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .coluna3 {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna2 {
+        width: 100vw;
+        border: none;
+    }
+
+    .buscar-box {
+        width: 95vw;
+    }
+
+    .digitado>h1 {
+        font-size: 16px;
+    }
+
+    .usuario>h1 {
+        font-size: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:500px) {
+    .digitado>h1 {
+        font-size: 14px;
+    }
+
+    .capalivro1 {
+        display: none;
+    }
+
+    .usuario>h1 {
+        font-size: 18px;
     }
 }
