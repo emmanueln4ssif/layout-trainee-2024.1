@@ -102,8 +102,8 @@ a:visited {
     color: #453232;
 }
 
-@media screen and (min-widith: 0px) and (max-widith: 470px) {
+@media only screen and (min-width: 0px) and (max-width: 470px) {
     .content{
-        width: 80%;
+        width: 70%;
     }
 }
