@@ -18,6 +18,14 @@ main{
     height: auto;
 }
 
+.linha-mobile{
+    display: none;
+}
+
+.botoes-mobile{
+    display: none;
+}
+
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -255,6 +263,22 @@ table td, table th{
         margin-left: 15%;
         overflow: hidden;
     }
+    .linha-normal{
+        display: none;
+    }
+
+    .linha-mobile{
+        display: table-row;
+    }
+    
+    .botoes-mobile{
+        display: table-row;
+    }
+
+    .container-botoes{
+        display: flex;
+        justify-content: space-around;
+    }
 
     .container-tabela{
         width: 100%;
@@ -301,14 +325,18 @@ table td, table th{
     }
 
     .espaco-excluir{
-        width: 9%;
+        display: none;
     }
     
     .espaco-editar{
-        width: 9%;
+        display: none
     }
     
     .espaco-visualizar{
-        width: 9%;
+        display: none
+    }
+
+    .acoes{
+        display: none;
     }
 }
