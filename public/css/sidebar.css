@@ -3,7 +3,6 @@ body {
     height: 100vh;
 }
 
-
 .sidebar {
     position: absolute;
     top: 35%;
@@ -25,7 +24,7 @@ body {
     cursor: pointer;
 }
 
-.sidebar>div {
+.sidebar-item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -37,7 +36,6 @@ body {
 }
 
 .sidetxt {
-
     margin: 0;
     font-family: 'Poppins';
     font-size: 18px;
@@ -50,7 +48,18 @@ body {
     height: 50px;
 }
 
+.logout-container {
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
 
+.logout-container:hover {
+    width: 100%;
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 550px) {
     .sideimg {
