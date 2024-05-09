@@ -106,11 +106,15 @@ table td, table th{
 }
 
 .espaco-autor{
-    width: 25vw;
+  width: fit-content;
+  max-width: 26ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .espaco-titulo{
-    width: fit-content;
+  width: fit-content;
   max-width: 14ch;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -156,7 +160,7 @@ table td, table th{
     margin-top: 1%;
 }
 
-@media screen and (min-width:932px) and (max-width:1158px){
+@media screen and (min-width:1020px) and (max-width:1300px){
     .botoes-fora-tabela{
         font-size: 16px;
         width: 140px;
@@ -187,7 +191,7 @@ table td, table th{
     }
 }
 
-@media screen and (min-width:514px) and (max-width:932px){
+@media screen and (min-width:600px) and (max-width:1020px){
     main{
         width: 100%;
         margin-right: 1.5%;
@@ -244,7 +248,7 @@ table td, table th{
     }
 }
 
-@media screen and (min-width:0px) and (max-width:514px){
+@media screen and (min-width:0px) and (max-width:600px){
     main{
         width: 100%;
         margin-right: 3%;
