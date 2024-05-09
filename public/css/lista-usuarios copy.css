@@ -63,10 +63,11 @@ table td button{
   color: #e87c7a;
   transition: 0.15s;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   font-size: 16px;
+  gap: 10px;
 }
 
 .table-id{
@@ -74,7 +75,7 @@ table td button{
 }
 
 .nome{
-  width: 300px;
+  width: 45%;
 }
 
 .email{
@@ -346,6 +347,7 @@ table td button:hover{
   }
 
   table{
+    width: 70%;
     border-radius: 10px;
   }
 
@@ -383,20 +385,12 @@ table td button:hover{
 
   .nome{
     text-wrap: nowrap;
-    width: 150px;
-  }
-
-  .email{
-    max-width: none;
-    overflow: none;
-    text-overflow: none;
-    white-space: nowrap;
   }
   
   table td button{
     width: 100%;
-    font-size: 0px;
-    color: #ffffff00;
+    font-size: 12px;
+    color: #e87c7a;
   }
 
   table td button i{
@@ -426,10 +420,6 @@ table td button:hover{
 
   td.container-btn{
     width: 30px;
-  }
-
-  .editar, .visualizar, .deletar{
-    width: 15px;
   }
 
 }
