@@ -173,7 +173,7 @@ table td, table th{
   .cont-modal {
     position: fixed;
     inset: 0;
-    background: rgba(69, 50, 50, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     display: none;
     align-items: center;
     justify-content: center;
@@ -194,6 +194,8 @@ table td, table th{
   }
 
   .fecha {
+    border: none;
+    background: none;
     position: absolute;
     top: -1px;
     right: 10px;
