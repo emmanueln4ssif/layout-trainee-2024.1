@@ -45,7 +45,7 @@
               <td class="nome">Jorge Renan Drumond</td>
               <td class="email">jorgerenandrumond@storystroll.com</td>
               <td align="center" class="container-btn"><button class="visualizar"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar"><i class="bi bi-pencil-square"></i>Editar</button></td>
+              <td align="center" class="container-btn"><button class="editar" id="botaoqedita" onclick="botaoqedita('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="ultimoDado container-btn"><button class="deletar"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
             </tr>
 
@@ -117,9 +117,10 @@
             </div>
             <input type="submit" value="Salvar">
         </form>
-        <a class="fecha" href="#">&times;</a>
+        <a class="fecha" href="#" onclick="fechabotao('edicaouser')" >&times;</a>
     </div>
     </div>
   </main>
 </body>
+  <script src="../../../public/js/lista-usuarios.js"></script>
 </html>
