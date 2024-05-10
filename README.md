@@ -1,6 +1,6 @@
 # **Trainee 2024.1**
 
-# **Nome do seu blog**
+# **Story Stroll**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2024.1**
 
@@ -13,22 +13,22 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+*  David 
+*  Gabriella 
+*  João Vitor
+*  Isaac 
+*  Leandro
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* Letícia Quintão Costa
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/Kj4vuHI6/ATTIa5d2dbe339bb7402c36550fa4a57c0658194209F/story-stroll)
 
-* [Drive com ID Visual]()
+* [Drive com ID Visual](https://drive.google.com/drive/folders/16ggjWqVNLczqyNkSSpqXFXvrUK3ePiYK?usp=sharing)
 
 
 
