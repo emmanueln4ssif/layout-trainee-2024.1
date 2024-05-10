@@ -380,18 +380,26 @@ table td, table th{
 
     .container-botoes{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
     .linha-botoes{
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px 50px 5px 50px;
+    }
+
+    .espaco-data{
+        border-left: 2px solid #ef9ca9;
+    }
+
+    .espaco-autor{
+        border-right: none;
+        max-width: 22ch;
     }
 
     .botao-visualizar, .botao-editar, .botao-excluir{
         height: 100%;
-        width: 44px;
+        width: 35px;
     }
 
     .container-tabela{
