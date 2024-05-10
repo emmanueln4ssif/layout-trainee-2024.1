@@ -97,7 +97,28 @@
 
     </div>
     <div id="edicaouser">
-      
+      <div class="content">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="formulario">
+                <div class="campos">
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="autor" name="autor" value="Laura Machado Miranda"><br>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br"><br>
+                    <label for="senha">Senha</label><br>
+                    <div class="senha-e-olho">
+                        <input type="password" id="senha" name="senha" value="senha123">
+                        <div class="olho" onclick="mostrarSenha()">
+                            <img id="icone-olho" src="/public/assets/olho-aberto.svg"
+                                alt="Ícone de olho representando a visibilidade da senha">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Salvar">
+        </form>
+        <a class="fecha" href="#">&times;</a>
+    </div>
     </div>
   </main>
 </body>
