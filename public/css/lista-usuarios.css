@@ -2,53 +2,54 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins;
 }
 
-body{
-  background: rgb(236,209,224);
+body {
+  background: rgb(236, 209, 224);
 }
 
 /*main{
   height: 90vh;
 }*/
 
-#crud-usuario{
+#crud-usuario {
   width: 70%;
   margin: auto;
   margin-top: 100px;
 }
 
-table{
+table {
   background-color: #002c42;
   width: 100%;
   text-align: center;
   border-radius: 20px;
 }
 
-thead{
+thead {
   font-weight: 200;
   font-size: 20px;
   color: #e87c7a;
 }
 
-tbody{
+tbody {
   font-weight: 300;
   font-size: 20px;
   color: #f5f5f5;
 }
 
-table td{
+table td {
   justify-items: center;
   border-top: 2px solid #ef9ca9;
   border-right: 2px solid #ef9ca9;
 }
 
-table td, table th{
+table td,
+table th {
   margin: 0;
   padding-left: 10px;
   padding-right: 10px;
@@ -56,7 +57,7 @@ table td, table th{
   padding-bottom: 7px;
 }
 
-table td button{
+table td button {
   text-decoration: none;
   background: #ffffff00;
   border: none;
@@ -69,22 +70,22 @@ table td button{
   font-size: 16px;
 }
 
-.table-id{
+.table-id {
   width: 60px;
 }
 
-.nome{
+.nome {
   width: 300px;
 }
 
-.email{
+.email {
   max-width: 15ch;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-td.container-btn{
+td.container-btn {
   width: 30px;
 }
 
@@ -93,58 +94,61 @@ td.container-btn{
   flex-direction: row;
 }*/
 
-.cont-bt{
+.cont-bt {
   /*border: 1px solid greenyellow;*/
   display: flex;
   flex-direction: row;
 }
 
-.visualizar, .editar, .deletar{
+.visualizar,
+.editar,
+.deletar {
   margin: auto;
 }
 
-.visualizar{
+.visualizar {
   width: 80px;
 }
 
-.editar{
+.editar {
   width: 50px;
 }
 
-.deletar{
+.deletar {
   width: 60px;
 }
 
-.ultimoDado{
+.ultimoDado {
   border-right: none;
 }
 
-table td button:hover{
+table td button:hover {
   font-weight: 600;
   color: #ef9ca9;
 }
 
-#alternador{
+#alternador {
   margin-top: 10px;
-  float:right;
+  float: right;
 }
 
-.btn-voltar{
+.btn-voltar {
   width: 110px;
   margin-right: 10px;
 }
 
-.btn-avancar{
+.btn-avancar {
   width: 135px;
 }
 
-.btn-avancar:hover, .btn-voltar:hover{
+.btn-avancar:hover,
+.btn-voltar:hover {
   background: #002c42;
   font-weight: 600;
   color: #ef9ca9;
 }
 
-.btn{
+.btn {
   text-align: center;
   border-radius: 10px;
   text-decoration: none;
@@ -158,27 +162,27 @@ table td button:hover{
   padding-right: 15px;
 }
 
-#cabecalho{
+#cabecalho {
   height: 30px;
 }
 
-#adicionar{
+#adicionar {
   float: left;
 }
 
-#adicionar .btn{
- margin-bottom: 10px;
- margin-top: 0;
- width: 230px;
+#adicionar .btn {
+  margin-bottom: 10px;
+  margin-top: 0;
+  width: 230px;
 }
 
-#adicionar .btn:hover{
-  background:#002c42;
+#adicionar .btn:hover {
+  background: #002c42;
   font-weight: 600;
   color: #ef9ca9;
 }
 
-#titulo-table{
+#titulo-table {
   align-items: baseline;
   justify-content: center;
   color: #002c42;
@@ -196,47 +200,48 @@ table td button:hover{
   font-size: 16px;
 }*/
 
-@media screen and (min-width:769px) and (max-width:1024px){
-  
-  #crud-usuario{
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+  #crud-usuario {
     width: 80%;
     margin: auto;
     margin-top: 100px;
   }
 
-  thead{
-    font-size: 16px;
-  }
-  
-  tbody{
+  thead {
     font-size: 16px;
   }
 
-  table td button{
+  tbody {
+    font-size: 16px;
+  }
+
+  table td button {
     font-size: 12px;
   }
 
-  #titulo-table{
+  #titulo-table {
     font-size: 28px;
   }
 
-  .btn{
+  .btn {
     font-size: 16px;
   }
 
-  .visualizar{
+  .visualizar {
     width: 60px;
   }
-  
-  .editar{
+
+  .editar {
     width: 40px;
   }
-  
-  .deletar{
+
+  .deletar {
     width: 50px;
   }
 
-  table td, table th{
+  table td,
+  table th {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
@@ -244,44 +249,45 @@ table td button:hover{
     padding-bottom: 2.5px;
   }
 
-  .table-id{
+  .table-id {
     width: 45px;
   }
 
 }
 
-@media screen and (min-width:427px) and (max-width:768px){
+@media screen and (min-width:427px) and (max-width:768px) {
 
-  #crud-usuario{
+  #crud-usuario {
     width: 80%;
     margin: auto;
     margin-top: 100px;
   }
 
-  thead{
-    font-size: 12px;
-  }
-  
-  tbody{
+  thead {
     font-size: 12px;
   }
 
-  #titulo-table{
+  tbody {
+    font-size: 12px;
+  }
+
+  #titulo-table {
     font-size: 20px;
   }
 
-  .btn{
+  .btn {
     font-size: 12px;
   }
 
-  table td, table th{
+  table td,
+  table th {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
   }
-  
-  table td button{
+
+  table td button {
     text-decoration: none;
     background: #ffffff00;
     border: none;
@@ -294,86 +300,87 @@ table td button:hover{
     font-size: 12px;
   }
 
-  .table-id{
+  .table-id {
     width: 45px;
   }
-  
-  .nome{
+
+  .nome {
     width: 225px;
   }
 
-  .visualizar{
+  .visualizar {
     width: 60px;
   }
-  
-  .editar{
+
+  .editar {
     width: 35px;
   }
-  
-  .deletar{
+
+  .deletar {
     width: 45px;
   }
-  
-  #adicionar .btn{
+
+  #adicionar .btn {
     margin-bottom: 5px;
     margin-top: 0;
     width: 160px;
   }
 
-  .btn-voltar{
+  .btn-voltar {
     width: 80px;
     margin-right: 5px;
   }
-  
-  .btn-avancar{
+
+  .btn-avancar {
     width: 95px;
   }
 
 }
 
-@media screen and (min-width:321px) and (max-width:426px){
+@media screen and (min-width:321px) and (max-width:426px) {
 
-  #crud-usuario{
+  #crud-usuario {
     width: auto;
     margin-left: 15%;
     margin-right: 1%;
     margin-top: 100px;
   }
 
-  #container-table{
+  #container-table {
     width: 100%;
     overflow-x: auto;
   }
 
-  table{
+  table {
     border-radius: 10px;
   }
 
-  thead{
-    font-size: 16px;
-  }
-  
-  tbody{
+  thead {
     font-size: 16px;
   }
 
-  #cabecalho{
+  tbody {
+    font-size: 16px;
+  }
+
+  #cabecalho {
     align-content: center;
     height: 45px;
     margin-bottom: 10px;
   }
 
-  #titulo-table{
+  #titulo-table {
     padding-right: 5px;
     margin-top: 10px;
     font-size: 20px;
   }
 
-  .btn{
+  .btn {
     font-size: 12px;
   }
 
-  table td, table th{
+  table td,
+  table th {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -381,164 +388,180 @@ table td button:hover{
     min-width: max-content;
   }
 
-  .nome{
+  .nome {
     text-wrap: nowrap;
     width: 150px;
   }
 
-  .email{
+  .email {
     max-width: none;
     overflow: none;
     text-overflow: none;
     white-space: nowrap;
   }
-  
-  table td button{
+
+  table td button {
     width: 100%;
     font-size: 0px;
     color: #ffffff00;
   }
 
-  table td button i{
+  table td button i {
     font-size: 12px;
     color: #e87c7a;
   }
 
-  table td button i:hover{
+  table td button i:hover {
     font-weight: 600;
     color: #ef9ca9;
   }
-  
-  #adicionar .btn{
+
+  #adicionar .btn {
     margin-bottom: 5px;
     margin-top: 0;
     width: 101px;
   }
 
-  .btn-voltar{
+  .btn-voltar {
     width: 78px;
     margin-right: 5px;
   }
-  
-  .btn-avancar{
+
+  .btn-avancar {
     width: 92px;
   }
 
-  td.container-btn{
+  td.container-btn {
     width: 30px;
   }
 
-  .editar, .visualizar, .deletar{
+  .editar,
+  .visualizar,
+  .deletar {
     width: 15px;
   }
 
 }
 
-@media screen and (min-width:0px) and (max-width:320px){
+@media screen and (min-width:0px) and (max-width:320px) {
 
-  #crud-usuario{
+  #crud-usuario {
     width: 100%;
     margin-top: 100px;
     margin-left: 15%;
   }
 
-  #container-table{
+  #container-table {
     width: 100%;
     overflow-x: auto;
   }
 
-  table{
+  table {
     border-radius: 10px;
   }
 
-  thead{
-    font-size: 16px;
-  }
-  
-  tbody{
+  thead {
     font-size: 16px;
   }
 
-  #cabecalho{
+  tbody {
+    font-size: 16px;
+  }
+
+  #cabecalho {
     align-content: center;
     height: 45px;
     margin-bottom: 10px;
   }
 
-  #titulo-table{
+  #titulo-table {
     padding-right: 5px;
     margin-top: 10px;
     font-size: 20px;
   }
 
-  .btn{
+  .btn {
     font-size: 12px;
     font-weight: 600;
   }
 
-  table td, table th{
+  table td,
+  table th {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
-  .nome{
+  .nome {
     text-wrap: nowrap;
     width: 150px;
   }
 
-  .email{
+  .email {
     max-width: none;
     overflow: none;
     text-overflow: none;
     white-space: nowrap;
   }
-  
-  table td button{
+
+  table td button {
     width: 100%;
     font-size: 0px;
     color: #ffffff00;
   }
 
-  table td button i{
+  table td button i {
     font-size: 12px;
     color: #e87c7a;
   }
 
-  table td button i:hover{
+  table td button i:hover {
     font-weight: 600;
     color: #ef9ca9;
   }
-  
-  #adicionar .btn{
+
+  #adicionar .btn {
     margin-bottom: 5px;
     margin-top: 0;
     width: 101px;
   }
 
-  .btn-voltar{
+  .btn-voltar {
     width: 78px;
     margin-right: 5px;
   }
-  
-  .btn-avancar{
+
+  .btn-avancar {
     width: 92px;
   }
 
-  td.container-btn{
+  td.container-btn {
     width: 30px;
   }
 
-  .editar, .visualizar, .deletar{
+  .editar,
+  .visualizar,
+  .deletar {
     width: 15px;
   }
 
 }
+
 #edicaouser {
   position: fixed;
   inset: 0;
   background: rgba(69, 50, 50, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#adcuser {
+  position: fixed;
+  inset: 0;
+  background: rgba(69, 50, 50, 0.2);
   display: none;
   align-items: center;
   justify-content: center;
@@ -554,9 +577,7 @@ table td button:hover{
   border-radius: 4px;
 }
 
-.popup:target {
-  display: flex;
-}
+
 
 .fecha {
   position: absolute;
@@ -605,18 +626,18 @@ a:visited {
   color: #453232;
 }
 
-.senha-e-olho{
+.senha-e-olho {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
 }
 
-#senha{
+#senha {
   position: relative;
 }
 
-.olho{
+.olho {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -625,12 +646,12 @@ a:visited {
   cursor: pointer;
 }
 
-#icone-olho{
+#icone-olho {
   width: 4vh;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 470px) {
-  .content{
-      width: 70%;
+  .content {
+    width: 70%;
   }
 }
