@@ -5,6 +5,7 @@ function botaoqedita (id){
 function fechabotao (id){
     document.getElementById(id).style.display = "none";
 }
+
 var senha = document.getElementById('senha')
 var botao = document.getElementById('icone-olho')
 
