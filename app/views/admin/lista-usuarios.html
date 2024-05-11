@@ -18,7 +18,7 @@
       <div id="cabecalho">
 
         <div id="adicionar">
-          <button class="btn" onclick="botaoqedita('edicaouser')">+ Adicionar usuário</button>
+          <button class="btn" onclick="botaoqedita('adcuser')">+ Adicionar usuário</button>
         </div>
 
         <div id="titulo-table">
@@ -28,7 +28,6 @@
       </div>
 
       <div id="container-table">
-
         <table>
 
           <thead>
@@ -138,7 +137,7 @@
         <a class="fecha" href="#" onclick="fechabotao('edicaouser')">&times;</a>
       </div>
     </div>
-    <div class="adcuser">
+    <div id="adcuser">
       <div class="content">
         <form action="#" method="post" enctype="multipart/form-data">
           <div class="formulario">
@@ -159,7 +158,7 @@
           </div>
           <input type="submit" value="Criar">
         </form>
-        <a class="fecha" href="#">&times;</a>
+        <a class="fecha" href="#" onclick="fechabotao('adcuser')">&times;</a>
       </div>
     </div>
   </main>
