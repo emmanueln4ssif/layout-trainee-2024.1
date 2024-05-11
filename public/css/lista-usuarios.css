@@ -538,7 +538,7 @@ table td button:hover{
 #edicaouser {
   position: fixed;
   inset: 0;
-  background: rgba(69, 50, 50, 0.2);
+  background: rgba(69, 50, 50, 0.3);
   display: none;
   align-items: center;
   justify-content: center;
