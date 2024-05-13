@@ -247,6 +247,148 @@ table td, table th{
 
 /*MODAL VISUALIZAR*/
 
+/*MODAL EDITAR*/
+
+.botao {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.cont-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(69, 50, 50, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.content {
+    margin: 8px;
+    position: relative;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.capa {
+    width: 55%;
+    border-style: solid;
+    border-width: 1.8px;
+    border-color: rgba(0, 0, 0, 0.40);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.fecha {
+    position: absolute;
+    top: -1px;
+    right: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.formulario>.direita {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    background-color: #ecd1e0;
+    color: #453232;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    background-color: #ecd1e0;
+    color: #453232;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    background-color: #ecd1e0;
+    color: #453232;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -1px;
+    font-size: 24px;
+}
+
+.form-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecd1e0;
+    padding: 12px 20px;
+    color: #453232;
+    height: 8vh;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -1px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 550px) {
+    .form-img {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .formulario {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        overflow-y: scroll;
+    }
+}
+
+/*MODAL EDITAR*/
+
 
 @media screen and (min-width:1020px) and (max-width:1300px){
     .botoes-fora-tabela{

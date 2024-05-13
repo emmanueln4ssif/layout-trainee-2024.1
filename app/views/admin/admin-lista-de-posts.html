@@ -36,7 +36,7 @@
                         <td class="espaco-autor">João Victor Nicácio Silva</td>
                         <td class="espaco-data">02/05/2024</td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button></td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"><i class="bi bi-pencil-square"></i><br>Editar</button></td>
+                        <td class="espaco-editar"><button type="button" class="botao-editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button></td>
                         <td class="espaco-excluir"><button type="button" class="botao-excluir"><i class="bi bi-trash3-fill"></i><br>Deletar</button></td>
                     </tr>
                     <tr class="linha-mobile">
@@ -45,14 +45,14 @@
                         <td class="espaco-autor">João Victor Nicácio Silva</td>
                         <td class="espaco-data" rowspan="2">02/05/2024</td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button></td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"><i class="bi bi-pencil-square"></i><br>Editar</button></td>
+                        <td class="espaco-editar"><button type="button" class="botao-editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button></td>
                         <td class="espaco-excluir"><button type="button" class="botao-excluir"><i class="bi bi-trash3-fill"></i><br>Deletar</button></td>
                     </tr>
                     <tr class="botoes-mobile">
                         <td class="linha-botoes" colspan="2">
                             <div class="container-botoes">
                                 <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                                <button type="button" class="botao-editar"><i class="bi bi-pencil-square"></i><br>Editar</button>
+                                <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
                                 <button type="button" class="botao-excluir"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
                             </div>
                         </td>
@@ -204,6 +204,51 @@
         </div>
 
         <!-- MODAL DE VISUALIZAÇÃO - FIM -->
+
+        <!-- MODAL DE EDIÇÃO - INÍCIO -->
+
+        <div class="cont-modal" id="editar">
+
+            <div class="content">
+
+                <form action="#" method="post" enctype="multipart/form-data">
+
+                    <div class="formulario">
+
+                        <div class="esquerda">
+                            <label for="autor">Autor</label><br>
+                            <input type="text" id="autor" name="autor" value="pedro_123" readonly><br>
+                            <label for="titulo">Título</label><br>
+                            <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"
+                                value="Título"><br>
+                            <label for="conteudo">Review</label><br>
+                            <textarea type="text" id="conteudo" name="conteudo" placeholder="Conteudo da sua review"
+                                rows="7" cols="50">Sua review</textarea>
+                        </div>
+
+                        <div class="direita">
+                            <img class="capa" src="../../../public/assets/capa.jpg">
+                            <label class="form-img" for="img">
+                                <p id="imgname">Selecione uma imagem</p>
+                            </label>
+                            <input onclick="verifica()" type="file" id="img" name="img" accept="image/*">
+                            <label for="data">Data:</label>
+                            <input type="date" id="data" name="data">
+                        </div>
+
+                    </div>
+
+                    <input type="submit" value="Salvar">
+
+                </form>
+
+                <button class="fecha" onclick="fecharModal('editar')">&times;</button>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL DE EDIÇÃO - FIM -->
 
     </main>
 </body>
