@@ -328,13 +328,13 @@
                         </div>
 
                         <div class="direita">
-                            <img class="capa" src="../../../public/assets/capa.jpg">
-                            <label class="form-img" for="img">
-                                <p id="imgname">Selecione uma imagem</p>
-                            </label>
-                            <input onclick="verifica()" type="file" id="img-edita" name="img" accept="image/*">
-                            <label for="data">Data:</label>
-                            <input type="date" id="data" name="data">
+                            <div class="img-prev"><img id="preview2" src="../../../public/assets/capa.jpg"
+                                    alt="Pré-visualização da imagem">
+                            </div>
+                            <label for="img">Selecione uma imagem:</label>
+                            <input type="file" id="img-edita" name="img" accept="image/*">
+                            <label for="data">Data da leitura:</label>
+                            <input type="date" id="prev-data" value="2024-03-14" name="data">
                         </div>
 
                     </div>
