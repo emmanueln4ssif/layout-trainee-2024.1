@@ -677,7 +677,14 @@ table td button:hover {
   border-radius: 4px;
 }
 
-
+.content-visualizar{
+  width: 40%;
+  margin: 8px;
+  position: relative;
+  background: white;
+  padding: 10px 20px 35px 20px;
+  border-radius: 4px;
+}
 
 .fecha {
   position: absolute;
