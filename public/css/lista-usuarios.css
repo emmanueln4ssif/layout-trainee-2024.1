@@ -38,6 +38,14 @@ tbody {
   color: #f5f5f5;
 }
 
+.linha-mobile{
+  display: none;
+}
+
+.botoes-mobile{
+  display: none;
+}
+
 table td {
   justify-items: center;
   border-top: 2px solid #ef9ca9;
@@ -541,6 +549,92 @@ table td button:hover {
   .deletar {
     width: 15px;
   }
+
+}
+
+@media screen and (min-width:0px) and (max-width:426px){
+
+/*main{
+  width: 100%;
+  margin-right: 3%;
+  margin-left: 15%;
+  overflow: hidden;
+}*/
+
+.linha-normal{
+    display: none;
+}
+
+.linha-mobile{
+    display: table-row;
+}
+
+.botoes-mobile{
+    display: table-row;
+}
+
+.linha-botoes{
+  padding: 5px 20px 5px 20px;
+}
+
+.container-botoes{
+    display: flex;
+    align-items: flex-start;
+}
+
+.email{
+    border-right: none;
+    max-width: 22ch;
+}
+
+.botao-visualizar, .botao-editar, .botao-deletar{
+    margin: 0px 25px;
+    height: 100%;
+    width: 35px;
+}
+
+/*.container-tabela{
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;///////////////
+}*/
+
+/*table i{
+    font-size: 14px;
+}*/
+
+/*thead{
+    font-size: 12px;
+}*/
+
+/*tbody{
+    font-size: 13px;
+    text-wrap: nowrap;
+}*/
+
+/*.tabela-posts{
+    border-radius: 1.7vh;
+}*/
+
+.espaco-deletar{
+    display: none;
+}
+
+.espaco-editar{
+    display: none
+}
+
+.espaco-visualizar{
+    display: none
+}
+
+/*.linha-botoes{
+    border-right: none;
+}*/
+
+/*.acoes{
+    display: none;
+}*/
 
 }
 
