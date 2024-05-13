@@ -48,7 +48,7 @@
               <td class="nome">Jorge Renan Drumond</td>
               <td class="email">jorgerenandrumond@storystroll.com</td>
               <td align="center" class="container-btn"><button class="visualizar"><i
-                    class="bi bi-eye-fill"></i>Visualizar</button></td>
+                onclick="botaoqedita('modal-visualizar')" class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="container-btn"><button class="editar" id="botaoqedita"
                   onclick="botaoqedita('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
@@ -163,10 +163,7 @@
       </div>
     </div>
     <div class="modal-visualizar">
-      <a class="botao" href="#popup-box">Visualizar usuário</a>
-        <div id="popup-box" class="popup">
             <div class="content">
-
                 <form action="#" method="post" enctype="multipart/form-data">
                     <div class="formulario">
                         <div class="campos">
@@ -179,9 +176,8 @@
                         </div>
                     </div>
                 </form>
-                <a class="fecha" href="#">&times;</a>
+                <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
             </div>
-        </div>
     </div>
   </main>
 </body>
