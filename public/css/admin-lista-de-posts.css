@@ -13,6 +13,30 @@ body {
     align-items: center;
 }
 
+.nota>span {
+    color: #FFE600;
+    font-size: 34px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    background-color: #ecd1e0;
+    color: #453232;
+}
+
+.direita>img {
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+}
+
+
+
 main {
     width: 70%;
     height: auto;
