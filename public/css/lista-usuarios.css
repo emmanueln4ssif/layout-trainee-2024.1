@@ -658,6 +658,16 @@ table td button:hover {
   overflow-y: scroll;
 }
 
+#modal-visualizar {
+  position: fixed;
+  inset: 0;
+  background: rgba(69, 50, 50, 0.2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
 .content {
   width: 40%;
   margin: 8px;
