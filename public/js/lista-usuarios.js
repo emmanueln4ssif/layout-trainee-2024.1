@@ -1,4 +1,4 @@
-function botaoqedita (id){
+function abrebotao (id){
     document.getElementById(id).style.display = "flex";
 
 }

@@ -19,7 +19,7 @@
       <div id="cabecalho">
 
         <div id="adicionar">
-          <button class="btn" onclick="botaoqedita('adcuser')">+ Adicionar usuário</button>
+          <button class="btn" onclick="abrebotao('adcuser')">+ Adicionar usuário</button>
         </div>
 
         <div id="titulo-table">
@@ -47,10 +47,10 @@
               <td class="table-id">01</td>
               <td class="nome">Jorge Renan Drumond</td>
               <td class="email">jorgerenandrumond@storystroll.com</td>
-              <td align="center" class="container-btn"><button class="visualizar"><i
-                onclick="botaoqedita('modal-visualizar')" class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar" id="botaoqedita"
-                  onclick="botaoqedita('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
+              <td align="center" class="container-btn"><button class="visualizar"
+                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+              <td align="center" class="container-btn"><button class="editar" id="abrebotao"
+                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
                     class="bi bi-trash3-fill"></i>Deletar</button></td>
             </tr>
@@ -162,22 +162,22 @@
         <a class="fecha" href="#" onclick="fechabotao('adcuser')">&times;</a>
       </div>
     </div>
-    <div class="modal-visualizar">
-            <div class="content">
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <div class="formulario">
-                        <div class="campos">
-                            <label for="nome">ID</label><br>
-                            <input type="text" id="id" name="id" value="01" readonly><br>
-                            <label for="nome">Nome</label><br>
-                            <input type="text" id="nome" name="nome" value="Laura Machado Miranda" readonly>
-                            <label for="email">E-mail</label><br>
-                            <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br" readonly><br>
-                        </div>
-                    </div>
-                </form>
-                <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
+    <div id="modal-visualizar">
+      <div class="content">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="formulario">
+            <div class="campos">
+              <label for="nome">ID</label><br>
+              <input type="text" id="id" name="id" value="01" readonly><br>
+              <label for="nome">Nome</label><br>
+              <input type="text" id="nome" name="nome" value="Laura Machado Miranda" readonly>
+              <label for="email">E-mail</label><br>
+              <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br" readonly><br>
             </div>
+          </div>
+        </form>
+        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
+      </div>
     </div>
   </main>
 </body>
