@@ -16,7 +16,7 @@
         <div class="cabecalho">
             <button type="button" class="botoes-fora-tabela" id="botao-criar-post"
                 onclick="abrirModal('adiciona-post')"><i class="bi bi-plus-lg"></i> Criar post</button>
-            <p id="titulo">Lista de posts</p>
+            <p id="titulo-pg">Lista de posts</p>
         </div>
 
         <div class="container-tabela">
@@ -298,7 +298,7 @@
                             <label class="form-img" for="img">
                                 <p id="imgname">Selecione uma imagem</p>
                             </label>
-                            <input onclick="verifica()" type="file" id="img" name="img" accept="image/*">
+                            <input onclick="verifica()" type="file" id="img-edita" name="img" accept="image/*">
                             <label for="data">Data:</label>
                             <input type="date" id="data" name="data">
                         </div>
@@ -371,10 +371,10 @@
                                     style="display: none;">
                             </div>
                             <label for="img">Selecione uma imagem:</label>
-                            <input type="file" id="img" name="img" accept="image/*">
+                            <input type="file" id="img-adc" name="img" accept="image/*">
                             <label for="data">Data da leitura:</label>
-                            <input type="date" id="data" name="data">
-                            <input type="hidden" id="dataat" name="dataat">
+                            <input type="date" id="data-adc" name="data">
+                            <input type="date" style="display: none;" id="dataat" name="dataat">
                         </div>
                     </div>
                     <input type="submit" value="Publicar">
