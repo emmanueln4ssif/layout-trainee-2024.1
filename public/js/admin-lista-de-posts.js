@@ -15,7 +15,6 @@ document.getElementById('img-adc').addEventListener('change', function (e) {
   }
   reader.readAsDataURL(e.target.files[0]);
 });
-
 function abrirModal(idmodal){
   document.getElementById(idmodal).style.display = "flex";
 }
