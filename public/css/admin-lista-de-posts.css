@@ -417,6 +417,13 @@ input[type="submit"] {
 
 /*MODAL EDITAR*/
 
+#titulo-review{
+    margin: 8;
+    color: #002c42;
+    font-weight: 600;
+    font-size: 25px;
+}
+
 /*MODAL CRIAR*/
 
 #imgname{
