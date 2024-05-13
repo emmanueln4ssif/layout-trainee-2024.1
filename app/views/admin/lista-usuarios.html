@@ -162,6 +162,27 @@
         <a class="fecha" href="#" onclick="fechabotao('adcuser')">&times;</a>
       </div>
     </div>
+    <div class="modal-visualizar">
+      <a class="botao" href="#popup-box">Visualizar usuário</a>
+        <div id="popup-box" class="popup">
+            <div class="content">
+
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="formulario">
+                        <div class="campos">
+                            <label for="nome">ID</label><br>
+                            <input type="text" id="id" name="id" value="01" readonly><br>
+                            <label for="nome">Nome</label><br>
+                            <input type="text" id="nome" name="nome" value="Laura Machado Miranda" readonly>
+                            <label for="email">E-mail</label><br>
+                            <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br" readonly><br>
+                        </div>
+                    </div>
+                </form>
+                <a class="fecha" href="#">&times;</a>
+            </div>
+        </div>
+    </div>
   </main>
 </body>
 <script src="../../../public/js/lista-usuarios.js"></script>
