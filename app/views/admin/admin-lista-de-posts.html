@@ -14,7 +14,7 @@
 <body>
     <main>
         <div class="cabecalho">
-            <button type="button" class="botoes-fora-tabela" id="botao-criar-post"><i class="bi bi-plus-lg"></i> Criar post</button>
+            <button type="button" class="botoes-fora-tabela" id="botao-criar-post" onclick="abrirModal('adiciona-post')"><i class="bi bi-plus-lg"></i> Criar post</button>
             <p id="titulo">Lista de posts</p>
         </div>
 
@@ -249,8 +249,36 @@
         </div>
 
         <!-- MODAL DE EDIÇÃO - FIM -->
+        <div id="adiciona-post" class="cont-modal">
+            <div class="content">
+    
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="formulario">
+                        <div class="esquerda">
+                            <label for="autor">Autor</label><br>
+                            <input type="text" id="autor" name="autor" value="pedro_123" readonly><br>
+                            <label for="titulo">Título</label><br>
+                            <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
+                            <label for="conteudo">Review</label><br>
+                            <textarea type="text" id="conteudo" name="conteudo" placeholder="Conteudo da sua review"
+                                rows="7" cols="50"></textarea>
+                        </div>
+                        <div class="direita">
+                            <label class="form-img" for="img">
+                                <p id="imgname">Selecione uma imagem</p>
+                            </label>
+                            <input onclick="verifica()" type="file" id="img" name="img" accept="image/*">
+                            <label for="data">Data:</label>
+                            <input type="date" id="data" name="data">
+                        </div>
+                    </div>
+                    <input type="submit" value="Publicar">
+                </form>
+                <a class="fecha" href="#" onclick="fecharModal('adiciona-post')">&times;</a>
+            </div>
+        </div>
 
     </main>
 </body>
-<script src="/public/js/admin-lista-de-posts.js"></script>
+<script src="../../../public/js/admin-lista-de-posts.js"></script>
 </html>
