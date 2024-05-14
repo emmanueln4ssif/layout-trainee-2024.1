@@ -336,6 +336,7 @@ textarea {
     background: white;
     padding: 10px 20px;
     border-radius: 4px;
+    height: fit-content;
 }
 
 .capa {
@@ -368,6 +369,7 @@ textarea {
 }
 
 .cont-modal {
+
     overflow-y: scroll;
 }
 
@@ -580,7 +582,7 @@ a:visited {
 
 @media only screen and (max-height: 690px) {
     .content {
-        margin-top: 35vh;
+        margin-top: 50vh;
     }
 }
 
