@@ -14,11 +14,11 @@ function mostrarSenha(){
     var botao = document.getElementById('icone-olho')
     if(senha.type == 'password'){
         senha.setAttribute('type', 'text')
-        botao.setAttribute('src', '/public/assets/olho-fechado.svg')
+        botao.setAttribute('src', '../../../public/assets/olho-fechado.svg')
     }
     else{
         senha.setAttribute('type', 'password')
-        botao.setAttribute('src', '/public/assets/olho-aberto.svg')
+        botao.setAttribute('src', '../../../public/assets/olho-aberto.svg')
     }
 }
 function mostrarSenhaAdc(){
