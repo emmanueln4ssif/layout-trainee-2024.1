@@ -556,37 +556,38 @@ a:visited {
 
 }
 
-@media only screen and (max-height: 950px) {
+@media only screen and (max-height: 950px) and (max-width:800px) {
     .content {
         margin-top: 10vh;
+        overflow-y: scroll;
     }
 }
 
-@media only screen and (max-height: 870px) {
+@media only screen and (max-height: 870px)and (max-width:800px) {
     .content {
         margin-top: 15vh;
     }
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 800px) and (max-width:800px) {
     .content {
         margin-top: 25vh;
     }
 }
 
-@media only screen and (max-height: 720px) {
+@media only screen and (max-height: 720px) and (max-width:800px) {
     .content {
         margin-top: 30vh;
     }
 }
 
-@media only screen and (max-height: 690px) {
+@media only screen and (max-height: 690px) and (max-width:800px) {
     .content {
         margin-top: 50vh;
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 460px) and (max-width:800px) {
     .formulario {
         flex-direction: column;
         gap: 10px;
