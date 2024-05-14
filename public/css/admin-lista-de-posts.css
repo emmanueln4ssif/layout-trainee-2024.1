@@ -367,6 +367,10 @@ textarea {
 
 }
 
+.cont-modal {
+    overflow-y: scroll;
+}
+
 .formulario>.direita {
     height: 100%;
     display: flex;
