@@ -336,7 +336,8 @@ textarea {
     background: white;
     padding: 10px 20px;
     border-radius: 4px;
-    height: fit-content;
+    height: 90%;
+    overflow-y: scroll;
 }
 
 .capa {
@@ -556,36 +557,6 @@ a:visited {
 
 }
 
-@media only screen and (max-height: 950px) and (max-width:800px) {
-    .content {
-        margin-top: 10vh;
-        overflow-y: scroll;
-    }
-}
-
-@media only screen and (max-height: 870px)and (max-width:800px) {
-    .content {
-        margin-top: 15vh;
-    }
-}
-
-@media only screen and (max-height: 800px) and (max-width:800px) {
-    .content {
-        margin-top: 25vh;
-    }
-}
-
-@media only screen and (max-height: 720px) and (max-width:800px) {
-    .content {
-        margin-top: 30vh;
-    }
-}
-
-@media only screen and (max-height: 690px) and (max-width:800px) {
-    .content {
-        margin-top: 50vh;
-    }
-}
 
 @media only screen and (max-width: 460px) and (max-width:800px) {
     .formulario {
