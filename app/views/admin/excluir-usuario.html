@@ -16,21 +16,34 @@
     <script src="../../../public/js/excluir-usuario.js"></script>
 </head>
 <body>
-    
+ <div class="remover-cont">
+        <div class="imagemremover">
+<div class="tituloremover">
+    <h1>Remover usuário</h1>
+<div class="descremover">
+    <h3>Tem certeza que deseja remover seu usuário?</h3>
 
-    
+
+
+                <div class="botaoremover">
+
+ 
     <a class="botao" href="#popup-box">Remover usuário</a>
-    <div id="popup-box" class="popup">
-        <div class="content">
-            <a class="fecha" href="#">&times;</a>
+        <div id="popup-box" class="popup">
+            <div class="content">
+    <a class="fecha" href="#">&times;</a>
             <div class="quebra"></div>
             <form action="/delete/" method="post">
                 <input type="hidden" value="id-do-post">
                 <input type="submit" value="Excluir usuário" onclick="Excluir()">
             </form>
-
+            </div>
         </div>
-
-    </div>
+                </div>
+</div>
+        </div>
+</div>
+        </div>
+    
 </body>
 </html>
