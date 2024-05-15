@@ -5,3 +5,4 @@ function Excluir() {
       window.location.href ='#';
     } 
   }
+  funtion
