@@ -22,7 +22,11 @@ function abrirModal(idmodal){
 function fecharModal(idmodal){
   document.getElementById(idmodal).style.display = "none";
 }
-
-
+function abrirModal1(idmodal){
+  document.getElementById(idmodal).style.display = "flex";
+}
+unction fecharModal1(idmodal){
+  document.getElementById(idmodal).style.display = "none";
+}
 document.getElementById('data-adc').valueAsDate = new Date();
 document.getElementById('dataat').valueAsDate = new Date();
