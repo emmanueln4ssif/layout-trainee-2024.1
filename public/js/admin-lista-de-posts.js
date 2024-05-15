@@ -25,7 +25,7 @@ function fecharModal(idmodal){
 function abrirModal1(idmodal){
   document.getElementById(idmodal).style.display = "flex";
 }
-unction fecharModal1(idmodal){
+function fecharModal1(idmodal){
   document.getElementById(idmodal).style.display = "none";
 }
 document.getElementById('data-adc').valueAsDate = new Date();

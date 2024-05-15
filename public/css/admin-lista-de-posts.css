@@ -279,6 +279,11 @@ textarea#text-visualizar {
     flex-basis: 100%;
 }
 
+/*MODAL DE DELETAR INICIO*/
+
+
+/*MODAL DE DELETAR FIM*/
+
 @media only screen and (max-width: 510px) {
     h3 {
         font-size: 20px;
