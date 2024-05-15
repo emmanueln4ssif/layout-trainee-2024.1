@@ -672,7 +672,7 @@ table td button:hover {
   width: 40%;
   margin: 8px;
   position: relative;
-  background: white;
+  background: #f5f5f5;
   padding: 10px 20px;
   border-radius: 4px;
 }
@@ -681,7 +681,7 @@ table td button:hover {
   width: 40%;
   margin: 8px;
   position: relative;
-  background: white;
+  background: #f5f5f5;
   padding: 10px 20px 35px 20px;
   border-radius: 4px;
 }
