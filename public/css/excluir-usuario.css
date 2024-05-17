@@ -43,7 +43,8 @@ body {
 }
 
 .content {
-    width: 30%;
+    width: 25%;
+    height: 50%;
     margin: 8px;
     position: relative;
     background: white;
@@ -126,23 +127,35 @@ a:visited {
     width: 4vh;
 }
 .botaoremover{
-   padding-top: 70%;
-   padding-left: 110%;
+   padding-top: 5vh;
+   padding-left: 30vh;
    width: 20vh;
+   display: flex;
 }
-.remover-form{
-    content: '';
-    width: 30vh;
-    height:35vh;
-    background-color: white;
-    border-radius: 10px 10px 10px 10px;
+
     
-}
+    
+
 .tituloremover h1{
     font-size: 35px;
-    margin-left:60%;
-    margin-top:70%;
+    margin-left:28%;
+    margin-top:-12%;
     width: 300px;
+    display: flex;
+}
+.imagemremover{
+ 
+     width: 60%;
+     margin-top:-7%;
+     margin-left:20%;
+}
+.descremover h3{
+    opacity: 0.5;
+    width: 450px;
+    font-size: 20px;
+    border-bottom: 1px solid #453232;
+    margin-left: 18%;
+    margin-top: 5%;
 }
 @media only screen and (min-width: 0px) and (max-width: 850px) {
     .content{
