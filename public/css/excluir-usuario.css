@@ -131,6 +131,7 @@ a:visited {
    padding-left: 30vh;
    width: 20vh;
    display: flex;
+   
 }
 
     
@@ -138,7 +139,7 @@ a:visited {
 
 .tituloremover h1{
     font-size: 35px;
-    margin-left:28%;
+    margin-left:27%;
     margin-top:-12%;
     width: 300px;
     display: flex;
@@ -155,7 +156,7 @@ a:visited {
     font-size: 20px;
     border-bottom: 1px solid #453232;
     margin-left: 18%;
-    margin-top: 5%;
+    margin-top: -2%;
 }
 @media only screen and (min-width: 0px) and (max-width: 850px) {
     .content{
