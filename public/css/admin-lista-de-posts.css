@@ -329,7 +329,9 @@ textarea#text-visualizar {
 }
 
 /*MODAL DE DELETAR INICIO*/
-
+.cont-deletar{
+    display: flex;
+}
 
 /*MODAL DE DELETAR FIM*/
 
