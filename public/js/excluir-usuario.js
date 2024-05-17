@@ -5,3 +5,7 @@ function Excluir() {
       window.location.href ='#';
     } 
   }
+  const buttonClose = document.querySelector("button")
+  button.onclick = function(){
+    
+  }
