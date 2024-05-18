@@ -338,7 +338,38 @@ textarea#text-visualizar {
     justify-content: center;
 
 }
+.content{
+    width: 22%;
+    height: 45%;
+}
+.titulodeletar h1{
+    font-size: 35px;
 
+}
+.titulodeletar{
+    padding-left: 18%;
+    margin-top:-10%;
+
+}
+.descdeletar h3{
+    font-size: 20px;
+    width: 93%;
+    padding-top: 5%;
+    opacity: 0.6;
+    border-bottom: 1px solid #453232;
+    
+}
+.descdeletar{
+    margin-left:-10%;
+    padding-bottom: 100%;
+}
+.imagemdeletar img{
+    width:100%;
+}
+.imagemdeletar{
+    margin-top:-10%;
+    
+}
 /*MODAL DE DELETAR FIM*/
 
 @media only screen and (max-width: 510px) {
