@@ -5,7 +5,7 @@ function Excluir() {
       window.location.href ='#';
     } 
   }
-  const buttonClose = document.querySelector("button")
-  button.onclick = function(){
-    
-  }
+ function fecharmodal(){
+  modal.style.display="none";
+ }
+ document.getElementById("fechar").addEventListener("click", fecharModal)
