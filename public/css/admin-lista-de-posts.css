@@ -477,7 +477,6 @@ input[type="file"] {
 }
 
 input[type="submit"] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -609,7 +608,28 @@ a:visited {
     width: 57%;
 }
 
+.bt-rm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4%;
+}
 
+.bt-rm>button {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #453232;
+    border-radius: 4px;
+    background-color: #ecd1e0;
+    color: #453232;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -1px;
+    font-size: 24px;
+}
 
 
 .bt-livro {
@@ -891,4 +911,27 @@ a:visited {
     .acoes {
         display: none;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 30px;
 }
