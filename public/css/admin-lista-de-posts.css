@@ -363,6 +363,10 @@ textarea#text-visualizar {
     button {
         font-size: 20px;
     }
+
+    .rm-ct {
+        margin-top: 4vh;
+    }
 }
 
 /*MODAL VISUALIZAR*/
@@ -416,11 +420,6 @@ textarea {
     flex-direction: row;
     gap: 40px;
 
-}
-
-.cont-modal {
-
-    overflow-y: scroll;
 }
 
 .direita {
@@ -613,6 +612,23 @@ a:visited {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 4%;
+}
+
+.rm-ct {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rm-ct>p {
+    color: #453232;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -1px;
+    font-size: 26px;
 }
 
 .bt-rm>button {

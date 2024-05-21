@@ -566,10 +566,13 @@
             <div class="content">
                 <a class="fecha" onclick="fecharModal('rm-post')" href="#">&times;</a>
                 <div class="quebra"></div>
-                <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
                 <form action="/delete/" method="post">
                     <input type="hidden" value="id-do-post">
-                    <input type="submit" value="Excluir publicação">
+                    <div class="rm-ct">
+                        <p>Deseja excluir a publicação?</p>
+                        <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
+                        <input type="submit" value="Excluir publicação">
+                    </div>
                 </form>
             </div>
         </div>
