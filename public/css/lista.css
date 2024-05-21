@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: fit-content;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #EF9CA9, white 55%);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: center;
+}
+
+.coluna1 {
+    display: flex;
+    height: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.coluna2 {
+    display: flex;
+    height: fit-content;
+    max-width: 900px;
+    border-left: 2px solid #453232;
+    border-right: 2px solid #453232;
+    padding-right: 2%;
+    padding-left: 2%;
+    flex-direction: column;
+}
+
+.coluna3 {
+    display: flex;
+    height: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+}
+
+.coluna-box {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+
+    width: 20vw;
+    height: 6vh;
+}
+
+.buscar-box {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 1.5vw;
+    opacity: 0.8;
+}
+
+.buscar-box .lupa img {
+    padding-left: 0.5vw;
+    height: 30px;
+}
+
+.buscar-box .input-buscar input {
+    padding-left: 0.3vw;
+    width: 88%;
+    font-size: 22px;
+    border: none;
+    outline: none;
+}
+
+.forma-post1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(239, 156, 169, 0.3);
+    height: fit-content;
+    border-radius: 20px;
+    justify-content: space-between;
+    border: 1px solid #453232;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.7);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.espasso {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.espassocapa {
+    width: fit-content;
+}
+
+.digitado {
+    display: flex;
+    font-size: 12px;
+    padding: 0.3vw 1vw 1vw 1vw;
+    height: auto;
+    width: 80;
+}
+
+.usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-size: 15px;
+    top: 5px;
+    padding-left: 5%;
+    padding-top: 2vh;
+}
+
+.estrelas {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -0.5vh;
+}
+
+.fotouser {
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 1vw;
+    padding-top: 2vh;
+}
+
+.capalivro1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding-right: 1vw;
+}
+
+.capalivro1 img {
+    height: 80%;
+}
+
+.digitado>h1 {
+    margin: 5px;
+}
+
+@media screen and (min-width:900px) and (max-width:1171px) {
+    .coluna3 {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna2 {
+        width: 100vw;
+        border: none;
+    }
+
+    .buscar-box {
+        width: 857px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .coluna3 {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna2 {
+        width: 100vw;
+        border: none;
+    }
+
+    .buscar-box {
+        width: 95vw;
+    }
+
+    .digitado>h1 {
+        font-size: 16px;
+    }
+
+    .usuario>h1 {
+        font-size: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:500px) {
+    .digitado>h1 {
+        font-size: 14px;
+    }
+
+    .capalivro1 {
+        display: none;
+    }
+
+    .usuario>h1 {
+        font-size: 18px;
+    }
+}
