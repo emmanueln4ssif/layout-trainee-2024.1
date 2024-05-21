@@ -47,7 +47,20 @@ tbody {
 }
 
 .rm-ct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 4vh;
+
+}
+
+
+
+.form-deleta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rm-ct {
@@ -56,6 +69,10 @@ tbody {
   align-content: center;
   justify-content: center;
   text-align: center;
+}
+
+.cont-deletar>.content {
+  width: fit-content;
 }
 
 .rm-ct>p {
