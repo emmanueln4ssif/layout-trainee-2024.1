@@ -13,6 +13,29 @@ body {
   background: rgb(236, 209, 224);
 }
 
+.botoes-rm {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  align-items: center;
+}
+
+.botoes-rm>button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #453232;
+  border-radius: 4px;
+  background-color: #ecd1e0;
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
+  height: fit-content;
+}
+
 #crud-usuario {
   width: 70%;
   margin: auto;

@@ -389,16 +389,22 @@
       <div class="content">
         <a class="fecha" onclick="fechabotao('excluir')" href="#">&times;</a>
         <div class="quebra"></div>
-        <form action="/delete/" class="form-deleta" method="post">
+        <form action="/delete/" method="post">
           <input type="hidden" value="id-do-post">
           <div class="rm-ct">
-            <p>Deseja excluir o usuário?</p>
+            <p>Deseja excluir a publicação?</p>
             <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
-            <input type="submit" value="Excluir usuário">
+            <div class="botoes-rm">
+              <input type="submit" value="Excluir publicação">
+              <button class="cancelar" onclick="fechabotao('excluir')" type="button">Cancelar</button>
+
+            </div>
+
           </div>
         </form>
       </div>
     </div>
+
 
   </main>
 </body>
