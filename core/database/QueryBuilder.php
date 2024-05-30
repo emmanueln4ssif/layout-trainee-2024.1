@@ -30,7 +30,7 @@ class QueryBuilder
     }
     public function selectAllcomNome($table)
     {
-        $sql = "select * from {$table}";
+        $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id', $table,$table,$table);
 
         try {
             $stmt = $this->pdo->prepare($sql);
