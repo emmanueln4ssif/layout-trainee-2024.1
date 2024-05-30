@@ -350,7 +350,7 @@
 
     <div id="adcuser">
       <div class="content">
-        <form action="users" method="post" enctype="multipart/form-data">
+        <form action="create" method="post" enctype="multipart/form-data">
           <div class="formulario">
             <div class="campos">
               <label for="nome">Nome</label><br>
@@ -395,7 +395,7 @@
       <div class="content">
         <a class="fecha" onclick="fechabotao('excluir')" href="#">&times;</a>
         <div class="quebra"></div>
-        <form action="users" method="post">
+        <form action="delete" method="post">
           <input type="hidden" name="id" value="<?= $user->id ?>">
           <div class="rm-ct">
             <p>Deseja excluir o usuário?</p>
