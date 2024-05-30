@@ -13,6 +13,7 @@
 
 <body>
   <main>
+
     <div id="crud-usuario">
 
       <div id="cabecalho">
@@ -55,11 +56,11 @@
             </tr>-->
 
             <!-- LINHA 1 - INÍCIO -->
-
+            <?php foreach($users as $user): ?>
             <tr class="linha-normal">
-              <td class="table-id">01</td>
-              <td class="nome">Jorge Renan Drumond</td>
-              <td class="email">jorgerenandrumond@storystroll.com</td>
+              <td class="table-id"><?= $user->id ?></td>
+              <td class="nome"><?= $user->name ?></td>
+              <td class="email"><?= $user->email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
                   onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
@@ -69,9 +70,9 @@
             </tr>
 
             <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">01</td>
-              <td class="nome">Jorge Renan Drumond</td>
-              <td class="email">jorgerenandrumond@storystroll.com</td>
+              <td class="table-id" rowspan="2"><?= $user->id ?></td>
+              <td class="nome"><?= $user->name ?></td>
+              <td class="email"><?= $user->email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
                   onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
@@ -94,6 +95,8 @@
             </tr>
 
             <!-- LINHA 1 - FIM -->
+
+            <?php endforeach; ?>
 
             <!--<tr class="linha dado">
               <td class="table-id">02</td>
@@ -319,6 +322,7 @@
       </div>
 
     </div>
+
     <div id="edicaouser">
       <div class="content">
         <form action="#" method="post" enctype="multipart/form-data">
@@ -343,13 +347,14 @@
         <a class="fecha" href="#" onclick="fechabotao('edicaouser')">&times;</a>
       </div>
     </div>
+
     <div id="adcuser">
       <div class="content">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="users" method="post" enctype="multipart/form-data">
           <div class="formulario">
             <div class="campos">
               <label for="nome">Nome</label><br>
-              <input type="text" id="autor" name="autor" placeholder="Digite o nome do usuário"><br>
+              <input type="text" id="autor" name="nome" placeholder="Digite o nome do usuário"><br>
               <label for="email">E-mail</label><br>
               <input type="email" id="email" name="email" placeholder="Digite o e-mail do usuário"><br>
               <label for="senha">Senha</label><br>
@@ -367,6 +372,7 @@
         <a class="fecha" href="#" onclick="fechabotao('adcuser')">&times;</a>
       </div>
     </div>
+
     <div id="modal-visualizar">
       <div class="content-visualizar">
         <form action="#" method="post" enctype="multipart/form-data">
@@ -389,10 +395,10 @@
       <div class="content">
         <a class="fecha" onclick="fechabotao('excluir')" href="#">&times;</a>
         <div class="quebra"></div>
-        <form action="/delete/" method="post">
-          <input type="hidden" value="id-do-post">
+        <form action="users" method="post">
+          <input type="hidden" name="id" value="<?= $user->id ?>">
           <div class="rm-ct">
-            <p>Deseja excluir a publicação?</p>
+            <p>Deseja excluir o usuário?</p>
             <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
             <div class="botoes-rm">
               <input type="submit" value="Excluir publicação">
