@@ -401,7 +401,7 @@
             <p>Deseja excluir o usuário?</p>
             <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
             <div class="botoes-rm">
-              <input type="submit" value="Excluir publicação">
+              <input type="submit" value="Excluir usuário">
               <button class="cancelar" onclick="fechabotao('excluir')" type="button">Cancelar</button>
 
             </div>
