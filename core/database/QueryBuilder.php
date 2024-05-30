@@ -28,4 +28,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function nomeUsuario($id){
+        $sql = sprintf('SELECT name FROM users WHERE id = %s', $id);
+    }
 }
