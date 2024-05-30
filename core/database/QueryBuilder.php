@@ -30,6 +30,7 @@ class QueryBuilder
     }
     public function selectAllcomNome($table)
     {
+        //seleciona tudo da $table e name da tabela users quando o user_id da $table é igual ao id da tabela user
         $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id', $table,$table,$table);
 
         try {
