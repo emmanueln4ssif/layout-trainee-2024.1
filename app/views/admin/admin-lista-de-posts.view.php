@@ -86,23 +86,29 @@
                                 <div class="cima">
                                     <div class="direita">
                                         <h3>Título do livro</h3>
-                                        <p>Livro</p>
+                                        <p><?php echo $post->livro_titulo ?></p>
                                         <h3>Autor do livro</h3>
-                                        <p>Nome</p>
+                                        <p><?php echo $post->livro_autor ?></p>
                                         <h3>Ano de publicação</h3>
-                                        <p>1990</p>
+                                        <p><?php echo $post->livro_ano ?></p>
                                     </div>
                                     <div class="esquerda">
                                         <h3>Sinopse</h3>
-                                        <textarea readonly>Sinopse</textarea>
+                                        <textarea readonly><?php echo $post->sinopse ?></textarea>
                                         <br>
                                         <h3>Nota média da internet</h3>
                                         <div class="nota">
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
+                                            <?php 
+                                        $aux=$post->nota_internet;
+                                            for($i= 0;$i<5;$i++){
+                                                if($aux>0){
+                                                    echo '<span class="icon">★</span>';
+                                                    $aux--;
+                                                }else{
+                                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                                }
+                                            }
+                                        ?>
                                         </div>
 
                                     </div>
@@ -114,24 +120,30 @@
                                         <h3>Autor</h1>
                                             <p><?php echo $post->name ?></p>
                                             <h3>Título</h1>
-                                                <p>Os Demônios</p>
+                                                <p><?php echo $post->titulo_post ?></p>
                                                 <div class="nota">
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
+                                                    <?php 
+                                                        $aux=$post->nota_user;
+                                                            for($i= 0;$i<5;$i++){
+                                                                if($aux>0){
+                                                                    echo '<span class="icon">★</span>';
+                                                                    $aux--;
+                                                                }else{
+                                                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                                                }
+                                                            }
+                                                    ?>
                                                 </div>
                                                 <h3>Review</h1>
                                                     <textarea rows="14" cols="50"
-                                                        readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo auctor erat, vel accumsan tortor aliquet ac. Donec vel odio eu quam eleifend commodo et quis velit. Nulla sollicitudin justo quis massa faucibus vulputate. Nam non augue leo. Aenean feugiat, lacus molestie facilisis blandit, dui turpis condimentum nisl, ut convallis nunc tortor nec enim. Nullam vestibulum, diam vitae commodo fermentum, mauris lorem sodales mauris, ac lacinia leo risus in tortor. Cras metus felis, rutrum eget vehicula et, elementum ut nunc. Quisque feugiat orci vitae maximus accumsan. Aliquam posuere nisi sed enim dictum, in dictum enim varius. Suspendisse sagittis ut nibh ac efficitur. Duis et nulla a tellus hendrerit euismod. Etiam egestas non dui eu elementum. Curabitur aliquam sed ex id mollis. Aenean a risus nisl.</textarea>
+                                                        readonly><?php echo $post->review ?></textarea>
                                     </div>
                                     <div class="direita">
                                         <img src="../../../public/assets/capa.jpg">
                                         <h3>Data da leitura</h3>
-                                        <p>02/05/2024</p>
+                                        <p><?php echo $post->data_leitura ?></p>
                                         <h3>Data da publicação</h3>
-                                        <p>05/05/2024</p>
+                                        <p><?php echo $post->data_post ?></p>
                                     </div>
                                 </div>
                             </div>
