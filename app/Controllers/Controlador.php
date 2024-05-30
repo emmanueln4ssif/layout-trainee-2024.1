@@ -8,9 +8,10 @@ use Exception;
 class Controlador
 {
 
-    public function index()
+    public function tabelaPosts()
     {
-        return view('site/index');
+        
+        return view('admin/admin-lista-de-posts');
     }
 }
 
