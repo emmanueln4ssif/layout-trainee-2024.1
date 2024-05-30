@@ -31,13 +31,15 @@
                     <th class="acoes"></th>
                 </thead>
                 <tbody>
+                    <?php foreach($posts as $post): ?>
                     <tr class="linha-normal">
-                        <td class="espaco-id">01</td>
-                        <td class="espaco-titulo">Capitu realmente traiu?</td>
-                        <td class="espaco-autor">João Victor Nicácio Silva</td>
-                        <td class="espaco-data">02/05/2024</td>
+                        <td class="espaco-id"><?php echo $post->id ?></td>
+                        <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
+                        <td class="espaco-autor"><?php echo $post->name ?></td>
+                        <td class="espaco-data"><?php echo $post->data_post ?></td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
+                                onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
+                                    class="bi bi-eye-fill"></i><br>Visualizar</button>
                         </td>
                         <td class="espaco-editar"><button type="button" class="botao-editar"
                                 onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
@@ -52,7 +54,8 @@
                         <td class="espaco-autor">João Victor Nicácio Silva</td>
                         <td class="espaco-data" rowspan="2">02/05/2024</td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
+                                onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
+                                    class="bi bi-eye-fill"></i><br>Visualizar</button>
                         </td>
                         <td class="espaco-editar"><button type="button" class="botao-editar"
                                 onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
@@ -64,7 +67,8 @@
                     <tr class="botoes-mobile">
                         <td class="linha-botoes" colspan="2">
                             <div class="container-botoes">
-                                <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i
+                                <button type="button" class="botao-visualizar"
+                                    onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                         class="bi bi-eye-fill"></i><br>Visualizar</button>
                                 <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i
                                         class="bi bi-pencil-square"></i><br>Editar</button>
@@ -73,174 +77,74 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="linha-normal">
-                        <td class="espaco-id">02</td>
-                        <td class="espaco-titulo">Resenha sobre Memórias Póstumas de Brás Cubas</td>
-                        <td class="espaco-autor">Luiz Eduardo de Souza</td>
-                        <td class="espaco-data">01/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="linha-mobile">
-                        <td class="espaco-id" rowspan="2">02</td>
-                        <td class="espaco-titulo">Resenha sobre Memórias Póstumas de Brás Cubas</td>
-                        <td class="espaco-autor">Luiz Eduardo de Souza</td>
-                        <td class="espaco-data" rowspan="2">01/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="botoes-mobile">
-                        <td class="linha-botoes" colspan="2">
-                            <div class="container-botoes">
-                                <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i
-                                        class="bi bi-eye-fill"></i><br>Visualizar</button>
-                                <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i
-                                        class="bi bi-pencil-square"></i><br>Editar</button>
-                                <button type="button" class="botao-excluir" onclick="abrirModal('rm-post')"><i
-                                        class="bi bi-trash3-fill"></i><br>Deletar</button>
+
+                    <!-- MODAL DE VISUALIZAÇÃO - INÍCIO -->
+                    <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
+
+                        <div class="content">
+                            <div class="content-vizu">
+                                <div class="cima">
+                                    <div class="direita">
+                                        <h3>Título do livro</h3>
+                                        <p>Livro</p>
+                                        <h3>Autor do livro</h3>
+                                        <p>Nome</p>
+                                        <h3>Ano de publicação</h3>
+                                        <p>1990</p>
+                                    </div>
+                                    <div class="esquerda">
+                                        <h3>Sinopse</h3>
+                                        <textarea readonly>Sinopse</textarea>
+                                        <br>
+                                        <h3>Nota média da internet</h3>
+                                        <div class="nota">
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <div class="baixo">
+                                    <div class="esquerda">
+                                        <h3>Autor</h1>
+                                            <p><?php echo $post->name ?></p>
+                                            <h3>Título</h1>
+                                                <p>Os Demônios</p>
+                                                <div class="nota">
+                                                    <span class="icon">★</span>
+                                                    <span class="icon">★</span>
+                                                    <span class="icon">★</span>
+                                                    <span class="icon">★</span>
+                                                    <span class="icon">★</span>
+                                                </div>
+                                                <h3>Review</h1>
+                                                    <textarea rows="14" cols="50"
+                                                        readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo auctor erat, vel accumsan tortor aliquet ac. Donec vel odio eu quam eleifend commodo et quis velit. Nulla sollicitudin justo quis massa faucibus vulputate. Nam non augue leo. Aenean feugiat, lacus molestie facilisis blandit, dui turpis condimentum nisl, ut convallis nunc tortor nec enim. Nullam vestibulum, diam vitae commodo fermentum, mauris lorem sodales mauris, ac lacinia leo risus in tortor. Cras metus felis, rutrum eget vehicula et, elementum ut nunc. Quisque feugiat orci vitae maximus accumsan. Aliquam posuere nisi sed enim dictum, in dictum enim varius. Suspendisse sagittis ut nibh ac efficitur. Duis et nulla a tellus hendrerit euismod. Etiam egestas non dui eu elementum. Curabitur aliquam sed ex id mollis. Aenean a risus nisl.</textarea>
+                                    </div>
+                                    <div class="direita">
+                                        <img src="../../../public/assets/capa.jpg">
+                                        <h3>Data da leitura</h3>
+                                        <p>02/05/2024</p>
+                                        <h3>Data da publicação</h3>
+                                        <p>05/05/2024</p>
+                                    </div>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr class="linha-normal">
-                        <td class="espaco-id">03</td>
-                        <td class="espaco-titulo">O melhor livro que já li</td>
-                        <td class="espaco-autor">Luiza Gomes Aguiar</td>
-                        <td class="espaco-data">07/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="linha-mobile">
-                        <td class="espaco-id" rowspan="2">03</td>
-                        <td class="espaco-titulo">O melhor livro que já li</td>
-                        <td class="espaco-autor">Luiza Gomes Aguiar</td>
-                        <td class="espaco-data" rowspan="2">07/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="botoes-mobile">
-                        <td class="linha-botoes" colspan="2">
-                            <div class="container-botoes">
-                                <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i
-                                        class="bi bi-eye-fill"></i><br>Visualizar</button>
-                                <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i
-                                        class="bi bi-pencil-square"></i><br>Editar</button>
-                                <button type="button" class="botao-excluir" onclick="abrirModal('rm-post')"><i
-                                        class="bi bi-trash3-fill"></i><br>Deletar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="linha-normal">
-                        <td class="espaco-id">04</td>
-                        <td class="espaco-titulo">Incrível!</td>
-                        <td class="espaco-autor">Marcelo Juan</td>
-                        <td class="espaco-data">01/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="linha-mobile">
-                        <td class="espaco-id" rowspan="2">04</td>
-                        <td class="espaco-titulo">Incrível!</td>
-                        <td class="espaco-autor">Marcelo Juan</td>
-                        <td class="espaco-data" rowspan="2">01/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="botoes-mobile">
-                        <td class="linha-botoes" colspan="2">
-                            <div class="container-botoes">
-                                <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i
-                                        class="bi bi-eye-fill"></i><br>Visualizar</button>
-                                <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i
-                                        class="bi bi-pencil-square"></i><br>Editar</button>
-                                <button type="button" class="botao-excluir" onclick="abrirModal('excluir')"><i
-                                        class="bi bi-trash3-fill"></i><br>Deletar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="linha-normal">
-                        <td class="espaco-id">05</td>
-                        <td class="espaco-titulo">Memórias Póstumas de Brás Cubas</td>
-                        <td class="espaco-autor">Joaquim Faria de Souza Filho</td>
-                        <td class="espaco-data">05/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
-                                onclick="abrirModal('rm-post')"><i class="bi bi-trash3-fill"></i><br>Deletar</button>
-                        </td>
-                    </tr>
-                    <tr class="linha-mobile">
-                        <td class="espaco-id" rowspan="2">05</td>
-                        <td class="espaco-titulo">Memórias Póstumas de Brás Cubas</td>
-                        <td class="espaco-autor">Joaquim Faria de Souza Filho</td>
-                        <td class="espaco-data" rowspan="2">05/05/2024</td>
-                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
-                                onclick="abrirModal('visualizar')"><i class="bi bi-eye-fill"></i><br>Visualizar</button>
-                        </td>
-                        <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i><br>Editar</button>
-                        </td>
-                        <td class="espaco-excluir"><button type="button" class="botao-excluir"><i
-                                    onclick="abrirModal('rm-post')"><i
-                                        class="bi bi-trash3-fill"></i><br>Deletar</button></td>
-                    </tr>
-                    <tr class="botoes-mobile">
-                        <td class="linha-botoes" colspan="2">
-                            <div class="container-botoes">
-                                <button type="button" class="botao-visualizar" onclick="abrirModal('visualizar')"><i
-                                        class="bi bi-eye-fill"></i><br>Visualizar</button>
-                                <button type="button" class="botao-editar" onclick="abrirModal('editar')"><i
-                                        class="bi bi-pencil-square"></i><br>Editar</button>
-                                <button type="button" class="botao-excluir" onclick="abrirModal('excluir')"><i
-                                        class="bi bi-trash3-fill"></i><br>Deletar</button>
-                            </div>
-                        </td>
-                    </tr>
+                            <button class="fecha"
+                                onclick="fecharModal('visualizar<?php echo $post->id ?>')">&times;</button>
+                        </div>
+                    </div>
+
+                    <!-- MODAL DE VISUALIZAÇÃO - FIM -->
+
+
+                    <?php endforeach; ?>
+
                 </tbody>
             </table>
         </div>
@@ -248,70 +152,6 @@
             <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
             <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
         </div>
-
-        <!-- MODAL DE VISUALIZAÇÃO - INÍCIO -->
-
-        <div class="cont-modal" id="visualizar">
-
-            <div class="content">
-                <div class="content-vizu">
-                    <div class="cima">
-                        <div class="direita">
-                            <h3>Título do livro</h3>
-                            <p>Livro</p>
-                            <h3>Autor do livro</h3>
-                            <p>Nome</p>
-                            <h3>Ano de publicação</h3>
-                            <p>1990</p>
-                        </div>
-                        <div class="esquerda">
-                            <h3>Sinopse</h3>
-                            <textarea readonly>Sinopse</textarea>
-                            <br>
-                            <h3>Nota média da internet</h3>
-                            <div class="nota">
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <hr>
-                    <div class="baixo">
-                        <div class="esquerda">
-                            <h3>Autor</h1>
-                                <p>Pedro_123</p>
-                                <h3>Título</h1>
-                                    <p>Os Demônios</p>
-                                    <div class="nota">
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                    </div>
-                                    <h3>Review</h1>
-                                        <textarea rows="14" cols="50"
-                                            readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo auctor erat, vel accumsan tortor aliquet ac. Donec vel odio eu quam eleifend commodo et quis velit. Nulla sollicitudin justo quis massa faucibus vulputate. Nam non augue leo. Aenean feugiat, lacus molestie facilisis blandit, dui turpis condimentum nisl, ut convallis nunc tortor nec enim. Nullam vestibulum, diam vitae commodo fermentum, mauris lorem sodales mauris, ac lacinia leo risus in tortor. Cras metus felis, rutrum eget vehicula et, elementum ut nunc. Quisque feugiat orci vitae maximus accumsan. Aliquam posuere nisi sed enim dictum, in dictum enim varius. Suspendisse sagittis ut nibh ac efficitur. Duis et nulla a tellus hendrerit euismod. Etiam egestas non dui eu elementum. Curabitur aliquam sed ex id mollis. Aenean a risus nisl.</textarea>
-                        </div>
-                        <div class="direita">
-                            <img src="../../../public/assets/capa.jpg">
-                            <h3>Data da leitura</h3>
-                            <p>02/05/2024</p>
-                            <h3>Data da publicação</h3>
-                            <p>05/05/2024</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="fecha" onclick="fecharModal('visualizar')">&times;</button>
-            </div>
-        </div>
-
-        <!-- MODAL DE VISUALIZAÇÃO - FIM -->
 
         <!-- MODAL DE EDIÇÃO - INÍCIO -->
 

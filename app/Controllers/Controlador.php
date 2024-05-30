@@ -11,7 +11,7 @@ class Controlador
     public function tabelaPosts()
     {
         $posts = App::get('database')->selectAllcomNome('posts');
-        return view('admin/admin-lista-de-posts',$posts);
+        return view('admin/admin-lista-de-posts',compact('posts'));
     }
 }
 
