@@ -30,5 +30,14 @@ class QueryBuilder
     }
     public function nomeUsuario($id){
         $sql = sprintf('SELECT name FROM users WHERE id = %s', $id);
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 }
