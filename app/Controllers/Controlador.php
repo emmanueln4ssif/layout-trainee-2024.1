@@ -30,6 +30,8 @@ class Controlador
             'data_post'=> $_POST['dataat']   
         ];
         App::get('database')->inserir('posts',$parameters);
+
+        header('Locarion: /posts');
     }
 }
 
