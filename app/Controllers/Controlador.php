@@ -25,13 +25,13 @@ class Controlador
             'titulo_post'=> $_POST['titulo'],
             'nota_user'=> $_POST['nota-user'],
             'review'=> $_POST['conteudo'],
-            'imagem'=> $_POST['img'],
+            //'imagem'=> $_POST['img'],
             'data_leitura'=> $_POST['data'],
             'data_post'=> $_POST['dataat']   
         ];
         App::get('database')->inserir('posts',$parameters);
 
-        header('Locarion: /posts');
+        header('Location: ../posts');
     }
 }
 
