@@ -44,13 +44,17 @@ class QueryBuilder
         }
     }
 
-    public function inserir($table, $parameters){
+    public function inserir($table, $parameters, $img){
+        $pasta = "uploads/";
+        $caminho = $pasta . basename($img["name"]);
+        move_uploaded_file($img["tmp_name"], $caminho);
+        $parameters['imagem']=$caminho;
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)', $table, implode(', ', array_keys($parameters)), implode(', :', array_keys($parameters)));
-
+        
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
-
+            
         } catch (Exception $e) {
             die($e->getMessage());
         }
