@@ -29,7 +29,7 @@ class Controlador
             'data_post'=> $_POST['dataat']   
         ];
         App::get('database')->inserir('posts',$parameters, $_FILES['img']);
-        //header('Location: ../posts');
+        header('Location: ../posts');
     }
 }
 

@@ -139,7 +139,7 @@
                                                         readonly><?php echo $post->review ?></textarea>
                                     </div>
                                     <div class="direita">
-                                        <img src="../../../public/assets/capa.jpg">
+                                        <img src="<?php echo $post->imagem ?>">
                                         <h3>Data da leitura</h3>
                                         <p><?php echo $post->data_leitura ?></p>
                                         <h3>Data da publicação</h3>
