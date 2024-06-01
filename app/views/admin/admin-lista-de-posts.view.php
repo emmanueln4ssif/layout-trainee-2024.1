@@ -300,7 +300,7 @@
         <div id="adiciona-post" class="cont-modal">
             <div class="content">
 
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="post/criar" method="post" enctype="multipart/form-data">
                     <div class="livro">
                         <div class="direita">
                             <label for="titulo-livro">Título do livro</label>
