@@ -49,10 +49,10 @@
                         </td>
                     </tr>
                     <tr class="linha-mobile">
-                        <td class="espaco-id" rowspan="2">01</td>
-                        <td class="espaco-titulo">Capitu realmente traiu?</td>
-                        <td class="espaco-autor">João Victor Nicácio Silva</td>
-                        <td class="espaco-data" rowspan="2">02/05/2024</td>
+                        <td class="espaco-id" rowspan="2"><?php echo $post->id ?></td>
+                        <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
+                        <td class="espaco-autor"><?php echo $post->name ?></td>
+                        <td class="espaco-data" rowspan="2"><?php echo $post->data_post ?></td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
                                 onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                     class="bi bi-eye-fill"></i><br>Visualizar</button>
@@ -153,10 +153,7 @@
                     </div>
 
                     <!-- MODAL DE VISUALIZAÇÃO - FIM -->
-
-
                     <?php endforeach; ?>
-
                 </tbody>
             </table>
         </div>

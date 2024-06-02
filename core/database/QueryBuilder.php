@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Core\Database;
-
 use PDO, Exception;
 
 class QueryBuilder
@@ -59,4 +58,6 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    
 }
