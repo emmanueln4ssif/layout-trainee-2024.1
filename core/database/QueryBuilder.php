@@ -16,15 +16,16 @@ class QueryBuilder
     }
     public function edita ($table, $parameters, $id)
     {
-        $sql = sprintf ('UPDATE %s SET %s WHERE id = %s', 
-        $table,
-        implode (',', array_map (function($param){
-            return $param . ' =: ' . $param;
-        }, array_keys ($parameters)
-    )), $id
+        $id=5;
+        $sql = sprintf('UPDATE %s SET %s WHERE id = %d', 
+    $table,
+    implode(', ', array_map(function($param) {
+        return $param . ' = :' . $param;
+    }, array_keys($parameters))),
+    $id
 );
-        try {
 
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 

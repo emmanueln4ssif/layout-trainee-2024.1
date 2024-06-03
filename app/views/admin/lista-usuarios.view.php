@@ -119,7 +119,7 @@
 
     <div class = "editauser "id="edicaouser<?php echo $user -> id ?>">
       <div class="content">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="edit" method="post" enctype="multipart/form-data">
           <div class="formulario">
             <div class="campos">
               <label for="nome">Nome</label><br>
