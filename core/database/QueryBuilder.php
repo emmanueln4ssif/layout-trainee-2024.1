@@ -59,5 +59,10 @@ class QueryBuilder
         }
     }
 
+    public function deletar($table, $id)
+    {
+        
+    }
+
     
 }

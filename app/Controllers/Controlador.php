@@ -31,6 +31,18 @@ class Controlador
         App::get('database')->inserir('posts',$parameters, $_FILES['img']);
         header('Location: ../posts');
     }
+
+    public function editar()
+    {
+        
+    }
+
+    public function deletar()
+    {
+        $id = $_POST["id"];
+        App::get("database")->deletar("posts", $id);
+        header("Location: /posts");
+    }
 }
 
 

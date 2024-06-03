@@ -165,10 +165,8 @@
         <!-- MODAL DE EDIÇÃO - INÍCIO -->
 
         <div class="cont-modal" id="editar">
-
             <div class="content">
-
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="post/editar" method="post" enctype="multipart/form-data">
                     <div class="livro">
                         <div class="direita">
                             <label for="titulo-livro">Título do livro</label>
@@ -415,7 +413,7 @@
             <div class="content">
                 <a class="fecha" onclick="fecharModal('rm-post')" href="#">&times;</a>
                 <div class="quebra"></div>
-                <form action="/delete/" method="post">
+                <form action="post/delete" method="POST">
                     <input type="hidden" value="id-do-post">
                     <div class="rm-ct">
                         <p>Deseja excluir a publicação?</p>
