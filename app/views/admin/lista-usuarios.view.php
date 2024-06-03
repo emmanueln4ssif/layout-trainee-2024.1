@@ -56,10 +56,9 @@
             </tr>-->
 
             <!-- LINHA 1 - INÍCIO -->
-            <?php
-              foreach ($users as $user):
-                
-            ?>
+
+            <?php foreach ($users as $user): ?>
+
             <tr class="linha-normal">
               <td class="table-id"><?php echo $user->id?></td>
               <td class="nome"><?php echo $user->name ?></td>
@@ -69,7 +68,7 @@
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
                   onclick="abrebotao('edicaouser<?php echo $user -> id ?>')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
+                  onclick="abrebotao('excluir<?php echo $user -> id ?>')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
             </tr>
 
             <tr class="linha-mobile">
@@ -97,55 +96,75 @@
               </td>
 
             </tr>
-            <div id="modal-visualizar<?php echo $user -> id ?>"
-            class="modal-visualizar">
-      <div class="content-visualizar">
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="formulario">
-            <div class="campos">
-              <label for="nome">ID</label><br>
-              
-              <input type="text" id="id" name="id" value="<?php echo $user -> id?>" readonly><br>
-              <label for="nome">Nome</label><br>
-              <input type="text" id="nome" name="nome" value="<?php echo $user -> name ?>" readonly>
-              <label for="email">E-mail</label><br>
-              <input type="email" id="email" name="email" value="<?php echo $user -> email ?>" readonly><br>
-            </div>
-          </div>
-        </form>
-        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar<?php echo $user -> id?>')">&times;</a>
-      </div>
-    </div>
 
+            <div id="modal-visualizar<?php echo $user -> id ?>" class="modal-visualizar">
+              <div class="content-visualizar">
+                <form action="#" method="post" enctype="multipart/form-data">
+                  <div class="formulario">
+                    <div class="campos">
 
-    <div class = "editauser "id="edicaouser<?php echo $user -> id ?>">
-      <div class="content">
-        <form action="edit" method="post" enctype="multipart/form-data">
-          <div class="formulario">
-            <div class="campos">
-              <label for="nome">Nome</label><br>
-              <input type="text" id="autor" name="autor" value="<?php echo $user -> name ?>"><br>
-              <label for="email">E-mail</label><br>
-              <input type="email" id="email" name="email" value="<?php echo $user -> email ?>"><br>
-              <label for="senha">Senha</label><br>
-              <div class="senha-e-olho">
-                <input type="password" id="senha" name="senha" value="<?php echo $user -> password ?>">
-                <div class="olho" onclick="mostrarSenha()">
-                  <img id="icone-olho" src="../../../public/assets/olho-aberto.svg"
-                    alt="Ícone de olho representando a visibilidade da senha">
-                </div>
+                      <label for="nome">ID</label><br>
+                      <input type="text" id="id" name="id" value="<?php echo $user -> id?>" readonly><br>
+                      <label for="nome">Nome</label><br>
+                      <input type="text" id="nome" name="nome" value="<?php echo $user -> name ?>" readonly>
+                      <label for="email">E-mail</label><br>
+                      <input type="email" id="email" name="email" value="<?php echo $user -> email ?>" readonly><br>
+
+                    </div>
+                  </div>
+                </form>
+                <a class="fecha" href="#" onclick="fechabotao('modal-visualizar<?php echo $user -> id?>')">&times;</a>
               </div>
             </div>
-          </div>
-          <input type="hidden" name = "id" value = "<?php echo $user -> id ?>">
-          <input type="submit" value="Salvar">
-        </form>
-        <a class="fecha" href="#" onclick="fechabotao('edicaouser<?php echo $user -> id ?>')">&times;</a>
-      </div>
-    </div>
 
-    
+
+            <div class = "editauser "id="edicaouser<?php echo $user -> id ?>">
+              <div class="content">
+                <form action="edit" method="post" enctype="multipart/form-data">
+                  <div class="formulario">
+                    <div class="campos">
+                      <label for="nome">Nome</label><br>
+                      <input type="text" id="autor" name="autor" value="<?php echo $user -> name ?>"><br>
+                      <label for="email">E-mail</label><br>
+                      <input type="email" id="email" name="email" value="<?php echo $user -> email ?>"><br>
+                      <label for="senha">Senha</label><br>
+                      <div class="senha-e-olho">
+                        <input type="password" id="senha" name="senha" value="<?php echo $user -> password ?>">
+                        <div class="olho" onclick="mostrarSenha()">
+                          <img id="icone-olho" src="../../../public/assets/olho-aberto.svg"
+                            alt="Ícone de olho representando a visibilidade da senha">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name = "id" value = "<?php echo $user -> id ?>">
+                  <input type="submit" value="Salvar">
+                </form>
+                <a class="fecha" href="#" onclick="fechabotao('edicaouser<?php echo $user -> id ?>')">&times;</a>
+              </div>
+            </div>
+
+            <div id="excluir<?php echo $user -> id ?>"  class="cont-deletar">
+              <div class="content">
+                <a class="fecha" onclick="fechabotao('excluir<?php echo $user -> id ?>')" href="#">&times;</a>
+                <div class="quebra"></div>
+                <form action="delete" method="post">
+                  <!--<input type="hidden" name="id" value="">-->
+                  <div class="rm-ct">
+                    <p>Deseja excluir o usuário?</p>
+                    <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
+                    <div class="botoes-rm">
+                      <input type="hidden" name = "id" value = "<?php echo $user -> id ?>">
+                      <input type="submit" value="Excluir usuário">
+                      <button class="cancelar" onclick="fechabotao('excluir<?php echo $user -> id ?>')" type="button">Cancelar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
             <?php endforeach; ?>
+
           </tbody>
 
         </table>
@@ -158,8 +177,6 @@
       </div>
 
     </div>
-
-  
 
     <div id="adcuser">
       <div class="content">
@@ -186,31 +203,9 @@
       </div>
     </div>
 
- 
-
-    <div id="excluir" class="cont-deletar">
-      <div class="content">
-        <a class="fecha" onclick="fechabotao('excluir')" href="#">&times;</a>
-        <div class="quebra"></div>
-        <form action="delete" method="post">
-          <input type="hidden" name="id" value="id">
-          <div class="rm-ct">
-            <p>Deseja excluir o usuário?</p>
-            <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
-            <div class="botoes-rm">
-              <input type="submit" value="Excluir usuário">
-              <button class="cancelar" onclick="fechabotao('excluir')" type="button">Cancelar</button>
-
-            </div>
-
-          </div>
-        </form>
-      </div>
-    </div>
-
-
   </main>
 </body>
+
 <script src="../../../public/js/lista-usuarios.js"></script>
 
 </html>
