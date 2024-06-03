@@ -17,11 +17,11 @@ class AdminController
     public function edit ()
     {
         $parameters = [
-            'id' => $_POST ['id'],
+            'password' => $_POST ['senha'],
             'name' => $_POST['autor'],
             'email' => $_POST['email']
         ];
-        $id = $_POST['senha'];
+        $id = $_POST['id'];
 
         App::get('database')->edita('users', $parameters, $id);
 

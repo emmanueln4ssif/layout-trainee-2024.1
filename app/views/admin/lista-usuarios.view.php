@@ -104,6 +104,7 @@
           <div class="formulario">
             <div class="campos">
               <label for="nome">ID</label><br>
+              
               <input type="text" id="id" name="id" value="<?php echo $user -> id?>" readonly><br>
               <label for="nome">Nome</label><br>
               <input type="text" id="nome" name="nome" value="<?php echo $user -> name ?>" readonly>
@@ -136,6 +137,7 @@
               </div>
             </div>
           </div>
+          <input type="hidden" name = "id" value = "<?php echo $user -> id ?>">
           <input type="submit" value="Salvar">
         </form>
         <a class="fecha" href="#" onclick="fechabotao('edicaouser<?php echo $user -> id ?>')">&times;</a>

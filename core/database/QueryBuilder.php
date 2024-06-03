@@ -16,10 +16,10 @@ class QueryBuilder
     }
     public function edita ($table, $parameters, $id)
     {
-        $id=5;
+        
         $sql = sprintf('UPDATE %s SET %s WHERE id = %d', 
-    $table,
-    implode(', ', array_map(function($param) {
+        $table,
+        implode(', ', array_map(function($param) {
         return $param . ' = :' . $param;
     }, array_keys($parameters))),
     $id
