@@ -14,6 +14,10 @@ class AdminController
         return view('admin/lista-usuarios', compact('users'));
     }
 
+    public function view ()
+    {
+        $users = App::get('database') -> selecionaUser ('users');
+    }
     public function create(){
 
         $parameters = [
