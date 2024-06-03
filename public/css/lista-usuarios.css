@@ -708,7 +708,7 @@ table td button:hover {
 
 }
 
-#edicaouser {
+.editauser {
   position: fixed;
   inset: 0;
   background: rgba(69, 50, 50, 0.3);
@@ -728,7 +728,7 @@ table td button:hover {
   overflow-y: scroll;
 }
 
-#modal-visualizar {
+.modal-visualizar {
   position: fixed;
   inset: 0;
   background: rgba(69, 50, 50, 0.2);

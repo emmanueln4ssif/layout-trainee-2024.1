@@ -14,7 +14,26 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
+    public function edita ($table, $parameters, $id)
+    {
+        $sql = sprintf ('UPDATE %s SET %s WHERE id = %s', 
+        $table,
+        implode (',', array_map (function($param){
+            return $param . ' =: ' . $param;
+        }, array_keys ($parameters)
+    )), $id
+);
+        try {
 
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+
+        } catch (Exception $e) {
+
+            die($e->getMessage());
+
+        }
+    }
     public function selectAll($table)
     {
         $sql = "select * from {$table}";

@@ -65,21 +65,21 @@
               <td class="nome"><?php echo $user->name ?></td>
               <td class="email"><?php echo $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
+                  onclick="abrebotao('modal-visualizar<?php echo $user -> id ?>')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
+                  onclick="abrebotao('edicaouser<?php echo $user -> id ?>')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
                   onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
             </tr>
 
             <tr class="linha-mobile">
               <td class="table-id" rowspan="2">01</td>
-              <td class="nome">Jorge Renan Drumond</td>
-              <td class="email">jorgerenandrumond@storystroll.com</td>
+              <td class="nome"><?php echo $user->name ?></td>
+              <td class="email"><?php $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
                   onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
+                  onclick="abrebotao('edicaouser<?php echo $user -> id ?>')"><i class="bi bi-pencil-square"></i>Editar</button></td>
               <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
                   onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
             </tr>
@@ -87,9 +87,9 @@
             <tr class="botoes-mobile">
               <td class="linha-botoes" colspan="2">
                 <div class="container-botoes">
-                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar')"><i
+                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar<?php echo $user -> id ?>')"><i
                       class="bi bi-eye-fill"></i><br>Visualizar</button>
-                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser')"><i
+                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser<?php echo $user -> id ?>')"><i
                       class="bi bi-pencil-square"></i><br>Editar</button>
                   <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
                       class="bi bi-trash3-fill"></i><br>Deletar</button>
@@ -97,7 +97,8 @@
               </td>
 
             </tr>
-            <div id="modal-visualizar">
+            <div id="modal-visualizar<?php echo $user -> id ?>"
+            class="modal-visualizar">
       <div class="content-visualizar">
         <form action="#" method="post" enctype="multipart/form-data">
           <div class="formulario">
@@ -111,9 +112,37 @@
             </div>
           </div>
         </form>
-        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
+        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar<?php echo $user -> id?>')">&times;</a>
       </div>
     </div>
+
+
+    <div class = "editauser "id="edicaouser<?php echo $user -> id ?>">
+      <div class="content">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="formulario">
+            <div class="campos">
+              <label for="nome">Nome</label><br>
+              <input type="text" id="autor" name="autor" value="<?php echo $user -> name ?>"><br>
+              <label for="email">E-mail</label><br>
+              <input type="email" id="email" name="email" value="<?php echo $user -> email ?>"><br>
+              <label for="senha">Senha</label><br>
+              <div class="senha-e-olho">
+                <input type="password" id="senha" name="senha" value="<?php echo $user -> password ?>">
+                <div class="olho" onclick="mostrarSenha()">
+                  <img id="icone-olho" src="../../../public/assets/olho-aberto.svg"
+                    alt="Ícone de olho representando a visibilidade da senha">
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Salvar">
+        </form>
+        <a class="fecha" href="#" onclick="fechabotao('edicaouser<?php echo $user -> id ?>')">&times;</a>
+      </div>
+    </div>
+
+    
             <?php endforeach; ?>
           </tbody>
 
@@ -128,30 +157,7 @@
 
     </div>
 
-    <div id="edicaouser">
-      <div class="content">
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="formulario">
-            <div class="campos">
-              <label for="nome">Nome</label><br>
-              <input type="text" id="autor" name="autor" value="Laura Machado Miranda"><br>
-              <label for="email">E-mail</label><br>
-              <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br"><br>
-              <label for="senha">Senha</label><br>
-              <div class="senha-e-olho">
-                <input type="password" id="senha" name="senha" value="senha123">
-                <div class="olho" onclick="mostrarSenha()">
-                  <img id="icone-olho" src="../../../public/assets/olho-aberto.svg"
-                    alt="Ícone de olho representando a visibilidade da senha">
-                </div>
-              </div>
-            </div>
-          </div>
-          <input type="submit" value="Salvar">
-        </form>
-        <a class="fecha" href="#" onclick="fechabotao('edicaouser')">&times;</a>
-      </div>
-    </div>
+  
 
     <div id="adcuser">
       <div class="content">

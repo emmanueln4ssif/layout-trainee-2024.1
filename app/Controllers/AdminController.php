@@ -14,9 +14,20 @@ class AdminController
         return view('admin/lista-usuarios', compact('users'));
     }
 
-    public function view ()
+    public function edit ()
     {
-        $users = App::get('database') -> selecionaUser ('users');
+        $parameters = [
+            'id' => $_POST ['id'],
+            'name' => $_POST['autor'],
+            'email' => $_POST['email']
+        ];
+        $id = $_POST['senha'];
+
+        App::get('database')->edita('users', $parameters, $id);
+
+        header('Location: /users');
+        
+
     }
     public function create(){
 
