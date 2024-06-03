@@ -70,7 +70,7 @@ class QueryBuilder
         $caminho = $pasta . basename($img["name"]);
         move_uploaded_file($img["tmp_name"], $caminho);
         $parameters['imagem'] = $caminho;
-        $sql = sprintf("UPDATE %s SET %s WHERE id = %s",
+        $sql = sprintf("UPDATE %s SET %s WHERE id = %d",
             $table,
             implode(", ", array_map(function($param){
                 return $param . " = :" . $param;
@@ -89,7 +89,7 @@ class QueryBuilder
 
     public function deletar($table, $id)
     {
-        $sql = sprintf("DELETE FROM %s WHERE id = %s",
+        $sql = sprintf("DELETE FROM %s WHERE id = %d",
             $table,
             $id
         );

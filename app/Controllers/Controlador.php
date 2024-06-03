@@ -58,7 +58,7 @@ class Controlador
 
     public function deletar()
     {
-        $id = $_POST["id"];
+        $id = $_POST['id'];
         App::get("database")->deletar("posts", $id);
         header("Location: ../posts");
     }
