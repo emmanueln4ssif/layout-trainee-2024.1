@@ -153,6 +153,7 @@
                     </div>
 
                     <!-- MODAL DE VISUALIZAÇÃO - FIM -->
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -183,63 +184,33 @@
                         <div class="esquerda">
                             <label for="sinopse">Sinopse</label><br>
                             <textarea name="sinopse" rows="7" cols="50" id="sinopse"><?php echo $post->sinopse ?></textarea>
+                            <label>Nota média da internet</label>
                             <br>
-                            <label>Nota média da internet</label><br>
                             <div class="rating">
                                 <label>
-                                    <input type="radio" name="nota-net" value="1"
-                                    <?php
-                                        if($post->nota_internet == 1){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="1" />
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="2"
-                                    <?php
-                                        if($post->nota_internet == 2){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="2" checked="checked"/>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="3"
-                                    <?php
-                                        if($post->nota_internet == 3){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="3" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="4"
-                                    <?php
-                                        if($post->nota_internet == 4){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="4" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="5"
-                                    <?php
-                                        if($post->nota_internet == 5){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="5" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
@@ -259,61 +230,31 @@
                             <label for="titulo">Título</label><br>
                             <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"
                                 value="<?php echo $post->titulo_post ?>">
-                                <div class="rating">
+                            <div class="rating">
                                 <label>
-                                    <input type="radio" name="nota-net" value="1"
-                                    <?php
-                                        if($post->nota_user == 1){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="1" />
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="2"
-                                    <?php
-                                        if($post->nota_user == 2){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="2" checked="checked"/>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="3"
-                                    <?php
-                                        if($post->nota_user == 3){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="3" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="4"
-                                    <?php
-                                        if($post->nota_user == 4){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="4" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="nota-net" value="5"
-                                    <?php
-                                        if($post->nota_user == 5){
-                                            echo 'checked = "checked"';
-                                        }
-                                    ?>
-                                    />
+                                    <input type="radio" name="stars" value="5" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
@@ -490,7 +431,6 @@
             </div>
         </div>
         <!-- MODAL DE DELETAR - FIM -->
-        <?php endforeach; ?>
     </main>
 </body>
 <script src="../../../public/js/admin-lista-de-posts.js"></script>
