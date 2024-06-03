@@ -97,6 +97,23 @@
               </td>
 
             </tr>
+            <div id="modal-visualizar">
+      <div class="content-visualizar">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="formulario">
+            <div class="campos">
+              <label for="nome">ID</label><br>
+              <input type="text" id="id" name="id" value="<?php echo $user -> id?>" readonly><br>
+              <label for="nome">Nome</label><br>
+              <input type="text" id="nome" name="nome" value="<?php echo $user -> name ?>" readonly>
+              <label for="email">E-mail</label><br>
+              <input type="email" id="email" name="email" value="<?php echo $user -> email ?>" readonly><br>
+            </div>
+          </div>
+        </form>
+        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
+      </div>
+    </div>
             <?php endforeach; ?>
           </tbody>
 
@@ -161,23 +178,7 @@
       </div>
     </div>
 
-    <div id="modal-visualizar">
-      <div class="content-visualizar">
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="formulario">
-            <div class="campos">
-              <label for="nome">ID</label><br>
-              <input type="text" id="id" name="id" value="01" readonly><br>
-              <label for="nome">Nome</label><br>
-              <input type="text" id="nome" name="nome" value="Laura Machado Miranda" readonly>
-              <label for="email">E-mail</label><br>
-              <input type="email" id="email" name="email" value="lauramachadomiranda@exemplo.com.br" readonly><br>
-            </div>
-          </div>
-        </form>
-        <a class="fecha" href="#" onclick="fechabotao('modal-visualizar')">&times;</a>
-      </div>
-    </div>
+ 
 
     <div id="excluir" class="cont-deletar">
       <div class="content">
