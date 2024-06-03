@@ -27,6 +27,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
     public function selectAllcomNome($table)
     {
         //seleciona tudo da $table e name da tabela users quando o user_id da $table é igual ao id da tabela user
@@ -48,8 +49,35 @@ class QueryBuilder
         $caminho = $pasta . basename($img["name"]);
         move_uploaded_file($img["tmp_name"], $caminho);
         $parameters['imagem']=$caminho;
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)', $table, implode(', ', array_keys($parameters)), implode(', :', array_keys($parameters)));
+        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
+        $table,
+        implode(', ', array_keys($parameters)),
+        implode(', :', array_keys($parameters))
+        );
         
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function editar($table, $id, $img)
+    {
+        $pasta = "uploads/";
+        $caminho = $pasta . basename($img["name"]);
+        move_uploaded_file($img["tmp_name"], $caminho);
+        $parameters['imagem'] = $caminho;
+        $sql = sprintf("UPDATE %s SET %s WHERE id = %s",
+            $table,
+            implode(", ", array_map(function($param){
+                return $param . " = :" . $param;
+            }, array_keys($parameters))),
+            $id
+        );
+
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
@@ -61,7 +89,18 @@ class QueryBuilder
 
     public function deletar($table, $id)
     {
-        
+        $sql = sprintf("DELETE FROM %s WHERE id = %s",
+            $table,
+            $id
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact($id));
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     

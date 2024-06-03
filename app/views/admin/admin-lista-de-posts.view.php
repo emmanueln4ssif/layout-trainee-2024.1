@@ -151,16 +151,11 @@
                                 onclick="fecharModal('visualizar<?php echo $post->id ?>')">&times;</button>
                         </div>
                     </div>
-
-                    <!-- MODAL DE VISUALIZAÇÃO - FIM -->
                     <?php endforeach; ?>
+                    <!-- MODAL DE VISUALIZAÇÃO - FIM -->
+                    
                 </tbody>
             </table>
-        </div>
-        <div class="paginacao">
-            <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
-            <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
-        </div>
 
         <!-- MODAL DE EDIÇÃO - INÍCIO -->
 
@@ -186,29 +181,29 @@
                             <br>
                             <div class="rating">
                                 <label>
-                                    <input type="radio" name="stars" value="1" />
+                                    <input type="radio" name="nota-user" value="1" />
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="2" checked="checked"/>
-                                    <span class="icon">★</span>
-                                    <span class="icon">★</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="stars" value="3" />
-                                    <span class="icon">★</span>
+                                    <input type="radio" name="nota-user" value="2" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="4" />
-                                    <span class="icon">★</span>
+                                    <input type="radio" name="nota-user" value="3" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="5" />
+                                    <input type="radio" name="nota-user" value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="nota-user" value="5" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
@@ -228,31 +223,31 @@
                             <label for="titulo">Título</label><br>
                             <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"
                                 value="<?php echo $post->titulo_post ?>">
-                            <div class="rating">
+                                <div class="rating">
                                 <label>
-                                    <input type="radio" name="stars" value="1" />
+                                    <input type="radio" name="nota-user" value="1" />
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="2" checked="checked"/>
-                                    <span class="icon">★</span>
-                                    <span class="icon">★</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="stars" value="3" />
-                                    <span class="icon">★</span>
+                                    <input type="radio" name="nota-user" value="2" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="4" />
-                                    <span class="icon">★</span>
+                                    <input type="radio" name="nota-user" value="3" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="stars" value="5" />
+                                    <input type="radio" name="nota-user" value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="nota-user" value="5" />
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
                                     <span class="icon">★</span>
@@ -289,7 +284,6 @@
         </div>
 
         <!-- MODAL DE EDIÇÃO - FIM -->
-
         <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
         <div id="adiciona-post" class="cont-modal">
@@ -413,7 +407,7 @@
             <div class="content">
                 <a class="fecha" onclick="fecharModal('rm-post')" href="#">&times;</a>
                 <div class="quebra"></div>
-                <form action="post/delete" method="POST">
+                <form action="post/deletar" method="POST">
                     <input type="hidden" value="id-do-post">
                     <div class="rm-ct">
                         <p>Deseja excluir a publicação?</p>
@@ -429,6 +423,11 @@
             </div>
         </div>
         <!-- MODAL DE DELETAR - FIM -->
+        </div>
+        <div class="paginacao">
+            <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
+            <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
+        </div>
     </main>
 </body>
 <script src="../../../public/js/admin-lista-de-posts.js"></script>
