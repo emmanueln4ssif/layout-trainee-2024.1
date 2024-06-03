@@ -56,11 +56,14 @@
             </tr>-->
 
             <!-- LINHA 1 - INÍCIO -->
-
+            <?php
+              foreach ($users as $user):
+                
+            ?>
             <tr class="linha-normal">
-              <td class="table-id">01</td>
-              <td class="nome">Jorge Renan Drumond</td>
-              <td class="email">jorgerenandrumond@storystroll.com</td>
+              <td class="table-id"><?php echo $user->id?></td>
+              <td class="nome"><?php echo $user->name ?></td>
+              <td class="email"><?php echo $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
                   onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
@@ -92,222 +95,9 @@
                       class="bi bi-trash3-fill"></i><br>Deletar</button>
                 </div>
               </td>
+
             </tr>
-
-            <!-- LINHA 1 - FIM -->
-
-            <!--<tr class="linha dado">
-              <td class="table-id">02</td>
-              <td class="nome">Calebe Oliver Silva</td>
-              <td class="email">calebe_oliver_silva@storystroll.com</td>
-              <td align="center" class="container-btn"><button class="visualizar"><i
-                    class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar"><i
-                    class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
-                    class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>-->
-
-            <!-- LINHA 2 - INÍCIO -->
-
-            <tr class="linha-normal">
-              <td class="table-id">02</td>
-              <td class="nome">Calebe Oliver Silva</td>
-              <td class="email">calebe_oliver_silva@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">02</td>
-              <td class="nome">Calebe Oliver Silva</td>
-              <td class="email">calebe_oliver_silva@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="botoes-mobile">
-              <td class="linha-botoes" colspan="2">
-                <div class="container-botoes">
-                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar')"><i
-                      class="bi bi-eye-fill"></i><br>Visualizar</button>
-                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser')"><i
-                      class="bi bi-pencil-square"></i><br>Editar</button>
-                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
-                      class="bi bi-trash3-fill"></i><br>Deletar</button>
-                </div>
-              </td>
-            </tr>
-
-            <!-- LINHA 2 - FIM -->
-
-            <!--<tr class="linha dado">
-              <td class="table-id">03</td>
-              <td class="nome">Sofia Bruna Moreira</td>
-              <td class="email">sofia.bruna.moreira@storystroll.com</td>
-              <td align="center" class="container-btn"><button class="visualizar"><i
-                    class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar"><i
-                    class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
-                    class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>-->
-
-            <!-- LINHA 3 - INÍCIO -->
-
-            <tr class="linha-normal">
-              <td class="table-id">03</td>
-              <td class="nome">Sofia Bruna Moreira</td>
-              <td class="email">sofia.bruna.moreira@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">03</td>
-              <td class="nome">Sofia Bruna Moreira</td>
-              <td class="email">sofia.bruna.moreira@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="botoes-mobile">
-              <td class="linha-botoes" colspan="2">
-                <div class="container-botoes">
-                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar')"><i
-                      class="bi bi-eye-fill"></i><br>Visualizar</button>
-                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser')"><i
-                      class="bi bi-pencil-square"></i><br>Editar</button>
-                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
-                      class="bi bi-trash3-fill"></i><br>Deletar</button>
-                </div>
-              </td>
-            </tr>
-
-            <!-- LINHA 3 - FIM -->
-
-            <!--<tr class="linha dado">
-              <td class="table-id">04</td>
-              <td class="nome">Kauã Leonardo Eduardo Pires</td>
-              <td class="email">kaua.eduardo.pires@storystroll.com</td>
-              <td align="center" class="container-btn"><button class="visualizar"><i
-                    class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar"><i
-                    class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
-                    class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>-->
-
-            <!-- LINHA 4 - INÍCIO -->
-
-            <tr class="linha-normal">
-              <td class="table-id">04</td>
-              <td class="nome">Kauã Leonardo Eduardo Pires</td>
-              <td class="email">kaua.eduardo.pires@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">04</td>
-              <td class="nome">Kauã Leonardo Eduardo Pires</td>
-              <td class="email">kaua.eduardo.pires@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="botoes-mobile">
-              <td class="linha-botoes" colspan="2">
-                <div class="container-botoes">
-                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar')"><i
-                      class="bi bi-eye-fill"></i><br>Visualizar</button>
-                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser')"><i
-                      class="bi bi-pencil-square"></i><br>Editar</button>
-                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
-                      class="bi bi-trash3-fill"></i><br>Deletar</button>
-                </div>
-              </td>
-            </tr>
-
-            <!-- LINHA 4 - FIM -->
-
-            <!--<tr class="linha dado">
-              <td class="table-id">05</td>
-              <td class="nome">Carolina Tereza Eloá Martins</td>
-              <td class="email">carolina_tereza_martins@storystroll.com</td>
-              <td align="center" class="container-btn"><button class="visualizar"><i
-                    class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="container-btn"><button class="editar"><i
-                    class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="ultimoDado container-btn"><button class="deletar"><i
-                    class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>-->
-
-            <!-- LINHA 5 - INÍCIO -->
-
-            <tr class="linha-normal">
-              <td class="table-id">05</td>
-              <td class="nome">Carolina Tereza Eloá Martins</td>
-              <td class="email">carolina_tereza_martins@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">05</td>
-              <td class="nome">Carolina Tereza Eloá Martins</td>
-              <td class="email">carolina_tereza_martins@storystroll.com</td>
-              <td align="center" class="espaco-visualizar"><button class="visualizar"
-                  onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
-              <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
-                  onclick="abrebotao('edicaouser')"><i class="bi bi-pencil-square"></i>Editar</button></td>
-              <td align="center" class="espaco-deletar ultimoDado"><button class="deletar"
-                  onclick="abrebotao('excluir')"><i class="bi bi-trash3-fill"></i>Deletar</button></td>
-            </tr>
-
-            <tr class="botoes-mobile">
-              <td class="linha-botoes" colspan="2">
-                <div class="container-botoes">
-                  <button type="button" class="botao-visualizar" onclick="abrebotao('modal-visualizar')"><i
-                      class="bi bi-eye-fill"></i><br>Visualizar</button>
-                  <button type="button" class="botao-editar" onclick="abrebotao('edicaouser')"><i
-                      class="bi bi-pencil-square"></i><br>Editar</button>
-                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
-                      class="bi bi-trash3-fill"></i><br>Deletar</button>
-                </div>
-              </td>
-            </tr>
-
-            <!-- LINHA 5 - FIM -->
-
+            <?php endforeach; ?>
           </tbody>
 
         </table>

@@ -25,6 +25,7 @@ class AdminController
         App::get('database')->insert('users', $parameters);
 
         header('Location: /users');
+        
 
     }
 
