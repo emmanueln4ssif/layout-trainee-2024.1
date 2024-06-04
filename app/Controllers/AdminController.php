@@ -17,7 +17,7 @@ class AdminController
     public function edit ()
     {
         $parameters = [
-            'password' => $_POST ['senha'],
+            'password' => md5($_POST ['senha']),
             'name' => $_POST['autor'],
             'email' => $_POST['email']
         ];
@@ -34,7 +34,7 @@ class AdminController
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
-            'password' => $_POST['senha']
+            'password' => md5($_POST['senha'])
         ];
 
         App::get('database')->insert('users', $parameters);
