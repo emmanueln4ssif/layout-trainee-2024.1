@@ -78,9 +78,6 @@ class QueryBuilder
             $id
         );
 
-        echo $sql;
-        exit;
-
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);

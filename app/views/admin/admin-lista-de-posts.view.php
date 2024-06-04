@@ -68,7 +68,6 @@
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
 
                             <div class="content">
-                                <h1><?php echo $post->data_post?></h1>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
