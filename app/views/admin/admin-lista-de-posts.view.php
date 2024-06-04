@@ -43,7 +43,7 @@
                                     class="bi bi-eye-fill"></i><br>Visualizar</button>
                         </td>
                         <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('edit-post<?php $post->id ?>')"><i
+                                onclick="abrirModal('edit-post<?php echo $post->id ?>')"><i
                                     class="bi bi-pencil-square"></i><br>Editar</button>
                         </td>
                         <td class="espaco-excluir"><button type="button" class="botao-excluir"
@@ -61,7 +61,7 @@
                                     class="bi bi-eye-fill"></i><br>Visualizar</button>
                         </td>
                         <td class="espaco-editar"><button type="button" class="botao-editar"
-                                onclick="abrirModal('edit-post<?php $post->id ?>')"><i
+                                onclick="abrirModal('edit-post<?php echo $post->id ?>')"><i
                                     class="bi bi-pencil-square"></i><br>Editar</button>
                         </td>
                         <td class="espaco-excluir"><button type="button" class="botao-excluir"
@@ -76,7 +76,7 @@
                                     onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                         class="bi bi-eye-fill"></i><br>Visualizar</button>
                                 <button type="button" class="botao-editar"
-                                    onclick="abrirModal('edit-post<?php $post->id ?>')"><i
+                                    onclick="abrirModal('edit-post<?php echo $post->id ?>')"><i
                                         class="bi bi-pencil-square"></i><br>Editar</button>
                                 <button type="button" class="botao-excluir"
                                     onclick="abrirModal('rm-post<?php echo $post->id ?>')"><i
@@ -185,7 +185,7 @@
 
                     <!-- MODAL DE EDITAR - INICIO -->
 
-                    <div class="cont-modal" id="edit-post<?php $post->id ?>">
+                    <div class="cont-modal" id="edit-post<?php echo $post->id ?>">
 
                         <div class="content modal-editar-tam">
 
