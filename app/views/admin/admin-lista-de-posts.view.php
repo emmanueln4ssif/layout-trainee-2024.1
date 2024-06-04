@@ -31,9 +31,10 @@
                     <th class="acoes"></th>
                 </thead>
                 <tbody>
+                    <?php $idCont=1; ?>
                     <?php foreach ($posts as $post) : ?>
                     <tr class="linha-normal">
-                        <td class="espaco-id"><?php echo $post->id ?></td>
+                        <td class="espaco-id"><?php echo $idCont ?></td>
                         <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
                         <td class="espaco-autor"><?php echo $post->name ?></td>
                         <td class="espaco-data"><?php echo $post->data_post ?></td>
@@ -312,7 +313,7 @@
                         </div>
 
                     </div>
-
+                    <?php $idCont++; ?>
                     <?php endforeach; ?>
                     <!-- MODAL DE VISUALIZAÇÃO - FIM -->
 

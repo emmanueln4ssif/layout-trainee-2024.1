@@ -153,6 +153,10 @@ table th {
     padding-bottom: 0.2vw;
 }
 
+.modal-editar-tam {
+    max-width: 900px;
+    display: flex;
+}
 
 .form-editar {
     display: flex;
