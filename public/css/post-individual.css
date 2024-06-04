@@ -1,0 +1,666 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+body {
+  background: rgb(236, 209, 224);
+}
+#crud-usuario {
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+}
+table {
+  background-color: #002c42;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+thead {
+  font-weight: 200;
+  font-size: 20px;
+  color: #e87c7a;
+}
+tbody {
+  font-weight: 300;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+.linha-mobile {
+  display: none;
+}
+.botoes-mobile {
+  display: none;
+}
+.rm-ct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.form-deleta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rm-ct {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.cont-deletar>.content {
+  width: fit-content;
+}
+.rm-ct>p {
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 26px;
+}
+table td {
+  justify-items: center;
+  border-top: 2px solid #ef9ca9;
+  border-right: 2px solid #ef9ca9;
+}
+table td,
+table th {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+table td button {
+  text-decoration: none;
+  background: #ffffff00;
+  border: none;
+  color: #e87c7a;
+  transition: 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+}
+.table-id {
+  width: 60px;
+}
+.nome {
+  width: 300px;
+}
+.email {
+  max-width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+td.container-btn {
+  width: 30px;
+}
+/*.container-btns{
+  display: flex;
+  flex-direction: row;
+}*/
+.cont-bt {
+  /*border: 1px solid greenyellow;*/
+  display: flex;
+  flex-direction: row;
+}
+.visualizar,
+.editar,
+.deletar {
+  margin: auto;
+}
+.visualizar {
+  width: 80px;
+}
+.editar {
+  width: 50px;
+}
+.deletar {
+  width: 60px;
+}
+.cont-deletar {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.ultimoDado {
+  border-right: none;
+}
+table td button:hover {
+  font-weight: 600;
+  color: #ef9ca9;
+}
+#alternador {
+  margin-top: 10px;
+  float: right;
+}
+.btn-voltar {
+  width: 110px;
+  margin-right: 10px;
+}
+.btn-avancar {
+  width: 135px;
+}
+.btn-avancar:hover,
+.btn-voltar:hover {
+  background: #002c42;
+  font-weight: 600;
+  color: #ef9ca9;
+}
+.btn {
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #002c42;
+  border: none;
+  color: #e87c7a;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#cabecalho {
+  height: 30px;
+}
+#adicionar {
+  float: left;
+}
+#adicionar .btn {
+  margin-bottom: 10px;
+  margin-top: 0;
+  width: 230px;
+}
+#adicionar .btn:hover {
+  background: #002c42;
+  font-weight: 600;
+  color: #ef9ca9;
+}
+#titulo-table {
+  align-items: baseline;
+  justify-content: center;
+  color: #002c42;
+  font-weight: 600;
+  font-size: 32px;
+  padding-right: 20px;
+  float: right;
+}
+/*.editar, .visualizar, .deletar{
+  /*border: 1px solid greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+}*/
+@media screen and (min-width:769px) and (max-width:1024px) {
+  #crud-usuario {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  thead {
+    font-size: 16px;
+  }
+  tbody {
+    font-size: 16px;
+  }
+  table td button {
+    font-size: 12px;
+  }
+  #titulo-table {
+    font-size: 28px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  .visualizar {
+    width: 60px;
+  }
+  .editar {
+    width: 40px;
+  }
+  .deletar {
+    width: 50px;
+  }
+  table td,
+  table th {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  .table-id {
+    width: 45px;
+  }
+}
+@media screen and (min-width:427px) and (max-width:768px) {
+  #crud-usuario {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  thead {
+    font-size: 12px;
+  }
+  tbody {
+    font-size: 12px;
+  }
+  #titulo-table {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  table td,
+  table th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  table td button {
+    text-decoration: none;
+    background: #ffffff00;
+    border: none;
+    color: #e87c7a;
+    transition: 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+  }
+  .table-id {
+    width: 45px;
+  }
+  .nome {
+    width: 225px;
+  }
+  .visualizar {
+    width: 60px;
+  }
+  .editar {
+    width: 35px;
+  }
+  .deletar {
+    width: 45px;
+  }
+  #adicionar .btn {
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 160px;
+  }
+  .btn-voltar {
+    width: 80px;
+    margin-right: 5px;
+  }
+  .btn-avancar {
+    width: 95px;
+  }
+}
+@media screen and (min-width:321px) and (max-width:426px) {
+  #crud-usuario {
+    width: auto;
+    margin-left: 15%;
+    margin-right: 1%;
+    margin-top: 100px;
+  }
+  #container-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  table {
+    border-radius: 10px;
+  }
+  thead {
+    font-size: 16px;
+  }
+  tbody {
+    font-size: 16px;
+  }
+  #cabecalho {
+    align-content: center;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+  #titulo-table {
+    padding-right: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  table td,
+  table th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width: max-content;
+  }
+  .nome {
+    text-wrap: nowrap;
+    width: 150px;
+  }
+  .email {
+    max-width: none;
+    overflow: none;
+    text-overflow: none;
+    white-space: nowrap;
+  }
+  table td button {
+    width: 100%;
+    font-size: 0px;
+    color: #ffffff00;
+  }
+  table td button i {
+    font-size: 12px;
+    color: #e87c7a;
+  }
+  table td button i:hover {
+    font-weight: 600;
+    color: #ef9ca9;
+  }
+  #adicionar .btn {
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 101px;
+  }
+  .btn-voltar {
+    width: 78px;
+    margin-right: 5px;
+  }
+  .btn-avancar {
+    width: 92px;
+  }
+  td.container-btn {
+    width: 30px;
+  }
+  .editar,
+  .visualizar,
+  .deletar {
+    width: 15px;
+  }
+}
+@media screen and (min-width:0px) and (max-width:320px) {
+  #crud-usuario {
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 15%;
+  }
+  #container-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  table {
+    border-radius: 10px;
+  }
+  thead {
+    font-size: 16px;
+  }
+  tbody {
+    font-size: 16px;
+  }
+  #cabecalho {
+    align-content: center;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+  #titulo-table {
+    padding-right: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  table td,
+  table th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .nome {
+    text-wrap: nowrap;
+    width: 150px;
+  }
+  .email {
+    max-width: none;
+    overflow: none;
+    text-overflow: none;
+    white-space: nowrap;
+  }
+  table td button {
+    width: 100%;
+    font-size: 0px;
+    color: #ffffff00;
+  }
+  table td button i {
+    font-size: 12px;
+    color: #e87c7a;
+  }
+  table td button i:hover {
+    font-weight: 600;
+    color: #ef9ca9;
+  }
+  #adicionar .btn {
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 101px;
+  }
+  .btn-voltar {
+    width: 78px;
+    margin-right: 5px;
+  }
+  .btn-avancar {
+    width: 92px;
+  }
+  td.container-btn {
+    width: 30px;
+  }
+  .editar,
+  .visualizar,
+  .deletar {
+    width: 15px;
+  }
+}
+@media screen and (min-width:0px) and (max-width:426px) {
+  /*main{
+  width: 100%;
+  margin-right: 3%;
+  margin-left: 15%;
+  overflow: hidden;
+}*/
+  .linha-normal {
+    display: none;
+  }
+  .linha-mobile {
+    display: table-row;
+  }
+  .botoes-mobile {
+    display: table-row;
+  }
+  .linha-botoes {
+    padding: 5px 20px 5px 20px;
+  }
+  .container-botoes {
+    display: flex;
+    align-items: flex-start;
+  }
+  .email {
+    border-right: none;
+    max-width: 22ch;
+  }
+  .botao-visualizar,
+  .botao-editar,
+  .botao-deletar {
+    margin: 0px 25px;
+    height: 100%;
+    width: 35px;
+  }
+  /*.container-tabela{
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;///////////////
+}*/
+  /*table i{
+    font-size: 14px;
+}*/
+  /*thead{
+    font-size: 12px;
+}*/
+  /*tbody{
+    font-size: 13px;
+    text-wrap: nowrap;
+}*/
+  /*.tabela-posts{
+    border-radius: 1.7vh;
+}*/
+  .espaco-deletar {
+    display: none;
+  }
+  .espaco-editar {
+    display: none
+  }
+  .espaco-visualizar {
+    display: none
+  }
+  /*.linha-botoes{
+    border-right: none;
+}*/
+  .acoes {
+    display: none;
+  }
+}
+#edicaouser {
+  position: fixed;
+  inset: 0;
+  background: rgba(69, 50, 50, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+#adcuser {
+  position: fixed;
+  inset: 0;
+  background: rgba(69, 50, 50, 0.2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+#modal-visualizar {
+  position: fixed;
+  inset: 0;
+  background: rgba(69, 50, 50, 0.2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.content {
+  width: 40%;
+  margin: 8px;
+  position: relative;
+  background: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.content-visualizar {
+  width: 40%;
+  margin: 8px;
+  position: relative;
+  background: #f5f5f5;
+  padding: 10px 20px 35px 20px;
+  border-radius: 4px;
+}
+.fecha {
+  position: absolute;
+  top: -1px;
+  right: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #453232;
+  border-radius: 4px;
+  background-color: #ecd1e0;
+  color: #453232;
+}
+input[type="file"] {
+  display: none;
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 28px 0;
+  box-sizing: border-box;
+  border: 2px solid #453232;
+  border-radius: 4px;
+  background-color: #ecd1e0;
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
+}
+a {
+  color: #453232;
+}
+a:visited {
+  color: #453232;
+}
+.senha-e-olho {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+#senha {
+  position: relative;
+  padding-right: 40px;
+}
+.olho {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 5vh;
+  cursor: pointer;
+}
+#icone-olho {
+  width: 4vh;
+}
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .content {
+    width: 70%;
+  }
+  .content-visualizar {
+    width: 70%;
+  }
+}
