@@ -153,6 +153,12 @@ table th {
     padding-bottom: 0.2vw;
 }
 
+
+.form-editar {
+    display: flex;
+    flex-direction: column;
+}
+
 .espaco-id {
     width: 1vw;
 }
