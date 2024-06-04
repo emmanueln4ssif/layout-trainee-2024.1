@@ -161,10 +161,10 @@
 
                     <!-- MODAL DE DELETAR - INICIO -->
                     <div id="rm-post<?php echo $post->id ?>" class="cont-modal">
-                        <div class="content">
+                        <div class="content-delete">
                             <a class="fecha" onclick="fecharModal('rm-post<?php echo $post->id ?>')"
                                 href="#">&times;</a>
-                            <div class="quebra"></div>
+
                             <form action="post/deletar" method="POST">
                                 <input type="hidden" value="<?php echo $post->id ?>" name="id">
                                 <div class="rm-ct">

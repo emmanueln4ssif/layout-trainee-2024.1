@@ -153,6 +153,23 @@ table th {
     padding-bottom: 0.2vw;
 }
 
+.content-delete {
+    margin: 8px;
+    position: relative;
+    height: fit-content;
+    max-height: 90%;
+    background: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 40px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
 .modal-editar-tam {
     max-width: 900px;
     display: flex;
