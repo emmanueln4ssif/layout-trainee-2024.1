@@ -27,7 +27,7 @@ class Controlador
             'nota_user'=> $_POST['nota-user'],
             'review'=> $_POST['conteudo'],
             'data_leitura'=> $_POST['data'],
-            'data_post'=> $_POST['dataat']   
+            'data_post'=> date("Y-m-d")   
         ];
         App::get('database')->inserir('posts',$parameters, $_FILES['img']);
         header('Location: ../posts');
@@ -45,8 +45,7 @@ class Controlador
             'titulo_post'=> $_POST['titulo'],
             'nota_user'=> $_POST['nota-user'],
             'review'=> $_POST['conteudo'],
-            'data_leitura'=> $_POST['data'],
-            'data_post'=> $_POST['dataat']   
+            'data_leitura'=> $_POST['data']
         ];
 
         $id = $_POST["id"];

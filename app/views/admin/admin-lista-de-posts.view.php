@@ -68,6 +68,7 @@
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
 
                             <div class="content">
+                                <h1><?php echo $post->data_post?></h1>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
@@ -269,7 +270,7 @@
                                         </div>
 
                                     </div>
-
+                                    <input type="hidden" value="<?php echo $post->id ?>" name="id">    
                                     <input type="submit" value="Salvar">
 
                                 </form>

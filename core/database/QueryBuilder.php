@@ -64,7 +64,7 @@ class QueryBuilder
         }
     }
 
-    public function editar($table, $id, $img)
+    public function editar($table, $id, $parameters, $img)
     {
         $pasta = "uploads/";
         $caminho = $pasta . basename($img["name"]);
@@ -77,6 +77,9 @@ class QueryBuilder
             }, array_keys($parameters))),
             $id
         );
+
+        echo $sql;
+        exit;
 
         try {
             $stmt = $this->pdo->prepare($sql);
