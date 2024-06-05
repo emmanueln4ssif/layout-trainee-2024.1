@@ -91,7 +91,7 @@
                       class="bi bi-eye-fill"></i><br>Visualizar</button>
                   <button type="button" class="botao-editar" onclick="abrebotao('edicaouser<?php echo $user -> id ?>')"><i
                       class="bi bi-pencil-square"></i><br>Editar</button>
-                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir')"><i
+                  <button type="button" class="botao-deletar" onclick="abrebotao('excluir<?php echo $user -> id ?>')"><i
                       class="bi bi-trash3-fill"></i><br>Deletar</button>
                 </div>
               </td>
@@ -130,9 +130,9 @@
                       <input type="email" id="email" name="email" value="<?php echo $user -> email ?>"><br>
                       <label for="senha">Senha</label><br>
                       <div class="senha-e-olho">
-                        <input type="password" id="senha" name="senha" value="<?php echo $user -> password ?>">
-                        <div class="olho" onclick="mostrarSenha()">
-                          <img id="icone-olho" src="../../../public/assets/olho-aberto.svg"
+                        <input type="password" id="senha<?php echo $user -> id ?>" name="senha" value="<?php echo $user -> password ?>">
+                        <div class="olho" onclick="mostrarSenha('senha<?php echo $user -> id ?>', 'icone-olhosenha<?php echo $user -> id ?>')">
+                          <img id="icone-olhosenha<?php echo $user -> id ?>" src="../../../public/assets/olho-aberto.svg"
                             alt="Ícone de olho representando a visibilidade da senha">
                         </div>
                       </div>

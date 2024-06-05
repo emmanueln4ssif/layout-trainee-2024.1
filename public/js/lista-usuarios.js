@@ -9,9 +9,9 @@ function fechabotao (id){
 
 
 
-function mostrarSenha(){
-    var senha = document.getElementById('senha')
-    var botao = document.getElementById('icone-olho')
+function mostrarSenha(id_senha, id_olho){
+    var senha = document.getElementById(id_senha)
+    var botao = document.getElementById(id_olho)
     if(senha.type == 'password'){
         senha.setAttribute('type', 'text')
         botao.setAttribute('src', '../../../public/assets/olho-fechado.svg')
