@@ -57,10 +57,11 @@
 
             <!-- LINHA 1 - INÍCIO -->
 
+            <?php $cont_id = 1; ?>
             <?php foreach ($users as $user): ?>
-
+            
             <tr class="linha-normal">
-              <td class="table-id"><?php echo $user->id?></td>
+              <td class="table-id"><?php echo $cont_id ?></td>
               <td class="nome"><?php echo $user->name ?></td>
               <td class="email"><?php echo $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
@@ -72,7 +73,7 @@
             </tr>
 
             <tr class="linha-mobile">
-              <td class="table-id" rowspan="2">01</td>
+              <td class="table-id" rowspan="2"><?php echo $cont_id ?></td>
               <td class="nome"><?php echo $user->name ?></td>
               <td class="email"><?php $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
@@ -104,7 +105,7 @@
                     <div class="campos">
 
                       <label for="nome">ID</label><br>
-                      <input type="text" id="id" name="id" value="<?php echo $user -> id?>" readonly><br>
+                      <input type="text" id="id" name="id" value="<?php echo $cont_id ?>" readonly><br>
                       <label for="nome">Nome</label><br>
                       <input type="text" id="nome" name="nome" value="<?php echo $user -> name ?>" readonly>
                       <label for="email">E-mail</label><br>
@@ -163,6 +164,7 @@
               </div>
             </div>
 
+            <?php $cont_id++; ?>
             <?php endforeach; ?>
 
           </tbody>
