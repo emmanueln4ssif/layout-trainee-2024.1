@@ -575,7 +575,8 @@
 
                             </form>
 
-                            <button class="fecha" onclick="fecharModal('edit-post<?php $post->id ?>')">&times;</button>
+                            <button class="fecha"
+                                onclick="fecharModal('edit-post<?php echo $post->id ?>')">&times;</button>
 
                         </div>
 
