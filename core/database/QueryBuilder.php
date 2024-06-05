@@ -110,7 +110,17 @@ class QueryBuilder
 
     public function inserir($table, $parameters, $img){
         $pasta = "uploads/";
-        $caminho = $pasta . basename($img["name"]);
+        $novoNome=uniqid();
+        $caminho = $pasta . basename($novoNome);
+        $extensao=strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
+        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg"){    
+            die("<script>
+            window.onload = function () {
+                alert('Tipo de arquivo não suportado!');
+                window.location.href = '/posts';
+            };
+        </script>");
+        }
         move_uploaded_file($img["tmp_name"], $caminho);
         $parameters['imagem']=$caminho;
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
@@ -131,7 +141,17 @@ class QueryBuilder
     public function editar($table, $id, $parameters, $img)
     {
         $pasta = "uploads/";
-        $caminho = $pasta . basename($img["name"]);
+        $novoNome=uniqid();
+        $caminho = $pasta . basename($novoNome);
+        $extensao=strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
+        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg"){    
+            die("<script>
+            window.onload = function () {
+                alert('Tipo de arquivo não suportado!');
+                window.location.href = '/posts';
+            };
+        </script>");
+        }
         move_uploaded_file($img["tmp_name"], $caminho);
         $parameters['imagem'] = $caminho;
         $sql = sprintf("UPDATE %s SET %s WHERE id = %d",
