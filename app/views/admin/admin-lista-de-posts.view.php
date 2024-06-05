@@ -31,13 +31,20 @@
                     <th class="acoes"></th>
                 </thead>
                 <tbody>
-                    <?php $idCont=1; ?>
-                    <?php foreach ($posts as $post) : ?>
+                    <?php $idCont=1;?>
+
+                    <?php foreach ($posts as $post) :
+                        $comp = explode('-', $post->data_post);
+                        $datapostFormatada = $comp[2] . '/' . $comp[1] . '/' . $comp[0];
+
+                        $compLeitura = explode('-', $post->data_leitura);
+                        $dataleituraFormatada = $compLeitura[2] . '/' . $compLeitura[1] . '/' . $compLeitura[0];
+                        ?>
                     <tr class="linha-normal">
                         <td class="espaco-id"><?php echo $idCont ?></td>
                         <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
                         <td class="espaco-autor"><?php echo $post->name ?></td>
-                        <td class="espaco-data"><?php echo $post->data_post ?></td>
+                        <td class="espaco-data"><?php echo $datapostFormatada  ?></td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
                                 onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                     class="bi bi-eye-fill"></i><br>Visualizar</button>
@@ -55,7 +62,7 @@
                         <td class="espaco-id" rowspan="2"><?php echo $post->id ?></td>
                         <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
                         <td class="espaco-autor"><?php echo $post->name ?></td>
-                        <td class="espaco-data" rowspan="2"><?php echo $post->data_post ?></td>
+                        <td class="espaco-data" rowspan="2"><?php echo $datapostFormatada ?></td>
                         <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
                                 onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                     class="bi bi-eye-fill"></i><br>Visualizar</button>
@@ -148,9 +155,9 @@
                                     <div class="direita">
                                         <img src="<?php echo $post->imagem ?>">
                                         <h3>Data da leitura</h3>
-                                        <p><?php echo $post->data_leitura ?></p>
+                                        <p><?php echo $dataleituraFormatada ?></p>
                                         <h3>Data da publicação</h3>
-                                        <p><?php echo $post->data_post ?></p>
+                                        <p><?php echo $datapostFormatada ?></p>
                                     </div>
                                 </div>
                             </div>
