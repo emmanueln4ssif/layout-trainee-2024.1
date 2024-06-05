@@ -75,7 +75,7 @@
             <tr class="linha-mobile">
               <td class="table-id" rowspan="2"><?php echo $cont_id ?></td>
               <td class="nome"><?php echo $user->name ?></td>
-              <td class="email"><?php $user -> email ?></td>
+              <td class="email"><?php echo $user -> email ?></td>
               <td align="center" class="espaco-visualizar"><button class="visualizar"
                   onclick="abrebotao('modal-visualizar')"><i class="bi bi-eye-fill"></i>Visualizar</button></td>
               <td align="center" class="espaco-editar"><button class="editar" id="abrebotao"
