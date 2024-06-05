@@ -144,16 +144,17 @@ class QueryBuilder
         $novoNome=uniqid();
         $caminho = $pasta . basename($novoNome);
         $extensao=strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
-        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg"){    
+        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg" && $img["name"] != null){    
             die("<script>
             window.onload = function () {
                 alert('Tipo de arquivo não suportado!');
                 window.location.href = '/posts';
             };
         </script>");
+        }elseif($img["name"]!=null){
+            move_uploaded_file($img["tmp_name"], $caminho);
+            $parameters['imagem'] = $caminho;
         }
-        move_uploaded_file($img["tmp_name"], $caminho);
-        $parameters['imagem'] = $caminho;
         $sql = sprintf("UPDATE %s SET %s WHERE id = %d",
             $table,
             implode(", ", array_map(function($param){
