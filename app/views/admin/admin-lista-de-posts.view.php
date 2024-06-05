@@ -697,7 +697,7 @@
                                     rows="7" cols="50"></textarea>
                             </div>
                             <div class="direita">
-                                <div class="img-prev"><img id="preview" src="" alt="Pré-visualização da imagem"
+                                <div class="img-prev"><img id="preview" src="#" alt="Pré-visualização da imagem"
                                         style="display: none;">
                                 </div>
                                 <label for="img">Selecione uma imagem:</label>
