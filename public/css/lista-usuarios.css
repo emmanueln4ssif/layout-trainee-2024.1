@@ -13,6 +13,22 @@ body {
   background: rgb(236, 209, 224);
 }
 
+.paginacao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navpaginacao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .botoes-rm {
   display: flex;
   flex-direction: row;
@@ -207,10 +223,41 @@ table td button:hover {
 .btn-voltar {
   width: 110px;
   margin-right: 10px;
+  color: #e87c7a;
 }
 
 .btn-avancar {
   width: 135px;
+  margin-left: 10px;
+}
+.paginacao-link:visited{
+  color: #e87c7a;
+  text-decoration: none;
+}
+.paginacao-link{
+  
+  color: #e87c7a;
+  text-decoration: none;
+}
+.paginacao-linkactive{
+  color: #376c89;
+  text-decoration: none;
+}
+.paginacao-item{
+  text-align: center;
+  list-style-type: none;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  float: left;
+  margin: 2px;
+  width: 35px;
+  cursor: pointer;
+}
+.paginacao-numeros{
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
 }
 
 .btn-avancar:hover,
