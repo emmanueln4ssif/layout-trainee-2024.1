@@ -201,17 +201,19 @@
                                     <div class="direita">
                                         <label for="titulo-livro">Título do livro</label>
                                         <input type="text" id="titulo-livro" name="titulo-livro"
-                                            placeholder="Título do livro" value="Livro">
+                                            placeholder="Título do livro" value="<?php echo $post->livro_titulo ?>">
                                         <label for="autor-livro">Nome do autor</label>
                                         <input type="text" id="autor-livro" name="autor-livro"
-                                            placeholder="Nome do autor do livro" value="autor">
+                                            placeholder="Nome do autor do livro"
+                                            value="<?php echo $post->livro_autor ?>">
                                         <label for="ano-pub">Ano de publicação</label>
                                         <input name="ano-pub" id="ano-pub" type="number" placeholder="Ano de publicação"
-                                            max="2024" value="1990">
+                                            max="2024" value="<?php echo $post->livro_ano ?>">
                                     </div>
                                     <div class="esquerda">
                                         <label for="sinopse">Sinopse</label><br>
-                                        <textarea name="sinopse" rows="7" cols="50" id="sinopse">Sinopse</textarea>
+                                        <textarea name="sinopse" rows="7" cols="50"
+                                            id="sinopse"><?php echo $post->sinopse ?></textarea>
                                         <br>
                                         <label>Nota média da internet</label><br>
                                         <div class="rating">
@@ -392,10 +394,11 @@
 
                                     <div class="esquerda">
                                         <label for="autor">Autor</label><br>
-                                        <input type="text" id="autor" name="autor" value="pedro_123" readonly><br>
+                                        <input type="text" id="autor" name="autor" value="<?php echo $post->name ?>"
+                                            readonly><br>
                                         <label for="titulo">Título</label><br>
                                         <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"
-                                            value="Título">
+                                            value="<?php echo $post->titulo_post ?>">
                                         <div class="rating">
                                             <?php
                                                 $notaUser = $post->nota_user;
@@ -563,17 +566,18 @@
                                         <label for="conteudo">Review</label><br>
                                         <textarea type="text" id="conteudo" name="conteudo"
                                             placeholder="Conteudo da sua review" rows="7"
-                                            cols="50">Sua review</textarea>
+                                            cols="50"><?php echo $post->review ?></textarea>
                                     </div>
 
                                     <div class="direita">
-                                        <div class="img-prev"><img id="preview2" src="../../../public/assets/capa.jpg"
+                                        <div class="img-prev"><img id="preview2" src="<?php echo $post->imagem ?>"
                                                 alt="Pré-visualização da imagem">
                                         </div>
                                         <label for="img">Selecione uma imagem:</label>
                                         <input type="file" id="img-edita" name="img" accept="image/*">
                                         <label for="data">Data da leitura:</label>
-                                        <input type="date" id="prev-data" value="2024-03-14" name="data">
+                                        <input type="date" id="prev-data" value="<?php echo $post->data_leitura ?>"
+                                            name="data">
                                     </div>
 
                                 </div>
