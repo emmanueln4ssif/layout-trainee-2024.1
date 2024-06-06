@@ -195,19 +195,19 @@
 
             </div>
 
-            <div id="alternador">
-                <button href="?pagina=<?php $page-1 ?>" class="btn btn-voltar <?= $page <=1 ?"disabled" : "" ?>">&lt
-                    Voltar</button>
-                <nav aria-label="...">
-                    <ul class="pagination pagination-sm">
+            <div id="alternador" class="paginacao">
+              <img width="40px" src="../../../public/assets/next-svgrepo-com 1.svg"
+              <a href="?pagina=<?php echo $page-1 ?>" class="btn btn-voltar <?= $page <=1 ?"disabled" : "" ?>"style="color: #e87c7a;" >&ltVoltar</a>
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
                         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                        <li class="page-item"><a class="page-link <?= $page_number == $page ? "active" : "" ?>"
+                        <li onclick="location.href = '?pagina=<?= $page_number ?>';"class="paginacao-item"><a class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
                                 href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
                         <?php endfor ?>
                     </ul>
                 </nav>
-                <button href="?pagina=<?= $page+1 ?>"
-                    class="btn btn-avancar <?= $page >=$total_pages ?"disabled" : "" ?>">Avançar &gt</button>
+                <a href="?pagina=<?= $page+1 ?>"
+                    class="btn btn-avancar <?= $page >=$total_pages ?"disabled" : "" ?>" style="color: #e87c7a;">Avançar &gt</a>
             </div>
 
         </div>
