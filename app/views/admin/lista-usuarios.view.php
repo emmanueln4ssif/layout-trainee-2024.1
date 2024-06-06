@@ -58,7 +58,7 @@
 
                         <!-- LINHA 1 - INÍCIO -->
 
-                        <?php $cont_id = 1; ?>
+                        <?php $cont_id = 1+(5*($page-1)); ?>
                         <?php foreach ($users as $user): ?>
 
                         <tr class="linha-normal">
