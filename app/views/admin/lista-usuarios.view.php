@@ -191,22 +191,23 @@
                         <?php endforeach; ?>
 
                     </tbody>
-
                 </table>
 
             </div>
 
             <div id="alternador">
-                <button class="btn btn-voltar">&lt Voltar</button>
+                <button href="?pagina=<?php $page-1 ?>" class="btn btn-voltar <?= $page <=1 ?"disabled" : "" ?>">&lt
+                    Voltar</button>
                 <nav aria-label="...">
                     <ul class="pagination pagination-sm">
-                        <?php for($page_number = 1; $page_number <= 8; $page_number++): ?>
-                        <li class="page-item"><a class="page-link <?= $page_number == 3 ? "active" : "" ?>"
-                                href="#"><?php echo $page_number?></a></li>
+                        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                        <li class="page-item"><a class="page-link <?= $page_number == $page ? "active" : "" ?>"
+                                href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
                         <?php endfor ?>
                     </ul>
                 </nav>
-                <button class=" btn btn-avancar">Avançar &gt</button>
+                <button href="?pagina=<?= $page+1 ?>"
+                    class="btn btn-avancar <?= $page >=$total_pages ?"disabled" : "" ?>">Avançar &gt</button>
             </div>
 
         </div>
