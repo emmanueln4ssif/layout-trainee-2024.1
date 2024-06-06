@@ -196,8 +196,7 @@
             </div>
 
             <div id="alternador" class="paginacao">
-              <img width="40px" src="../../../public/assets/next-svgrepo-com 1.svg"
-              <a href="?pagina=<?php echo $page-1 ?>" class="btn btn-voltar <?= $page <=1 ?"disabled" : "" ?>"style="color: #e87c7a;" >&ltVoltar</a>
+              <img width="40px" src="../../../public/assets/esquerda.svg">
                 <nav class="navpaginacao">
                     <ul class="paginacao-numeros">
                         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
@@ -206,8 +205,8 @@
                         <?php endfor ?>
                     </ul>
                 </nav>
-                <a href="?pagina=<?= $page+1 ?>"
-                    class="btn btn-avancar <?= $page >=$total_pages ?"disabled" : "" ?>" style="color: #e87c7a;">Avançar &gt</a>
+                <img width="40px" src="../../../public/assets/direita.svg">
+
             </div>
 
         </div>
