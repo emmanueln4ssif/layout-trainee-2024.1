@@ -34,9 +34,14 @@ class QueryBuilder
 
         }
     }
-    public function selectAll($table)
+    public function selectAll($table, $inicio=null,$rows_count=null)
     {
+        
         $sql = "select * from {$table}";
+        
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -183,6 +188,22 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(compact($id));
             
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+    public function conta($table){
+        $sql = "select COUNT(*) from {$table}";
+
+        try {
+            
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
         } catch (Exception $e) {
             die($e->getMessage());
         }

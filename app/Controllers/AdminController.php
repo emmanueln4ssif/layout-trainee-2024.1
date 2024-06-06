@@ -10,8 +10,24 @@ class AdminController
 
     public function index()
     {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/lista-usuarios', compact('users'));
+        $page = 1;
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page<=0){
+                return redirect('/users');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App :: get('database')->conta('users');
+        if($inicio > $rows_count){
+            return redirect('/users');
+        }
+
+
+        $users = App::get('database')->selectAll('users',$inicio,$itensPage);
+        $total_pages = ceil ($rows_count/$itensPage);
+        return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'));
     }
 
     public function edit ()
