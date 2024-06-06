@@ -196,7 +196,7 @@
             </div>
 
             <div id="alternador" class="paginacao">
-              <img width="40px" src="../../../public/assets/esquerda.svg">
+              <img onclick="location.href='?pagina=<?php echo $page-1 ?>';" width="40px" src="../../../public/assets/azul2.svg">
                 <nav class="navpaginacao">
                     <ul class="paginacao-numeros">
                         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
@@ -205,7 +205,7 @@
                         <?php endfor ?>
                     </ul>
                 </nav>
-                <img width="40px" src="../../../public/assets/direita.svg">
+                <img onclick="location.href='?pagina=<?php echo $page+1 ?>';" width="40px" src="../../../public/assets/azul1.svg">
 
             </div>
 
