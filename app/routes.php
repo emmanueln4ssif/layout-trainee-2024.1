@@ -9,7 +9,7 @@ use App\Controllers\Controlador;
     $router->post('create', 'AdminController@create');
     $router->post('delete', 'AdminController@delete');
     $router->post('edit', 'AdminController@edit');
-
+    $router->get('publicacoes', 'AdminController@listaPost');
 
     $router->get('posts', 'Controlador@tabelaPosts');
     $router->post('post/criar', 'Controlador@criar');

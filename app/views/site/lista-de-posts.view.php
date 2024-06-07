@@ -11,6 +11,10 @@
 
 <body>
     <main>
+
+        <?php var_dump($posts);
+        ?>
+
         <div class="coluna1">
             <div class="buscar-box">
                 <div class="lupa">
@@ -19,7 +23,7 @@
                 <div class="input-buscar">
                     <input type="text" name="" id="" placeholder="Buscar Postagens">
                 </div>
-            </div>
+          nd/div>
         </div>
         <div class="coluna2">
             <div class="forma-post1">
