@@ -61,6 +61,11 @@ class Controlador
         App::get("database")->deletar("posts", $id);
         header("Location: ../posts");
     }
+
+    public function dashboard()
+    {
+        return view('admin/dashboard');
+    }
 }
 
 

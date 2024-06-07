@@ -16,4 +16,6 @@ use App\Controllers\Controlador;
     $router->post('post/editar', 'Controlador@editar');
     $router->post('post/deletar', 'Controlador@deletar');
 
+    $router->get('dashboard', 'Controlador@dashboard');
+
 ?>
