@@ -31,7 +31,8 @@
                     <th class="acoes"></th>
                 </thead>
                 <tbody>
-                    <?php $idCont=1;?>
+                    <?php $cont_id = 1+(5*($page-1)); ?>
+
 
                     <?php foreach ($posts as $post) :
                         $comp = explode('-', $post->data_post);
@@ -41,7 +42,7 @@
                         $dataleituraFormatada = $compLeitura[2] . '/' . $compLeitura[1] . '/' . $compLeitura[0];
                         ?>
                     <tr class="linha-normal">
-                        <td class="espaco-id"><?php echo $idCont ?></td>
+                        <td class="espaco-id"><?php echo $cont_id ?></td>
                         <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
                         <td class="espaco-autor"><?php echo $post->name ?></td>
                         <td class="espaco-data"><?php echo $datapostFormatada  ?></td>
@@ -588,12 +589,14 @@
                         </div>
 
                     </div>
-                    <?php $idCont++; ?>
+                    <?php $cont_id++; ?>
+
                     <?php endforeach; ?>
                     <!-- MODAL DE VISUALIZAÇÃO - FIM -->
 
                 </tbody>
             </table>
+            
             <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
             <div id="adiciona-post" class="cont-modal">
@@ -716,10 +719,21 @@
             <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
         </div>
-        <div class="paginacao">
-            <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
-            <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
-        </div>
+
+        <div id="alternador" class="paginacao">
+              <img onclick="location.href='?pagina=<?php echo $page-1 ?>';" width="40px" src="../../../public/assets/azul2.svg">
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
+                        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                        <li onclick="location.href = '?pagina=<?= $page_number ?>';"class="paginacao-item"><a class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
+                                href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
+                        <?php endfor ?>
+                    </ul>
+                </nav>
+                <img onclick="location.href='?pagina=<?php echo $page+1 ?>';" width="40px" src="../../../public/assets/azul1.svg">
+
+            </div>
+
     </main>
 </body>
 <script src="../../../public/js/admin-lista-de-posts.js"></script>

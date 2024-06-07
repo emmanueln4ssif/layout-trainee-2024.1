@@ -10,8 +10,22 @@ class Controlador
 
     public function tabelaPosts()
     {
-        $posts = App::get('database')->selectAllcomNome('posts');
-        return view('admin/admin-lista-de-posts',compact('posts'));
+        $page = 1;
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page<=0){
+                return redirect('/posts');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App :: get('database')->conta('posts');
+        if($inicio > $rows_count){
+            return redirect('/posts');
+        }
+        $posts = App::get('database')->selectAllcomNome('posts',$inicio,$itensPage);
+        $total_pages = ceil ($rows_count/$itensPage);
+        return view('admin/admin-lista-de-posts',compact('posts','page', 'total_pages'));
     }
 
     public function criar()
