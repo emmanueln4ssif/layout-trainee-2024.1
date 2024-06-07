@@ -14,6 +14,12 @@ class AdminController
         return view('admin/lista-usuarios', compact('users'));
     }
 
+    public function login(){
+
+        return require "app/views/site/login.view.php";
+        
+    }
+
     public function edit ()
     {
         $parameters = [
