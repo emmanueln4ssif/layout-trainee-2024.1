@@ -12,20 +12,20 @@
     <div class="corpo">
         <img id="mainimg" src="../../../public/assets/foto.svg">
         <div class="botoes">
-            <div class="botao">
+            <div class="botao" onclick="window.location.href='posts'">
                 <img id="botaopublicacao" src="../../../public/assets/lapis.svg">
                 <p>Publicações</p>
             </div>
-            <div class="botao">
+            <div class="botao" onclick="window.location.href='users'">
                 <img id="botaousuarios" src="../../../public/assets/usuarios.svg">
                 <p>Usuários</p>
             </div>
-            <div class="botao" id="botaolog">
+            <div class="botao" id="botaolog" onclick="window.location.href='#'">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
                 <p>Logout</p>
     
         </div>
-
     </div>
+    
 </body>
 </html>
