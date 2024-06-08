@@ -12,11 +12,19 @@
 </head>
 
 <body>
+
+    <div class="sdbar">
+        <?php include 'sidebar.view.php'?>
+    </div>
+
     <main>
+
+    <div class="tabelaPost">
         <div class="cabecalho">
             <button type="button" class="botoes-fora-tabela" id="botao-criar-post"
                 onclick="abrirModal('adiciona-post')"><i class="bi bi-plus-lg"></i> Criar post</button>
             <p id="titulo-pg">Lista de posts</p>
+            
         </div>
 
         <div class="container-tabela">
@@ -724,7 +732,9 @@
             <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
             <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i class="bi bi-chevron-right"></i></button>
         </div>
-    </main>
+
+                                            </main>
+
 </body>
 <script src="../../../public/js/admin-lista-de-posts.js"></script>
 

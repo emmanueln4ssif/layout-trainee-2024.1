@@ -4,7 +4,6 @@ body {
 }
 
 .sidebar {
-    position: absolute;
     top: 35%;
     display: flex;
     flex-direction: column;
@@ -61,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 1020px) {
     .sideimg {
         width: 35px;
         height: 35px;

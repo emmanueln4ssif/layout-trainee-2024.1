@@ -23,9 +23,8 @@
             <div class="botao" id="botaolog" onclick="window.location.href='#'">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
                 <p>Logout</p>
-    
         </div>
     </div>
-    
+
 </body>
 </html>

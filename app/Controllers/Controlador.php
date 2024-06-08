@@ -66,6 +66,7 @@ class Controlador
     {
         return view('admin/dashboard');
     }
+    
 }
 
 
