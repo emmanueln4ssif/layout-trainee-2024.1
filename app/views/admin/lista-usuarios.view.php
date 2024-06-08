@@ -12,8 +12,12 @@
 </head>
 
 <body>
-  <main>
 
+    <div class="sdbar">
+        <?php include 'sidebar.view.php'?>
+    </div>
+
+  <main>
     <div id="crud-usuario">
 
       <div id="cabecalho">
