@@ -19,7 +19,8 @@
 
 <div class="conteiner">
     <div class="p1">
-        <div class="navbar"></div>
+        <?php require("navbar.php");?>
+        
         <div class="home1">
             <img class="mainimg" id="mainimg-id" src="../../../public/assets/arte1.svg">
             <div class="agrupamento">
@@ -194,9 +195,7 @@
                 <p>Ver Mais</p><img src="../../../public/assets/arrow.svg">
             </div>
         </div>
-        <footer>
-
-        </footer>
+        <?php require("footer.php");?>
     </div>
 </div>
 </div>

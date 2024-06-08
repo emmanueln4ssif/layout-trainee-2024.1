@@ -66,6 +66,10 @@ class Controlador
     {
         return view('admin/dashboard');
     }
+    public function landingPage()
+    {
+        return view('site/landing');
+    }
     
 }
 

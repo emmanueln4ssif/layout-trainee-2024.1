@@ -18,4 +18,6 @@ use App\Controllers\Controlador;
 
     $router->get('dashboard', 'Controlador@dashboard');
 
+    $router->get('','Controlador@landingPage');
+
 ?>

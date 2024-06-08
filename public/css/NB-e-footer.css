@@ -5,14 +5,12 @@
 /*GERAL*/
 
 *{
-  font-family: Poppins;
   margin: 0;
   padding: 0;
-  color: #ef9ca9;
 }
-
-body{
-  background: #bbbbbb;
+a{
+  color: #ef9ca9;
+  font-family: Poppins;
 }
 
 /*NAVBAR*/
@@ -29,7 +27,7 @@ header{
 }
 
 nav{
-  position: fixed;
+  position: relative;
   top: 0;
   height: 70px;
   width: 100%;
@@ -38,6 +36,7 @@ nav{
   display: flex;
   font-weight: 500;
   font-size: 30px;
+  border-bottom: 0.5px solid rgba(69, 50, 50,0.3);
 }
 
 nav:after{
@@ -194,7 +193,8 @@ footer{
 }
 
 #background-logo{
-  height: 90px;
+  height: 60px;
+  display: flex;
   background-color: #002c42;
   align-content: center;
   justify-content: center;
@@ -202,7 +202,7 @@ footer{
 }
 
 #background-logo img{
-  width: 230px;
+  max-width: 200px;
 }
 
 /*SEPARAÇÃO*/
