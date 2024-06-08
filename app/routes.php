@@ -5,6 +5,8 @@ use App\Controllers\AdminController;
 use App\Core\Router;
 use App\Controllers\Controlador;
 
+    $router->get('landingpage', 'AdminController@landingpage');
+    $router->get('logout', 'AdminController@logout');
     $router->get('dashboard', 'AdminController@dashboard');
     $router->post('efetuaLogin', 'AdminController@efetuaLogin');
     $router->get('login', 'AdminController@login');

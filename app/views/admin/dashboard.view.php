@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 if(!isset ($_SESSION['login']) == true){
     header('Location: /login');
 }
@@ -32,8 +33,7 @@ if(!isset ($_SESSION['login']) == true){
             </div>
             <div class="botao" id="botaolog">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
-                <p>Logout</p>
-    
+                <a href="/logout"><p>Logout</p></a>
         </div>
 
     </div>

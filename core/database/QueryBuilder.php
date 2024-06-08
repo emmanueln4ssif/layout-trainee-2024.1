@@ -190,7 +190,7 @@ class QueryBuilder
 
     public function verificaLogin($email, $senha){
 
-        $sql = sprintf("SELECT * FROM users WHERE email = '$email' AND password = '$senha'");
+        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$senha'";
 
         try {
 

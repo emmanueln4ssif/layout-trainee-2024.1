@@ -36,15 +36,30 @@ class AdminController
         $verificacao = App::get('database')->verificaLogin($email, $senha_cripto);
         //return view('admin/lista-usuarios', compact('users'));
         if($verificacao > 0){
+            session_start();
             $_SESSION['login'] = $email;
             header('Location: /dashboard');
-        }else{
+            echo $senha_cripto;
+        }else{        
             unset ($_SESSION['login']);
             header('Location: /login');
         }
 
         //return require "app/views/site/efetuaLogin.view.php";
         
+    }
+
+    public function logout(){
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location: /landingpage');
+    }
+
+    public function landingpage(){
+
+        return require "app/views/site/landing.view.php";
+
     }
 
     public function edit ()
