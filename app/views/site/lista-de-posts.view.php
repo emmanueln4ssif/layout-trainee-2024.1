@@ -17,7 +17,7 @@
                     <img src="../../../public/assets/lupa.svg">
                 </div>
                 <div class="input-buscar">
-                    <input type="text" name="" id="" placeholder="Buscar Postagens">
+                    <input type="search" name="search" id="search" placeholder="Buscar Postagens">
                 </div>
             </div>
         </div>
@@ -167,5 +167,15 @@
         </div>
     </main>
 </body>
+<script> 
 
+    let pesquisa = document.getElementById('search');
+
+    function searchData(){
+
+        window.location = '';
+
+    }
+
+</script>
 </html>

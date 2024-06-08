@@ -14,6 +14,12 @@ class AdminController
         return view('admin/lista-usuarios', compact('users'));
     }
 
+    public function listaPosts(){
+
+        
+
+    }
+
     public function edit ()
     {
         $parameters = [
