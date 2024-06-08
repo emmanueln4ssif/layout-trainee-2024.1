@@ -185,6 +185,8 @@ body {
   width: 192px;
   height: 270px;
   margin-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .imagpost>h3 {
@@ -242,7 +244,7 @@ body {
   margin: 0;
   word-wrap: break-word;
   height: 185px;
-  
+
 }
 
 .titulo-comentario {
@@ -415,6 +417,7 @@ body {
 @media only screen and (max-width: 768px) {
   .posts {
     flex-direction: column;
+    align-content: center;
   }
 
   .post {
@@ -426,9 +429,15 @@ body {
   }
 
   .mb {
-    width: 50%;
+    width: 50vw;
     height: 100%;
     align-items: start;
+  }
+
+  .cometario>p {
+    height: 115px;
+    overflow-wrap: break-word;
+    width: 98%;
   }
 
   .cometario {
@@ -437,7 +446,7 @@ body {
   }
 
   .cometario {
-    width: 100%;
+    width: 60%;
     height: 100%;
   }
 
@@ -445,6 +454,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    height: 81.5%;
+  }
+
+  .icon {
+    font-size: 25px;
   }
 }
 

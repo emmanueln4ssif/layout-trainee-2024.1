@@ -20,7 +20,7 @@
 <div class="conteiner">
     <div class="p1">
         <?php require("navbar.php");?>
-        
+
         <div class="home1">
             <img class="mainimg" id="mainimg-id" src="../../../public/assets/arte1.svg">
             <div class="agrupamento">
@@ -60,32 +60,43 @@
             <p>Posts Recentes</p>
             <img src="../../../public/assets/arrow.svg">
         </div>
-        
+
         <div class="posts">
-        <?php $indice=sizeof($posts)-1;?>
-        <?php for ($i = 0; $i < 5; $i++): ?>
+            <?php $indice=sizeof($posts)-1;?>
+            <?php for ($i = 0; $i < 5; $i++): ?>
             <div class="post">
                 <div class="imagpost" id="p">
                     <img src="<?= $posts[$indice]->imagem ?>">
+                    <?php 
+                        if (mb_strlen($posts[$indice]->titulo_post) > 16) {
+                            $posts[$indice]->titulo_post = mb_substr($posts[$indice]->titulo_post, 0, 16) . '...';
+                        }
+                    ?>
                     <h3 class="titulo-comentario"><?= $posts[$indice]->titulo_post ?></h3>
                 </div>
                 <div class="mb">
-                    <div class="estrelas">
-                        <img src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px">
+                    <div class="estrelas" style="margin-bottom:6px;">
+                        <?php
+                            $aux = $posts[$indice]->nota_user;
+                            for ($k = 0; $k < 5; $k++) {
+                                if ($aux > 0) {
+                                    echo '<span class="icon" style="color: #f5d000;">★</span>';
+                                    $aux--;
+                                } else {
+                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                }
+                            }
+                        ?>
                     </div>
                     <?php 
-                        if (mb_strlen($posts[$indice]->review) > 98) {
+                        if (mb_strlen($posts[$indice]->review) > 97) {
                             $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 97) . '...';
                         }
                     ?>
                     <div class="cometario">
                         <h3>Pedro_123</h3>
                         <p>
-                        <?= $posts[$indice]->review ?>
+                            <?= $posts[$indice]->review ?>
                         </p>
                         <div class="ver">
                             <p>ver mais</p><img src="../../../public/assets/arrow.svg">
@@ -93,8 +104,8 @@
                     </div>
                 </div>
             </div>
-        <?php $indice--;?>
-        <?php endfor; ?>
+            <?php $indice--;?>
+            <?php endfor; ?>
             <div class="bt-vermais">
                 <p>Ver Mais</p><img src="../../../public/assets/arrow.svg">
             </div>
