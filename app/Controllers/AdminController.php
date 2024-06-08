@@ -39,7 +39,6 @@ class AdminController
             session_start();
             $_SESSION['login'] = $email;
             header('Location: /dashboard');
-            echo $senha_cripto;
         }else{        
             unset ($_SESSION['login']);
             header('Location: /login');
