@@ -60,11 +60,14 @@
             <p>Posts Recentes</p>
             <img src="../../../public/assets/arrow.svg">
         </div>
+        
         <div class="posts">
+        <?php $indice=sizeof($posts)-1;?>
+        <?php for ($i = 0; $i < 5; $i++): ?>
             <div class="post">
                 <div class="imagpost" id="p">
-                    <img src="../../../public/assets/capas/capa1.jpg">
-                    <h3 class="titulo-comentario">Livrão!</h3>
+                    <img src="<?= $posts[$indice]->imagem ?>">
+                    <h3 class="titulo-comentario"><?= $posts[$indice]->titulo_post ?></h3>
                 </div>
                 <div class="mb">
                     <div class="estrelas">
@@ -74,12 +77,15 @@
                             src="../../../public/assets/st.svg" height="29px" width="33px"><img
                             src="../../../public/assets/st.svg" height="29px" width="33px">
                     </div>
+                    <?php 
+                        if (mb_strlen($posts[$indice]->review) > 98) {
+                            $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 97) . '...';
+                        }
+                    ?>
                     <div class="cometario">
                         <h3>Pedro_123</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                            mollis
-                            hendrerit quis ...
+                        <?= $posts[$indice]->review ?>
                         </p>
                         <div class="ver">
                             <p>ver mais</p><img src="../../../public/assets/arrow.svg">
@@ -87,110 +93,8 @@
                     </div>
                 </div>
             </div>
-            <div class="post">
-                <div class="imagpost">
-                    <img src="../../../public/assets/capas/capa1.jpg">
-                    <h3 class="titulo-comentario">Livrão!</h3>
-                </div>
-                <div class="mb">
-                    <div class="estrelas">
-                        <img src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px">
-                    </div>
-                    <div class="cometario">
-                        <h3>Pedro_123</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                            mollis
-                            hendrerit quis ...
-                        </p>
-                        <div class="ver">
-                            <p>ver mais</p><img src="../../../public/assets/arrow.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="imagpost">
-                    <img src="../../../public/assets/capas/capa1.jpg">
-                    <h3 class="titulo-comentario">Livrão!</h3>
-                </div>
-                <div class="mb">
-                    <div class="estrelas">
-                        <img src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px">
-                    </div>
-                    <div class="cometario">
-                        <h3>Pedro_123</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                            mollis
-                            hendrerit quis ...
-                        </p>
-                        <div class="ver">
-                            <p>ver mais</p><img src="../../../public/assets/arrow.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="imagpost">
-                    <img src="../../../public/assets/capas/capa1.jpg">
-                    <h3 class="titulo-comentario">Livrão!</h3>
-                </div>
-                <div class="mb">
-                    <div class="estrelas">
-                        <img src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px">
-                    </div>
-                    <div class="cometario">
-                        <h3>Pedro_123</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                            mollis
-                            hendrerit quis ...
-                        </p>
-                        <div class="ver">
-                            <p>ver mais</p><img src="../../../public/assets/arrow.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="imagpost">
-                    <img src="../../../public/assets/capas/capa1.jpg">
-                    <h3 class="titulo-comentario">Livrão!</h3>
-                </div>
-                <div class="mb">
-                    <div class="estrelas">
-                        <img src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px"><img
-                            src="../../../public/assets/st.svg" height="29px" width="33px">
-                    </div>
-                    <div class="cometario">
-                        <h3>Pedro_123</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                            mollis
-                            hendrerit quis ...
-                        </p>
-                        <div class="ver">
-                            <p>ver mais</p><img src="../../../public/assets/arrow.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?php $indice--;?>
+        <?php endfor; ?>
             <div class="bt-vermais">
                 <p>Ver Mais</p><img src="../../../public/assets/arrow.svg">
             </div>

@@ -240,6 +240,9 @@ body {
   font-size: 20px;
   padding: 5px;
   margin: 0;
+  word-wrap: break-word;
+  height: 185px;
+  
 }
 
 .titulo-comentario {
@@ -372,6 +375,7 @@ body {
   .cometario {
     width: 130px;
   }
+
 
   .imagpost>h3 {
     font-size: 16px;

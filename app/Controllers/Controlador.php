@@ -68,7 +68,8 @@ class Controlador
     }
     public function landingPage()
     {
-        return view('site/landing');
+        $posts = App::get('database')->selectAllcomNome('posts');
+        return view('site/landing',compact('posts'));
     }
     
 }
