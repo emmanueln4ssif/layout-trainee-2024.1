@@ -16,7 +16,7 @@ class AdminController
 
     public function listaPosts(){
 
-        
+        return require "app/views/site/lista-de-posts.view.php";
 
     }
 

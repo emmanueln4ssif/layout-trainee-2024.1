@@ -66,14 +66,19 @@ main {
     opacity: 0.8;
 }
 
+.buscar-box button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 .buscar-box .lupa img {
-    padding-left: 0.5vw;
+    padding-right: 1vw;
     height: 30px;
 }
 
 .buscar-box .input-buscar input {
-    padding-left: 0.3vw;
-    width: 88%;
+    margin-left: 2vw;
+    width: 84%;
     font-size: 22px;
     border: none;
     outline: none;

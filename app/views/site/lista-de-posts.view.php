@@ -1,8 +1,19 @@
+<?php 
+
+/*if(!empty($_GET['search'])){
+    echo 'contpem algo, pesquisar!';
+}else{
+    echo 'vazio, traga tudo!';
+}*/
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -13,11 +24,11 @@
     <main>
         <div class="coluna1">
             <div class="buscar-box">
-                <div class="lupa">
-                    <img src="../../../public/assets/lupa.svg">
-                </div>
                 <div class="input-buscar">
                     <input type="search" name="search" id="search" placeholder="Buscar Postagens">
+                </div>
+                <div class="lupa">
+                    <button onclick="searchData()"><img src="../../../public/assets/lupa.svg"></button>
                 </div>
             </div>
         </div>
@@ -171,11 +182,19 @@
 
     let pesquisa = document.getElementById('search');
 
+    pesquisa.addEventListener("keydown", function(event){
+
+        if(event.key === "Enter"){
+            searchData();
+        }
+
+    });
+
     function searchData(){
 
-        window.location = '';
+        window.location = 'listaPosts?search='+pesquisa.value;
 
-    }
+    };
 
 </script>
 </html>
