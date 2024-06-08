@@ -93,8 +93,13 @@
                             $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 97) . '...';
                         }
                     ?>
+                    <?php 
+                        if (mb_strlen($posts[$indice]->name) > 16) {
+                            $posts[$indice]->review = mb_substr($posts[$indice]->name, 0, 16) . '...';
+                        }
+                    ?>
                     <div class="cometario">
-                        <h3>Pedro_123</h3>
+                        <h3><?= $posts[$indice]->name?></h3>
                         <p>
                             <?= $posts[$indice]->review ?>
                         </p>
