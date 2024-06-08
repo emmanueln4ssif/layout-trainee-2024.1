@@ -27,7 +27,7 @@
 
       <p id="titulo-login">Bem vindo de volta!</p>
 
-      <form action="efetuaLogin.view.php" method="$_POST"></form>
+      <form action="efetuaLogin" method="post">
         <div class="campos">
           <div class="circulo">
             <img id="icone-email" src="/public/assets/icone-e-mail.svg"
@@ -49,7 +49,7 @@
             alt="Ícone de olho representando a visibilidade da senha">
           </div>
         </div>
-        <input type="submit">Login</input>
+        <input id="btn-login" type="submit"></input>
       </form>
     </div>
   </div>

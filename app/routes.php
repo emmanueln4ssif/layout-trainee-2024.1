@@ -5,6 +5,8 @@ use App\Controllers\AdminController;
 use App\Core\Router;
 use App\Controllers\Controlador;
 
+    $router->get('dashboard', 'AdminController@dashboard');
+    $router->post('efetuaLogin', 'AdminController@efetuaLogin');
     $router->get('login', 'AdminController@login');
     $router->get('users', 'AdminController@index');
     $router->post('create', 'AdminController@create');

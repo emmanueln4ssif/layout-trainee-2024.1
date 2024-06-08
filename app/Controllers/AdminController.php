@@ -20,6 +20,33 @@ class AdminController
         
     }
 
+    public function dashboard(){
+
+        return require "app/views/admin/dashboard.view.php";
+        
+    }
+
+
+    public function efetuaLogin(){
+
+        $email = $_POST['email'];
+        $senha_crua = $_POST['senha'];
+        $senha_cripto = md5($senha_crua);
+
+        $verificacao = App::get('database')->verificaLogin($email, $senha_cripto);
+        //return view('admin/lista-usuarios', compact('users'));
+        if($verificacao > 0){
+            $_SESSION['login'] = $email;
+            header('Location: /dashboard');
+        }else{
+            unset ($_SESSION['login']);
+            header('Location: /login');
+        }
+
+        //return require "app/views/site/efetuaLogin.view.php";
+        
+    }
+
     public function edit ()
     {
         $parameters = [
