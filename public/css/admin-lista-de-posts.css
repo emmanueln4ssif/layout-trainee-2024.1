@@ -72,7 +72,31 @@ main {
 .botoes-mobile {
     display: none;
 }
-
+.paginacao-numeros{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  .paginacao-item{
+    text-align: center;
+    list-style-type: none;
+    background-color: #002c42;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+    margin: 2px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .paginacao-link:visited{
+    color: #e87c7a;
+    text-decoration: none;
+  }
+  .paginacao-link{
+    
+    color: #e87c7a;
+    text-decoration: none;
+  }
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -103,13 +127,27 @@ main {
     color: #ef9ca9;
     transition: 0.15s;
 }
+.btn {
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    background: #002c42;
+    border: none;
+    color: #e87c7a;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
 
-#botao-voltar {
+#btn-voltar {
     width: 140px;
     margin-right: 1%;
 }
 
-#botao-avancar {
+#btn-avancar {
     width: 160px;
     margin-left: 1%;
 }
@@ -246,6 +284,19 @@ table th {
     align-items: center;
     margin-top: 1%;
 }
+.navpaginacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-avancar:hover,
+.btn-voltar:hover {
+  background: #002c42;
+  font-weight: 600;
+  color: #ef9ca9;
+}
 
 /*MODAL VISUALIZAR*/
 
@@ -380,6 +431,30 @@ textarea#text-visualizar {
 
 
 /*MODAL DE DELETAR FIM*/
+@media screen and (min-width: 0px) and (max-width: 944px) {
+    .btn {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 426px) {
+    .btn {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .btn-voltar {
+        width: 78px;
+        margin-right: 5px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .btn {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
 
 @media only screen and (max-width: 510px) {
     h3 {
@@ -778,11 +853,11 @@ a:visited {
         width: 140px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 120px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 125px;
     }
 
@@ -821,11 +896,11 @@ a:visited {
         width: 120px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 90px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 100px;
     }
 
@@ -925,11 +1000,11 @@ a:visited {
         width: 120px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 90px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 100px;
     }
 
