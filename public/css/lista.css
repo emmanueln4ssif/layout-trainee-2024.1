@@ -8,7 +8,7 @@
 
 body {
 
-    height: fit-content;
+    height: 100%;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to bottom, #EF9CA9, white 55%);
 }
@@ -18,6 +18,10 @@ main {
     flex-direction: row;
     height: fit-content;
     justify-content: center;
+}
+
+.review {
+    word-break: break-all;
 }
 
 .coluna1 {
@@ -86,8 +90,7 @@ main {
     height: fit-content;
     border-radius: 20px;
     justify-content: space-between;
-    border: 1px solid #453232;
-    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(69, 50, 50, 0.8);
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
@@ -122,11 +125,14 @@ main {
 }
 
 .estrelas {
-    width: 30%;
-    height: 30%;
+    margin-top: -15px;
     display: flex;
     flex-direction: row;
-    margin-top: -0.5vh;
+
+}
+
+.estrelas>span {
+    font-size: 25px;
 }
 
 .fotouser {

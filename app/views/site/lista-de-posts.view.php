@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 
@@ -11,10 +11,6 @@
 
 <body>
     <main>
-
-        <?php var_dump($posts);
-        ?>
-
         <div class="coluna1">
             <div class="buscar-box">
                 <div class="lupa">
@@ -23,9 +19,10 @@
                 <div class="input-buscar">
                     <input type="text" name="" id="" placeholder="Buscar Postagens">
                 </div>
-          nd/div>
+            </div>
         </div>
         <div class="coluna2">
+            <?php foreach($posts as $post): ?>
             <div class="forma-post1">
                 <div class="espassocapa">
                     <div class="espasso">
@@ -33,136 +30,38 @@
                             <img src="/public/assets/FOTOPERFIL.svg">
                         </div>
                         <div class="usuario">
-                            <h1>Sommelier</h1>
+                            <h1><?= $post->name ?></h1>
                             <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
+                                <?php
+                            $aux = $post->nota_user;
+                            for ($k = 0; $k < 5; $k++) {
+                                if ($aux > 0) {
+                                    echo '<span class="icon" style="color: #f7e702;">★</span>';
+                                    $aux--;
+                                } else {
+                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                }
+                            }
+                        ?>
                             </div>
                         </div>
                     </div>
                     <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
+                        <?php 
+                        if (mb_strlen($post->review) > 160) {
+                            $post->review = mb_substr($post->review, 0, 160) . '...';
+                        }
+                    ?>
+                        <h2 class="review"><?= $post->review ?></h2>
                     </div>
                 </div>
                 <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
+                    <img src="<?= $post->imagem?>" width="140px">
                 </div>
             </div>
+            <?php endforeach; ?>
 
 
-            <div class="forma-post1">
-                <div class="espassocapa">
-                    <div class="espasso">
-                        <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
-                        </div>
-                        <div class="usuario">
-                            <h1>Sommelier</h1>
-                            <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
-                    </div>
-                </div>
-                <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
-                </div>
-            </div>
-            <div class="forma-post1">
-                <div class="espassocapa">
-                    <div class="espasso">
-                        <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
-                        </div>
-                        <div class="usuario">
-                            <h1>Sommelier</h1>
-                            <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
-                    </div>
-                </div>
-                <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
-                </div>
-            </div>
-            <div class="forma-post1">
-                <div class="espassocapa">
-                    <div class="espasso">
-                        <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
-                        </div>
-                        <div class="usuario">
-                            <h1>Sommelier</h1>
-                            <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
-                    </div>
-                </div>
-                <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
-                </div>
-            </div>
-            <div class="forma-post1">
-                <div class="espassocapa">
-                    <div class="espasso">
-                        <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
-                        </div>
-                        <div class="usuario">
-                            <h1>Sommelier</h1>
-                            <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
-                    </div>
-                </div>
-                <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
-                </div>
-            </div>
         </div>
         <div class="coluna3">
             <div class="coluna-box">
