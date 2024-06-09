@@ -29,13 +29,9 @@
                             <img src="/public/assets/FOTOPERFIL.svg">
                         </div>
                         <div class="usuario">
-                            <h1><?php echo $post->titulo_post ?></h1>
+                            <h1><?php echo $post->name ?></h1>
                             <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
+                                <?= $post->nota_user?>
                             </div>
                         </div>
                     </div>

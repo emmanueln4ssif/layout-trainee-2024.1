@@ -52,11 +52,11 @@ class QueryBuilder
 
     public function selectSearch($pesquisa)
     {
-        $sql = "select * from posts WHERE livro_titulo LIKE '%$pesquisa%'
+        $sql = "select posts.*, users.name from posts INNER JOIN users ON posts.user_id WHERE livro_titulo LIKE '%$pesquisa%'
             OR titulo_post LIKE '%$pesquisa%' 
             OR review LIKE '%$pesquisa%' 
             ORDER BY id DESC";
-
+            
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -70,7 +70,8 @@ class QueryBuilder
 
     public function selectAllDesc($table)
     {
-        $sql = "select * from {$table} ORDER BY id DESC";
+
+        $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id ORDER BY id DESC', $table,$table,$table);
 
         try {
             $stmt = $this->pdo->prepare($sql);
