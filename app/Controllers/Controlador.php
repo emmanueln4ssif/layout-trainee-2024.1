@@ -14,6 +14,12 @@ class Controlador
         return view('admin/admin-lista-de-posts',compact('posts'));
     }
 
+    public function listaPosts()
+    {
+        $post_pesquisado = App::get('database')->selectSearch('posts');
+        return view('site/lista-de-posts',compact('$post_pesquisado'));
+    }
+
     public function criar()
     {
         $parameters= [
