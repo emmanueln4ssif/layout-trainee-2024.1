@@ -32,10 +32,17 @@
                         hendrerit quis rhoncus lorem.
                     </p>
                 </div>
+                <?php 
+                $tam=sizeof($posts)-1;
+                $numeros = range(0, $tam); // Cria um vetor com números de 0 até x
+                shuffle($numeros); // Embaralha os números aleatoriamente
+                    
+                ?>
                 <div class="livros">
                     <div id="fotoscima">
                         <div class="swiper bloco1">
-                            <div id="blo1" class="swiper-wrapper"></div>
+                            <div id="blo1" class="swiper-wrapper">
+                            </div>
                         </div>
                         <div class="swiper bloco2">
                             <div id="blo2" class="swiper-wrapper"></div>
@@ -121,10 +128,34 @@
 </div>
 </div>
 
+<script>
+const numImg = <?= count($posts) ?>;
+<?php $vetImg=shuffle($posts);?>
 
+function onload(i, k) { //cria um vetor com uma ordem aleatoria para as imagens e popula o slideshow
+    id1 = "blo" + i.toString();
+    id2 = "blo" + k.toString();
+    var ar = gerarArrayAleatorio(numImg);
+
+    for (k = 0; k < numImg; k++) {
+        document.getElementById(id1).innerHTML +=
+            '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' + <?= $vetImg[k]->imagem?> +
+            '.jpg"></div>';
+        if (k + 1 < numImg) {
+            document.getElementById(id2).innerHTML +=
+                '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' + ar[k + 1] + '.jpg"></div>';
+        }
+    }
+    document.getElementById(id2).innerHTML += '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' +
+        ar[0] + '.jpg"></div>';
+}
+</script>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../../../public/js/landing.js"></script>
+<script src="../../../public/js/landing.js">
+
+
+</script>
 </body>
 
 </html>

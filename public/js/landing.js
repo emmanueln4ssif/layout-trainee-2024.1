@@ -1,16 +1,4 @@
-function onload(i, k) { //cria um vetor com uma ordem aleatoria para as imagens e popula o slideshow
-  id1 = "blo" + i.toString();
-  id2 = "blo" + k.toString();
-  var ar = gerarArrayAleatorio(12);
 
-  for (k = 0; k < 12; k++) {
-    document.getElementById(id1).innerHTML += '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' + ar[k] + '.jpg"></div>';
-    if (k + 1 < 12) {
-      document.getElementById(id2).innerHTML += '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' + ar[k + 1] + '.jpg"></div>';
-    }
-  }
-  document.getElementById(id2).innerHTML += '<div class="swiper-slide"><img src="../../../public/assets/capas/capa' + ar[0] + '.jpg"></div>';
-}
 
 onload(1, 2);
 onload(3, 4);
@@ -96,11 +84,11 @@ function mudafoto() {
 
 setInterval(function () { ; mudafoto() }, 3500);
 
-function posts(){
-  window.open("https://www.youraddress.com","_self")
+function posts() {
+  window.open("https://www.youraddress.com", "_self")
 }
 
-function scrolla() { 
-  let bt1 = document.getElementById("p"); 
-  bt1.scrollIntoView({ behavior: 'smooth' }); 
+function scrolla() {
+  let bt1 = document.getElementById("p");
+  bt1.scrollIntoView({ behavior: 'smooth' });
 } 
