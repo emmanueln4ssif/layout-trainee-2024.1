@@ -34,9 +34,43 @@ class QueryBuilder
 
         }
     }
+
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectSearch($pesquisa)
+    {
+        $sql = "select * from posts WHERE livro_titulo LIKE '%$pesquisa%'
+            OR titulo_post LIKE '%$pesquisa%' 
+            OR review LIKE '%$pesquisa%' 
+            ORDER BY id DESC";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectAllDesc($table)
+    {
+        $sql = "select * from {$table} ORDER BY id DESC";
 
         try {
             $stmt = $this->pdo->prepare($sql);

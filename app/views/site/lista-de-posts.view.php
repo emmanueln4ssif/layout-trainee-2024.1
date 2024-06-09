@@ -1,15 +1,3 @@
-<?php 
-
-/*if(!empty($_GET['search'])){
-    echo 'contpem algo, pesquisar!';
-}else{
-    echo 'vazio, traga tudo!';
-}*/
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +21,7 @@
             </div>
         </div>
         <div class="coluna2">
+        <?php foreach ($post_pesquisado as $post) :?>
             <div class="forma-post1">
                 <div class="espassocapa">
                     <div class="espasso">
@@ -40,7 +29,7 @@
                             <img src="/public/assets/FOTOPERFIL.svg">
                         </div>
                         <div class="usuario">
-                            <h1>Sommelier</h1>
+                            <h1><?php echo $post->livro_autor ?></h1>
                             <div class="estrelas">
                                 <img src="/public/assets/ESTRELA.svg">
                                 <img src="/public/assets/ESTRELA.svg">
@@ -51,17 +40,42 @@
                         </div>
                     </div>
                     <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
+                        <h1><?php echo $post->review ?></h1>
                     </div>
                 </div>
                 <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
+                    <img src="<?php echo $post->imagem ?>">
                 </div>
             </div>
+            <?php endforeach ?>
 
-
+    <!--    <div class="forma-post1">
+                <div class="espassocapa">
+                    <div class="espasso">
+                        <div class="fotouser">
+                            <img src="/public/assets/FOTOPERFIL.svg">
+                        </div>
+                        <div class="usuario">
+                            <h1>Sommelier</h1>
+                            <div class="estrelas">
+                                <img src="/public/assets/ESTRELA.svg">
+                                <img src="/public/assets/ESTRELA.svg">
+                                <img src="/public/assets/ESTRELA.svg">
+                                <img src="/public/assets/ESTRELA.svg">
+                                <img src="/public/assets/ESTRELA.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="digitado">
+                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
+                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
+                            vel, praesentium quo autem blanditiis!</h1>
+                    </div>
+                </div>
+                <div class="capalivro1">
+                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
+                </div>
+            </div>  
             <div class="forma-post1">
                 <div class="espassocapa">
                     <div class="espasso">
@@ -142,34 +156,7 @@
                 <div class="capalivro1">
                     <img src="/public/assets/A1uUKJ5uzCL 1.svg">
                 </div>
-            </div>
-            <div class="forma-post1">
-                <div class="espassocapa">
-                    <div class="espasso">
-                        <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
-                        </div>
-                        <div class="usuario">
-                            <h1>Sommelier</h1>
-                            <div class="estrelas">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                                <img src="/public/assets/ESTRELA.svg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="digitado">
-                        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa consectetur quae
-                            dolores nemo iusto debitis molestias temporibus nihil, eum tempore, sit quam rerum repellat
-                            vel, praesentium quo autem blanditiis!</h1>
-                    </div>
-                </div>
-                <div class="capalivro1">
-                    <img src="/public/assets/A1uUKJ5uzCL 1.svg">
-                </div>
-            </div>
+            </div>  -->
         </div>
         <div class="coluna3">
             <div class="coluna-box">

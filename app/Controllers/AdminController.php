@@ -16,7 +16,14 @@ class AdminController
 
     public function listaPosts(){
 
-        return require "app/views/site/lista-de-posts.view.php";
+        if(!empty($_GET['search'])){
+            $pesquisa = $_GET['search'];
+            $post_pesquisado = App::get('database')->selectSearch($pesquisa);
+            return view('site/lista-de-posts',compact('post_pesquisado'));
+        }else{
+            $post_pesquisado = App::get('database')->selectAllDesc('posts');
+            return view('site/lista-de-posts',compact('post_pesquisado'));
+        }
 
     }
 
