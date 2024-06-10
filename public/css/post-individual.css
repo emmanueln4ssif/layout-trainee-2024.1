@@ -191,9 +191,10 @@ span.icon1 {
     }
 
     #bloco {
-        width: 90%;
+
         margin-left: 0;
-        width: fit-content;
+        margin-right: 10px;
+
     }
 
     .titulo {
@@ -289,12 +290,20 @@ span.icon1 {
         max-width: 170px;
         max-height: 250px;
     }
+
+    #img_user>img {
+        width: 65px;
+        height: 61px;
+    }
 }
 
 @media only screen and (max-width: 522px) {
     .titulo {
         letter-spacing: -2px;
+    }
 
+    .elementos_review {
+        max-width: 98vw;
     }
 
     span.icon1 {
@@ -317,13 +326,11 @@ span.icon1 {
         width: 100%;
     }
 
-    #bloco {
-        width: 95%;
-    }
+
 
     #img_user>img {
-        width: 85px;
-        height: 81px;
+        width: 45px;
+        height: 41px;
     }
 
     .sinopse {

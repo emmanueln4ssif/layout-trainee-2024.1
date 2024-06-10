@@ -49,7 +49,7 @@
                             <div id="blo1" class="swiper-wrapper">
                                 <?php
                                     for($k = 0; $k < count($posts); $k++):
-                                        echo "<div class='swiper-slide'><img src='".$vetImg1[$k]->imagem."'></div>';";
+                                        echo "<div class='swiper-slide' '><img onclick=location.href='publicacoes/post?id=".$vetImg1[$k]->id."' src='".$vetImg1[$k]->imagem."'></div>'";
                                     endfor;
                                 ?>
                             </div>
@@ -59,10 +59,10 @@
                                 <?php
                                 for($k = 0; $k < count($posts); $k++):
                             if($k+1<count($posts)){
-                                echo "<div class='swiper-slide'><img src='".$vetImg1[$k+1]->imagem."'></div>';";
+                                echo "<div class='swiper-slide'><img onclick=location.href='publicacoes/post?id=".$vetImg1[$k+1]->id."' src='".$vetImg1[$k+1]->imagem."'></div>';";
                             }                    
                             endfor;
-                            echo "<div class='swiper-slide'><img src='".$vetImg1[0]->imagem."'></div>';";
+                            echo "<div class='swiper-slide'><img onclick=location.href='publicacoes/post?id=".$vetImg1[0]->id."' src='".$vetImg1[0]->imagem."'></div>';";
                             ?>
 
                             </div>
@@ -73,7 +73,7 @@
                             <div id="blo3" class="swiper-wrapper">
                                 <?php
                                     for($k = 0; $k < count($posts); $k++):
-                                        echo "<div class='swiper-slide'><img src='".$vetImg2[$k]->imagem."'></div>';";
+                                        echo "<div class='swiper-slide'><img onclick=location.href='publicacoes/post?id=".$vetImg2[$k]->id."' src='".$vetImg2[$k]->imagem."'></div>';";
                                     endfor;
                                 ?>
                             </div>
@@ -83,10 +83,10 @@
                                 <?php
                                 for($k = 0; $k < count($posts); $k++):
                             if($k+1<count($posts)){
-                                echo "<div class='swiper-slide'><img src='".$vetImg2[$k+1]->imagem."'></div>';";
+                                echo "<div class='swiper-slide'><img onclick=location.href='publicacoes/post?id=".$vetImg2[$k+1]->id."' src='".$vetImg2[$k+1]->imagem."'></div>';";
                             }                    
                             endfor;
-                            echo "<div class='swiper-slide'><img src='".$vetImg2[0]->imagem."'></div>';";
+                            echo "<div class='swiper-slide'><img onclick=location.href='publicacoes/post?id=".$vetImg2[0]->id."' src='".$vetImg2[0]->imagem."'></div>';";
                             ?>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
         <div class="posts">
             <?php $indice=sizeof($posts)-1;?>
             <?php for ($i = 0; $i < 5; $i++): ?>
-            <div class="post">
+            <div class="post" onclick="location.href='/publicacoes/post?id=<?=$posts[$indice]->id?>'">
                 <div class="imagpost" id="p">
                     <img src="<?= $posts[$indice]->imagem ?>">
                     <?php 
@@ -131,8 +131,8 @@
                         ?>
                     </div>
                     <?php 
-                        if (mb_strlen($posts[$indice]->review) > 97) {
-                            $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 97) . '...';
+                        if (mb_strlen($posts[$indice]->review) > 80) {
+                            $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 80) . '...';
                         }
                     ?>
                     <?php 
@@ -153,7 +153,7 @@
             </div>
             <?php $indice--;?>
             <?php endfor; ?>
-            <div class="bt-vermais">
+            <div class="bt-vermais" style="cursor: pointer;" onclick="location.href='/publicacoes'">
                 <p>Ver Mais</p><img src="../../../public/assets/arrow.svg">
             </div>
         </div>
