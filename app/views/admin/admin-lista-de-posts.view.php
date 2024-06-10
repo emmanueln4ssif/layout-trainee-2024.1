@@ -586,7 +586,7 @@
                                                     alt="Pré-visualização da imagem">
                                             </div>
                                             <label for="img">Selecione uma imagem:</label>
-                                            <input type="file" id="img-edita" name="img" accept="image/*">
+                                            <input type="file" id="img-edita<?=$post->id?>" name="img" accept="image/*">
                                             <label for="data">Data da leitura:</label>
                                             <input type="date" id="prev-data" value="<?php echo $post->data_leitura ?>"
                                                 name="data">
@@ -604,6 +604,19 @@
                             </div>
 
                         </div>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.getElementById('img-edita<?=$post->id?>').addEventListener('change',
+                                function(e) {
+                                    var reader1 = new FileReader();
+                                    reader1.onload = function(event) {
+                                        document.getElementById('preview2').src = event.target.result;
+                                        document.getElementById('preview2').style.display = 'block';
+                                    };
+                                    reader1.readAsDataURL(e.target.files[0]);
+                                });
+                        });
+                        </script>
                         <?php $idCont++; ?>
                         <?php endforeach; ?>
                         <!-- MODAL DE VISUALIZAÇÃO - FIM -->
