@@ -49,7 +49,7 @@
             alt="Ícone de olho representando a visibilidade da senha">
           </div>
         </div>
-        <input id="btn-login" type="submit"></input>
+        <input id="btn-login" type="submit" value="Logar"></input>
       </form>
       </div>
     </div>
