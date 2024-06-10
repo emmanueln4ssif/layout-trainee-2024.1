@@ -52,8 +52,8 @@
                     </div>
                     <div class="digitado">
                         <?php 
-                        if (mb_strlen($post->review) > 160) {
-                            $post->review = mb_substr($post->review, 0, 160) . '...';
+                        if (mb_strlen($post->review) > 220) {
+                            $post->review = mb_substr($post->review, 0, 220) . '...';
                         }
                     ?>
                         <p class="review">
@@ -62,7 +62,8 @@
                     </div>
                 </div>
                 <div class="capalivro1">
-                    <img style="border-radius: 10px;" src="<?= $post->imagem?>" width="140px">
+                    <img style="border-radius: 10px;" src="<?php if($post->imagem != null){echo $post->imagem;}?>"
+                        width="140px">
                 </div>
             </div>
             <?php endforeach; ?>

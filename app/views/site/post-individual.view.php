@@ -26,10 +26,10 @@
                             $aux = $post[0]->nota_internet;
                             for ($k = 0; $k < 5; $k++) {
                                 if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f7e702; font-size:50px;">★</span>';
+                                    echo '<span class="icon" style="color: #f7e702;">★</span>';
                                     $aux--;
                                 } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9; font-size:50px;">★</span>';
+                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
                                 }
                             }
                         ?>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="elementos_review">
-        <div id="img_user"><img src="../../../public/assets/system-solid-8-account 1.svg"></div>
+        <div id="img_user"><img src="../../../public/assets/usuario-rosa.svg"></div>
 
         <div id="bloco_review">
             <div id="nome_user">
@@ -54,10 +54,10 @@
                             $aux = $post[0]->nota_user;
                             for ($k = 0; $k < 5; $k++) {
                                 if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f7e702; font-size:35px;">★</span>';
+                                    echo '<span class="icon1" style="color: #f7e702; ">★</span>';
                                     $aux--;
                                 } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9; font-size:35px;">★</span>';
+                                    echo '<span class="icon1" style="color: #D9D9D9;">★</span>';
                                 }
                             }
                         ?>
