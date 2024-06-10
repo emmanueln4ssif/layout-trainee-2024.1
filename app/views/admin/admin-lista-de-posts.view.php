@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset ($_SESSION['login']) == true){
+    header('Location: /login');
+}
+
+?>
+    
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
