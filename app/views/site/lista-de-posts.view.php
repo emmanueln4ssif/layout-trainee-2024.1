@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    <?php require("navbar.php");?>
     <main>
+
         <div class="coluna1">
             <div class="buscar-box">
                 <div class="lupa">
@@ -27,12 +29,12 @@
                 <div class="espassocapa">
                     <div class="espasso">
                         <div class="fotouser">
-                            <img src="/public/assets/FOTOPERFIL.svg">
+                            <img width="60px" src="../../../public/assets/usuario-rosa.svg">
                         </div>
                         <div class="usuario">
-                            <h1>
+                            <h2>
                                 <?= $post->name ?>
-                            </h1>
+                            </h2>
                             <div class="estrelas">
                                 <?php
                             $aux = $post->nota_user;
@@ -54,13 +56,13 @@
                             $post->review = mb_substr($post->review, 0, 160) . '...';
                         }
                     ?>
-                        <h2 class="review">
+                        <p class="review">
                             <?= $post->review ?>
-                        </h2>
+                        </p>
                     </div>
                 </div>
                 <div class="capalivro1">
-                    <img src="<?= $post->imagem?>" width="140px">
+                    <img style="border-radius: 10px;" src="<?= $post->imagem?>" width="140px">
                 </div>
             </div>
             <?php endforeach; ?>
@@ -73,6 +75,7 @@
             </div>
         </div>
     </main>
+    <?php require("footer.php");?>
 </body>
 
 </html>

@@ -1,23 +1,3 @@
-
-
-onload(1, 2);
-onload(3, 4);
-
-
-function gerarArrayAleatorio(tamanho) {
-  var array = [];
-  for (var i = 1; i <= tamanho; i++) {
-    array.push(i);
-  }
-  array.sort(function () {
-    return .5 - Math.random();
-  });
-  return array;
-}
-
-
-
-
 const swiper1 = new Swiper(".bloco1", {
   direction: "vertical",
   loop: true,
