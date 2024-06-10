@@ -103,7 +103,10 @@ body {
     display: flex;
     position: relative;
 }
-
+.formulario{
+    display: flex;
+    justify-content: center;
+}
 .campos input {
     width: 25vw;
     height: 12.8vh;

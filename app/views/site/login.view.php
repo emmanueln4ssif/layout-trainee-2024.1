@@ -26,7 +26,7 @@
       </div>
 
       <p id="titulo-login">Bem vindo de volta!</p>
-
+<div class ="formulario">
       <form action="efetuaLogin" method="post">
         <div class="campos">
           <div class="circulo">
@@ -51,6 +51,7 @@
         </div>
         <input id="btn-login" type="submit"></input>
       </form>
+      </div>
     </div>
   </div>
   <script src="/public/js/login.js"></script>
