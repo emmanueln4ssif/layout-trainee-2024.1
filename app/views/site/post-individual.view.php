@@ -23,7 +23,7 @@
             <div class="estrela_sinopse">
                 <div class="estrelas" style="margin-top:-20px;">
                     <?php
-                            $aux = $post[0]->nota_user;
+                            $aux = $post[0]->nota_internet;
                             for ($k = 0; $k < 5; $k++) {
                                 if ($aux > 0) {
                                     echo '<span class="icon" style="color: #f7e702; font-size:50px;">★</span>';
@@ -49,12 +49,18 @@
                 <?= $post[0]->name?>
             </div>
             <div class="estrelas_data">
-                <div class="star">
-                    <img src="../../../public/assets/Star 1.svg">
-                    <img src="../../../public/assets/Star 1.svg">
-                    <img src="../../../public/assets/Star 5.svg">
-                    <img src="../../../public/assets/Star 5.svg">
-                    <img src="../../../public/assets/Star 5.svg">
+                <div class="star" style="margin-top:-14px;">
+                    <?php
+                            $aux = $post[0]->nota_user;
+                            for ($k = 0; $k < 5; $k++) {
+                                if ($aux > 0) {
+                                    echo '<span class="icon" style="color: #f7e702; font-size:35px;">★</span>';
+                                    $aux--;
+                                } else {
+                                    echo '<span class="icon-cinza" style="color: #D9D9D9; font-size:35px;">★</span>';
+                                }
+                            }
+                        ?>
                 </div>
                 <?php
                 $comp = explode('-', $post[0]->data_post);

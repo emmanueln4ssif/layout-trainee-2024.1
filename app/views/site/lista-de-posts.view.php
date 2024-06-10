@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="coluna2">
-            <?php foreach($posts as $post): ?>
+            <?php foreach(array_reverse($posts) as $post): ?>
             <div class="forma-post1" onclick="location.href='publicacoes/post?id=<?=$post->id?>';">
                 <div class="espassocapa">
                     <div class="espasso">

@@ -94,6 +94,7 @@ main {
     border: 1px solid rgba(69, 50, 50, 0.8);
     margin-top: 2vh;
     margin-bottom: 2vh;
+    cursor: pointer;
 }
 
 .espasso {
