@@ -201,6 +201,17 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function pegaPost($table, $id){
+        $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id WHERE %s.id = %d;', $table,$table,$table,$table,$id);
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
 
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
     
 }

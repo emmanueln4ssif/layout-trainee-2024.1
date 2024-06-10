@@ -2,21 +2,23 @@ body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
     width: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.container {
+.container1 {
     margin-top: 4%;
     display: flex;
     justify-content: center;
     gap: 5%;
     align-items: start;
     height: auto;
-    width: 70%; 
+    width: 70%;
     flex-direction: row;
     margin-bottom: 5%;
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .imagem {
     margin-top: 5%;
     width: 100%;
@@ -29,9 +31,9 @@ body {
 
 .amostra {
     color: #002C42;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: end;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
     font-family: 'Poppins';
     flex-direction: row-reverse;
 }
@@ -95,12 +97,11 @@ body {
 #nome_user {
     color: #002C42;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     letter-spacing: -1.6px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #data {
@@ -134,12 +135,16 @@ body {
     width: 100%;
     max-width: 1000px;
     margin-left: auto;
-    margin-bottom: 370px;
+    margin-bottom: 70px;
     flex-shrink: 0;
     border-radius: 26px;
     border: 1px solid rgba(0, 0, 0, 0.25);
     opacity: 0.64;
     background: #E8E8E8;
+    padding: 8px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-wrap: break-word;
 }
 
 #bloco>p {
@@ -168,40 +173,50 @@ body {
 }
 
 @media only screen and (max-width: 855px) {
-    .titulo{
+    .titulo {
         letter-spacing: -4px;
 
     }
+
     #bloco {
         width: 90%;
     }
-    .titulo{
+
+    .titulo {
         font-size: 35px;
     }
-    .autor{
+
+    .autor {
         font-size: 20px;
     }
+
     .sinopse {
         font-size: 20px;
     }
-    #bloco > p {
+
+    #bloco>p {
         font: 17px;
     }
-    #data{
+
+    #data {
         font-size: 16px;
     }
-    #nome_user{
+
+    #nome_user {
         font-size: 18px;
     }
-    .data{
+
+    .data {
         font-size: 18px;
     }
-    .amostra{
+
+    .amostra {
         font-size: 17px;
     }
-    #img_user>img{
+
+    #img_user>img {
         width: 85px;
-        height: 81px;  
+        height: 81px;
     }
 }
 
@@ -209,39 +224,49 @@ body {
     #bloco {
         width: 95%;
     }
-    .titulo{
+
+    .titulo {
         font-size: 33px;
         letter-spacing: -3px;
     }
-    .autor{
+
+    .autor {
         font-size: 18px;
     }
+
     #img_user>img {
         width: 85px;
         height: 81px;
     }
-    .amostra{
+
+    .amostra {
         font-size: 15px;
     }
 
     .sinopse {
         font-size: 18px;
     }
-    #bloco > p {
+
+    #bloco>p {
         font: 16px;
     }
-    #data{
+
+    #data {
         font-size: 15px;
     }
-    #nome_user{
+
+    #nome_user {
         font-size: 16px;
     }
-    .data{
+
+    .data {
         font-size: 16px;
     }
-    .resumo{
+
+    .resumo {
         font-size: 17px;
     }
+
     .imagem {
         max-width: 170px;
         max-height: 250px;
@@ -249,7 +274,7 @@ body {
 }
 
 @media only screen and (max-width: 522px) {
-    .titulo{
+    .titulo {
         letter-spacing: -2px;
 
     }

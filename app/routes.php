@@ -20,4 +20,5 @@ use App\Controllers\Controlador;
 
     $router->get('','Controlador@landingPage');
     $router->get('publicacoes', 'Controlador@tabelaPostsUser');
+    $router->get('publicacoes/post','Controlador@verPost');
 ?>

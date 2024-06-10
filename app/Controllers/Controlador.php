@@ -51,6 +51,10 @@ class Controlador
         $total_pages = ceil ($rows_count/$itensPage);
         return view('site/lista-de-posts',compact('posts','page', 'total_pages'));
     }
+    public function verPost(){
+        $post = App::get('database')->pegaPost('posts',$_GET['id']);
+        return view('site/post-individual',compact('post'));
+    }
     public function editar()
     {
         $parameters= [

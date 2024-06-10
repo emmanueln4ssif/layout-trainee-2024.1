@@ -25,7 +25,7 @@
         </div>
         <div class="coluna2">
             <?php foreach($posts as $post): ?>
-            <div class="forma-post1">
+            <div class="forma-post1" onclick="location.href='publicacoes/post?id=<?=$post->id?>';">
                 <div class="espassocapa">
                     <div class="espasso">
                         <div class="fotouser">
