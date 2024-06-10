@@ -303,6 +303,11 @@ body {
   display: none;
 }
 
+.cometario>p {
+  overflow: clip;
+  overflow-clip-margin: 6px;
+}
+
 .bt-vermais>p {
   margin: 0;
   font-size: 28px;
