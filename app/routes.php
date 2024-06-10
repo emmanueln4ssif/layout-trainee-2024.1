@@ -19,5 +19,5 @@ use App\Controllers\Controlador;
     $router->get('dashboard', 'Controlador@dashboard');
 
     $router->get('','Controlador@landingPage');
-
+    $router->get('publicacoes', 'Controlador@tabelaPostsUser');
 ?>
