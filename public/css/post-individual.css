@@ -64,6 +64,7 @@ body {
 
 .resumo {
     text-align: left;
+    text-align: justify;
 }
 
 .titulo {
@@ -326,12 +327,10 @@ span.icon1 {
     }
 
     .resumo {
-        font-size: 16px;
+        font-size: 14px;
         text-align: justify;
         width: 100%;
     }
-
-
 
     #img_user>img {
         width: 45px;
@@ -345,5 +344,11 @@ span.icon1 {
 
     #bloco>p {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .resumo {
+        font-size: 12px;
     }
 }

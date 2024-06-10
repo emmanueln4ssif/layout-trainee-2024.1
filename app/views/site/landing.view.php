@@ -103,7 +103,7 @@
             <img src="../../../public/assets/arrow.svg">
         </div>
 
-        <div class="posts">
+        <div class="posts" id="pe">
             <?php 
                 $indice=sizeof($posts)-1;
                 if($indice+1<=5){
@@ -118,7 +118,7 @@
             <?php for ($i = 0; $i < $aux2 ; $i++): ?>
 
             <div class="post normal" onclick="location.href='/publicacoes/post?id=<?=$posts[$indice]->id?>'">
-                <div class="imagpost" id="p">
+                <div class="imagpost">
                     <img src="<?= $posts[$indice]->imagem ?>">
                     <?php 
                         if (mb_strlen($posts[$indice]->titulo_post) > 16) {

@@ -69,6 +69,6 @@ function posts() {
 }
 
 function scrolla() {
-  let bt1 = document.getElementById("p");
+  let bt1 = document.getElementById("pe");
   bt1.scrollIntoView({ behavior: 'smooth' });
 } 
