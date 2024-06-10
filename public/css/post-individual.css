@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
+    background-repeat: no-repeat;
     width: 100%;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -17,6 +18,10 @@ body {
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.titulo_rev {
+    text-align: center;
 }
 
 .imagem {

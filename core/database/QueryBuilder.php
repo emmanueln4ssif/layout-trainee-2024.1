@@ -113,7 +113,7 @@ class QueryBuilder
         $novoNome=uniqid();
         $caminho = $pasta . basename($novoNome);
         $extensao=strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
-        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg" && $img["name"] != null){    
+        if($extensao != "png" && $extensao != "jpg" && $img["name"] != null){    
             die("<script>
             window.onload = function () {
                 alert('Tipo de arquivo não suportado!');

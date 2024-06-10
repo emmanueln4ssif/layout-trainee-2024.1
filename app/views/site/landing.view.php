@@ -104,9 +104,20 @@
         </div>
 
         <div class="posts">
-            <?php $indice=sizeof($posts)-1;?>
-            <?php for ($i = 0; $i < 5; $i++): ?>
-            <div class="post" onclick="location.href='/publicacoes/post?id=<?=$posts[$indice]->id?>'">
+            <?php 
+                $indice=sizeof($posts)-1;
+                if($indice+1<=5){
+                    $aux=$indice+1; 
+                }else{
+                    $aux=5;
+                }
+                $aux2=(int)$aux;
+                
+            ?>
+
+            <?php for ($i = 0; $i < $aux2 ; $i++): ?>
+
+            <div class="post normal" onclick="location.href='/publicacoes/post?id=<?=$posts[$indice]->id?>'">
                 <div class="imagpost" id="p">
                     <img src="<?= $posts[$indice]->imagem ?>">
                     <?php 
@@ -131,8 +142,54 @@
                         ?>
                     </div>
                     <?php 
+                        $rev =$posts[$indice]->review;
                         if (mb_strlen($posts[$indice]->review) > 80) {
-                            $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 80) . '...';
+                            $rev = mb_substr($posts[$indice]->review, 0, 80) . '...';
+                        }
+                    ?>
+                    <?php 
+                        if (mb_strlen($posts[$indice]->name) > 16) {
+                            $posts[$indice]->review = mb_substr($posts[$indice]->name, 0, 16) . '...';
+                        }
+                    ?>
+                    <div class="cometario">
+                        <h3><?= $posts[$indice]->name?></h3>
+                        <p>
+                            <?= $rev ?>
+                        </p>
+                        <div class="ver">
+                            <p>ver mais</p><img src="../../../public/assets/arrow.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post mobile" onclick="location.href='/publicacoes/post?id=<?=$posts[$indice]->id?>'">
+                <div class="imagpost" id="p">
+                    <img src="<?= $posts[$indice]->imagem ?>">
+                    <?php 
+                        if (mb_strlen($posts[$indice]->titulo_post) > 16) {
+                            $posts[$indice]->titulo_post = mb_substr($posts[$indice]->titulo_post, 0, 16) . '...';
+                        }
+                    ?>
+                    <h3 class="titulo-comentario"><?= $posts[$indice]->titulo_post ?></h3>
+                </div>
+                <div class="mb">
+                    <div class="estrelas" style="margin-bottom:6px;">
+                        <?php
+                            $aux = $posts[$indice]->nota_user;
+                            for ($k = 0; $k < 5; $k++) {
+                                if ($aux > 0) {
+                                    echo '<span class="icon" style="color: #f5d000;">★</span>';
+                                    $aux--;
+                                } else {
+                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                }
+                            }
+                        ?>
+                    </div>
+                    <?php 
+                        if (mb_strlen($posts[$indice]->review) > 180) {
+                            $posts[$indice]->review = mb_substr($posts[$indice]->review, 0, 180) . '...';
                         }
                     ?>
                     <?php 

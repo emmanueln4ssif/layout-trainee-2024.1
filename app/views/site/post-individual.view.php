@@ -70,6 +70,7 @@
             </div>
 
             <div id="bloco">
+                <h2 class="titulo_rev"><?=$post[0]->titulo_post?></h2>
                 <p><?= nl2br( $post[0]->review)?></p>
             </div>
         </div>
