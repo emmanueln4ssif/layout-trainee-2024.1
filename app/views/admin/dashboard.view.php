@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 
     <title>Story Stroll</title>
 </head>
+
 <body>
     <div class="corpo">
         <img id="mainimg" src="../../../public/assets/foto.svg">
@@ -20,11 +22,12 @@
                 <img id="botaousuarios" src="../../../public/assets/usuarios.svg">
                 <p>Usuários</p>
             </div>
-            <div class="botao" id="botaolog" onclick="window.location.href='#'">
+            <div class="botao" id="botaolog" onclick="window.location.href='/'">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
                 <p>Logout</p>
+            </div>
         </div>
-    </div>
 
 </body>
+
 </html>
