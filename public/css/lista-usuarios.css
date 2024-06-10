@@ -205,11 +205,13 @@ td.container-btn {
   justify-content: center;
 
 }
-.btn-voltar{
+
+.btn-voltar {
   width: 40px;
 
 }
-.btn-avancar{
+
+.btn-avancar {
   width: 40px;
 }
 
@@ -237,17 +239,19 @@ table td button:hover {
   width: 135px;
   margin-left: 10px;
 }
-.paginacao-link:visited{
-  color: #e87c7a;
-  text-decoration: none;
-}
-.paginacao-link{
-  
+
+.paginacao-link:visited {
   color: #e87c7a;
   text-decoration: none;
 }
 
-.paginacao-item{
+.paginacao-link {
+
+  color: #e87c7a;
+  text-decoration: none;
+}
+
+.paginacao-item {
   text-align: center;
   list-style-type: none;
   background-color: #002c42;
@@ -258,7 +262,8 @@ table td button:hover {
   width: 35px;
   cursor: pointer;
 }
-.paginacao-numeros{
+
+.paginacao-numeros {
   list-style-type: none;
   padding: 0;
   margin-top: 15px;
@@ -283,6 +288,19 @@ table td button:hover {
   padding-bottom: 5px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.cs {
+  background-color: gray;
+  color: #f5f5f5;
+  font-family: Poppins;
+}
+
+.cs:hover {
+  background-color: gray;
+  color: #f5f5f5;
+  font-family: Poppins;
+  font-weight: 400;
 }
 
 #cabecalho {
