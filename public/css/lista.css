@@ -160,6 +160,89 @@ main {
     margin: 5px;
 }
 
+#alternador {
+    margin-top: 10px;
+    float: right;
+}
+
+.paginacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-voltar {
+    width: 110px;
+    margin-right: 10px;
+    color: #e87c7a;
+}
+
+.btn-avancar {
+    width: 135px;
+    margin-left: 10px;
+}
+
+.paginacao-link:visited {
+    color: #e87c7a;
+    text-decoration: none;
+}
+
+.paginacao-link {
+
+    color: #e87c7a;
+    text-decoration: none;
+}
+
+.paginacao-item {
+    text-align: center;
+    list-style-type: none;
+    background-color: #002c42;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+    margin: 2px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.paginacao-numeros {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.btn-avancar:hover,
+.btn-voltar:hover {
+    background: #002c42;
+    font-weight: 600;
+    color: #ef9ca9;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    background: #002c42;
+    border: none;
+    color: #e87c7a;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navpaginacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
 @media screen and (min-width:900px) and (max-width:1171px) {
     .coluna3 {
         display: none;

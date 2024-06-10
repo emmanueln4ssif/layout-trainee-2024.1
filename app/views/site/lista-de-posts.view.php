@@ -60,7 +60,24 @@
                 </div>
             </div>
             <?php endforeach; ?>
+            <div id="alternador" class="paginacao">
+                <button class="btn btn-voltar" onclick="location.href='?pagina=<?php echo $page-1 ?>';">&lt
+                    Voltar</button>
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
+                        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                        <li onclick="location.href = '?pagina=<?= $page_number ?>';" class="paginacao-item"><a
+                                style="<?= $page_number == $page ? "color: #f5f5f5; text-decoration: none;" : "" ?>"
+                                class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
+                                href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
+                        <?php endfor ?>
+                    </ul>
+                </nav>
+                <button class="btn btn-avancar" onclick="location.href='?pagina=<?php echo $page+1 ?>';">Avançar
+                    &gt</button>
 
+
+            </div>
 
         </div>
         <div class="coluna3">
