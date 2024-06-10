@@ -582,8 +582,8 @@
                                         </div>
 
                                         <div class="direita">
-                                            <div class="img-prev"><img id="preview2" src="<?php echo $post->imagem ?>"
-                                                    alt="Pré-visualização da imagem">
+                                            <div class="img-prev"><img class="preview2" id="preview<?=$post->id?>"
+                                                    src="<?php echo $post->imagem ?>" alt="Pré-visualização da imagem">
                                             </div>
                                             <label for="img">Selecione uma imagem:</label>
                                             <input type="file" id="img-edita<?=$post->id?>" name="img" accept="image/*">
@@ -608,12 +608,14 @@
                         document.addEventListener('DOMContentLoaded', function() {
                             document.getElementById('img-edita<?=$post->id?>').addEventListener('change',
                                 function(e) {
-                                    var reader1 = new FileReader();
-                                    reader1.onload = function(event) {
-                                        document.getElementById('preview2').src = event.target.result;
-                                        document.getElementById('preview2').style.display = 'block';
+                                    var reader = new FileReader();
+                                    reader.onload = function(event) {
+                                        document.getElementById('preview<?=$post->id?>').src = event
+                                            .target.result;
+                                        document.getElementById('preview<?=$post->id?>').style.display =
+                                            'block';
                                     };
-                                    reader1.readAsDataURL(e.target.files[0]);
+                                    reader.readAsDataURL(e.target.files[0]);
                                 });
                         });
                         </script>
