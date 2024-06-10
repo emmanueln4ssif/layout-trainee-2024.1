@@ -53,6 +53,10 @@ class Controlador
     }
     public function verPost(){
         $post = App::get('database')->pegaPost('posts',$_GET['id']);
+        if($post==null){
+        header('Location: /publicacoes');
+        exit();
+        }
         return view('site/post-individual',compact('post'));
     }
     public function editar()
