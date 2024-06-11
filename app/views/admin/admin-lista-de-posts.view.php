@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
+
 <body>
 
     <div class="sdbar">
@@ -24,6 +25,20 @@
                 <button type="button" class="botoes-fora-tabela" id="botao-criar-post"
                     onclick="abrirModal('adiciona-post')"><i class="bi bi-plus-lg"></i> Criar post</button>
                 <p id="titulo-pg">Lista de posts</p>
+        <div class="container-tabela">
+            <table class="tabela-posts">
+                <thead>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Data</th>
+                    <th class="acoes"></th>
+                    <th class="acoes"></th>
+                    <th class="acoes"></th>
+                </thead>
+                <tbody>
+                    <?php $cont_id = 1+(5*($page-1)); ?>
+
 
             </div>
 
@@ -48,12 +63,46 @@
                         $compLeitura = explode('-', $post->data_leitura);
                         $dataleituraFormatada = $compLeitura[2] . '/' . $compLeitura[1] . '/' . $compLeitura[0];
                         ?>
-                        <tr class="linha-normal">
-                            <td class="espaco-id"><?php echo $idCont ?></td>
-                            <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
-                            <td class="espaco-autor"><?php echo $post->name ?></td>
-                            <td class="espaco-data"><?php echo $datapostFormatada  ?></td>
-                            <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
+                    <tr class="linha-normal">
+                        <td class="espaco-id"><?php echo $cont_id ?></td>
+                        <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
+                        <td class="espaco-autor"><?php echo $post->name ?></td>
+                        <td class="espaco-data"><?php echo $datapostFormatada  ?></td>
+                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
+                                onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
+                                    class="bi bi-eye-fill"></i><br>Visualizar</button>
+                        </td>
+                        <td class="espaco-editar"><button type="button" class="botao-editar"
+                                onclick="abrirModal('edit-post<?php echo $post->id ?>')"><i
+                                    class="bi bi-pencil-square"></i><br>Editar</button>
+                        </td>
+                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
+                                onclick="abrirModal('rm-post<?php echo $post->id ?>')"><i
+                                    class="bi bi-trash3-fill"></i><br>Deletar</button>
+                        </td>
+                    </tr>
+                    <tr class="linha-mobile">
+                        <td class="espaco-id" rowspan="2"><?php echo $post->id ?></td>
+                        <td class="espaco-titulo"><?php echo $post->titulo_post ?></td>
+                        <td class="espaco-autor"><?php echo $post->name ?></td>
+                        <td class="espaco-data" rowspan="2"><?php echo $datapostFormatada ?></td>
+                        <td class="espaco-visualizar"><button type="button" class="botao-visualizar"
+                                onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
+                                    class="bi bi-eye-fill"></i><br>Visualizar</button>
+                        </td>
+                        <td class="espaco-editar"><button type="button" class="botao-editar"
+                                onclick="abrirModal('edit-post<?php echo $post->id ?>')"><i
+                                    class="bi bi-pencil-square"></i><br>Editar</button>
+                        </td>
+                        <td class="espaco-excluir"><button type="button" class="botao-excluir"
+                                onclick="abrirModal('rm-post<?php echo $post->id ?>')"><i
+                                    class="bi bi-trash3-fill"></i><br>Deletar</button>
+                        </td>
+                    </tr>
+                    <tr class="botoes-mobile">
+                        <td class="linha-botoes" colspan="2">
+                            <div class="container-botoes">
+                                <button type="button" class="botao-visualizar"
                                     onclick="abrirModal('visualizar<?php echo $post->id ?>')"><i
                                         class="bi bi-eye-fill"></i><br>Visualizar</button>
                             </td>
@@ -744,16 +793,55 @@
                         </form>
                         <a class="fecha" href="#" onclick="fecharModal('adiciona-post')">&times;</a>
                     </div>
-                </div>
+                    <?php $cont_id++; ?>
+
+                    <!-- MODAL DE VISUALIZAÇÃO - FIM -->
+
+                </tbody>
+            </table>
+
+            <!-- MODAL DE CRIAÇÃO - INÍCIO -->
+
+         
 
                 <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
             </div>
-            <div class="paginacao">
-                <button class="botoes-fora-tabela" id="botao-voltar"><i class="bi bi-chevron-left"></i>Voltar</button>
-                <button class="botoes-fora-tabela" id="botao-avancar">Avançar<i
-                        class="bi bi-chevron-right"></i></button>
-            </div>
+
+            <!-- MODAL DE CRIAÇÃO - INÍCIO -->
+
+        </div>
+
+        <div id="altemindor" class="paginacao">
+            <?php
+                if($page-1>0){
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                }else{
+                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                }
+
+                ?>
+            <nav class="navpaginacao">
+                <ul class="paginacao-numeros">
+                    <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                    <li onclick="location.href = '?pagina=<?= $page_number ?>';" class="paginacao-item"><a
+                            style="<?= $page_number == $page ? "color: #f5f5f5; text-decoration: none;" : "" ?>"
+                            class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
+                            href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
+                    <?php endfor ?>
+                </ul>
+            </nav>
+            <?php
+                if($page+1<=$total_pages){
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar
+                    &gt</button>";
+                }else{
+                    echo "<button class='btn btn-avancar cs'>Avançar
+                    &gt</button>";
+                }
+
+                ?>
+        </div>
 
     </main>
 

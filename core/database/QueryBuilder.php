@@ -34,9 +34,14 @@ class QueryBuilder
 
         }
     }
-    public function selectAll($table)
+    public function selectAll($table, $inicio=null,$rows_count=null)
     {
+        
         $sql = "select * from {$table}";
+        
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -92,11 +97,13 @@ class QueryBuilder
 
     }
 
-    public function selectAllcomNome($table)
+    public function selectAllcomNome($table, $inicio = null, $rows_count = null)
     {
         //seleciona tudo da $table e name da tabela users quando o user_id da $table é igual ao id da tabela user
         $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id', $table,$table,$table);
-
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -213,5 +220,6 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
     
 }
