@@ -104,6 +104,7 @@
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
 
                             <div class="content">
+                            <?php viewEstrela($post->nota_internet, 20)?>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
@@ -120,7 +121,17 @@
                                             <br>
                                             <h3>Nota média da internet</h3>
                                             <div class="nota">
-                                                <?php viewEstrela('site/estrelas', $post->nota_internet, 20)?>
+                                                <?php
+                                                $aux = $post->nota_internet;
+                                                for ($i = 0; $i < 5; $i++) {
+                                                    if ($aux > 0) {
+                                                        echo '<span class="icon">★</span>';
+                                                        $aux--;
+                                                    } else {
+                                                        echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
+                                                    }
+                                                }
+                                                ?>
                                             </div>
 
                                         </div>

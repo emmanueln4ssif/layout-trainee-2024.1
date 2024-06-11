@@ -13,7 +13,7 @@ function view($name, $data = [])
     return require "app/views/{$name}.view.php";
 }
 
-function viewEstrela($name, $nota, $tam)
+function viewEstrela($nota, $tam)
 {
     $vetor = [
         $nota_user = $nota,
@@ -22,7 +22,7 @@ function viewEstrela($name, $nota, $tam)
 
     extract($vetor);
 
-    return require "app/views/{$name}.view.php";
+    return require "app/views/site/estrelas.view.php";
 }
 
 /**
