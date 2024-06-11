@@ -43,6 +43,7 @@ main {
     padding-right: 2%;
     padding-left: 2%;
     flex-direction: column;
+    min-width: 48vw;
     min-height: 61vh;
 }
 
