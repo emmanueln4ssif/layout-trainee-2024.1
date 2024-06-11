@@ -10,6 +10,7 @@ class Controlador
 
     public function tabelaPosts()
     {
+        
         $page = 1;
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
@@ -35,6 +36,8 @@ class Controlador
     }
     public function tabelaPostsUser()
     {
+        $pesquisa = false;
+        $users= App::get('database')->selectAll('users') ;
         $page = 1;
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
@@ -50,7 +53,7 @@ class Controlador
         }
         $posts = App::get('database')->selectAllcomNome('posts',$inicio,$itensPage);
         $total_pages = ceil ($rows_count/$itensPage);
-        return view('site/lista-de-posts',compact('posts','page', 'total_pages'));
+        return view('site/lista-de-posts',compact('posts','page', 'total_pages','users','pesquisa'));
     }
     
 

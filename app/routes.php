@@ -19,7 +19,7 @@ use App\Controllers\Controlador;
     $router->post('post/deletar', 'Controlador@deletar');
 
     $router->get('dashboard', 'Controlador@dashboard');
-
+    $router->get('listaPosts', 'AdminController@listaPosts');
     $router->get('','Controlador@landingPage');
     $router->get('publicacoes', 'Controlador@tabelaPostsUser');
     $router->get('publicacoes/post','Controlador@verPost');

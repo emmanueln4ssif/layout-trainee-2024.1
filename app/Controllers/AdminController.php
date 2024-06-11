@@ -30,11 +30,15 @@ class AdminController
         return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'));
     }
 
+
+
+
     public function login(){
 
         return require "app/views/site/login.view.php";
         
     }
+    
 
     public function dashboard(){
 
@@ -78,14 +82,15 @@ class AdminController
     }
 
     public function listaPosts(){
-
+        $users= App::get('database')->selectAll('users') ;
+        $pesquisa = true;
         if(!empty($_GET['search'])){
             $pesquisa = $_GET['search'];
-            $post_pesquisado = App::get('database')->selectSearch($pesquisa);
-            return view('site/lista-de-posts',compact('post_pesquisado'));
+            $posts = App::get('database')->selectSearch($pesquisa);
+            return view('site/lista-de-posts',compact('posts','users','pesquisa'));
         }else{
-            $post_pesquisado = App::get('database')->selectAllDesc('posts');
-            return view('site/lista-de-posts',compact('post_pesquisado'));
+            $posts = App::get('database')->selectAllDesc('posts');
+            return view('site/lista-de-posts',compact('posts','users','pesquisa'));
         }
 
     }

@@ -56,11 +56,8 @@ class QueryBuilder
 
     public function selectSearch($pesquisa)
     {
-        $sql = "select posts.*, users.name from posts INNER JOIN users ON posts.user_id WHERE livro_titulo LIKE '%$pesquisa%'
-            OR titulo_post LIKE '%$pesquisa%' 
-            OR review LIKE '%$pesquisa%' 
-            ORDER BY id DESC";
-            
+        $sql = "SELECT * FROM `posts` WHERE `titulo_post` LIKE '%$pesquisa%' OR `livro_titulo` LIKE '%$pesquisa%'";
+         
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();

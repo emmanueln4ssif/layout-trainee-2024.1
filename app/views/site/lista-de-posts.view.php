@@ -15,11 +15,11 @@
 
         <div class="coluna1">
             <div class="buscar-box">
-                <div class="lupa">
-                    <img src="../../../public/assets/lupa.svg">
-                </div>
                 <div class="input-buscar">
-                    <input type="text" name="" id="" placeholder="Buscar Postagens">
+                    <input type="search" name="search" id="search" placeholder="Buscar Postagens">
+                </div>
+                <div class="lupa">
+                    <button onclick="searchData()"><img src="../../../public/assets/lupa.svg"></button>
                 </div>
             </div>
         </div>
@@ -33,7 +33,13 @@
                         </div>
                         <div class="usuario">
                             <h2>
-                                <?= $post->name ?>
+                                <?php 
+                                foreach($users as $user){
+                                    if($user->id == $post->user_id){
+                                        echo $user->name;
+                                    }
+                                }
+                                ?>
                             </h2>
                             <div class="estrelas">
                                 <?php
@@ -67,6 +73,7 @@
                 </div>
             </div>
             <?php endforeach; ?>
+            <?php if(!$pesquisa): ?>
             <div id="alternador" class="paginacao">
                 <?php
                 if($page-1>0){
@@ -97,7 +104,7 @@
 
                 ?>
             </div>
-
+            <?php endif; ?>
         </div>
         <div class="coluna3">
             <div class="coluna-box">
@@ -105,25 +112,23 @@
             </div>
         </div>
     </main>
-<script> 
-
+    <script>
     let pesquisa = document.getElementById('search');
 
-    pesquisa.addEventListener("keydown", function(event){
+    pesquisa.addEventListener("keydown", function(event) {
 
-        if(event.key === "Enter"){
+        if (event.key === "Enter") {
             searchData();
         }
 
     });
 
-    function searchData(){
+    function searchData() {
 
-        window.location = 'listaPosts?search='+pesquisa.value;
+        window.location = 'listaPosts?search=' + pesquisa.value;
 
     };
-
-</script>
+    </script>
     <?php require("footer.php");?>
 </body>
 
