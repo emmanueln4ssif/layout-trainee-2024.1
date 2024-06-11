@@ -105,6 +105,7 @@
 
                             <div class="content">
                                 <div class="content-vizu">
+                                <?php viewEstrela('site/estrelas', $post->nota_user, 20)?>
                                     <div class="cima">
                                         <div class="direita">
                                             <h3>Título do livro</h3>

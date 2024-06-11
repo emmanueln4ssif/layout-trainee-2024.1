@@ -13,6 +13,18 @@ function view($name, $data = [])
     return require "app/views/{$name}.view.php";
 }
 
+function viewEstrela($name, $nota, $tam)
+{
+    $vetor = [
+        $nota_user = $nota,
+        $tamanho = $tam
+    ];
+
+    extract($vetor);
+
+    return require "app/views/{$name}.view.php";
+}
+
 /**
  * Redirect to a new page.
  *
