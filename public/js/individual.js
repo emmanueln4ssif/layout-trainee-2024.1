@@ -10,6 +10,8 @@ async function amostra(titulo) {
         const sampleLink = firstBook.accessInfo.webReaderLink;
         console.log(sampleLink);
         document.getElementById('amostra').setAttribute('onclick', `location.href='${sampleLink}'`);
+        document.getElementById('amostra').style.textDecoration = "underline";
+        document.getElementById('amostra').style.cursor = "pointer";
     } else {
         document.getElementById('amostra').innerHTML = "Sem amostra disponível";
     }
