@@ -187,7 +187,7 @@ span.icon1 {
 
 @media only screen and (max-width: 1345px) {
     #bloco {
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -243,7 +243,7 @@ span.icon1 {
 
 @media only screen and (max-width: 639px) {
     #bloco {
-        width: 95%;
+        width: 89%;
     }
 
     span {
