@@ -99,6 +99,7 @@ main {
     margin-bottom: 2vh;
     cursor: pointer;
     min-width: 43vw;
+    max-width: 100%;
 }
 
 .espasso {

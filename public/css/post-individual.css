@@ -323,12 +323,17 @@ span.icon1 {
     }
 
     .titulo {
-        font-size: 29px;
+        font-size: 19px;
+    }
+
+    .autor {
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 
     .resumo {
         font-size: 14px;
-        text-align: justify;
+        text-align: start;
         width: 100%;
     }
 
@@ -349,6 +354,39 @@ span.icon1 {
 
 @media only screen and (max-width: 400px) {
     .resumo {
+        font-size: 10px;
+    }
+
+    .amostra {
         font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 500;
+    }
+
+    .data {
+        font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 400;
+    }
+
+    .titulo_rev {
+        font-size: 16px;
+    }
+
+    #bloco>p {
+        font-size: 10px;
+    }
+
+    #data {
+        font-size: 12px;
+    }
+
+    .autor {
+        margin-bottom: 10px;
+    }
+
+    .estrelas>span {
+        margin-top: 300px;
+        font-size: 20px;
     }
 }
