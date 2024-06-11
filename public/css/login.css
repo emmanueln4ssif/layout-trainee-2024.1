@@ -185,6 +185,11 @@ body {
     margin-top: 2vh;
     border: none;
     width:100%;
+}
+#botao {
+    margin-top: 2vh;
+    border: none;
+    width: 36.5vw;
     height: 12.8vh;
     border-radius: 12.8vh;
     background: linear-gradient(180deg, #EF9CA9 -58.7%, #E87C7A 99.02%);

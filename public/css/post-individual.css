@@ -1,22 +1,29 @@
 body {
     background: linear-gradient(to bottom, #ecd1e0, #ffffff);
     margin: 0;
+    background-repeat: no-repeat;
     width: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.container {
+.container1 {
     margin-top: 4%;
     display: flex;
     justify-content: center;
     gap: 5%;
     align-items: start;
     height: auto;
-    width: 70%; 
+    width: 70%;
     flex-direction: row;
     margin-bottom: 5%;
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.titulo_rev {
+    text-align: center;
+}
+
 .imagem {
     margin-top: 5%;
     width: 100%;
@@ -29,9 +36,9 @@ body {
 
 .amostra {
     color: #002C42;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: end;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
     font-family: 'Poppins';
     flex-direction: row-reverse;
 }
@@ -57,13 +64,14 @@ body {
 
 .resumo {
     text-align: left;
+    text-align: justify;
 }
 
 .titulo {
     font-size: 40px;
     font-family: 'Poppins';
     color: #453232;
-    letter-spacing: -5.28px;
+    letter-spacing: -3px;
     font-weight: 400;
 }
 
@@ -95,12 +103,11 @@ body {
 #nome_user {
     color: #002C42;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     letter-spacing: -1.6px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #data {
@@ -120,6 +127,7 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+
 }
 
 .estrelas_data {
@@ -134,16 +142,24 @@ body {
     width: 100%;
     max-width: 1000px;
     margin-left: auto;
-    margin-bottom: 370px;
+    margin-bottom: 70px;
     flex-shrink: 0;
     border-radius: 26px;
     border: 1px solid rgba(0, 0, 0, 0.25);
     opacity: 0.64;
     background: #E8E8E8;
+    padding: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-wrap: break-word;
+}
+
+#bloco_review {
+    max-width: 80vw;
 }
 
 #bloco>p {
-    color: #453232;
+    color: black;
     font-family: Poppins;
     font-size: 19px;
     font-weight: 400;
@@ -161,97 +177,143 @@ body {
     align-self: flex-start;
 }
 
+span {
+    font-size: 50px;
+}
+
+span.icon1 {
+    font-size: 35px;
+}
+
 @media only screen and (max-width: 1345px) {
     #bloco {
-        width: 100%;
+        width: 95%;
     }
 }
 
 @media only screen and (max-width: 855px) {
-    .titulo{
+    .titulo {
         letter-spacing: -4px;
+    }
+
+    #bloco {
+
+        margin-left: 0;
+        margin-right: 10px;
 
     }
-    #bloco {
-        width: 90%;
-    }
-    .titulo{
+
+    .titulo {
         font-size: 35px;
     }
-    .autor{
+
+    .autor {
         font-size: 20px;
     }
+
     .sinopse {
         font-size: 20px;
     }
-    #bloco > p {
+
+    #bloco>p {
         font: 17px;
     }
-    #data{
+
+    #data {
         font-size: 16px;
     }
-    #nome_user{
+
+    #nome_user {
         font-size: 18px;
     }
-    .data{
+
+    .data {
         font-size: 18px;
     }
-    .amostra{
+
+    .amostra {
         font-size: 17px;
     }
-    #img_user>img{
+
+    #img_user>img {
         width: 85px;
-        height: 81px;  
+        height: 81px;
     }
 }
 
 @media only screen and (max-width: 639px) {
     #bloco {
-        width: 95%;
+        width: 89%;
     }
-    .titulo{
+
+    span {
+        font-size: 32px;
+    }
+
+    .titulo {
         font-size: 33px;
         letter-spacing: -3px;
     }
-    .autor{
+
+    .autor {
         font-size: 18px;
     }
+
     #img_user>img {
         width: 85px;
         height: 81px;
     }
-    .amostra{
+
+    .amostra {
         font-size: 15px;
     }
 
     .sinopse {
         font-size: 18px;
     }
-    #bloco > p {
+
+    #bloco>p {
         font: 16px;
     }
-    #data{
+
+    #data {
         font-size: 15px;
     }
-    #nome_user{
+
+    #nome_user {
         font-size: 16px;
     }
-    .data{
+
+    .data {
         font-size: 16px;
     }
-    .resumo{
+
+    .resumo {
         font-size: 17px;
     }
+
     .imagem {
         max-width: 170px;
         max-height: 250px;
     }
+
+    #img_user>img {
+        width: 65px;
+        height: 61px;
+    }
 }
 
 @media only screen and (max-width: 522px) {
-    .titulo{
+    .titulo {
         letter-spacing: -2px;
+    }
 
+    .elementos_review {
+        max-width: 98vw;
+    }
+
+    span.icon1 {
+        font-size: 25px;
     }
 
     .container {
@@ -261,22 +323,23 @@ body {
     }
 
     .titulo {
-        font-size: 29px;
+        font-size: 19px;
+    }
+
+    .autor {
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 
     .resumo {
-        font-size: 16px;
-        text-align: justify;
+        font-size: 14px;
+        text-align: start;
         width: 100%;
     }
 
-    #bloco {
-        width: 95%;
-    }
-
     #img_user>img {
-        width: 85px;
-        height: 81px;
+        width: 45px;
+        height: 41px;
     }
 
     .sinopse {
@@ -286,5 +349,44 @@ body {
 
     #bloco>p {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .resumo {
+        font-size: 10px;
+    }
+
+    .amostra {
+        font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 500;
+    }
+
+    .data {
+        font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 400;
+    }
+
+    .titulo_rev {
+        font-size: 16px;
+    }
+
+    #bloco>p {
+        font-size: 10px;
+    }
+
+    #data {
+        font-size: 12px;
+    }
+
+    .autor {
+        margin-bottom: 10px;
+    }
+
+    .estrelas>span {
+        margin-top: 300px;
+        font-size: 20px;
     }
 }

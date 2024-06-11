@@ -14,11 +14,16 @@ use App\Controllers\Controlador;
     $router->post('create', 'AdminController@create');
     $router->post('delete', 'AdminController@delete');
     $router->post('edit', 'AdminController@edit');
-
+    $router->get('publicacoes', 'AdminController@listaPost');
 
     $router->get('posts', 'Controlador@tabelaPosts');
     $router->post('post/criar', 'Controlador@criar');
     $router->post('post/editar', 'Controlador@editar');
     $router->post('post/deletar', 'Controlador@deletar');
 
+    $router->get('dashboard', 'Controlador@dashboard');
+
+    $router->get('','Controlador@landingPage');
+    $router->get('publicacoes', 'Controlador@tabelaPostsUser');
+    $router->get('publicacoes/post','Controlador@verPost');
 ?>

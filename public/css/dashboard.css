@@ -25,6 +25,10 @@ body {
     gap: 12%;
 }
 
+.botoes:hover {
+    cursor:pointer;
+}
+
 .botao {
     width: 10%;
     font-family: 'Poppins';

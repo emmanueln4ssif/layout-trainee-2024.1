@@ -1,3 +1,5 @@
+
+
 document.getElementById('img-adc').addEventListener('change', function (e) {
   var reader = new FileReader();
   reader.onload = function (event) {
@@ -6,14 +8,7 @@ document.getElementById('img-adc').addEventListener('change', function (e) {
   }
   reader.readAsDataURL(e.target.files[0]);
 });
-document.getElementById('img-edita').addEventListener('change', function (e) {
-  var reader = new FileReader();
-  reader.onload = function (event) {
-    document.getElementById('preview2').src = event.target.result;
-    document.getElementById('preview2').style.display = 'block';
-  }
-  reader.readAsDataURL(e.target.files[0]);
-});
+
 function abrirModal(idmodal) {
   document.getElementById(idmodal).style.display = "flex";
 }

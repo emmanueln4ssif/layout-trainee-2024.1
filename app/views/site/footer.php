@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="/public/css/NB-e-footer.css">
-  <title>Story Stroll</title>
-</head>
-<body>
-  <main></main>
+  
   <footer>
     <div id="footer-content">
       <div id="lista-redes">
@@ -15,22 +8,22 @@
         <h1 class="footer-titulo">SIGA NOSSAS REDES SOCIAIS!</h1>
 
         <a href="#" class="rede-social instagram">
-          <div class="block-rede">
-            <img src="/public/assets/LOGO_INSTAGRAM V1.png" alt="logo instagram">
+          <div class="block-rede" style="display:flex;align-items: flex-start;flex-wrap:wrap;">
+            <img src="/public/assets/LOGO_INSTAGRAM V1.png" style="margin:0;" alt="logo instagram">
             <p class="footer-texto">@StoryStroll</p>
           </div>
         </a>
 
         <a herf="#" class="rede-social facebook" >
-          <div class="block-rede">
-            <img src="/public/assets/LOFO_FACEBOOK V1.png" alt="logo facebook">
+          <div class="block-rede" style="display:flex;align-items: flex-start;flex-wrap:wrap;">
+            <img src="/public/assets/LOFO_FACEBOOK V1.png" style="margin:0;" alt="logo facebook">
             <p class="footer-texto">Story Stroll</p>
           </div>
         </a>
 
         <a href="#" class="rede-social twitter">
-          <div class="block-rede">
-            <img src="/public/assets/LOGO_TWITTER V1.png" alt="logo twitter">
+          <div class="block-rede" style="display:flex;align-items: flex-start;flex-wrap:wrap;">
+            <img src="/public/assets/LOGO_TWITTER V1.png" style="margin:0;" alt="logo twitter">
             <p class="footer-texto">story_stroll</p>
           </div>
         </a>
@@ -69,5 +62,3 @@
       </div>
     </div>
   </footer>
-</body>
-</html>
