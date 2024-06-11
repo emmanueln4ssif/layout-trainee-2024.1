@@ -28,6 +28,7 @@
                         <div class="fotouser">
                             <img src="/public/assets/FOTOPERFIL.svg">
                         </div>
+                        
                         <div class="usuario">
                             <h1><?php echo $post->name ?></h1>
                             <div class="estrelas">
