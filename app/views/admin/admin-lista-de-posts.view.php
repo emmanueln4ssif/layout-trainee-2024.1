@@ -104,7 +104,7 @@
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
 
                             <div class="content">
-                            <?php viewEstrela($post->nota_internet, 20)?>
+                            <?php //viewEstrela($post->nota_internet, 20)?>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
