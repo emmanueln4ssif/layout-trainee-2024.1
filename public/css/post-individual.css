@@ -71,7 +71,7 @@ body {
     font-size: 40px;
     font-family: 'Poppins';
     color: #453232;
-    letter-spacing: -5.28px;
+    letter-spacing: -3px;
     font-weight: 400;
 }
 
@@ -148,7 +148,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.25);
     opacity: 0.64;
     background: #E8E8E8;
-    padding: 8px;
+    padding: 16px;
     text-align: justify;
     text-justify: inter-word;
     word-wrap: break-word;
@@ -159,7 +159,7 @@ body {
 }
 
 #bloco>p {
-    color: #453232;
+    color: black;
     font-family: Poppins;
     font-size: 19px;
     font-weight: 400;

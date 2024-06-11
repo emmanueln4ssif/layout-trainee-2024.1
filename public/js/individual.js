@@ -8,7 +8,6 @@ async function amostra(titulo) {
     if (data.items && data.items.length > 0) {
         const firstBook = data.items[0];
         const sampleLink = firstBook.accessInfo.webReaderLink;
-        console.log(sampleLink);
         document.getElementById('amostra').setAttribute('onclick', `location.href='${sampleLink}'`);
         document.getElementById('amostra').style.textDecoration = "underline";
         document.getElementById('amostra').style.cursor = "pointer";

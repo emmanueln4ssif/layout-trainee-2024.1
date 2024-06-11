@@ -25,6 +25,7 @@ main {
 .review {
     word-break: break-all;
     font-size: 20px;
+    color: #453232;
 }
 
 .coluna1 {
@@ -153,16 +154,17 @@ main {
 }
 
 .capalivro1 {
+    max-width: 156px;
+    height: 223px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    padding-right: 1vw;
+    margin: 5px;
+    margin-right: 15px;
 }
 
-.capalivro1 img {
-    max-height: 80%;
-    min-height: 75%;
+.capalivro1>img {
+    max-height: 223px;
 }
 
 .digitado>h1 {

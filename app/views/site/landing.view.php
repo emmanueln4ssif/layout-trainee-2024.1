@@ -27,9 +27,8 @@
                 <h1 class="titulo">STORY STROLL</h1>
                 <div class="subtitulo">
                     <p class="textsub">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in enim finibus diam
-                        mollis
-                        hendrerit quis rhoncus lorem.
+                        Conecte-se com outros leitores, compartilhe
+                        suas avaliações e explore recomendações baseadas em opiniões reais.
                     </p>
                 </div>
                 <?php 
@@ -92,7 +91,8 @@
                         </div>
                     </div>
                 </div>
-                <img class="arrow" onclick="scrolla()" id="arrow-id" href="end" src="../../../public/assets/arrow.svg">
+                <img class="arrow" style="cursor:pointer;" onclick="scrolla()" id="arrow-id" href="end"
+                    src="../../../public/assets/arrow.svg">
             </div>
 
         </div>
@@ -174,7 +174,7 @@
                     <h3 class="titulo-comentario"><?= $posts[$indice]->titulo_post ?></h3>
                 </div>
                 <div class="mb">
-                    <div class="estrelas" style="margin-bottom:6px;">
+                    <div class="estrelas" style="margin-bottom:1px;">
                         <?php
                             $aux = $posts[$indice]->nota_user;
                             for ($k = 0; $k < 5; $k++) {
