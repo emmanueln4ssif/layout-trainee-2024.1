@@ -13,6 +13,16 @@ body {
     align-items: center;
 }
 
+.sdbar {
+    padding-left: 1%;
+}
+
+main {
+    width: 100%;
+    padding: 0 9% 0 6%;
+    height: auto;
+}
+
 .nota>span {
     color: #FFE600;
     font-size: 34px;
@@ -59,18 +69,41 @@ textarea {
 }
 
 
-
-main {
-    width: 70%;
-    height: auto;
-}
-
 .linha-mobile {
     display: none;
 }
 
 .botoes-mobile {
     display: none;
+}
+
+.paginacao-numeros {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.paginacao-item {
+    text-align: center;
+    list-style-type: none;
+    background-color: #002c42;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+    margin: 2px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.paginacao-link:visited {
+    color: #e87c7a;
+    text-decoration: none;
+}
+
+.paginacao-link {
+
+    color: #e87c7a;
+    text-decoration: none;
 }
 
 .cabecalho {
@@ -104,12 +137,27 @@ main {
     transition: 0.15s;
 }
 
-#botao-voltar {
+.btn {
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    background: #002c42;
+    border: none;
+    color: #e87c7a;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+#btn-voltar {
     width: 140px;
     margin-right: 1%;
 }
 
-#botao-avancar {
+#btn-avancar {
     width: 160px;
     margin-left: 1%;
 }
@@ -247,6 +295,23 @@ table th {
     margin-top: 1%;
 }
 
+.navpaginacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-avancar:hover,
+.btn-voltar:hover {
+    background: #002c42;
+    font-weight: 600;
+    color: #ef9ca9;
+}
+
+
+
 /*MODAL VISUALIZAR*/
 
 .cont-modal {
@@ -376,10 +441,39 @@ textarea#text-visualizar {
     flex-basis: 100%;
 }
 
+
+
 /*MODAL DE DELETAR INICIO*/
 
 
 /*MODAL DE DELETAR FIM*/
+@media screen and (min-width: 0px) and (max-width: 944px) {
+    .btn {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 426px) {
+    .btn {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .btn-voltar {
+        width: 78px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+    .btn {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
 
 @media only screen and (max-width: 510px) {
     h3 {
@@ -539,6 +633,11 @@ input[type="submit"] {
 }
 
 #preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.preview2 {
     max-width: 100%;
     max-height: 100%;
 }
@@ -771,6 +870,8 @@ a:visited {
 
 /*MODAL CRIAR*/
 
+/*Responsividade das tabelas*/
+
 
 @media screen and (min-width:1020px) and (max-width:1300px) {
     .botoes-fora-tabela {
@@ -778,11 +879,11 @@ a:visited {
         width: 140px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 120px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 125px;
     }
 
@@ -808,8 +909,7 @@ a:visited {
 @media screen and (min-width:600px) and (max-width:1020px) {
     main {
         width: 100%;
-        margin-right: 1.5%;
-        margin-left: 10%;
+        padding: 0 9% 0 6%;
     }
 
     #titulo-pg {
@@ -821,11 +921,11 @@ a:visited {
         width: 120px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 90px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 100px;
     }
 
@@ -867,8 +967,7 @@ a:visited {
 @media screen and (min-width:0px) and (max-width:600px) {
     main {
         width: 100%;
-        margin-right: 3%;
-        margin-left: 15%;
+        padding: 0 2% 0 6%;
         overflow: hidden;
     }
 
@@ -891,7 +990,7 @@ a:visited {
     }
 
     .linha-botoes {
-        padding: 5px 50px 5px 50px;
+        padding: 5px 40px 5px 40px;
     }
 
     .espaco-data {
@@ -922,14 +1021,14 @@ a:visited {
 
     .botoes-fora-tabela {
         font-size: 12px;
-        width: 120px;
+        width: 110px;
     }
 
-    #botao-voltar {
+    #btn-voltar {
         width: 90px;
     }
 
-    #botao-avancar {
+    #btn-avancar {
         width: 100px;
     }
 
@@ -999,4 +1098,17 @@ a:visited {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
     border-radius: 30px;
+}
+
+.cs {
+    background-color: gray;
+    color: #f5f5f5;
+    font-family: Poppins;
+}
+
+.cs:hover {
+    background-color: gray;
+    color: #f5f5f5;
+    font-family: Poppins;
+    font-weight: 400;
 }

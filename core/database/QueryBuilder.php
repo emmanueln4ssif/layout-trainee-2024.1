@@ -34,10 +34,14 @@ class QueryBuilder
 
         }
     }
-
-    public function selectAll($table)
+    public function selectAll($table, $inicio=null,$rows_count=null)
     {
+        
         $sql = "select * from {$table}";
+        
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -127,11 +131,13 @@ class QueryBuilder
 
     }
 
-    public function selectAllcomNome($table)
+    public function selectAllcomNome($table, $inicio = null, $rows_count = null)
     {
         //seleciona tudo da $table e name da tabela users quando o user_id da $table é igual ao id da tabela user
         $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id', $table,$table,$table);
-
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -148,7 +154,7 @@ class QueryBuilder
         $novoNome=uniqid();
         $caminho = $pasta . basename($novoNome);
         $extensao=strtolower(pathinfo($img["name"], PATHINFO_EXTENSION));
-        if($extensao != "png" && $extensao != "jpg" && $extensao != "svg" && $img["name"] != null){    
+        if($extensao != "png" && $extensao != "jpg" && $img["name"] != null){    
             die("<script>
             window.onload = function () {
                 alert('Tipo de arquivo não suportado!');
@@ -221,6 +227,48 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+    public function conta($table){
+        $sql = "select COUNT(*) from {$table}";
+
+        try {
+            
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function pegaPost($table, $id){
+        $sql = sprintf('SELECT %s.*, users.name FROM %s INNER JOIN users ON %s.user_id = users.id WHERE %s.id = %d;', $table,$table,$table,$table,$id);
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function verificaLogin($email, $senha){
+
+        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$senha'";
+
+        try {
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $num_rows = $stmt->rowCount();
+            return $num_rows;
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }  
     }
 
     

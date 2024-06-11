@@ -15,20 +15,20 @@
 
 <body>
     <div class="sidebar">
-        <div class="sidebar-item">
+        <div class="sidebar-item" onclick="window.location.href='posts'">
             <img class="sideimg" src="../../../public/assets/lapis.svg" alt="">
             <p class="sidetxt" id="pub">Publicações</p>
         </div>
-        <div class="sidebar-item">
+        <div class="sidebar-item" onclick="window.location.href='dashboard'">
             <img class="sideimg" src="../../../public/assets/dash.svg" alt="">
             <p id="dash" class="sidetxt">Dashboard</p>
         </div>
-        <div class="sidebar-item">
+        <div class="sidebar-item" onclick="window.location.href='users'">
             <img class="sideimg" src="../../../public/assets/usuarios.svg" alt="">
             <p id="users" class="sidetxt">Usuários</p>
         </div>
         <div class="logout-container"></div>
-        <div class="sidebar-item"> <!-- Div com borda superior branca para separar o botão de logout -->
+        <div class="sidebar-item" onclick="window.location.href='#'"> <!-- Div com borda superior branca para separar o botão de logout -->
             <img class="sideimg" src="../../../public/assets/logout.svg" alt="">
             <p id="logout" class="sidetxt">Logout</p>
         </div>
