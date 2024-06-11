@@ -15,10 +15,10 @@
         <div class="img_txt">
             <img src="../<?= $post[0]->imagem?>" class="imagem" alt="Imagem do livro">
             <div class="data">Publicado em <?= $post[0]->livro_ano?></div>
-            <div class="amostra">Amostra gratis: </div>
+            <div class="amostra" id="amostra">Amostra gratis</div>
         </div>
         <div class="conteudo">
-            <div class="titulo"><?= $post[0]->livro_titulo?></div>
+            <div class="titulo" id="livro_titulo"><?= $post[0]->livro_titulo?></div>
             <div class="autor"><?= $post[0]->livro_autor?></div>
             <div class="estrela_sinopse">
                 <div class="estrelas" style="margin-top:-20px;">
@@ -75,4 +75,5 @@
             </div>
         </div>
     </div>
+    <script src="../../../public/js/individual.js"></script>
     <?php require("footer.php");?>
