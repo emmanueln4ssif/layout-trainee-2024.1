@@ -105,7 +105,6 @@
 
                             <div class="content">
                                 <div class="content-vizu">
-                                <?php viewEstrela('site/estrelas', $post->nota_user, 20)?>
                                     <div class="cima">
                                         <div class="direita">
                                             <h3>Título do livro</h3>
@@ -121,17 +120,7 @@
                                             <br>
                                             <h3>Nota média da internet</h3>
                                             <div class="nota">
-                                                <?php
-                                                $aux = $post->nota_internet;
-                                                for ($i = 0; $i < 5; $i++) {
-                                                    if ($aux > 0) {
-                                                        echo '<span class="icon">★</span>';
-                                                        $aux--;
-                                                    } else {
-                                                        echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                                    }
-                                                }
-                                                ?>
+                                                <?php viewEstrela('site/estrelas', $post->nota_internet, 20)?>
                                             </div>
 
                                         </div>

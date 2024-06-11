@@ -28,6 +28,7 @@ function generateStars(size, nota) {
         star.classList.add('star');
         
         if (i <= fullStars) {
+            starsContainer.style.setProperty('--star-size', `${size}px`);
             star.style.backgroundColor = 'gold';
         }
         else if (i === fullStars + 1 && partialStar !== 0) {
