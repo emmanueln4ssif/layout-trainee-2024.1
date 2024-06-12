@@ -56,6 +56,16 @@
                             </div>
                         </div>
                     </div>
+                        <div class="titulo-do-post">
+                            <h3><?php 
+                            if (mb_strlen($post->titulo_post) > 50) {
+                                $post->titulo_post = mb_substr($post->titulo_post, 0, 50) . '...';
+                                echo $post->titulo_post;
+                            }
+                            else
+                                echo $post->titulo_post;
+                            ?></h3>
+                        </div>
                     <div class="digitado">
                         <?php 
                         if (mb_strlen($post->review) > 220) {

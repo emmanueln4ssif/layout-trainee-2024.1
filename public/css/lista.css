@@ -24,7 +24,7 @@ main {
 
 .review {
     word-break: break-all;
-    font-size: 20px;
+    font-size: 18px;
     color: #453232;
 }
 
@@ -127,6 +127,14 @@ main {
     padding: 0.3vw 1vw 1vw 1vw;
     height: auto;
     width: 80;
+}
+
+.titulo-do-post{
+    padding: 1vw 0 0.6vh 1vw;
+}
+
+.titulo-do-post>h3{
+    font-size: 3vh;
 }
 
 .usuario {
