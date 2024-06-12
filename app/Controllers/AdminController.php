@@ -55,19 +55,41 @@ class AdminController
 
         $verificacao = App::get('database')->verificaLogin($email, $senha_cripto);
         //return view('admin/lista-usuarios', compact('users'));
-        if($verificacao > 0){
+        if($verificacao[0] > 0){
             session_start();
+            
             $_SESSION['login'] = $email;
+            $_SESSION['id']=$verificacao[1][0]->id;
+            $_SESSION['nome']= $verificacao[1][0]->name;
+            
             header('Location: /dashboard');
         }else{        
             unset ($_SESSION['login']);
+            unset ($_SESSION['id']);
             header('Location: /login');
         }
 
         //return require "app/views/site/efetuaLogin.view.php";
         
     }
-
+    public function criar()
+    {
+        $parameters= [
+            'livro_titulo' => $_POST['titulo-livro'],
+            'livro_autor' => $_POST['autor-livro'],
+            'livro_ano' => $_POST['ano-pub'],
+            'sinopse'=> $_POST['sinopse'],
+            'nota_internet'=> $_POST['nota-net'],
+            'user_id'=> $_POST['user-id'],
+            'titulo_post'=> $_POST['titulo'],
+            'nota_user'=> $_POST['nota-user'],
+            'review'=> $_POST['conteudo'],
+            'data_leitura'=> $_POST['data'],
+            'data_post'=> date("Y-m-d")   
+        ];
+        App::get('database')->inserir('posts',$parameters, $_FILES['img']);
+        header('Location: ../posts');
+    }
     public function logout(){
         session_start();
         session_unset();

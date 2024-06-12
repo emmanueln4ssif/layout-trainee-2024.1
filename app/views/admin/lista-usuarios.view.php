@@ -7,7 +7,7 @@ if(!isset ($_SESSION['login']) == true){
 }
 
 ?>
-    
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,8 +29,8 @@ if(!isset ($_SESSION['login']) == true){
         <?php include 'sidebar.view.php'?>
     </div>
 
-  <main>
-    <div id="crud-usuario">
+    <main>
+        <div id="crud-usuario">
 
             <div id="cabecalho">
 
@@ -209,7 +209,7 @@ if(!isset ($_SESSION['login']) == true){
                 </table>
 
             </div>
-
+            
             <div id="alternador" class="paginacao">
                 <?php
                 if($page-1>0){

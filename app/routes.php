@@ -14,7 +14,7 @@ use App\Controllers\Controlador;
     $router->post('edit', 'AdminController@edit');
 
     $router->get('posts', 'Controlador@tabelaPosts');
-    $router->post('post/criar', 'Controlador@criar');
+    $router->post('post/criar', 'AdminController@criar');
     $router->post('post/editar', 'Controlador@editar');
     $router->post('post/deletar', 'Controlador@deletar');
 

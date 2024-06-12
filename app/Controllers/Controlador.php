@@ -57,24 +57,7 @@ class Controlador
     }
     
 
-    public function criar()
-    {
-        $parameters= [
-            'livro_titulo' => $_POST['titulo-livro'],
-            'livro_autor' => $_POST['autor-livro'],
-            'livro_ano' => $_POST['ano-pub'],
-            'sinopse'=> $_POST['sinopse'],
-            'nota_internet'=> $_POST['nota-net'],
-            'user_id'=> '1',
-            'titulo_post'=> $_POST['titulo'],
-            'nota_user'=> $_POST['nota-user'],
-            'review'=> $_POST['conteudo'],
-            'data_leitura'=> $_POST['data'],
-            'data_post'=> date("Y-m-d")   
-        ];
-        App::get('database')->inserir('posts',$parameters, $_FILES['img']);
-        header('Location: ../posts');
-    }
+    
   
     public function verPost(){
         $post = App::get('database')->pegaPost('posts',$_GET['id']);

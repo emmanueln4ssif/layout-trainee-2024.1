@@ -260,7 +260,8 @@ class QueryBuilder
 
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-            $num_rows = $stmt->rowCount();
+            $num_rows[0] = $stmt->rowCount();
+            $num_rows[1] = $stmt->fetchAll(PDO::FETCH_CLASS);
             return $num_rows;
             
         } catch (Exception $e) {

@@ -7,8 +7,8 @@ if(!isset ($_SESSION['login']) == true){
 }
 
 ?>
-    
-    
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -117,7 +117,7 @@ if(!isset ($_SESSION['login']) == true){
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
 
                             <div class="content">
-                            <?php //viewEstrela($post->nota_internet, 20)?>
+                                <?php //viewEstrela($post->nota_internet, 20)?>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
@@ -635,7 +635,7 @@ if(!isset ($_SESSION['login']) == true){
                         </script>
                         <?php $cont_id++; ?>
                         <?php endforeach; ?>
-                        
+
                         <!-- MODAL DE VISUALIZAÇÃO - FIM -->
 
                     </tbody>
@@ -702,7 +702,9 @@ if(!isset ($_SESSION['login']) == true){
                             <div class="formulario">
                                 <div class="esquerda">
                                     <label for="autor">Autor</label><br>
-                                    <input type="text" id="autor" name="autor" value="pedro_123" readonly><br>
+                                    <input type="text" id="autor" name="autor" value="<?= $_SESSION['nome'] ?>"
+                                        readonly><br>
+                                    <input type="hidden" name="user-id" value="<?= $_SESSION['id'] ?>">
                                     <label for="titulo">Título</label><br>
                                     <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
                                     <label>Sua nota</label><br>
@@ -763,6 +765,7 @@ if(!isset ($_SESSION['login']) == true){
                 <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
             </div>
+            <?php var_dump($_SESSION) ?>
             <div id="alternador" class="paginacao">
                 <?php
                 if($page-1>0){

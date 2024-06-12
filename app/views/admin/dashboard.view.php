@@ -7,7 +7,7 @@ if(!isset ($_SESSION['login']) == true){
 }
 
 ?>
-    
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +37,11 @@ if(!isset ($_SESSION['login']) == true){
             </div>
             <div class="botao" id="botaolog" onclick="window.location.href='/'">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
-                <a href="/logout"><p>Logout</p></a>
-        </div>
+                <a href="/logout">
+                    <p>Logout</p>
+                </a>
+            </div>
 
 </body>
+
 </html>
