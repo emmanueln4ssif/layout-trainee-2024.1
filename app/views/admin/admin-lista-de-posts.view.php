@@ -765,7 +765,6 @@ if(!isset ($_SESSION['login']) == true){
                 <!-- MODAL DE CRIAÇÃO - INÍCIO -->
 
             </div>
-            <?php var_dump($_SESSION) ?>
             <div id="alternador" class="paginacao">
                 <?php
                 if($page-1>0){

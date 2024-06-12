@@ -30,7 +30,7 @@ header {
   width: 100%;
 }
 
-nav {
+.navbar {
   position: relative;
   top: 0;
   height: 70px;

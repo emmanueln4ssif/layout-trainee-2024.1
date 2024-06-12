@@ -75,7 +75,6 @@ class Controlador
             'livro_ano' => $_POST['ano-pub'],
             'sinopse'=> $_POST['sinopse'],
             'nota_internet'=> $_POST['nota-net'],
-            'user_id'=> '1',
             'titulo_post'=> $_POST['titulo'],
             'nota_user'=> $_POST['nota-user'],
             'review'=> $_POST['conteudo'],
