@@ -23,6 +23,6 @@ async function amostra(titulo, autor) {
 }
 
 const titulo = document.getElementById('livro_titulo').textContent;
-const autor = document.getElementById('autor-livro').textContent;
 
-amostra(titulo, autor);
+
+amostra(titulo);
