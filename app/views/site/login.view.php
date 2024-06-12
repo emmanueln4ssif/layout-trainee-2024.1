@@ -13,7 +13,7 @@
   <div class="main">
 
     <div class="esquerda">
-      <a id="logo-escrita" href="">STORY STROLL</a>
+        <a id="logo-escrita" onclick="window.location.href='/'">STORY STROLL</a>
       <div class="imagem-principal">
         <img id="imagem-principal" src="/public/assets/imagem-principal.svg" alt="Três pessoas lendo livros">
       </div>
@@ -22,7 +22,7 @@
     <div class="direita">
       <div class="cabecalho">
         <img id="marcador-de-livro" src="/public/assets/marcador-de-livro.svg" alt="Marcador de livro">
-        <img id="logo-imagem" src="/public/assets/logo-direita.svg" alt="Logo Story Stroll">
+        <img id="logo-imagem" src="/public/assets/logo-direita.svg" alt="Logo Story Stroll" onclick="window.location.href='/'">
       </div>
 
       <p id="titulo-login">Bem vindo de volta!</p>

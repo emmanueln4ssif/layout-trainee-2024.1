@@ -28,7 +28,7 @@
             <p id="users" class="sidetxt">Usuários</p>
         </div>
         <div class="logout-container"></div>
-        <div class="sidebar-item" onclick="window.location.href='#'"> <!-- Div com borda superior branca para separar o botão de logout -->
+        <div class="sidebar-item" onclick="window.location.href='/logout'"> <!-- Div com borda superior branca para separar o botão de logout -->
             <img class="sideimg" src="../../../public/assets/logout.svg" alt="">
             <p id="logout" class="sidetxt">Logout</p>
         </div>

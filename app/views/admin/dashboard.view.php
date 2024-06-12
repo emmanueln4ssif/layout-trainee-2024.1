@@ -35,7 +35,7 @@ if(!isset ($_SESSION['login']) == true){
                 <img id="botaousuarios" src="../../../public/assets/usuarios.svg">
                 <p>Usuários</p>
             </div>
-            <div class="botao" id="botaolog" onclick="window.location.href='/'">
+            <div class="botao" id="botaolog">
                 <img id="botaologout" src="../../../public/assets/logout.svg">
                 <a href="/logout">
                     <p>Logout</p>

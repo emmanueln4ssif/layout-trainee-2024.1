@@ -36,6 +36,10 @@ body {
     position: absolute;
 }
 
+#logo-escrita:hover{
+    cursor: pointer;
+}
+
 .imagem-principal {
     display: flex;
     height: 100vh;
