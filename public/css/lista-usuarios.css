@@ -16,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-.sdbar{
+.sdbar {
   padding-left: 1%;
 }
 
@@ -290,6 +290,13 @@ table td button:hover {
   color: #ef9ca9;
 }
 
+#valida {
+  margin: 0;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
 .btn {
   text-align: center;
   border-radius: 10px;
@@ -413,7 +420,7 @@ table td button:hover {
 
   .visualizar,
   .editar,
-  .deletar{
+  .deletar {
     font-size: 0px;
   }
 
@@ -497,7 +504,7 @@ table td button:hover {
 
 @media screen and (min-width:380px) and (max-width:502px) {
 
-  .sdbar{
+  .sdbar {
     padding-left: 65px;
   }
 
@@ -609,7 +616,7 @@ table td button:hover {
     overflow-x: auto;
   }
 
-  .sdbar{
+  .sdbar {
     padding-left: 60px;
   }
 

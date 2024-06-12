@@ -10,6 +10,10 @@ class AdminController
 
     public function index()
     {
+        $usuarios = App::get('database')->selectAll('users');
+        foreach ($usuarios as $usuario) {
+            $email[] = md5($usuario->email);
+        }
         $page = 1;
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
@@ -27,7 +31,7 @@ class AdminController
 
         $users = App::get('database')->selectAll('users',$inicio,$itensPage);
         $total_pages = ceil ($rows_count/$itensPage);
-        return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'));
+        return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'), compact('email'));
     }
 
 

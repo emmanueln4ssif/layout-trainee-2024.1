@@ -24,6 +24,8 @@ if(!isset ($_SESSION['login']) == true){
 </head>
 
 <body>
+    <script type="text/javascript" src="../../../public/js/md5.js">
+    </script>
 
     <div class="sdbar">
         <?php include 'sidebar.view.php'?>
@@ -209,7 +211,7 @@ if(!isset ($_SESSION['login']) == true){
                 </table>
 
             </div>
-            
+
             <div id="alternador" class="paginacao">
                 <?php
                 if($page-1>0){
@@ -245,13 +247,15 @@ if(!isset ($_SESSION['login']) == true){
 
         <div id="adcuser">
             <div class="content">
-                <form action="create" method="post" enctype="multipart/form-data">
+                <form action="create" onsubmit="return validaForm();" method="post" enctype="multipart/form-data">
                     <div class="formulario">
                         <div class="campos">
                             <label for="nome">Nome</label><br>
                             <input type="text" id="autor" name="nome" placeholder="Digite o nome do usuário"><br>
                             <label for="email">E-mail</label><br>
-                            <input type="email" id="email" name="email" placeholder="Digite o e-mail do usuário"><br>
+                            <p id="valida"></p>
+                            <input type="email" id="email-test" oninput="validaEmail()" name="email"
+                                placeholder="Digite o e-mail do usuário"><br>
                             <label for="senha">Senha</label><br>
                             <div class="senha-e-olho">
                                 <input type="password" id="senha1" name="senha" placeholder="Digite a senha do usuário">
@@ -270,7 +274,11 @@ if(!isset ($_SESSION['login']) == true){
 
     </main>
 </body>
+<script>
+const emailsMD5 = <?= json_encode($email); ?>;
+</script>
+<script src="../../../public/js/lista-usuarios.js">
 
-<script src="../../../public/js/lista-usuarios.js"></script>
+</script>
 
 </html>
