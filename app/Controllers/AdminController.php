@@ -70,7 +70,12 @@ class AdminController
         }else{        
             unset ($_SESSION['login']);
             unset ($_SESSION['id']);
-            header('Location: /login');
+            die("<script>
+            window.onload = function () {
+                window.location.href = '/login?s=1';
+            };
+            </script>");
+            
         }
 
         //return require "app/views/site/efetuaLogin.view.php";
