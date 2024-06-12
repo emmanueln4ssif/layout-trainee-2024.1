@@ -94,7 +94,7 @@ class AdminController
         session_start();
         session_unset();
         session_destroy();
-        header('Location: /landingpage');
+        header('Location: /');
     }
 
     public function landingpage(){
