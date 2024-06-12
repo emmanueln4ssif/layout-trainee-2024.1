@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background: #f5f5f5;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.083vw;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper {
+  cursor: pointer;
+}
+
+.home1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-image: url(../assets/bg1.svg);
+  background-position: left top;
+  background-size: 180px;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  background-color: pink;
+}
+
+.titulo {
+  flex-basis: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 45px;
+  letter-spacing: -4.5px;
+  color: #EE9CA8;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.subtitulo {
+  color: #72AACB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
+  text-align: center;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: rgba(69, 50, 50, 0.25);
+  border-radius: 14px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #f5f5f5;
+}
+
+.textsub {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mainimg {
+  margin-top: 180px;
+  width: 675px;
+  height: 663px;
+  margin-left: 160px;
+}
+
+.separador-mobile {
+  display: none;
+}
+
+
+.separador-mobile {
+  display: none;
+  text-align: center;
+  color: #72AACB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
+}
+
+.agrupamento {
+
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 160px;
+}
+
+.livros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.conteiner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.p1 {
+  width: 100%;
+
+}
+
+.p2 {
+  width: 100%;
+}
+
+.swiper {
+  margin: 0;
+  height: 210px;
+  width: 126px;
+  margin: 10px;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#fotosbaixo {
+  margin-left: 10px;
+  margin-top: 60px;
+}
+
+.arrow {
+  flex-basis: 100%;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  height: 25px;
+}
+
+.posts {
+  margin-top: 120px;
+  display: flex;
+  margin-bottom: 80px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 46px;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagpost {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+  margin: 0;
+}
+
+.imagpost>img {
+  width: 192px;
+  height: 270px;
+  margin-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.imagpost>h3 {
+  background-color: #453232;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-left: 12px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.cometario {
+  width: 192px;
+  border-style: solid;
+  border-width: 1.8px;
+  border-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+}
+
+.cometario>h3 {
+  background-color: #453232;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 12px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.cometario>p {
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+  word-wrap: break-word;
+  height: 185px;
+
+}
+
+.titulo-comentario {
+  margin-top: 0px;
+}
+
+.ver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.ver>img {
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 10px;
+}
+
+.ver>p {
+  margin: 0;
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+}
+
+.bt-vermais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  width: 194px;
+}
+
+.bt-vermais>img {
+  transform: rotate(-90deg);
+  width: 40px;
+  height: 20px;
+  margin: 0;
+}
+
+.mobile {
+  display: none;
+}
+
+.cometario>p {
+  overflow: clip;
+  overflow-clip-margin: 6px;
+}
+
+.bt-vermais>p {
+  margin: 0;
+  font-size: 28px;
+  color: #72AACB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -1px;
+  padding: 5px;
+  margin: 0;
+
+}
+
+
+
+.mb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1440px) {
+  .agrupamento {
+    margin-right: 80px;
+  }
+
+  .mainimg {
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #mainimg-id {
+    display: none;
+  }
+
+  .home1 {
+    background-image: url(../assets/bg1.svg);
+    background-position: left top;
+    background-size: 120px;
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  #arrow-id {
+    display: none;
+  }
+
+  .livros {
+    margin-bottom: 100px;
+  }
+
+  .separador-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .separador-mobile>p {
+    margin: 5px;
+  }
+
+  .agrupamento {
+    margin-right: 0;
+  }
+
+  .home1 {
+    background-size: 100px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .imagpost>img {
+    width: 130px;
+    height: 210px;
+    margin-bottom: 0;
+  }
+
+  .cometario {
+    width: 130px;
+  }
+
+
+  .imagpost>h3 {
+    font-size: 16px;
+  }
+
+  .cometario>h3 {
+    font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 16px;
+  }
+
+  .estrelas>img {
+    width: 25px;
+  }
+
+  .bt-vermais {
+    width: 130px;
+    justify-content: center;
+  }
+
+  .bt-vermais>p {
+    font-size: 20px;
+  }
+
+  .bt-vermais>img {
+    width: 20px;
+  }
+
+  .posts {
+    gap: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .posts {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .post {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    height: 229px;
+
+  }
+
+  .normal {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .mb {
+    width: 50vw;
+    height: 100%;
+    align-items: start;
+  }
+
+  .cometario>p {
+    height: 115px;
+    overflow-wrap: break-word;
+    width: 98%;
+  }
+
+  .cometario {
+    width: 100%;
+    height: 200px;
+  }
+
+  .cometario {
+    width: 60%;
+    height: 100%;
+  }
+
+  .cometario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 81.5%;
+  }
+
+  .icon {
+    font-size: 25px;
+  }
+
+  .icon-cinza {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .home1 {
+    background-size: 80px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 14.5px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .home1 {
+    background-size: 80px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .cometario>p {
+    font-size: 13.5px;
+  }
+}

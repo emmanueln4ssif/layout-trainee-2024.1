@@ -1,0 +1,1590 @@
+/*FONTES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*GERAL*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+
+}
+
+a {
+  color: #ef9ca9;
+}
+
+
+
+/*NAVBAR*/
+
+.container {
+  width: 100%;
+}
+
+header {
+  position: relative;
+  top: 0;
+  height: auto;
+  width: 100%;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+  background-color: #f5f5f5;
+  display: flex;
+  font-weight: 500;
+  font-size: 30px;
+  border-bottom: 0.5px solid rgba(69, 50, 50, 0.3);
+}
+
+nav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.nav-container {
+  width: 100%;
+  position: relative;
+}
+
+/*LOGO NAVBAR*/
+
+#nav-logo {
+  height: 50px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+/*LISTA DE LINKS NAVBAR*/
+
+.nav-container ul {
+  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+  list-style-type: none;
+  gap: 50px;
+  margin-right: 150px;
+  line-height: 70px;
+}
+
+.nav-container li {
+  display: inline;
+}
+
+.nav-container li a {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.nav-container li a:hover {
+  color: #e87c7a;
+}
+
+/*MAIN*/
+
+
+
+/*FOOTER*/
+
+footer {
+  width: 100%;
+}
+
+#footer-content {
+  height: 300px;
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: 1.05fr 2px 3fr 2px 1fr;
+}
+
+.footer-titulo {
+  font-weight: 600;
+  font-size: 24px;
+  color: #002c42;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-texto {
+  color: #376c89;
+  font-weight: 500;
+}
+
+/*REDES SOCIAIS*/
+
+#lista-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 50px;
+}
+
+#lista-redes h1 {
+  margin-right: 30px;
+}
+
+.rede-social {
+  text-decoration: none;
+  display: flex;
+}
+
+.rede-social p {
+  font-size: 20px;
+}
+
+.rede-social img {
+  float: left;
+  width: 30px;
+}
+
+/*MISSÃO, VISÃO E VALORES*/
+
+#mis-vis-val {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 0.75fr;
+}
+
+#mis-vis-val div p {
+  font-size: 24px;
+}
+
+#missao {
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+#visao {
+  margin-left: 15px;
+  margin-right: 25px;
+}
+
+#valores {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#valores ul li {
+  font-size: 24px;
+}
+
+/*CRÉDITOS*/
+
+#creditos {
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
+#creditos h1 {
+  font-weight: 600;
+  text-align: center;
+  color: #376c89;
+  font-size: 20px;
+  margin-top: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+#background-logo {
+  height: 60px;
+  display: flex;
+  background-color: #002c42;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#background-logo img {
+  max-width: 200px;
+}
+
+/*SEPARAÇÃO*/
+
+.separacao {
+  background-image: linear-gradient(#f5f5f5 10%,
+      #002c42 50%,
+      #f5f5f5 90%);
+}
+
+/*RESPONSIVIDADE*/
+
+@media screen and (min-width:1261px) and (max-width:1376px) {
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 100px;
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 100px;
+  }
+
+  /*FOOTER*/
+
+  .footer-titulo {
+    font-size: 20px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val div p {
+    font-size: 20px;
+  }
+
+  #valores ul li {
+    font-size: 20px;
+  }
+
+  #missao h1 {
+    margin-bottom: 2rem;
+  }
+
+  #visao h1 {
+    margin-bottom: 2rem;
+  }
+
+  #valores h1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width:1025px) and (max-width:1260px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 55px;
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 75px;
+    height: 40px;
+    margin-top: 7.5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 75px;
+    gap: 40px;
+    line-height: 55px;
+  }
+
+  /*FOOTER*/
+
+  #footer-content {
+    height: 200px;
+  }
+
+  .footer-titulo {
+    font-size: 20px;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+  }
+
+  #lista-redes h1 {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .rede-social p {
+    font-size: 16px;
+  }
+
+  .rede-social img {
+    float: left;
+    width: 25px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val div p {
+    font-size: 16px;
+  }
+
+  #missao {
+    margin-left: 30px;
+  }
+
+  #valores ul li {
+    font-size: 16px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+
+  #creditos h1 {
+    font-size: 16px;
+    margin-top: 2.75rem;
+    margin-bottom: 2rem;
+  }
+
+  #background-logo {
+    height: 70px;
+  }
+
+  #background-logo img {
+    width: 180px;
+  }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 40px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 50px;
+    height: 30px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 50px;
+    gap: 40px;
+    line-height: 40px;
+  }
+
+  /*FOOTER*/
+
+  #footer-content {
+    height: 150px;
+  }
+
+  .footer-titulo {
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+  }
+
+  #lista-redes h1 {
+    font-size: 12px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .rede-social p {
+    font-size: 12px;
+  }
+
+  .rede-social img {
+    float: left;
+    width: 20px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val div p {
+    font-size: 12px;
+  }
+
+  #missao {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #background-logo {
+    height: 35px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #background-logo img {
+    width: 130px;
+  }
+
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+
+  /*NAVBAR*/
+  .block-rede {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  nav {
+    height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 25px;
+    height: 25px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 25px;
+    gap: 20px;
+    line-height: 35px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+  }
+
+  .rede-social {
+    margin-top: 0rem;
+    width: 110px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .facebook {
+    width: 100px;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.7rem;
+    font-size: 12px;
+    margin-right: 12%;
+    margin-bottom: 10px;
+    width: 180px;
+  }
+
+  .rede-social p {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    margin-top: 0.4rem;
+    float: left;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores {
+    width: 70px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 110px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 107px;
+  }
+
+}
+
+@media screen and (min-width:475px) and (max-width:599px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 25px;
+    height: 25px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 25px;
+    gap: 20px;
+    line-height: 35px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+  }
+
+  .rede-social {
+    margin-top: 0.5rem;
+    /*width: 110px;*/
+  }
+
+  /*.facebook{
+    width: 100px;
+  }*/
+
+  #lista-redes h1 {
+    margin-top: 0.7rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 160px;
+  }
+
+  .rede-social p {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    margin-top: 0.4rem;
+    float: left;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores {
+    width: 70px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 110px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 107px;
+  }
+
+}
+
+@media screen and (min-width:423px) and (max-width:474px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 25px;
+    height: 25px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 25px;
+    gap: 20px;
+    line-height: 35px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+  }
+
+  .rede-social {
+    margin-top: 0.5rem;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 130px;
+  }
+
+  .rede-social p {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    margin-top: 0.4rem;
+    float: left;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 110px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 107px;
+  }
+
+}
+
+@media screen and (min-width:375px) and (max-width:422px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 15px;
+    height: 20px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 15px;
+    gap: 10px;
+    line-height: 30px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .rede-social {
+    align-content: center;
+    margin-top: 0.5rem;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 120px;
+  }
+
+  .rede-social p {
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    margin-top: 0.4rem;
+    float: left;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 110px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 107px;
+  }
+
+}
+
+@media screen and (min-width:321px) and (max-width:374px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 35px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 15px;
+    height: 25px;
+    margin-top: 5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 15px;
+    gap: 10px;
+    line-height: 35px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .rede-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 100px;
+  }
+
+  .block-rede {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rede-social p {
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    display: block;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 90px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 87px;
+  }
+
+}
+
+@media screen and (min-width:285px) and (max-width:320px) {
+
+  /*NAVBAR*/
+
+  nav {
+    height: 35px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 15px;
+    height: 20px;
+    margin-top: 7.5px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 15px;
+    gap: 10px;
+    line-height: 35px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .rede-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 100px;
+  }
+
+
+
+  .rede-social p {
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    display: block;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+  }
+
+  #mis-vis-val div p {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 90px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 87px;
+  }
+
+}
+
+@media screen and (min-width:0px) and (max-width:284px) {
+
+  /*NAVBAR*/
+  .block-rede {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  nav {
+    height: 30px;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  /*LOGO NAVBAR*/
+
+  #nav-logo {
+    margin-left: 15px;
+    height: 16px;
+    margin-top: 7px;
+    /*MUDAR*/
+  }
+
+  /*LISTA DE LINKS NAVBAR*/
+
+  .nav-container ul {
+    margin-right: 15px;
+    gap: 10px;
+    line-height: 30px;
+  }
+
+  /*FOOTER*/
+
+  /*pode ser editado*/
+
+  .footer-titulo {
+    font-weight: 600;
+  }
+
+  .footer-texto {
+    color: #376c89;
+    font-weight: 500;
+  }
+
+  /*pode ser editado*/
+
+  #footer-content {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-titulo {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /*REDES SOCIAIS*/
+
+  #lista-redes {
+    order: 1;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .rede-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #lista-redes h1 {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    width: 100px;
+  }
+
+  .block-rede {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rede-social p {
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .rede-social img {
+    display: block;
+    width: 15px;
+  }
+
+  /*MISSÃO, VISÃO E VALORES*/
+
+  #mis-vis-val {
+    order: 0;
+  }
+
+  #mis-vis-val div p {
+    font-size: 8px;
+    margin-top: 10px;
+  }
+
+  #missao {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  #visao {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #valores h1 {
+    margin-bottom: 0rem;
+  }
+
+  #valores ul li {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  /*CRÉDITOS*/
+
+  #creditos {
+    order: 2;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #creditos h1 {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  #background-logo {
+    height: 30px;
+    width: 90px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  #background-logo img {
+    float: right;
+    width: 87px;
+  }
+
+}

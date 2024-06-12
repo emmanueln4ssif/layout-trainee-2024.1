@@ -1,0 +1,392 @@
+body {
+    background: linear-gradient(to bottom, #ecd1e0, #ffffff);
+    margin: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.container1 {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    align-items: start;
+    height: auto;
+    width: 70%;
+    flex-direction: row;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo_rev {
+    text-align: center;
+}
+
+.imagem {
+    margin-top: 5%;
+    width: 100%;
+    max-width: 268px;
+    height: auto;
+    max-height: 401px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.40);
+}
+
+.amostra {
+    color: #002C42;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Poppins';
+    flex-direction: row-reverse;
+}
+
+.img_txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sinopse {
+    color: #453232;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.resumo {
+    text-align: left;
+    text-align: justify;
+}
+
+.titulo {
+    font-size: 40px;
+    font-family: 'Poppins';
+    color: #453232;
+    letter-spacing: -3px;
+    font-weight: 400;
+}
+
+.autor {
+    font-size: 25px;
+    color: #453232;
+    font-family: 'Poppins';
+    letter-spacing: -2.75px;
+    line-height: normal;
+}
+
+.data {
+    color: #002C42;
+    font-family: 'Poppins';
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -2px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+}
+
+.estrela_sinopse {
+    display: flex;
+    flex-direction: column;
+    gap: -55px;
+}
+
+#nome_user {
+    color: #002C42;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    font-weight: 500;
+}
+
+#data {
+    color: #002C42;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+    letter-spacing: 0.34px;
+    font-weight: 600;
+}
+
+.elementos_review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.estrelas_data {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#bloco {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-bottom: 70px;
+    flex-shrink: 0;
+    border-radius: 26px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    opacity: 0.64;
+    background: #E8E8E8;
+    padding: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-wrap: break-word;
+}
+
+#bloco_review {
+    max-width: 80vw;
+}
+
+#bloco>p {
+    color: black;
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+}
+
+#img_user>img {
+    width: 111px;
+    height: 104px;
+    flex-shrink: 0;
+    border-radius: 111px;
+}
+
+#img_user {
+    align-self: flex-start;
+}
+
+span {
+    font-size: 50px;
+}
+
+span.icon1 {
+    font-size: 35px;
+}
+
+@media only screen and (max-width: 1345px) {
+    #bloco {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .titulo {
+        letter-spacing: -4px;
+    }
+
+    #bloco {
+
+        margin-left: 0;
+        margin-right: 10px;
+
+    }
+
+    .titulo {
+        font-size: 35px;
+    }
+
+    .autor {
+        font-size: 20px;
+    }
+
+    .sinopse {
+        font-size: 20px;
+    }
+
+    #bloco>p {
+        font: 17px;
+    }
+
+    #data {
+        font-size: 16px;
+    }
+
+    #nome_user {
+        font-size: 18px;
+    }
+
+    .data {
+        font-size: 18px;
+    }
+
+    .amostra {
+        font-size: 17px;
+    }
+
+    #img_user>img {
+        width: 85px;
+        height: 81px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    #bloco {
+        width: 89%;
+    }
+
+    span {
+        font-size: 32px;
+    }
+
+    .titulo {
+        font-size: 33px;
+        letter-spacing: -3px;
+    }
+
+    .autor {
+        font-size: 18px;
+    }
+
+    #img_user>img {
+        width: 85px;
+        height: 81px;
+    }
+
+    .amostra {
+        font-size: 15px;
+    }
+
+    .sinopse {
+        font-size: 18px;
+    }
+
+    #bloco>p {
+        font: 16px;
+    }
+
+    #data {
+        font-size: 15px;
+    }
+
+    #nome_user {
+        font-size: 16px;
+    }
+
+    .data {
+        font-size: 16px;
+    }
+
+    .resumo {
+        font-size: 17px;
+    }
+
+    .imagem {
+        max-width: 170px;
+        max-height: 250px;
+    }
+
+    #img_user>img {
+        width: 65px;
+        height: 61px;
+    }
+}
+
+@media only screen and (max-width: 522px) {
+    .titulo {
+        letter-spacing: -2px;
+    }
+
+    .elementos_review {
+        max-width: 98vw;
+    }
+
+    span.icon1 {
+        font-size: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 19px;
+    }
+
+    .autor {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .resumo {
+        font-size: 14px;
+        text-align: start;
+        width: 100%;
+    }
+
+    #img_user>img {
+        width: 45px;
+        height: 41px;
+    }
+
+    .sinopse {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #bloco>p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .resumo {
+        font-size: 10px;
+    }
+
+    .amostra {
+        font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 500;
+    }
+
+    .data {
+        font-size: 12px;
+        letter-spacing: -1px;
+        font-weight: 400;
+    }
+
+    .titulo_rev {
+        font-size: 16px;
+    }
+
+    #bloco>p {
+        font-size: 10px;
+    }
+
+    #data {
+        font-size: 12px;
+    }
+
+    .autor {
+        margin-bottom: 10px;
+    }
+
+    .estrelas>span {
+        margin-top: 300px;
+        font-size: 20px;
+    }
+}
