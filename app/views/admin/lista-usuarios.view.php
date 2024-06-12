@@ -163,8 +163,7 @@ if(!isset ($_SESSION['login']) == true){
                                                 value="<?php echo $user -> email ?>"><br>
                                             <label for="senha">Senha</label><br>
                                             <div class="senha-e-olho">
-                                                <input type="password" id="senha<?php echo $user -> id ?>" name="senha"
-                                                    value="<?php echo $user -> password ?>">
+                                                <input type="password" id="senha<?php echo $user -> id ?>" name="senha">
                                                 <div class="olho"
                                                     onclick="mostrarSenha('senha<?php echo $user -> id ?>', 'icone-olhosenha<?php echo $user -> id ?>')">
                                                     <img id="icone-olhosenha<?php echo $user -> id ?>"
