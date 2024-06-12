@@ -1,6 +1,12 @@
-async function amostra(titulo) {
+async function amostra(titulo, autor) {
+    let queryParams = `q=${encodeURIComponent(titulo)}`;
 
-    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(titulo)}`;
+    if (autor) {
+        queryParams += `+inauthor:${encodeURIComponent(autor)}`;
+    }
+
+
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?${queryParams}`;
 
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -17,4 +23,6 @@ async function amostra(titulo) {
 }
 
 const titulo = document.getElementById('livro_titulo').textContent;
-amostra(titulo);
+const autor = document.getElementById('autor-livro').textContent;
+
+amostra(titulo, autor);

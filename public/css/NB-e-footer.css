@@ -43,7 +43,7 @@ header {
   border-bottom: 0.5px solid rgba(69, 50, 50, 0.3);
 }
 
-nav:after {
+.navbar:after {
   clear: both;
   content: "";
   display: block;
@@ -264,7 +264,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 55px;
     font-weight: 500;
     font-size: 28px;
@@ -361,7 +361,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 40px;
     font-weight: 500;
     font-size: 24px;
@@ -479,7 +479,7 @@ footer {
     align-items: flex-end;
   }
 
-  nav {
+  .navbar {
     height: 35px;
     font-weight: 500;
     font-size: 16px;
@@ -644,7 +644,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 35px;
     font-weight: 500;
     font-size: 16px;
@@ -807,7 +807,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 35px;
     font-weight: 500;
     font-size: 16px;
@@ -959,7 +959,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 30px;
     font-weight: 500;
     font-size: 16px;
@@ -1111,7 +1111,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 35px;
     font-weight: 500;
     font-size: 12px;
@@ -1271,7 +1271,7 @@ footer {
 
   /*NAVBAR*/
 
-  nav {
+  .navbar {
     height: 35px;
     font-weight: 500;
     font-size: 12px;
@@ -1432,7 +1432,7 @@ footer {
     align-items: flex-end;
   }
 
-  nav {
+  .navbar {
     height: 30px;
     font-weight: 500;
     font-size: 10px;
