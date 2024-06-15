@@ -423,7 +423,10 @@ table td button:hover {
   .deletar {
     font-size: 0px;
   }
-
+  .paginacao-numeros{
+    font-size: x-small;
+  }
+  
   table i {
     font-size: 12px;
   }
@@ -507,7 +510,11 @@ table td button:hover {
   .sdbar {
     padding-left: 65px;
   }
-
+  .paginacao-numeros{
+    display: flex;
+    font-size: x-small;
+  }
+  
   main {
     width: 100%;
     padding: 0 67px 0 6%;
@@ -873,6 +880,10 @@ table td button:hover {
   .espaco-deletar {
     display: none;
   }
+  .paginacao-numeros{
+  display: flex;
+  font-size: x-small;
+}
 
   .espaco-editar {
     display: none
@@ -963,6 +974,11 @@ table td button:hover {
   .espaco-deletar {
     display: none;
   }
+  .paginacao-numeros{
+    display: flex;
+    font-size: x-small;
+  }
+  
 
   .espaco-editar {
     display: none
@@ -991,7 +1007,6 @@ table td button:hover {
     width: 70%;
   }
 }
-
 .editauser {
   position: fixed;
   inset: 0;
