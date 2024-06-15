@@ -13,9 +13,10 @@
     <?php require("navbar.php");?>
     <div class="container1">
         <div class="img_txt">
-            <img src="../<?= $post[0]->imagem?>" class="imagem" alt="Imagem do livro">
-            <div class="data" id="livro-ano">Publicado em <?= $post[0]->livro_ano?></div>
-            <div class="amostra" id="amostra">Amostra gratis</div>
+        <img src="../<?= $post[0]->imagem?>" class="imagem" alt="Imagem do livro">
+        <div class="data" id="livro-ano">Publicado em <?= $post[0]->livro_ano?></div>
+        <div class="amostra" id="amostra">Amostra gratis</div>
+        
         </div>
         <div class="conteudo">
             <div class="titulo" id="livro_titulo"><?= $post[0]->livro_titulo?></div>

@@ -245,7 +245,14 @@ span.icon1 {
     #bloco {
         width: 89%;
     }
-
+    .container1{
+        display: flex;
+        flex-direction: column;
+    }
+    .css_imagem{
+        display: flex;
+        align-items: center;
+    }
     span {
         font-size: 32px;
     }
@@ -290,6 +297,10 @@ span.icon1 {
 
     .resumo {
         font-size: 17px;
+    }
+    .img_txt{
+        width: 100%;
+        align-items: center;
     }
 
     .imagem {
@@ -341,6 +352,10 @@ span.icon1 {
         width: 45px;
         height: 41px;
     }
+    .img_txt{
+        width: 100%;
+        align-items: center;
+    }
 
     .sinopse {
         font-size: 15px;
@@ -383,6 +398,10 @@ span.icon1 {
 
     .autor {
         margin-bottom: 10px;
+    }
+    .img_txt{
+        width: 100%;
+        align-items: center;
     }
 
     .estrelas>span {
