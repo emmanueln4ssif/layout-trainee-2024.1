@@ -115,9 +115,8 @@ if(!isset ($_SESSION['login']) == true){
 
                         <!-- MODAL DE VISUALIZAÇÃO - INÍCIO -->
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
-
                             <div class="content">
-                                <?php //viewEstrela($post->nota_internet, 20)?>
+                            <?php viewEstrela($post->id, 50, $post->nota_user);?>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
