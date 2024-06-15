@@ -996,7 +996,15 @@ a:visited {
     .espaco-data {
         border-left: 2px solid #ef9ca9;
     }
-
+    .navpaginacao{
+        font-size: x-small;
+    }
+    .paginacao-numeros{
+        display: flex;
+    }
+    .btn{
+        font-size: x-small;
+    }
     .espaco-autor {
         border-right: none;
         max-width: 22ch;
@@ -1112,3 +1120,4 @@ a:visited {
     font-family: Poppins;
     font-weight: 400;
 }
+@media screen and (min-width:0px) and (max-width:600px) {
