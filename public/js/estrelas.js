@@ -20,7 +20,7 @@ function generateStars(containerId, size, nota) {
         partialPercentage = 50;
 
     if (partialStar > 2/3)
-        partialPercentage = 65;
+        partialPercentage = 60;
 
     for (let i = 1; i <= 5; i++) {
         const star = document.createElement('div');

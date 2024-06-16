@@ -42,17 +42,7 @@
                                 ?>
                             </h2>
                             <div class="estrelas">
-                                <?php
-                            $aux = $post->nota_user;
-                            for ($k = 0; $k < 5; $k++) {
-                                if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f7e702;">★</span>';
-                                    $aux--;
-                                } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                }
-                            }
-                        ?>
+                                <?php viewEstrela($post->id, 25, $post->nota_user)?>
                             </div>
                         </div>
                     </div>

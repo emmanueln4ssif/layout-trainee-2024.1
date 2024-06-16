@@ -134,7 +134,9 @@ if(!isset ($_SESSION['login']) == true){
                                             <div class="nota">
                                                 <?php viewEstrela($post->id."1", 30, $post->nota_internet)?>
                                             </div>
+
                                         </div>
+
                                     </div>
                                     <hr>
                                     <div class="baixo">
@@ -218,174 +220,8 @@ if(!isset ($_SESSION['login']) == true){
                                             <br>
                                             <label>Nota média da internet</label><br>
                                             <div class="rating">
-                                                <?php
-                                                $nota = $post->nota_internet;
-
-                                                switch ($nota) {
-                                                case 1:
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-net" value="1" checked />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="2" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                    break;
-                                                case 2:
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-net" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="2" checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                    break;
-                                                case 3:
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-net" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="3" checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                    break;
-                                                case 4:
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-net" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="4"checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                    break;
-                                                case "5":
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-net" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-net" value="5" checked/>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                }
-                                                ?>
-
+                                                <input name="nota-net" id="nota" type="text" value="<?=$post->nota_internet?>" oninput="controlaCampoNota(this)"> 
                                             </div><br>
-
                                         </div>
                                     </div>
                                     <hr>
@@ -402,167 +238,7 @@ if(!isset ($_SESSION['login']) == true){
                                                 placeholder="Título da sua review"
                                                 value="<?php echo $post->titulo_post ?>">
                                             <div class="rating">
-                                                <?php
-                                                $notaUser = $post->nota_user;
-
-                                                if($notaUser==1) {
-                                                
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-user" value="1" checked />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="2" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';}
-                                                elseif($notaUser== 2) {
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-user" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="2" checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                }elseif($notaUser== 3) {
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-user" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="3" checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                }elseif($notaUser== 4) {
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-user" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="4"checked />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="5" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                }else{
-                                                    echo '<label>
-                                                    <input type="radio" name="nota-user" value="1" />
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="2"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="3"  />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="4" />
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="nota-user" value="5" checked/>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                    <span class="icon">★</span>
-                                                </label>';
-                                                }
-                                                ?>
+                                                <input name="nota-user" id="nota" type="text" value="<?=$post->nota_user?>" oninput="controlaCampoNota(this)"> 
                                             </div>
                                             <br>
                                             <label for="conteudo">Review</label><br>
@@ -638,9 +314,9 @@ if(!isset ($_SESSION['login']) == true){
                                     <label for="sinopse">Sinopse</label><br>
                                     <textarea name="sinopse" rows="7" cols="50" id="sinopse"></textarea>
                                     <br>
-                                    <label>Nota média da internet</label><br>
                                     <div class="rating">
-                                        <input type="number" name="nota-net" step="0.1" maxlength="3">    
+                                        <label>Nota média da internet</label><br>
+                                        <input name="nota-net" id="nota" type="text" placeholder="Digite um número entre 0 e 5.0" oninput="controlaCampoNota(this)"> 
                                     </div>
                                     <br>
                                 </div>
@@ -656,7 +332,7 @@ if(!isset ($_SESSION['login']) == true){
                                     <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
                                     <label>Sua nota</label><br>
                                     <div class="rating">
-                                        <input type="number" name="nota-user" step="0.1" maxlength="3">    
+                                    <input name="nota-user" id="nota" type="text" placeholder="Digite um número entre 0 e 5.0" oninput="controlaCampoNota(this)">    
                                     </div>
                                     <br>
                                     <label for="conteudo">Review</label><br>
