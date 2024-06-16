@@ -22,18 +22,8 @@
             <div class="titulo" id="livro_titulo"><?= $post[0]->livro_titulo?></div>
             <div class="autor" id="autor-livro"><?= $post[0]->livro_autor?></div>
             <div class="estrela_sinopse">
-                <div class="estrelas" style="margin-top:-20px;">
-                    <?php
-                            $aux = $post[0]->nota_internet;
-                            for ($k = 0; $k < 5; $k++) {
-                                if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f7e702;">★</span>';
-                                    $aux--;
-                                } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                }
-                            }
-                        ?>
+                <div class="estrelas">
+                    <?php viewEstrela($post[0]->id."1", 35, $post[0]->nota_internet)?>
                 </div>
                 <div class="sinopse">
                     <p class="resumo"><?= $post[0]->sinopse?></p>
@@ -50,18 +40,8 @@
                 <?= $post[0]->name?>
             </div>
             <div class="estrelas_data">
-                <div class="star" style="margin-top:-14px;">
-                    <?php
-                            $aux = $post[0]->nota_user;
-                            for ($k = 0; $k < 5; $k++) {
-                                if ($aux > 0) {
-                                    echo '<span class="icon1" style="color: #f7e702; ">★</span>';
-                                    $aux--;
-                                } else {
-                                    echo '<span class="icon1" style="color: #D9D9D9;">★</span>';
-                                }
-                            }
-                        ?>
+                <div class="estrelas" >
+                    <?php viewEstrela($post[0]->id."2", 25, $post[0]->nota_user)?>
                 </div>
                 <?php
                 $comp = explode('-', $post[0]->data_post);
