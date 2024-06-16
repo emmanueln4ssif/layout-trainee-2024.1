@@ -13,12 +13,12 @@ function view($name, $data = [], $data2=[])
     return require "app/views/{$name}.view.php";
 }
 
-function viewEstrela($id, $tamanho_estrelas, $nota)
+function viewEstrela($id, $tamanho_estrelas, $nota_dada)
 {
     $vetor = [
         $containerId = 'stars-container-' . $id,
         $tamanho = $tamanho_estrelas,
-        $nota_user = $nota,
+        $nota = $nota_dada,
     ];
 
     extract($vetor);

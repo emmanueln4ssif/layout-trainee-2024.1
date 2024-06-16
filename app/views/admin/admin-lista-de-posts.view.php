@@ -116,7 +116,6 @@ if(!isset ($_SESSION['login']) == true){
                         <!-- MODAL DE VISUALIZAÇÃO - INÍCIO -->
                         <div class="cont-modal" id="visualizar<?php echo $post->id ?>">
                             <div class="content">
-                            <?php viewEstrela($post->id, 50, $post->nota_user);?>
                                 <div class="content-vizu">
                                     <div class="cima">
                                         <div class="direita">
@@ -133,21 +132,9 @@ if(!isset ($_SESSION['login']) == true){
                                             <br>
                                             <h3>Nota média da internet</h3>
                                             <div class="nota">
-                                                <?php
-                                                $aux = $post->nota_internet;
-                                                for ($i = 0; $i < 5; $i++) {
-                                                    if ($aux > 0) {
-                                                        echo '<span class="icon">★</span>';
-                                                        $aux--;
-                                                    } else {
-                                                        echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                                    }
-                                                }
-                                                ?>
+                                                <?php viewEstrela($post->id."1", 30, $post->nota_internet)?>
                                             </div>
-
                                         </div>
-
                                     </div>
                                     <hr>
                                     <div class="baixo">
@@ -157,17 +144,7 @@ if(!isset ($_SESSION['login']) == true){
                                                 <h3>Título</h1>
                                                     <p><?php echo $post->titulo_post ?></p>
                                                     <div class="nota">
-                                                        <?php
-                                                        $aux = $post->nota_user;
-                                                        for ($i = 0; $i < 5; $i++) {
-                                                            if ($aux > 0) {
-                                                                echo '<span class="icon">★</span>';
-                                                                $aux--;
-                                                            } else {
-                                                                echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                                            }
-                                                        }
-                                                        ?>
+                                                        <?php viewEstrela($post->id."2", 30, $post->nota_user)?>
                                                     </div>
                                                     <h3>Review</h1>
                                                         <textarea rows="14" cols="50"
@@ -663,38 +640,9 @@ if(!isset ($_SESSION['login']) == true){
                                     <br>
                                     <label>Nota média da internet</label><br>
                                     <div class="rating">
-                                        <label>
-                                            <input type="radio" name="nota-net" value="1" />
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-net" value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-net" value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-net" value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-net" value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                    </div><br>
-
+                                        <input type="number" name="nota-net" step="0.1" maxlength="3">    
+                                    </div>
+                                    <br>
                                 </div>
                             </div>
                             <hr>
@@ -708,36 +656,7 @@ if(!isset ($_SESSION['login']) == true){
                                     <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
                                     <label>Sua nota</label><br>
                                     <div class="rating">
-                                        <label>
-                                            <input type="radio" name="nota-user" value="1" />
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-user" value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-user" value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-user" value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="nota-user" value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                        </label>
+                                        <input type="number" name="nota-user" step="0.1" maxlength="3">    
                                     </div>
                                     <br>
                                     <label for="conteudo">Review</label><br>
