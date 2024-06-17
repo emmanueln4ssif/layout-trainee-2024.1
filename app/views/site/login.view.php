@@ -52,7 +52,7 @@
                     <p id="valida"><?php
                         function erro(){
                           if($_GET['s']==1){
-                            echo'Dados inválidos!';
+                            echo'Email ou senha inválido!';
                           }
                         }
                         @erro();
