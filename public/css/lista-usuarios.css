@@ -16,6 +16,22 @@ body {
   overflow-x: hidden;
 }
 
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 28px 0;
+  box-sizing: border-box;
+  border: 2px solid #453232;
+  border-radius: 4px;
+  background-color: #ecd1e0;
+  color: #453232;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-size: 24px;
+}
+
 .sdbar {
   padding-left: 1%;
 }
@@ -423,10 +439,11 @@ table td button:hover {
   .deletar {
     font-size: 0px;
   }
-  .paginacao-numeros{
+
+  .paginacao-numeros {
     font-size: x-small;
   }
-  
+
   table i {
     font-size: 12px;
   }
@@ -510,11 +527,16 @@ table td button:hover {
   .sdbar {
     padding-left: 65px;
   }
-  .paginacao-numeros{
+
+  .botoes-rm>button {
+    font-size: medium;
+  }
+
+  .paginacao-numeros {
     display: flex;
     font-size: x-small;
   }
-  
+
   main {
     width: 100%;
     padding: 0 67px 0 6%;
@@ -614,6 +636,10 @@ table td button:hover {
     width: 15px;
   }
 
+  input[type="submit"] {
+    font-size: medium;
+  }
+
 }
 
 @media screen and (min-width:0px) and (max-width:380px) {
@@ -621,6 +647,14 @@ table td button:hover {
   #container-table {
     width: 100%;
     overflow-x: auto;
+  }
+
+  .botoes-rm>button {
+    font-size: medium;
+  }
+
+  input[type="submit"] {
+    font-size: medium;
   }
 
   .sdbar {
@@ -732,6 +766,13 @@ table td button:hover {
   margin-left: 15%;
   overflow: hidden;
 }*/
+  .botoes-rm>button {
+    font-size: medium;
+  }
+
+  input[type="submit"] {
+    font-size: medium;
+  }
 
   .linha-normal {
     display: none;
@@ -817,6 +858,13 @@ table td button:hover {
   margin-left: 15%;
   overflow: hidden;
 }*/
+  .botoes-rm>button {
+    font-size: medium;
+  }
+
+  input[type="submit"] {
+    font-size: medium;
+  }
 
   .linha-normal {
     display: none;
@@ -880,10 +928,11 @@ table td button:hover {
   .espaco-deletar {
     display: none;
   }
-  .paginacao-numeros{
-  display: flex;
-  font-size: x-small;
-}
+
+  .paginacao-numeros {
+    display: flex;
+    font-size: x-small;
+  }
 
   .espaco-editar {
     display: none
@@ -911,6 +960,13 @@ table td button:hover {
   margin-left: 15%;
   overflow: hidden;
 }*/
+  input[type="submit"] {
+    font-size: medium;
+  }
+
+  .botoes-rm>button {
+    font-size: medium;
+  }
 
   .linha-normal {
     display: none;
@@ -974,11 +1030,12 @@ table td button:hover {
   .espaco-deletar {
     display: none;
   }
-  .paginacao-numeros{
+
+  .paginacao-numeros {
     display: flex;
     font-size: x-small;
   }
-  
+
 
   .espaco-editar {
     display: none
@@ -1007,6 +1064,7 @@ table td button:hover {
     width: 70%;
   }
 }
+
 .editauser {
   position: fixed;
   inset: 0;
@@ -1078,21 +1136,7 @@ input[type="file"] {
   display: none;
 }
 
-input[type="submit"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 28px 0;
-  box-sizing: border-box;
-  border: 2px solid #453232;
-  border-radius: 4px;
-  background-color: #ecd1e0;
-  color: #453232;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -1px;
-  font-size: 24px;
-}
+
 
 a {
   color: #453232;
