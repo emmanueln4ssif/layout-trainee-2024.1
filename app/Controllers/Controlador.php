@@ -24,7 +24,7 @@ class Controlador
         if($inicio > $rows_count){
             return redirect('/posts');
         }
-        $posts = App::get('database')->selectAllcomNome('posts',$inicio,$itensPage);
+        $posts = App::get('database')->selectAllcomNomeRevertido('posts',$inicio,$itensPage);
         $total_pages = ceil ($rows_count/$itensPage);
         return view('admin/admin-lista-de-posts',compact('posts','page', 'total_pages'));
     }
@@ -51,7 +51,7 @@ class Controlador
         if($inicio > $rows_count){
             return redirect('/posts');
         }
-        $posts = App::get('database')->selectAllcomNome('posts',$inicio,$itensPage);
+        $posts = App::get('database')->selectAllcomNomeRevertido('posts',$inicio,$itensPage);
         $total_pages = ceil ($rows_count/$itensPage);
         return view('site/lista-de-posts',compact('posts','page', 'total_pages','users','pesquisa'));
     }
