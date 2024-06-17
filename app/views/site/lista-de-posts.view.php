@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,11 @@
             </div>
         </div>
         <div class="coluna2">
+            <?php 
+                if(count($posts)<1){
+                    echo"<p class='postNao'>Nenhuma publicação encontrada</p>";
+                }
+            ?>
             <?php foreach(array_reverse($posts) as $post): ?>
             <div class="forma-post1" onclick="location.href='publicacoes/post?id=<?=$post->id?>';">
                 <div class="espassocapa">
@@ -46,8 +52,8 @@
                             </div>
                         </div>
                     </div>
-                        <div class="titulo-do-post">
-                            <h3><?php 
+                    <div class="titulo-do-post">
+                        <h3><?php 
                             if (mb_strlen($post->titulo_post) > 50) {
                                 $post->titulo_post = mb_substr($post->titulo_post, 0, 50) . '...';
                                 echo $post->titulo_post;
@@ -55,7 +61,7 @@
                             else
                                 echo $post->titulo_post;
                             ?></h3>
-                        </div>
+                    </div>
                     <div class="digitado">
                         <?php 
                         if (mb_strlen($post->review) > 220) {

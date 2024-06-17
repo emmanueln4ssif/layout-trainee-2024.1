@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+
         <div class="coluna2">
             <?php foreach ($post_pesquisado as $post) :?>
             <div class="forma-post1">
