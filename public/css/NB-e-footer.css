@@ -574,6 +574,7 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
+    margin-bottom: 20px;
     order: 0;
     margin-left: 90px;
     margin-right: 90px;
