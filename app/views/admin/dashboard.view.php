@@ -20,7 +20,7 @@ if(!isset ($_SESSION['login']) == true){
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
 
-    <title>Story Stroll</title>
+    <title>Admin - Dashboard</title>
 </head>
 
 <body>

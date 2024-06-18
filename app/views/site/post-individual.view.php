@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/post-individual.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
-    <title>Story Stroll</title>
+    <title>Story Stroll - <?= $post[0]->titulo_post?></title>
 </head>
 
 <body>
