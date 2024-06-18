@@ -53,6 +53,25 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function selectAllOrdenado($table, $inicio=null,$rows_count=null)
+    {
+        
+        $sql = "select * from {$table} ORDER BY id DESC";
+        
+        if($rows_count>0 && $inicio >=0){
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
     public function selectSearch($pesquisa)
     {

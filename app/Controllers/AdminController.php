@@ -10,7 +10,7 @@ class AdminController
 
     public function index()
     {
-        $usuarios = App::get('database')->selectAll('users');
+        $usuarios = App::get('database')->selectAllOrdenado('users');
         foreach ($usuarios as $usuario) {
             $email[] = md5($usuario->email);
         }
@@ -29,7 +29,7 @@ class AdminController
         }
 
 
-        $users = App::get('database')->selectAll('users',$inicio,$itensPage);
+        $users = App::get('database')->selectAllOrdenado('users',$inicio,$itensPage);
         $total_pages = ceil ($rows_count/$itensPage);
         return view('admin/lista-usuarios', compact('users', 'page', 'total_pages'), compact('email'));
     }
