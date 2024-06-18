@@ -193,6 +193,11 @@ if(!isset ($_SESSION['login']) == true){
                                         <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">
                                         <div class="botoes-rm">
                                             <input type="hidden" name="id" value="<?php echo $user -> id ?>">
+                                            <?php
+                                            if($user->id==$_SESSION['id']){
+                                                echo '<input type="hidden" name="logout" value="1">';
+                                            }
+                                            ?>
                                             <input type="submit" value="Excluir usuário">
                                             <button class="cancelar"
                                                 onclick="fechabotao('excluir<?php echo $user -> id ?>')"

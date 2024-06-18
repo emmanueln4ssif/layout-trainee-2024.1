@@ -180,7 +180,16 @@ class AdminController
         $id = $_POST['id'];
 
         App::get('database')->delete('users', $id);
-
+        if($_POST['logout']==1){
+            session_start();
+            session_unset();
+            session_destroy();
+            die("<script>
+            window.onload = function () {
+                window.location.href = '/';
+            };
+        </script>");
+        }
         header('Location: /users');
 
     }
