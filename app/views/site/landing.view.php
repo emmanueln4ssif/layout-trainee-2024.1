@@ -129,17 +129,7 @@
                 </div>
                 <div class="mb">
                     <div class="estrelas" style="margin-bottom:6px;">
-                        <?php
-                            $aux = $posts[$indice]->nota_user;
-                            for ($k = 0; $k < 5; $k++) {
-                                if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f5d000;">★</span>';
-                                    $aux--;
-                                } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                }
-                            }
-                        ?>
+                        <?php viewEstrela($posts[$indice]->id."$indice", 25, $posts[$indice]->nota_user)?>
                     </div>
                     <?php 
                         $rev =$posts[$indice]->review;
@@ -175,17 +165,7 @@
                 </div>
                 <div class="mb">
                     <div class="estrelas" style="margin-bottom:1px;">
-                        <?php
-                            $aux = $posts[$indice]->nota_user;
-                            for ($k = 0; $k < 5; $k++) {
-                                if ($aux > 0) {
-                                    echo '<span class="icon" style="color: #f5d000;">★</span>';
-                                    $aux--;
-                                } else {
-                                    echo '<span class="icon-cinza" style="color: #D9D9D9;">★</span>';
-                                }
-                            }
-                        ?>
+                        <?php viewEstrela($posts[$indice]->id."$indice"."$indice", 25, $posts[$indice]->nota_user)?>
                     </div>
                     <?php 
                         if (mb_strlen($posts[$indice]->review) > 180) {

@@ -1,4 +1,4 @@
-function generateStars(containerId, size, nota) {
+function generateStars(containerId, size, nota) {  
     const rating = parseFloat(nota);
 
     if (isNaN(rating) || rating < 0 || rating > 5.0) {
