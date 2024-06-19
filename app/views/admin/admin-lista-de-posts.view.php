@@ -402,7 +402,7 @@ if(!isset ($_SESSION['login']) == true){
                                 href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page < $total_pages - 1): ?>
+                        <?php if ($page < $total_pages - 1 && $page+2 != $total_pages): ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
