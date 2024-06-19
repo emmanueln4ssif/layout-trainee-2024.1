@@ -19,6 +19,7 @@ if(!isset ($_SESSION['login']) == true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/logo_sf.png">
 
     <title>Admin - Dashboard</title>
 </head>

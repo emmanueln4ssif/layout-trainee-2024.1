@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/post-individual.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/logo_sf.png">
     <title>Story Stroll - <?= $post[0]->titulo_post?></title>
 </head>
 
@@ -13,10 +14,10 @@
     <?php require("navbar.php");?>
     <div class="container1">
         <div class="img_txt">
-        <img src="../<?= $post[0]->imagem?>" class="imagem" alt="Imagem do livro">
-        <div class="data" id="livro-ano">Publicado em <?= $post[0]->livro_ano?></div>
-        <div class="amostra" id="amostra">Amostra gratis</div>
-        
+            <img src="../<?= $post[0]->imagem?>" class="imagem" alt="Imagem do livro">
+            <div class="data" id="livro-ano">Publicado em <?= $post[0]->livro_ano?></div>
+            <div class="amostra" id="amostra">Amostra gratis</div>
+
         </div>
         <div class="conteudo">
             <div class="titulo" id="livro_titulo"><?= $post[0]->livro_titulo?></div>
@@ -40,7 +41,7 @@
                 <?= $post[0]->name?>
             </div>
             <div class="estrelas_data">
-                <div class="estrelas" >
+                <div class="estrelas">
                     <?php viewEstrela($post[0]->id."2", 25, $post[0]->nota_user)?>
                 </div>
                 <?php

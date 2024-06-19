@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/logo_sf.png">
     <title>Story Stroll - Login</title>
 </head>
 
@@ -52,7 +53,7 @@
                     <p id="valida"><?php
                         function erro(){
                           if($_GET['s']==1){
-                            echo'Email ou senha inválido!';
+                            echo'Email ou senha inválidos!';
                           }
                         }
                         @erro();

@@ -19,6 +19,8 @@ if(!isset ($_SESSION['login']) == true){
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/admin-lista-de-posts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/logo_sf.png">
+
 </head>
 
 <body>
@@ -218,7 +220,8 @@ if(!isset ($_SESSION['login']) == true){
                                             <br>
                                             <label>Nota média da internet</label><br>
                                             <div class="rating">
-                                                <input name="nota-net" id="nota" type="text" value="<?=$post->nota_internet?>" oninput="controlaCampoNota(this)"> 
+                                                <input name="nota-net" id="nota" type="text"
+                                                    value="<?=$post->nota_internet?>" oninput="controlaCampoNota(this)">
                                             </div><br>
                                         </div>
                                     </div>
@@ -236,7 +239,8 @@ if(!isset ($_SESSION['login']) == true){
                                                 placeholder="Título da sua review"
                                                 value="<?php echo $post->titulo_post ?>">
                                             <div class="rating">
-                                                <input name="nota-user" id="nota" type="text" value="<?=$post->nota_user?>" oninput="controlaCampoNota(this)"> 
+                                                <input name="nota-user" id="nota" type="text"
+                                                    value="<?=$post->nota_user?>" oninput="controlaCampoNota(this)">
                                             </div>
                                             <br>
                                             <label for="conteudo">Review</label><br>
@@ -314,7 +318,9 @@ if(!isset ($_SESSION['login']) == true){
                                     <br>
                                     <div class="rating">
                                         <label>Nota média da internet</label><br>
-                                        <input name="nota-net" id="nota" type="text" placeholder="Digite um número entre 0 e 5.0" oninput="controlaCampoNota(this)"> 
+                                        <input name="nota-net" id="nota" type="text"
+                                            placeholder="Digite um número entre 0 e 5.0"
+                                            oninput="controlaCampoNota(this)">
                                     </div>
                                     <br>
                                 </div>
@@ -330,7 +336,9 @@ if(!isset ($_SESSION['login']) == true){
                                     <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
                                     <label>Sua nota</label><br>
                                     <div class="rating">
-                                    <input name="nota-user" id="nota" type="text" placeholder="Digite um número entre 0 e 5.0" oninput="controlaCampoNota(this)">    
+                                        <input name="nota-user" id="nota" type="text"
+                                            placeholder="Digite um número entre 0 e 5.0"
+                                            oninput="controlaCampoNota(this)">
                                     </div>
                                     <br>
                                     <label for="conteudo">Review</label><br>
@@ -359,32 +367,59 @@ if(!isset ($_SESSION['login']) == true){
             </div>
             <div id="alternador" class="paginacao">
                 <?php
-                if($page-1>0){
+                if ($page - 1 > 0) {
                     echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
-                }else{
+                } else {
                     echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
-
                 ?>
                 <nav class="navpaginacao">
                     <ul class="paginacao-numeros">
-                        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                        <li onclick="location.href = '?pagina=<?= $page_number ?>';" class="paginacao-item"><a
-                                style="<?= $page_number == $page ? "color: #f5f5f5; text-decoration: none;" : "" ?>"
-                                class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
-                                href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
-                        <?php endfor ?>
+                        <li onclick="location.href = '?pagina=1';" class="paginacao-item"><a
+                                style="<?= $page == 1 ? 'color: #f5f5f5; text-decoration: none;' : '' ?>"
+                                class="paginacao-link<?= $page == 1 ? 'active' : '' ?>" href="?pagina=1">1</a></li>
+
+                        <?php if ($page - 1 > 2): ?>
+                        <li class="paginacao-item"><a class="paginacao-link">...</a></li>
+                        <?php endif; ?>
+
+                        <?php if ($page - 1 > 1): ?>
+                        <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
+                                style="<?= $page == $page - 1 ? 'color: #f5f5f5; text-decoration: none;' : '' ?>"
+                                class="paginacao-link<?= $page == $page - 1 ? 'active' : '' ?>"
+                                href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
+                        <?php endif; ?>
+
+                        <?php if ($page != 1 && $page != $total_pages): ?>
+                        <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
+                                class="paginacao-link active"><?= $page ?></a></li>
+                        <?php endif; ?>
+
+                        <?php if ($page + 1 < $total_pages): ?>
+                        <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
+                                style="<?= $page == $page + 1 ? 'color: #f5f5f5; text-decoration: none;' : '' ?>"
+                                class="paginacao-link<?= $page == $page + 1 ? 'active' : '' ?>"
+                                href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
+                        <?php endif; ?>
+
+                        <?php if ($page < $total_pages - 1): ?>
+                        <li class="paginacao-item"><a class="paginacao-link">...</a></li>
+                        <?php endif; ?>
+
+                        <?php if ($total_pages > 1): ?>
+                        <li onclick="location.href = '?pagina=<?= $total_pages ?>';" class="paginacao-item"><a
+                                style="<?= $page == $total_pages ? 'color: #f5f5f5; text-decoration: none;' : '' ?>"
+                                class="paginacao-link<?= $page == $total_pages ? 'active' : '' ?>"
+                                href="?pagina=<?= $total_pages ?>"><?= $total_pages ?></a></li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
                 <?php
-                if($page+1<=$total_pages){
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar
-                    &gt</button>";
-                }else{
-                    echo "<button class='btn btn-avancar cs'>Avançar
-                    &gt</button>";
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
-
                 ?>
             </div>
 
