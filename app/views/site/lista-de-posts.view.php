@@ -84,7 +84,7 @@
             <div id="alternador" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button class='btn btn-voltar' style='cursor:pointer;' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
                     echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
@@ -132,7 +132,7 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button class='btn btn-avancar' style='cursor:pointer;' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
                     echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
