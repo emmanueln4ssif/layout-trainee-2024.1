@@ -238,7 +238,8 @@ if(!isset ($_SESSION['login']) == true){
                                             <input type="text" id="titulo" name="titulo"
                                                 placeholder="Título da sua review"
                                                 value="<?php echo $post->titulo_post ?>">
-                                            <div class="rating">
+                                                <label>Sua nota</label><br>
+                                                <div class="rating">
                                                 <input name="nota-user" id="nota" type="text"
                                                     value="<?=$post->nota_user?>" oninput="controlaCampoNota(this)">
                                             </div>
