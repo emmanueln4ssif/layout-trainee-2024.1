@@ -65,3 +65,9 @@ function validaForm() {
         return true;
     }
 }
+
+function abrePag(num) {
+    window.location.href = "#" + num;
+    document.getElementById('pag-mob').style.display = 'none';
+    document.getElementById('dropdown').style.display = 'flex';
+}

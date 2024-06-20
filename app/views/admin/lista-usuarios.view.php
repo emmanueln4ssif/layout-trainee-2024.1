@@ -276,6 +276,39 @@ if(!isset ($_SESSION['login']) == true){
             </div>
 
 
+
+
+            <div class="navpaginacaomob">
+                <?php
+                if ($page - 1 > 0) {
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                } else {
+                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                }
+                ?>
+
+                <li class="btne" id="pag-mob" onclick="abrePag('<?=$page?>')"><a class="paginacao-link"><span
+                            style="color:#f5f5f5;"><?=$page?>
+                        </span> &#8744;</a></li>
+
+                <div class="dropdown" id="dropdown">
+                    <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                    <li id="<?=$page_number?>" onclick="location.href = '?pagina=<?= $page_number ?>';"
+                        class="paginacao-item"><a
+                            style="<?= $page_number == $page ? "color: #f5f5f5; text-decoration: none;" : "" ?> "
+                            class="paginacao-link<?= $page_number == $page ? "active" : "" ?>"
+                            href="?pagina=<?= $page_number ?>"><?php echo $page_number?></a></li>
+                    <?php endfor ?>
+                </div>
+                <?php
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                }
+                ?>
+            </div>
+
         </div>
 
         <div id="adcuser">
