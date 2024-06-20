@@ -8,7 +8,10 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+}
 
+body{
+  overflow-x: hidden;
 }
 
 a {
@@ -513,6 +516,7 @@ footer {
   .footer-texto {
     color: #376c89;
     font-weight: 500;
+    margin-top: -2px;
   }
 
   /*pode ser editado*/
@@ -641,7 +645,7 @@ footer {
 
 }
 
-@media screen and (min-width:475px) and (max-width:599px) {
+@media screen and (min-width:475px) and (max-width:600px) {
 
   /*NAVBAR*/
 
@@ -679,6 +683,7 @@ footer {
   .footer-texto {
     color: #376c89;
     font-weight: 500;
+    margin-top: -2px;
   }
 
   /*pode ser editado*/
@@ -804,7 +809,7 @@ footer {
 
 }
 
-@media screen and (min-width:423px) and (max-width:474px) {
+@media screen and (min-width:440px) and (max-width:475px) {
 
   /*NAVBAR*/
 
@@ -956,7 +961,7 @@ footer {
 
 }
 
-@media screen and (min-width:375px) and (max-width:422px) {
+@media screen and (min-width:375px) and (max-width:440px) {
 
   /*NAVBAR*/
 
@@ -1108,7 +1113,7 @@ footer {
 
 }
 
-@media screen and (min-width:321px) and (max-width:374px) {
+@media screen and (min-width:321px) and (max-width:375px) {
 
   /*NAVBAR*/
 
