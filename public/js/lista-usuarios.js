@@ -65,9 +65,22 @@ function validaForm() {
         return true;
     }
 }
-
+function fechaPag() {
+    window.addEventListener('click', function oi(e) {
+        if (document.getElementById('dropdown').contains(e.target)) {
+        } else {
+            document.getElementById('pag-mob').style.display = 'flex';
+            document.getElementById('dropdown').style.display = 'none';
+            window.removeEventListener("click", oi);
+        }
+    });
+}
 function abrePag(num) {
     window.location.href = "#" + num;
     document.getElementById('pag-mob').style.display = 'none';
     document.getElementById('dropdown').style.display = 'flex';
+    setTimeout(() => {
+        fechaPag();
+    }, 10);
+
 }
