@@ -35,7 +35,8 @@
                                 alt="Ícone de carta representando e-mail">
                         </div>
                         <label for="email"></label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                        <input id="email" oninput="apagaMsg()" type="email" name="email" placeholder="Digite seu e-mail"
+                            required>
                     </div>
 
                     <div class="campos">
@@ -44,7 +45,8 @@
                                 alt="Ícone de cadeado representando senha">
                         </div>
                         <label for="senha"></label>
-                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                        <input id="senha" oninput="apagaMsg()" type="password" name="senha"
+                            placeholder="Digite sua senha" required>
                         <div class="olho" onclick="mostrarSenha()">
                             <img id="icone-olho" src="/public/assets/olho-aberto.svg"
                                 alt="Ícone de olho representando a visibilidade da senha">

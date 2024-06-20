@@ -1,13 +1,16 @@
 var senha = document.getElementById('senha')
 var botao = document.getElementById('icone-olho')
 
-function mostrarSenha(){
-    if(senha.type == 'password'){
+function mostrarSenha() {
+    if (senha.type == 'password') {
         senha.setAttribute('type', 'text')
         botao.setAttribute('src', '/public/assets/olho-fechado.svg')
     }
-    else{
+    else {
         senha.setAttribute('type', 'password')
         botao.setAttribute('src', '/public/assets/olho-aberto.svg')
     }
+}
+function apagaMsg() {
+    document.getElementById('valida').style.display = 'none';
 }
