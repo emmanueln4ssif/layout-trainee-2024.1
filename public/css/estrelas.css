@@ -41,3 +41,12 @@
 .star.partial::before {
     background: linear-gradient(to right, gold var(--clip-percentage), gray var(--clip-percentage));
 }
+@media only screen and (max-width: 600px){
+    .star{
+        width: 28px;
+        height: 28px;
+    }
+    #txtEstrela{
+        font-size: 18px;
+    }
+}
