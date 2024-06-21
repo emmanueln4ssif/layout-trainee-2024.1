@@ -142,6 +142,7 @@ main {
 
 .titulo-do-post>h3 {
     font-size: 3vh;
+    color: #453232;
 }
 
 .usuario {
@@ -366,7 +367,10 @@ main {
     .capalivro1 {
         display: none;
     }
-
+    .titulo-do-post>h3 {
+        font-size: 2vh;
+        color: #453232;
+    }
     .usuario>h1 {
         font-size: 18px;
     }
