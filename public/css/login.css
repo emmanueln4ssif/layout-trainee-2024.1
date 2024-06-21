@@ -311,6 +311,7 @@ body {
     }
 
     #btn-login {
+        height: 10vh;
         font-size: 15px;
     }
 }
@@ -327,6 +328,7 @@ body {
     }
 
     #btn-login {
+        height: 10vh;
         font-size: 19px;
     }
 
