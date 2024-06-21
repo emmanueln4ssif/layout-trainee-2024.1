@@ -9,6 +9,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
 .swiper {
@@ -439,7 +440,7 @@ body {
     justify-content: center;
     gap: 10px;
     height: 229px;
-
+    width: fit-content;
   }
 
   .normal {
@@ -448,6 +449,7 @@ body {
 
   .mobile {
     display: flex;
+    width: fit-content;
   }
 
   .mb {
@@ -463,7 +465,7 @@ body {
   }
 
   .cometario {
-    width: 100%;
+    width: fit-content;
     height: 200px;
   }
 
