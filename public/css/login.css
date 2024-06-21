@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-::placeholder {     
-    padding: 18px; }
+
+::placeholder {
+    padding: 18px;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -188,7 +191,7 @@ body {
     align-items: center;
     position: absolute;
     left: 84%;
-    top: 4.5vh;
+    top: 3.1vh;
 }
 
 #icone-olho {
@@ -235,6 +238,19 @@ body {
     font-weight: 500;
     line-height: normal;
     cursor: pointer;
+}
+
+.circulo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#email {
+    max-height: 100px;
+}
+
+#senha {
+    max-height: 100px;
 }
 
 @media screen and (min-width:0px) and (max-width:350px) {
@@ -295,7 +311,7 @@ body {
     }
 
     .olho {
-        top: 4vh;
+        top: 2.8vh;
         left: 87%;
     }
 
@@ -313,6 +329,19 @@ body {
     #btn-login {
         height: 10vh;
         font-size: 15px;
+    }
+
+    .circulo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    #email {
+        max-height: 60px;
+    }
+
+    #senha {
+        max-height: 60px;
     }
 }
 
@@ -379,7 +408,7 @@ body {
     }
 
     .olho {
-        top: 4vh;
+        top: 2.8vh;
         left: 87%;
     }
 
@@ -392,6 +421,19 @@ body {
         font-size: 5vw;
         width: 71.5vw;
         height: 10vh;
+    }
+
+    .circulo {
+        max-width: 65px;
+        max-height: 65px;
+    }
+
+    #email {
+        max-height: 65px;
+    }
+
+    #senha {
+        max-height: 65px;
     }
 }
 
@@ -453,7 +495,7 @@ body {
     }
 
     .olho {
-        top: 4vh;
+        top: 2.8vh;
         left: 87%;
     }
 
@@ -467,6 +509,20 @@ body {
         width: 71.5vw;
         height: 10vh;
     }
+
+    .circulo {
+        max-width: 65px;
+        max-height: 65px;
+    }
+
+    #email {
+        max-height: 65px;
+    }
+
+    #senha {
+        max-height: 65px;
+    }
+
 }
 
 @media screen and (min-width:503px) and (max-width:690px) {
@@ -517,7 +573,7 @@ body {
         align-items: center;
         position: absolute;
         left: 90%;
-        top: 4.5vh;
+        top: 2.4vh;
     }
 
     #icone-olho {
@@ -529,6 +585,20 @@ body {
         font-size: 4vw;
         width: 78.5vw;
     }
+
+    .circulo {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    #email {
+        max-height: 70px;
+    }
+
+    #senha {
+        max-height: 70px;
+    }
+
 }
 
 @media screen and (min-width:690px) and (max-width:937px) {
@@ -543,6 +613,19 @@ body {
 
     .formulario {
         text-align: center;
+    }
+
+    .circulo {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    #email {
+        max-height: 80px;
+    }
+
+    #senha {
+        max-height: 80px;
     }
 
     #btn_login {
@@ -584,7 +667,7 @@ body {
         align-items: center;
         position: absolute;
         left: 90%;
-        top: 4.5vh;
+        top: 2.8vh;
     }
 
     #icone-olho {
@@ -611,5 +694,18 @@ body {
     #senha {
         width: 18.5vw;
         padding: 0vw 8vw 0vw 10vw;
+    }
+
+    .circulo {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    #email {
+        max-height: 80px;
+    }
+
+    #senha {
+        max-height: 80px;
     }
 }
