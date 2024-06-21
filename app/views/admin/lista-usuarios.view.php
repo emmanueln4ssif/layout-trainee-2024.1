@@ -302,6 +302,13 @@ if(!isset ($_SESSION['login']) == true){
             <div class="navpaginacaomob">
                 <?php
                 if ($page - 1 > 0) {
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                } else {
+                    echo "<button class='btn btn-voltar cs'>início</button>";
+                }
+                ?>
+                <?php
+                if ($page - 1 > 0) {
                     echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
                     echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
@@ -326,6 +333,13 @@ if(!isset ($_SESSION['login']) == true){
                     echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
                     echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                }
+                ?>
+                <?php
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Fim</button>";
                 }
                 ?>
             </div>
