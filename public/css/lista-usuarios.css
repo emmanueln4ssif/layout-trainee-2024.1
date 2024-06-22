@@ -397,6 +397,103 @@ table td button:hover {
   align-items: center;
   font-size: 16px;
 }*/
+@media screen and (min-width:1060px) {
+  #alternador {
+    display: flex;
+  }
+
+  #alternador2 {
+    display: none;
+  }
+
+  #alternador3 {
+    display: none;
+  }
+
+  #alternador4 {
+    display: none;
+  }
+
+  #alternador5 {
+    display: none;
+  }
+
+  #alternador6 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:1059px) {
+  #alternador {
+    display: none;
+  }
+
+
+}
+
+@media screen and (min-width:789px) {
+  #alternador3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:700px) {
+  #alternador3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:790px) {
+  #alternador2 {
+    display: none;
+  }
+
+  #alternador3 {
+    display: flex;
+  }
+}
+
+@media screen and (max-width:700px) {
+  #alternador3 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:701px) {
+  #alternador4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:476px) {
+  #alternador4 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:475px) {
+  #alternador5 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:475px) {
+  #alternador5 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:361px) {
+  #alternador6 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:360px) {
+  #alternador5 {
+    display: none;
+  }
+}
 
 @media screen and (min-width:820px) and (max-width:1024px) {
 
@@ -485,6 +582,29 @@ table td button:hover {
     padding-left: 15px;
     padding-right: 15px;
     list-style-type: none;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:942px) {
+  .btn-voltar {
+    width: 80px;
+    margin-right: 5px;
+  }
+
+  .btn-avancar {
+    width: 95px;
+  }
+
+  .paginacao-numeros {
+    font-size: x-small;
+  }
+
+  .btn-avancar {
+    font-size: 12px;
+  }
+
+  .btn-voltar {
     font-size: 12px;
   }
 }
@@ -1229,4 +1349,20 @@ a:visited {
 
 #icone-olho {
   width: 4vh;
+}
+
+@media screen and (max-width:385px) {
+  .btn-avancar {
+    font-size: x-small;
+  }
+
+  .btn-voltar {
+    font-size: x-small;
+  }
+
+  .paginacao-link {
+    font-size: x-small;
+  }
+
+
 }

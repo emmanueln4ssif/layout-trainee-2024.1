@@ -297,7 +297,7 @@ if(!isset ($_SESSION['login']) == true){
             </div>
 
 
-            <div id="alternador" class="paginacao">
+            <div id="alternador2" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
                     echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
@@ -370,7 +370,7 @@ if(!isset ($_SESSION['login']) == true){
                 ?>
             </div>
 
-            <div id="alternador" class="paginacao">
+            <div id="alternador3" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
                     echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
@@ -434,6 +434,137 @@ if(!isset ($_SESSION['login']) == true){
                 ?>
             </div>
 
+
+
+
+            <div id="alternador4" class="paginacao">
+
+                <?php
+                if ($page - 1 > 0) {
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                } else {
+                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                }
+                ?>
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
+
+
+                        <?php if ($page - 1 >= 2): ?>
+                        <li class="paginacao-item"><a class="paginacao-link">...</a></li>
+                        <?php endif; ?>
+
+
+                        <?php if ($page - 1 >= 1): ?>
+                        <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
+                        <?php endif; ?>
+
+                        <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
+                                class="paginacao-link active"><?= $page ?></a></li>
+
+                        <?php if ($page + 1 <= $total_pages): ?>
+                        <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
+                        <?php endif; ?>
+
+
+
+
+
+                        <?php if ($page < $total_pages - 1 && $page+1 != $total_pages): ?>
+                        <li class="paginacao-item"><a class="paginacao-link">...</a></li>
+                        <?php endif; ?>
+
+
+                    </ul>
+                </nav>
+                <?php
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                }
+                ?>
+
+            </div>
+
+            <div id="alternador5" class="paginacao">
+
+                <?php
+                if ($page - 1 > 0) {
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                } else {
+                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                }
+                ?>
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
+
+
+                        <?php if ($page - 1 >= 1): ?>
+                        <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
+                        <?php endif; ?>
+
+                        <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
+                                class="paginacao-link active"><?= $page ?></a></li>
+
+                        <?php if ($page + 1 <= $total_pages): ?>
+                        <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
+                        <?php endif; ?>
+
+
+                    </ul>
+                </nav>
+                <?php
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                }
+                ?>
+
+            </div>
+            <div id="alternador6" class="paginacao">
+
+                <?php
+                if ($page - 1 > 0) {
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">Voltar</button>";
+                } else {
+                    echo "<button class='btn btn-voltar cs'>Voltar</button>";
+                }
+                ?>
+                <nav class="navpaginacao">
+                    <ul class="paginacao-numeros">
+
+
+                        <?php if ($page - 1 >= 1): ?>
+                        <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
+                        <?php endif; ?>
+
+                        <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
+                                class="paginacao-link active"><?= $page ?></a></li>
+
+                        <?php if ($page + 1 <= $total_pages): ?>
+                        <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
+                                class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
+                        <?php endif; ?>
+
+
+                    </ul>
+                </nav>
+                <?php
+                if ($page + 1 <= $total_pages) {
+                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar</button>";
+                } else {
+                    echo "<button class='btn btn-avancar cs'>Avançar</button>";
+                }
+                ?>
+
+            </div>
         </div>
 
         <div id="adcuser">
