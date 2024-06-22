@@ -359,7 +359,7 @@ if(!isset ($_SESSION['login']) == true){
                                 placeholder="Digite o e-mail do usuário"><br>
                             <label for="senha">Senha</label><br>
                             <div class="senha-e-olho">
-                                <input type="password" id="senha1" name="senha" placeholder="Digite a senha do usuário">
+                                <input type="password" id="senha1" name="senha">
                                 <div class="olho" onclick="mostrarSenhaAdc()">
                                     <img id="icone-olho1" src="/public/assets/olho-aberto.svg"
                                         alt="Ícone de olho representando a visibilidade da senha">
