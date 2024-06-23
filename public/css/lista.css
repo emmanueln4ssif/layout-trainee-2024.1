@@ -138,6 +138,7 @@ main {
 
 .titulo-do-post {
     padding: 1vw 0 0.6vh 1vw;
+    word-break: break-all;
 }
 
 .titulo-do-post>h3 {
@@ -497,7 +498,7 @@ main {
 
 @media screen and (max-width:704px) {
 
-    #alternador2{
+    #alternador2 {
         display: flex;
         margin-top: 20px;
         padding-bottom: 40px;
@@ -559,7 +560,7 @@ main {
 
 @media screen and (max-width:626px) {
 
-    #alternador3{
+    #alternador3 {
         display: flex;
         margin-top: 20px;
         padding-bottom: 40px;
@@ -621,7 +622,7 @@ main {
 
 @media screen and (max-width:560px) {
 
-    #alternador4{
+    #alternador4 {
         display: flex;
         margin-top: 20px;
         padding-bottom: 40px;
@@ -673,7 +674,7 @@ main {
 
 @media screen and (max-width:414px) {
 
-    #alternador5{
+    #alternador5 {
         display: flex;
         margin-top: 20px;
         padding-bottom: 40px;
@@ -725,7 +726,7 @@ main {
 
 @media screen and (max-width:340px) {
 
-    #alternador6{
+    #alternador6 {
         display: flex;
         margin-top: 20px;
         padding-bottom: 40px;
@@ -776,4 +777,3 @@ main {
         display: none;
     }
 }
-

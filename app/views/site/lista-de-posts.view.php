@@ -81,7 +81,7 @@
             </div>
             <?php endforeach; ?>
             <?php if(!$pesquisa): ?>
-                <div id="alternador" class="paginacao">
+            <div id="alternador" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
                     echo "<button id='inicio' class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
