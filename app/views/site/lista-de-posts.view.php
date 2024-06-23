@@ -84,16 +84,16 @@
                 <div id="alternador" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -146,16 +146,16 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
                 ?>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar cs'>Fim</button>";
                 }
                 ?>
             </div>
@@ -164,16 +164,16 @@
             <div id="alternador2" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -220,16 +220,16 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
                 ?>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar cs'>Fim</button>";
                 }
                 ?>
             </div>
@@ -237,16 +237,16 @@
             <div id="alternador3" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button id='inicio' class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -284,16 +284,16 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
                 ?>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($total_pages) . "';\">Fim</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Fim</button>";
+                    echo "<button id='fim' class='btn btn-avancar cs'>Fim</button>";
                 }
                 ?>
             </div>
@@ -302,9 +302,9 @@
 
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -336,9 +336,9 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
                 ?>
 
@@ -348,9 +348,9 @@
 
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">&lt; Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>&lt; Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>&lt; Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -375,9 +375,9 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar &gt</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar &gt</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar &gt</button>";
                 }
                 ?>
 
@@ -386,9 +386,9 @@
 
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar' onclick=\"location.href='?pagina=" . ($page - 1) . "';\">Voltar</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>Voltar</button>";
+                    echo "<button id='voltar' class='btn btn-voltar cs'>Voltar</button>";
                 }
                 ?>
                 <nav class="navpaginacao">
@@ -413,9 +413,9 @@
                 </nav>
                 <?php
                 if ($page + 1 <= $total_pages) {
-                    echo "<button class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar</button>";
+                    echo "<button id='avancar' class='btn btn-avancar' onclick=\"location.href='?pagina=" . ($page + 1) . "';\">Avançar</button>";
                 } else {
-                    echo "<button class='btn btn-avancar cs'>Avançar</button>";
+                    echo "<button id='avancar' class='btn btn-avancar cs'>Avançar</button>";
                 }
                 ?>
 

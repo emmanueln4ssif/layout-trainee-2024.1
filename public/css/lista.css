@@ -194,12 +194,6 @@ main {
     margin: 5px;
 }
 
-#alternador {
-    margin-top: 10px;
-    float: right;
-    padding-bottom: 30px;
-}
-
 .paginacao {
     display: flex;
     flex-direction: row;
@@ -243,7 +237,7 @@ main {
     border-radius: 10px;
     float: left;
     margin: 2px;
-    width: 35px;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -297,7 +291,68 @@ main {
     font-weight: 400;
 }
 
-@media screen and (min-width:900px) and (max-width:1171px) {
+#alternador {
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.paginacao-item {
+    width: 29px;
+    padding: 10px 5px;
+}
+
+#alternador>.btn-avancar {
+    font-size: 17px;
+    margin-left: 6px;
+}
+
+#alternador>.btn-voltar {
+    font-size: 17px;
+    margin-right: 6px;
+}
+
+#alternador>#inicio {
+    width: 68px;
+    padding: 5px 5px;
+}
+
+#alternador>#voltar {
+    width: 90px;
+    padding: 5px 5px;
+}
+
+#alternador>#avancar {
+    width: 110px;
+    padding: 5px 5px;
+}
+
+#alternador>#fim {
+    width: 55px;
+    padding: 5px 5px;
+}
+
+#alternador2 {
+    display: none;
+}
+
+#alternador3 {
+    display: none;
+}
+
+#alternador4 {
+    display: none;
+}
+
+#alternador5 {
+    display: none;
+}
+
+#alternador6 {
+    display: none;
+}
+
+@media screen and (min-width:900px) and (max-width:1244px) {
     .coluna3 {
         display: none;
     }
@@ -367,15 +422,358 @@ main {
     .capalivro1 {
         display: none;
     }
+
     .titulo-do-post>h3 {
         font-size: 2vh;
         color: #453232;
     }
+
     .usuario>h1 {
         font-size: 18px;
     }
 }
 
-@media screen and (max-width:500px) {
-    
+@media screen and (max-width:1244px) {
+
+    #alternador {
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 30px;
+        padding: 10px 5px;
+    }
+
+    #alternador>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador>#inicio {
+        width: 68px;
+        padding: 5px 5px;
+    }
+
+    #alternador>#voltar {
+        width: 90px;
+        padding: 5px 5px;
+    }
+
+    #alternador>#avancar {
+        width: 110px;
+        padding: 5px 5px;
+    }
+
+    #alternador>#fim {
+        width: 55px;
+        padding: 5px 5px;
+    }
+
+    #alternador2 {
+        display: none;
+    }
+
+    #alternador3 {
+        display: none;
+    }
+
+    #alternador4 {
+        display: none;
+    }
+
+    #alternador5 {
+        display: none;
+    }
+
+    #alternador6 {
+        display: none;
+    }
 }
+
+@media screen and (max-width:704px) {
+
+    #alternador2{
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 30px;
+        padding: 10px 5px;
+    }
+
+    #alternador2>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador2>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador2>#inicio {
+        width: 68px;
+        padding: 5px 5px;
+    }
+
+    #alternador2>#voltar {
+        width: 90px;
+        padding: 5px 5px;
+    }
+
+    #alternador2>#avancar {
+        width: 110px;
+        padding: 5px 5px;
+    }
+
+    #alternador2>#fim {
+        width: 55px;
+        padding: 5px 5px;
+    }
+
+    #alternador {
+        display: none;
+    }
+
+    #alternador3 {
+        display: none;
+    }
+
+    #alternador4 {
+        display: none;
+    }
+
+    #alternador5 {
+        display: none;
+    }
+
+    #alternador6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:626px) {
+
+    #alternador3{
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 30px;
+        padding: 10px 5px;
+    }
+
+    #alternador3>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador3>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador3>#inicio {
+        width: 68px;
+        padding: 5px 5px;
+    }
+
+    #alternador3>#voltar {
+        width: 90px;
+        padding: 5px 5px;
+    }
+
+    #alternador3>#avancar {
+        width: 110px;
+        padding: 5px 5px;
+    }
+
+    #alternador3>#fim {
+        width: 55px;
+        padding: 5px 5px;
+    }
+
+    #alternador {
+        display: none;
+    }
+
+    #alternador2 {
+        display: none;
+    }
+
+    #alternador4 {
+        display: none;
+    }
+
+    #alternador5 {
+        display: none;
+    }
+
+    #alternador6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    #alternador4{
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 30px;
+        padding: 10px 5px;
+    }
+
+    #alternador4>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador4>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador4>#voltar {
+        width: 90px;
+        padding: 5px 5px;
+    }
+
+    #alternador4>#avancar {
+        width: 110px;
+        padding: 5px 5px;
+    }
+
+    #alternador {
+        display: none;
+    }
+
+    #alternador2 {
+        display: none;
+    }
+
+    #alternador3 {
+        display: none;
+    }
+
+    #alternador5 {
+        display: none;
+    }
+
+    #alternador6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:414px) {
+
+    #alternador5{
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 30px;
+        padding: 10px 5px;
+    }
+
+    #alternador5>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador5>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador5>#voltar {
+        width: 90px;
+        padding: 5px 5px;
+    }
+
+    #alternador5>#avancar {
+        width: 110px;
+        padding: 5px 5px;
+    }
+
+    #alternador {
+        display: none;
+    }
+
+    #alternador2 {
+        display: none;
+    }
+
+    #alternador3 {
+        display: none;
+    }
+
+    #alternador4 {
+        display: none;
+    }
+
+    #alternador6 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    #alternador6{
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .paginacao-item {
+        width: 27px;
+        padding: 10px 5px;
+    }
+
+    #alternador6>.btn-avancar {
+        font-size: 17px;
+    }
+
+    #alternador6>.btn-voltar {
+        font-size: 17px;
+    }
+
+    #alternador6>#voltar {
+        font-size: 15px;
+        width: 80px;
+        padding: 5px 5px;
+    }
+
+    #alternador6>#avancar {
+        font-size: 15px;
+        width: 95px;
+        padding: 5px 5px;
+    }
+
+    #alternador {
+        display: none;
+    }
+
+    #alternador2 {
+        display: none;
+    }
+
+    #alternador3 {
+        display: none;
+    }
+
+    #alternador4 {
+        display: none;
+    }
+
+    #alternador5 {
+        display: none;
+    }
+}
+
