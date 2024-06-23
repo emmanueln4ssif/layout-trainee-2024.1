@@ -388,6 +388,10 @@ body {
     margin-bottom: 0;
   }
 
+  .imagpost {
+    width: 130px;
+  }
+
   .cometario {
     width: 130px;
   }
@@ -395,6 +399,7 @@ body {
 
   .imagpost>h3 {
     font-size: 16px;
+    overflow: hidden;
   }
 
   .cometario>h3 {
@@ -443,9 +448,9 @@ body {
     width: fit-content;
   }
 
-#pe{
-  margin-bottom: 40px;
-}
+  #pe {
+    margin-bottom: 40px;
+  }
 
   .normal {
     display: none;
