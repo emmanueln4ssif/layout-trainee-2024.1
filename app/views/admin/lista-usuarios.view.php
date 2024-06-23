@@ -217,6 +217,9 @@ if(!isset ($_SESSION['login']) == true){
                 </table>
 
             </div>
+
+            <!-- PAGINÇÃO -->
+
             <div id="alternador" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
@@ -434,9 +437,6 @@ if(!isset ($_SESSION['login']) == true){
                 ?>
             </div>
 
-
-
-
             <div id="alternador4" class="paginacao">
 
                 <?php
@@ -468,15 +468,9 @@ if(!isset ($_SESSION['login']) == true){
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
 
-
-
-
-
                         <?php if ($page < $total_pages - 1 && $page+1 != $total_pages): ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
-
-
                     </ul>
                 </nav>
                 <?php
