@@ -13,6 +13,7 @@
 body{
   overflow-x: hidden;
   height: fit-content;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -579,10 +580,10 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
+    display: flex;
     margin-bottom: 20px;
-    order: 0;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 
   #mis-vis-val div p {
@@ -618,8 +619,10 @@ footer {
   #creditos {
     order: 2;
     align-items: center;
+    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 15px;
     display: flex;
     justify-content: center;
   }
@@ -643,9 +646,12 @@ footer {
     width: 107px;
   }
 
+  #footer-content{
+    padding-top: 10px;
+  }
 }
 
-@media screen and (min-width:475px) and (max-width:600px) {
+@media screen and (min-width: 500px) and (max-width:600px) {
 
   /*NAVBAR*/
 
@@ -743,9 +749,10 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
-    order: 0;
+    display: flex;
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 20px;
   }
 
   #mis-vis-val div p {
@@ -786,6 +793,7 @@ footer {
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
   }
 
   #creditos h1 {
@@ -807,9 +815,13 @@ footer {
     width: 107px;
   }
 
+  #footer-content{
+    padding-top: 10px;
+  }
+
 }
 
-@media screen and (min-width:440px) and (max-width:475px) {
+@media screen and (min-width:440px) and (max-width: 500px) {
 
   /*NAVBAR*/
 
@@ -901,7 +913,10 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
-    order: 0;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
   }
 
   #mis-vis-val div p {
@@ -938,6 +953,7 @@ footer {
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
   }
 
   #creditos h1 {
@@ -957,163 +973,15 @@ footer {
   #background-logo img {
     float: right;
     width: 107px;
+  }
+
+  #footer-content{
+    padding-top: 10px;
   }
 
 }
 
 @media screen and (min-width:375px) and (max-width:440px) {
-
-  /*NAVBAR*/
-
-  .navbar {
-    height: 30px;
-    font-weight: 500;
-    font-size: 16px;
-  }
-
-  /*LOGO NAVBAR*/
-
-  #nav-logo {
-    margin-left: 15px;
-    height: 20px;
-    margin-top: 5px;
-    /*MUDAR*/
-  }
-
-  /*LISTA DE LINKS NAVBAR*/
-
-  .nav-container ul {
-    margin-right: 15px;
-    gap: 10px;
-    line-height: 30px;
-  }
-
-  /*FOOTER*/
-
-  /*pode ser editado*/
-
-  .footer-titulo {
-    font-weight: 600;
-  }
-
-  .footer-texto {
-    color: #376c89;
-    font-weight: 500;
-  }
-
-  /*pode ser editado*/
-
-  #footer-content {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-titulo {
-    font-size: 12px;
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /*REDES SOCIAIS*/
-
-  #lista-redes {
-    order: 1;
-    justify-content: center;
-    flex-direction: row;
-    gap: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .rede-social {
-    align-content: center;
-    margin-top: 0.5rem;
-  }
-
-  #lista-redes h1 {
-    margin-top: 0.5rem;
-    font-size: 12px;
-    margin-right: 0;
-    margin-bottom: 5px;
-    width: 120px;
-  }
-
-  .rede-social p {
-    font-size: 10px;
-    display: inline-block;
-  }
-
-  .rede-social img {
-    margin-top: 0.4rem;
-    float: left;
-    width: 15px;
-  }
-
-  /*MISSÃO, VISÃO E VALORES*/
-
-  #mis-vis-val {
-    order: 0;
-  }
-
-  #mis-vis-val div p {
-    font-size: 10px;
-    margin-top: 15px;
-  }
-
-  #missao {
-    margin-left: 5px;
-    margin-right: 10px;
-  }
-
-  #visao {
-    margin-left: 10px;
-    margin-right: 0px;
-  }
-
-  #valores h1 {
-    margin-bottom: 0rem;
-  }
-
-  #valores ul li {
-    font-size: 10px;
-    margin-left: 5px;
-  }
-
-  /*CRÉDITOS*/
-
-  #creditos {
-    order: 2;
-    align-items: center;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  #creditos h1 {
-    font-size: 12px;
-    margin-top: 0;
-    margin-bottom: 0.25rem;
-  }
-
-  #background-logo {
-    height: 30px;
-    width: 110px;
-    align-content: center;
-    justify-content: center;
-    margin-left: 1.5rem;
-  }
-
-  #background-logo img {
-    float: right;
-    width: 107px;
-  }
-
-}
-
-@media screen and (min-width:321px) and (max-width:375px) {
 
   /*NAVBAR*/
 
@@ -1213,7 +1081,10 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
-    order: 0;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   #mis-vis-val div p {
@@ -1250,6 +1121,7 @@ footer {
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
   }
 
   #creditos h1 {
@@ -1271,9 +1143,13 @@ footer {
     width: 87px;
   }
 
+  #footer-content{
+    padding-top: 10px;
+  }
+
 }
 
-@media screen and (min-width:285px) and (max-width:320px) {
+@media screen and (min-width:285px) and (max-width:375px) {
 
   /*NAVBAR*/
 
@@ -1351,6 +1227,8 @@ footer {
     font-size: 12px;
     margin-right: 0;
     margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100px;
   }
 
@@ -1369,7 +1247,10 @@ footer {
   /*MISSÃO, VISÃO E VALORES*/
 
   #mis-vis-val {
-    order: 0;
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
   }
 
   #mis-vis-val div p {
@@ -1406,6 +1287,7 @@ footer {
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
   }
 
   #creditos h1 {
@@ -1425,6 +1307,10 @@ footer {
   #background-logo img {
     float: right;
     width: 87px;
+  }
+
+  #footer-content{
+    padding-top: 10px;
   }
 
 }
