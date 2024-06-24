@@ -305,7 +305,7 @@ if(!isset ($_SESSION['login']) == true){
                 if ($page - 1 > 0) {
                     echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
