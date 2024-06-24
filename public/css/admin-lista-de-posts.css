@@ -277,6 +277,10 @@ table th {
     width: 14%;
 }
 
+#nota-usuario{
+    margin-bottom: 16px;
+}
+
 .paginacao {
     justify-content: center;
     gap: 5px;
