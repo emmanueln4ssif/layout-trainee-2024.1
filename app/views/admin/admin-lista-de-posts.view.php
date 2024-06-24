@@ -130,8 +130,8 @@ if(!isset ($_SESSION['login']) == true){
                                             <h3>Sinopse</h3>
                                             <textarea readonly><?php echo $post->sinopse ?></textarea>
                                             <br>
-                                            <h3>Nota média da internet</h3>
                                             <div class="nota">
+                                                <h3>Nota média da internet</h3>
                                                 <?php viewEstrela($post->id."1", 30, $post->nota_internet)?>
                                             </div>
 
@@ -145,7 +145,8 @@ if(!isset ($_SESSION['login']) == true){
                                                 <p><?php echo $post->name ?></p>
                                                 <h3>Título</h1>
                                                     <p><?php echo $post->titulo_post ?></p>
-                                                    <div class="nota">
+                                                    <div id="nota-usuario" class="nota">
+                                                        <h3>Nota do usuário</h3>
                                                         <?php viewEstrela($post->id."2", 30, $post->nota_user)?>
                                                     </div>
                                                     <h3>Review</h1>
