@@ -157,6 +157,10 @@ main {
     padding-top: 2vh;
 }
 
+.usuario>h2{
+    color: #453232;
+}
+
 .estrelas {
     margin-top: -8px;
     display: flex;
@@ -424,8 +428,13 @@ main {
         display: none;
     }
 
+    .usuario>h2{
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
     .titulo-do-post>h3 {
-        font-size: 2vh;
+        font-size: 15px;
         color: #453232;
     }
 
