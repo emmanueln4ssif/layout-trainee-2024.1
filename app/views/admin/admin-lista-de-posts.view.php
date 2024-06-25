@@ -174,7 +174,8 @@ if (!isset($_SESSION['login']) == true) {
                                     href="#">&times;</a>
 
                                 <form action="post/deletar" method="POST">
-                                    <input type="hidden" value="<?php echo $post->id ?>" name="id">
+                                    <input type="hidden" value="<?= $post->imagem ?>" name="imagem-apagar">
+                                    <input type="hidden" value="<?= $post->id ?>" name="id">
                                     <div class="rm-ct">
                                         <p>Deseja excluir a publicação?</p>
                                         <img src="../../../public/assets/Inbox cleanup-rafiki (1).svg">

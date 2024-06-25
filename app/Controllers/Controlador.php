@@ -10,75 +10,76 @@ class Controlador
 
     public function tabelaPosts()
     {
-        
+
         $page = 1;
-        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
             $page = intval($_GET['pagina']);
-            if($page<=0){
+            if ($page <= 0) {
                 return redirect('/posts');
             }
         }
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App :: get('database')->conta('posts');
-        if($inicio > $rows_count){
+        $rows_count = App::get('database')->conta('posts');
+        if ($inicio > $rows_count) {
             return redirect('/posts');
         }
-        $posts = App::get('database')->selectAllcomNomeRevertido('posts',$inicio,$itensPage);
-        $total_pages = ceil ($rows_count/$itensPage);
-        return view('admin/admin-lista-de-posts',compact('posts','page', 'total_pages'));
+        $posts = App::get('database')->selectAllcomNomeRevertido('posts', $inicio, $itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
+        return view('admin/admin-lista-de-posts', compact('posts', 'page', 'total_pages'));
     }
 
     public function listaPosts()
     {
         $post_pesquisado = App::get('database')->selectSearch('posts');
-        return view('site/lista-de-posts',compact('$post_pesquisado'));
+        return view('site/lista-de-posts', compact('$post_pesquisado'));
     }
     public function tabelaPostsUser()
     {
         $pesquisa = false;
-        $users= App::get('database')->selectAll('users') ;
+        $users = App::get('database')->selectAll('users');
         $page = 1;
-        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
             $page = intval($_GET['pagina']);
-            if($page<=0){
+            if ($page <= 0) {
                 return redirect('/posts');
             }
         }
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App :: get('database')->conta('posts');
-        if($inicio > $rows_count){
+        $rows_count = App::get('database')->conta('posts');
+        if ($inicio > $rows_count) {
             return redirect('/posts');
         }
-        $posts = App::get('database')->selectAllcomNomeRevertido('posts',$inicio,$itensPage);
-        $total_pages = ceil ($rows_count/$itensPage);
-        return view('site/lista-de-posts',compact('posts','page', 'total_pages','users','pesquisa'));
+        $posts = App::get('database')->selectAllcomNomeRevertido('posts', $inicio, $itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
+        return view('site/lista-de-posts', compact('posts', 'page', 'total_pages', 'users', 'pesquisa'));
     }
-    
 
-    
-  
-    public function verPost(){
-        $post = App::get('database')->pegaPost('posts',$_GET['id']);
-        if($post==null){
-        header('Location: /publicacoes');
-        exit();
+
+
+
+    public function verPost()
+    {
+        $post = App::get('database')->pegaPost('posts', $_GET['id']);
+        if ($post == null) {
+            header('Location: /publicacoes');
+            exit();
         }
-        return view('site/post-individual',compact('post'));
+        return view('site/post-individual', compact('post'));
     }
     public function editar()
     {
-        $parameters= [
+        $parameters = [
             'livro_titulo' => $_POST['titulo-livro'],
             'livro_autor' => $_POST['autor-livro'],
             'livro_ano' => $_POST['ano-pub'],
-            'sinopse'=> $_POST['sinopse'],
-            'nota_internet'=> $_POST['nota-net'],
-            'titulo_post'=> $_POST['titulo'],
-            'nota_user'=> $_POST['nota-user'],
-            'review'=> $_POST['conteudo'],
-            'data_leitura'=> $_POST['data']
+            'sinopse' => $_POST['sinopse'],
+            'nota_internet' => $_POST['nota-net'],
+            'titulo_post' => $_POST['titulo'],
+            'nota_user' => $_POST['nota-user'],
+            'review' => $_POST['conteudo'],
+            'data_leitura' => $_POST['data']
         ];
 
         $id = $_POST["id"];
@@ -91,6 +92,7 @@ class Controlador
     public function deletar()
     {
         $id = $_POST['id'];
+        unlink($_POST['imagem-apagar']);
         App::get("database")->deletar("posts", $id);
         header("Location: ../posts");
     }
@@ -102,10 +104,6 @@ class Controlador
     public function landingPage()
     {
         $posts = App::get('database')->selectAllcomNome('posts');
-        return view('site/landing',compact('posts'));
+        return view('site/landing', compact('posts'));
     }
-    
 }
-
-
-?>
