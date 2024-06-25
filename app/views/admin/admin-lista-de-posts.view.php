@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset ($_SESSION['login']) == true){
+if (!isset($_SESSION['login']) == true) {
     header('Location: /login');
 }
 
@@ -26,7 +26,7 @@ if(!isset ($_SESSION['login']) == true){
 <body>
 
     <div class="sdbar">
-        <?php include 'sidebar.view.php'?>
+        <?php include 'sidebar.view.php' ?>
     </div>
 
     <main>
@@ -51,15 +51,15 @@ if(!isset ($_SESSION['login']) == true){
                         <th class="acoes"></th>
                     </thead>
                     <tbody>
-                        <?php $cont_id = 1+(5*($page-1)); ?>
+                        <?php $cont_id = 1 + (5 * ($page - 1)); ?>
 
 
                         <?php foreach ($posts as $post) :
-                        $comp = explode('-', $post->data_post);
-                        $datapostFormatada = $comp[2] . '/' . $comp[1] . '/' . $comp[0];
+                            $comp = explode('-', $post->data_post);
+                            $datapostFormatada = $comp[2] . '/' . $comp[1] . '/' . $comp[0];
 
-                        $compLeitura = explode('-', $post->data_leitura);
-                        $dataleituraFormatada = $compLeitura[2] . '/' . $compLeitura[1] . '/' . $compLeitura[0];
+                            $compLeitura = explode('-', $post->data_leitura);
+                            $dataleituraFormatada = $compLeitura[2] . '/' . $compLeitura[1] . '/' . $compLeitura[0];
                         ?>
                         <tr class="linha-normal">
                             <td class="espaco-id"><?php echo $cont_id ?></td>
@@ -132,7 +132,7 @@ if(!isset ($_SESSION['login']) == true){
                                             <br>
                                             <div class="nota">
                                                 <h3>Nota média da internet</h3>
-                                                <?php viewEstrela($post->id."1", 30, $post->nota_internet)?>
+                                                <?php viewEstrela($post->id . "1", 30, $post->nota_internet) ?>
                                             </div>
 
                                         </div>
@@ -147,7 +147,7 @@ if(!isset ($_SESSION['login']) == true){
                                                     <p><?php echo $post->titulo_post ?></p>
                                                     <div id="nota-usuario" class="nota">
                                                         <h3>Nota do usuário</h3>
-                                                        <?php viewEstrela($post->id."2", 30, $post->nota_user)?>
+                                                        <?php viewEstrela($post->id . "2", 30, $post->nota_user) ?>
                                                     </div>
                                                     <h3>Review</h1>
                                                         <textarea rows="14" cols="50"
@@ -204,25 +204,27 @@ if(!isset ($_SESSION['login']) == true){
                                         <div class="direita">
                                             <label for="titulo-livro">Título do livro</label>
                                             <input type="text" id="titulo-livro" name="titulo-livro"
-                                                placeholder="Título do livro" value="<?php echo $post->livro_titulo ?>">
+                                                placeholder="Título do livro" value="<?php echo $post->livro_titulo ?>"
+                                                required>
                                             <label for="autor-livro">Nome do autor</label>
                                             <input type="text" id="autor-livro" name="autor-livro"
                                                 placeholder="Nome do autor do livro"
-                                                value="<?php echo $post->livro_autor ?>">
+                                                value="<?php echo $post->livro_autor ?>" required>
                                             <label for="ano-pub">Ano de publicação</label>
                                             <input name="ano-pub" id="ano-pub" type="number"
                                                 placeholder="Ano de publicação" max="2024"
-                                                value="<?php echo $post->livro_ano ?>">
+                                                value="<?php echo $post->livro_ano ?>" required>
                                         </div>
                                         <div class="esquerda">
                                             <label for="sinopse">Sinopse</label><br>
-                                            <textarea name="sinopse" rows="7" cols="50"
-                                                id="sinopse"><?php echo $post->sinopse ?></textarea>
+                                            <textarea name="sinopse" rows="7" cols="50" id="sinopse"
+                                                required><?php echo $post->sinopse ?></textarea>
                                             <br>
                                             <label>Nota média da internet</label><br>
                                             <div class="rating">
                                                 <input name="nota-net" id="nota" type="text"
-                                                    value="<?=$post->nota_internet?>" oninput="controlaCampoNota(this)">
+                                                    value="<?= $post->nota_internet ?>"
+                                                    oninput="controlaCampoNota(this)" required>
                                             </div><br>
                                         </div>
                                     </div>
@@ -233,33 +235,35 @@ if(!isset ($_SESSION['login']) == true){
 
                                         <div class="esquerda">
                                             <label for="autor">Autor</label><br>
-                                            <input type="text" id="autor" name="autor" value="<?php echo $post->name ?>"
-                                                readonly><br>
+                                            <input type="text" id="autor" name="autor"
+                                                value="<?php echo $post->name ?> " readonly><br>
                                             <label for="titulo">Título</label><br>
                                             <input type="text" id="titulo" name="titulo"
                                                 placeholder="Título da sua review"
-                                                value="<?php echo $post->titulo_post ?>">
-                                                <label>Sua nota</label><br>
-                                                <div class="rating">
+                                                value="<?php echo $post->titulo_post ?>" required>
+                                            <label>Sua nota</label><br>
+                                            <div class="rating">
                                                 <input name="nota-user" id="nota" type="text"
-                                                    value="<?=$post->nota_user?>" oninput="controlaCampoNota(this)">
+                                                    value="<?= $post->nota_user ?>" oninput="controlaCampoNota(this)"
+                                                    required>
                                             </div>
                                             <br>
                                             <label for="conteudo">Review</label><br>
                                             <textarea type="text" id="conteudo" name="conteudo"
-                                                placeholder="Conteudo da sua review" rows="7"
-                                                cols="50"><?php echo $post->review ?></textarea>
+                                                placeholder="Conteudo da sua review" rows="7" cols="50"
+                                                required><?php echo $post->review ?></textarea>
                                         </div>
 
                                         <div class="direita">
-                                            <div class="img-prev"><img class="preview2" id="preview<?=$post->id?>"
+                                            <div class="img-prev"><img class="preview2" id="preview<?= $post->id ?>"
                                                     src="<?php echo $post->imagem ?>" alt="Pré-visualização da imagem">
                                             </div>
                                             <label for="img">Selecione uma imagem:</label>
-                                            <input type="file" id="img-edita<?=$post->id?>" name="img" accept="image/*">
+                                            <input type="file" id="img-edita<?= $post->id ?>" name="img"
+                                                accept="image/*">
                                             <label for="data">Data da leitura:</label>
                                             <input type="date" id="prev-data" value="<?php echo $post->data_leitura ?>"
-                                                name="data">
+                                                name="data" required>
                                         </div>
 
                                     </div>
@@ -276,13 +280,14 @@ if(!isset ($_SESSION['login']) == true){
                         </div>
                         <script>
                         document.addEventListener('DOMContentLoaded', function() {
-                            document.getElementById('img-edita<?=$post->id?>').addEventListener('change',
+                            document.getElementById('img-edita<?= $post->id ?>').addEventListener('change',
                                 function(e) {
                                     var reader = new FileReader();
                                     reader.onload = function(event) {
-                                        document.getElementById('preview<?=$post->id?>').src = event
+                                        document.getElementById('preview<?= $post->id ?>').src = event
                                             .target.result;
-                                        document.getElementById('preview<?=$post->id?>').style.display =
+                                        document.getElementById('preview<?= $post->id ?>').style
+                                            .display =
                                             'block';
                                     };
                                     reader.readAsDataURL(e.target.files[0]);
@@ -306,23 +311,23 @@ if(!isset ($_SESSION['login']) == true){
                                 <div class="direita">
                                     <label for="titulo-livro">Título do livro</label>
                                     <input type="text" id="titulo-livro" name="titulo-livro"
-                                        placeholder="Título do livro">
+                                        placeholder="Título do livro" required>
                                     <label for="autor-livro">Nome do autor</label>
                                     <input type="text" id="autor-livro" name="autor-livro"
-                                        placeholder="Nome do autor do livro">
+                                        placeholder="Nome do autor do livro" required>
                                     <label for="ano-pub">Ano de publicação</label>
                                     <input name="ano-pub" id="ano-pub" type="number" placeholder="Ano de publicação"
-                                        max="2024">
+                                        max="2024" required>
                                 </div>
                                 <div class="esquerda">
                                     <label for="sinopse">Sinopse</label><br>
-                                    <textarea name="sinopse" rows="7" cols="50" id="sinopse"></textarea>
+                                    <textarea name="sinopse" rows="7" cols="50" id="sinopse" required></textarea>
                                     <br>
                                     <div class="rating">
                                         <label>Nota média da internet</label><br>
                                         <input name="nota-net" id="nota" type="text"
                                             placeholder="Digite um número entre 0 e 5.0"
-                                            oninput="controlaCampoNota(this)">
+                                            oninput="controlaCampoNota(this)" required>
                                     </div>
                                     <br>
                                 </div>
@@ -335,26 +340,30 @@ if(!isset ($_SESSION['login']) == true){
                                         readonly><br>
                                     <input type="hidden" name="user-id" value="<?= $_SESSION['id'] ?>">
                                     <label for="titulo">Título</label><br>
-                                    <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"><br>
+                                    <input type="text" id="titulo" name="titulo" placeholder="Título da sua review"
+                                        required><br>
                                     <label>Sua nota</label><br>
                                     <div class="rating">
                                         <input name="nota-user" id="nota" type="text"
                                             placeholder="Digite um número entre 0 e 5.0"
-                                            oninput="controlaCampoNota(this)">
+                                            oninput="controlaCampoNota(this)" required>
                                     </div>
                                     <br>
                                     <label for="conteudo">Review</label><br>
                                     <textarea type="text" id="conteudo" name="conteudo"
-                                        placeholder="Conteudo da sua review" rows="7" cols="50"></textarea>
+                                        placeholder="Conteudo da sua review" rows="7" cols="50" required></textarea>
                                 </div>
                                 <div class="direita">
                                     <div class="img-prev"><img id="preview" src="#" alt="Pré-visualização da imagem"
                                             style="display: none;">
                                     </div>
                                     <label for="img">Selecione uma imagem:</label>
-                                    <input type="file" id="img-adc" name="img" accept="image/*">
+                                    <input type="file" id="img-adc" name="img" accept="image/*" required>
+                                    <script>
+                                    document.getElementById("img-adc").required;
+                                    </script>
                                     <label for="data">Data da leitura:</label>
-                                    <input type="date" id="data-adc" name="data">
+                                    <input type="date" id="data-adc" name="data" required>
                                     <input type="date" style="display: none;" id="dataat" name="dataat">
                                 </div>
                             </div>
@@ -386,21 +395,21 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 4): ?>
+                        <?php if ($page - 1 >= 4) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
-                        <?php if ($page - 3 >= 1): ?>
+                        <?php if ($page - 3 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 3 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 3 ?>"><?= $page - 3 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page - 2 >= 1): ?>
+                        <?php if ($page - 2 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 2 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 2 ?>"><?= $page - 2 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -408,22 +417,22 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page + 2 <= $total_pages): ?>
+                        <?php if ($page + 2 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 2 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 2 ?>"><?= $page + 2 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page + 3 <= $total_pages): ?>
+                        <?php if ($page + 3 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 3 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 3 ?>"><?= $page + 3 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page < $total_pages - 3 && $page+3 != $total_pages): ?>
+                        <?php if ($page < $total_pages - 3 && $page + 3 != $total_pages) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
@@ -466,18 +475,18 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 3): ?>
+                        <?php if ($page - 1 >= 3) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
 
 
-                        <?php if ($page - 2 >= 1): ?>
+                        <?php if ($page - 2 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 2 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 2 ?>"><?= $page - 2 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -485,19 +494,19 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page + 2 <= $total_pages): ?>
+                        <?php if ($page + 2 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 2 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 2 ?>"><?= $page + 2 ?></a></li>
                         <?php endif; ?>
 
 
 
-                        <?php if ($page < $total_pages - 2 && $page+2 != $total_pages): ?>
+                        <?php if ($page < $total_pages - 2 && $page + 2 != $total_pages) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
@@ -539,12 +548,12 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 2): ?>
+                        <?php if ($page - 1 >= 2) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -552,7 +561,7 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
@@ -561,7 +570,7 @@ if(!isset ($_SESSION['login']) == true){
 
 
 
-                        <?php if ($page < $total_pages - 1 && $page+1 != $total_pages): ?>
+                        <?php if ($page < $total_pages - 1 && $page + 1 != $total_pages) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
@@ -597,12 +606,12 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 2): ?>
+                        <?php if ($page - 1 >= 2) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
 
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -610,12 +619,12 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ($page < $total_pages - 1 && $page+1 != $total_pages): ?>
+                        <?php if ($page < $total_pages - 1 && $page + 1 != $total_pages) : ?>
                         <li class="paginacao-item"><a class="paginacao-link">...</a></li>
                         <?php endif; ?>
                     </ul>
@@ -643,7 +652,7 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -651,7 +660,7 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
@@ -681,7 +690,7 @@ if(!isset ($_SESSION['login']) == true){
                     <ul class="paginacao-numeros">
 
 
-                        <?php if ($page - 1 >= 1): ?>
+                        <?php if ($page - 1 >= 1) : ?>
                         <li onclick="location.href = '?pagina=<?= $page - 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page - 1 ?>"><?= $page - 1 ?></a></li>
                         <?php endif; ?>
@@ -689,7 +698,7 @@ if(!isset ($_SESSION['login']) == true){
                         <li class="paginacao-item"><a style="color: #f5f5f5; text-decoration: none;"
                                 class="paginacao-link active"><?= $page ?></a></li>
 
-                        <?php if ($page + 1 <= $total_pages): ?>
+                        <?php if ($page + 1 <= $total_pages) : ?>
                         <li onclick="location.href = '?pagina=<?= $page + 1 ?>';" class="paginacao-item"><a
                                 class="paginacao-link" href="?pagina=<?= $page + 1 ?>"><?= $page + 1 ?></a></li>
                         <?php endif; ?>
