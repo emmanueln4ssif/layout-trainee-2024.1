@@ -134,12 +134,15 @@
                         }
                         ?>
                         <?php
-                        if (mb_strlen($posts[$indice]->name) > 16) {
-                            $posts[$indice]->review = mb_substr($posts[$indice]->name, 0, 16) . '...';
+                        if (mb_strlen($posts[$indice]->name) > 10) {
+                            $nome = mb_substr($posts[$indice]->name, 0, 10) . '...';
+                        } else {
+                            $nome = $posts[$indice]->name;
                         }
                         ?>
+
                         <div class="cometario">
-                            <h3><?= $posts[$indice]->name ?></h3>
+                            <h3><?= $nome ?></h3>
                             <p>
                                 <?= $rev ?>
                             </p>
