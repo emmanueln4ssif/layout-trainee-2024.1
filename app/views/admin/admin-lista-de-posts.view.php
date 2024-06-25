@@ -370,9 +370,9 @@ if(!isset ($_SESSION['login']) == true){
             <div id="alternador" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
@@ -450,9 +450,9 @@ if(!isset ($_SESSION['login']) == true){
             <div id="alternador2" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
@@ -523,9 +523,9 @@ if(!isset ($_SESSION['login']) == true){
             <div id="alternador3" class="paginacao">
                 <?php
                 if ($page - 1 > 0) {
-                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">início</button>";
+                    echo "<button class='btn btn-voltar' onclick=\"location.href='?pagina=1';\">Início</button>";
                 } else {
-                    echo "<button class='btn btn-voltar cs'>início</button>";
+                    echo "<button class='btn btn-voltar cs'>Início</button>";
                 }
                 ?>
                 <?php
