@@ -16,7 +16,7 @@
     <main>
 
         <div class="coluna1">
-            <div class="buscar-box">
+            <div class="buscar-box" onclick="document.getElementById('search').focus();" style="cursor:text;">
                 <div class="input-buscar">
                     <input type="search" name="search" id="search" placeholder="Buscar Postagens">
                 </div>
