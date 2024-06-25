@@ -440,9 +440,9 @@
     });
 
     function searchData() {
-
-        window.location = 'listaPosts?search=' + pesquisa.value;
-
+        if (pesquisa.value != '') {
+            window.location = 'listaPosts?search=' + pesquisa.value;
+        }
     };
     </script>
     <?php require("footer.php");?>
