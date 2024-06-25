@@ -435,8 +435,8 @@ body {
     }
 
     .circulo {
-        max-width: 65px;
-        max-height: 65px;
+        width: 65px;
+        height: 100%;
     }
 
     #email {
@@ -495,8 +495,8 @@ body {
     }
 
     .circulo {
-        width: 10vh;
-        height: 10vh;
+        width: 65px;
+        height: 65px;
         border-radius: 8vh;
     }
 
