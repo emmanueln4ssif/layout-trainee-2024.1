@@ -1134,14 +1134,8 @@ a:visited {
     }
   }
   
-  @media screen and (max-width:476px) {
+  @media screen and (max-width:475px) {
     #alternador4 {
-      display: none;
-    }
-  }
-  
-  @media screen and (min-width:475px) {
-    #alternador5 {
       display: none;
     }
   }

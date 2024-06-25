@@ -108,7 +108,7 @@ table {
   background-color: #002c42;
   width: 100%;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 2vh;
 }
 
 thead {
@@ -465,14 +465,8 @@ table td button:hover {
   }
 }
 
-@media screen and (max-width:476px) {
+@media screen and (max-width:475px) {
   #alternador4 {
-    display: none;
-  }
-}
-
-@media screen and (min-width:475px) {
-  #alternador5 {
     display: none;
   }
 }
@@ -702,7 +696,7 @@ table td button:hover {
 @media screen and (min-width:380px) and (max-width:502px) {
 
   .sdbar {
-    padding-left: 65px;
+    padding-left: 1%;
   }
 
   .botoes-rm>button {
@@ -716,7 +710,7 @@ table td button:hover {
 
   main {
     width: 100%;
-    padding: 0 67px 0 6%;
+    padding: 0 10px 0 6%;
   }
 
   #container-table {
@@ -757,7 +751,10 @@ table td button:hover {
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    min-width: max-content;
+  }
+
+  table-id{
+    width: 1px;
   }
 
   .nome {
@@ -817,6 +814,10 @@ table td button:hover {
     font-size: medium;
   }
 
+  .table-id {
+    width: 30px;
+  }
+
 }
 
 @media screen and (min-width:0px) and (max-width:380px) {
@@ -834,13 +835,9 @@ table td button:hover {
     font-size: medium;
   }
 
-  .sdbar {
-    padding-left: 60px;
-  }
-
   main {
     width: 100%;
-    padding: 0 63px 0 6%;
+    padding: 0 10px 0 6%;
   }
 
   table {
