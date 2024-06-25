@@ -159,13 +159,14 @@ if(!isset ($_SESSION['login']) == true){
                                         <div class="campos">
                                             <label for="nome">Nome</label><br>
                                             <input type="text" id="autor" name="autor"
-                                                value="<?php echo $user -> name ?>"><br>
+                                                value="<?php echo $user -> name ?>" required><br>
                                             <label for="email">E-mail</label><br>
                                             <input type="email" id="email" name="email"
-                                                value="<?php echo $user -> email ?>"><br>
+                                                value="<?php echo $user -> email ?>" required><br>
                                             <label for="senha">Senha</label><br>
                                             <div class="senha-e-olho">
-                                                <input type="password" id="senha<?php echo $user -> id ?>" name="senha">
+                                                <input type="password" id="senha<?php echo $user -> id ?>" name="senha"
+                                                    required>
                                                 <div class="olho"
                                                     onclick="mostrarSenha('senha<?php echo $user -> id ?>', 'icone-olhosenha<?php echo $user -> id ?>')">
                                                     <img id="icone-olhosenha<?php echo $user -> id ?>"
@@ -567,14 +568,15 @@ if(!isset ($_SESSION['login']) == true){
                     <div class="formulario">
                         <div class="campos">
                             <label for="nome">Nome</label><br>
-                            <input type="text" id="autor" name="nome" placeholder="Digite o nome do usuário"><br>
+                            <input type="text" id="autor" name="nome" placeholder="Digite o nome do usuário"
+                                required><br>
                             <label for="email">E-mail</label><br>
                             <p id="valida"></p>
                             <input type="email" id="email-test" oninput="validaEmail()" name="email"
-                                placeholder="Digite o e-mail do usuário"><br>
+                                placeholder="Digite o e-mail do usuário" required><br>
                             <label for="senha">Senha</label><br>
                             <div class="senha-e-olho">
-                                <input type="password" id="senha1" name="senha">
+                                <input type="password" id="senha1" name="senha" required>
                                 <div class="olho" onclick="mostrarSenhaAdc()">
                                     <img id="icone-olho1" src="/public/assets/olho-aberto.svg"
                                         alt="Ícone de olho representando a visibilidade da senha">
