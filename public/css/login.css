@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 ::placeholder {
-    padding: 18px;
+    padding: 8px;
 }
 
 body {
@@ -141,6 +141,18 @@ body {
     margin-bottom: 4vh;
 }
 
+#senha {
+    background: none;
+    box-shadow: none;
+    margin-bottom: unset;
+}
+
+#email {
+    background: none;
+    box-shadow: none;
+    margin-bottom: unset;
+}
+
 .campos input::placeholder {
     color: #376C89;
     font-family: Poppins;
@@ -172,32 +184,19 @@ body {
     height: auto;
 }
 
-#email {
-    padding: 0vw 3.5vw 0vw 8vw;
-}
+
 
 #btn_login {
     width: 100%;
-}
-
-#senha {
-    width: 20.5vw;
-    padding: 0vw 8vw 0vw 8vw;
-}
-
-.olho {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 84%;
-    top: 3.1vh;
 }
 
 #icone-olho {
     width: 3vw;
     height: auto;
     cursor: pointer;
+    margin-right: 18px;
+    margin-top: 0.4vw;
+    align-self: flex-end;
 }
 
 #btn-login {
@@ -254,6 +253,29 @@ body {
     max-height: 100px;
 }
 
+.senha-campo {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 12.8vh;
+    border: none;
+    border-radius: 12.8vh;
+    background: #F5F5F5;
+    box-shadow: 1vh 1vh 2vh 0vh rgba(0, 0, 0, 0.60);
+    outline: none;
+    color: #376C89;
+    font-family: Poppins;
+    font-size: 1.6vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4vh;
+    max-height: 100px;
+}
+
+
 @media screen and (min-width:0px) and (max-width:350px) {
     .esquerda {
         display: none;
@@ -287,7 +309,7 @@ body {
     }
 
     .campos input {
-        width: 45vw;
+        width: 100%;
         height: 10vh;
         font-size: 4vw;
     }
@@ -296,14 +318,7 @@ body {
         font-size: 4vw;
     }
 
-    #email {
-        padding: 0vw 6.5vw 0vw 20vw;
-    }
 
-    #senha {
-        width: 38.5vw;
-        padding: 0vw 13vw 0vw 20vw;
-    }
 
     .circulo {
         width: 10vh;
@@ -344,6 +359,10 @@ body {
     #senha {
         max-height: 60px;
     }
+
+    .senha-campo {
+        max-height: 60px;
+    }
 }
 
 @media screen and (min-width:350px) and (max-width:400px) {
@@ -380,7 +399,7 @@ body {
     }
 
     .campos input {
-        width: 48vw;
+        width: 100%;
         height: 10vh;
         font-size: 4vw;
     }
@@ -391,15 +410,6 @@ body {
 
     .formulario {
         text-align: center;
-    }
-
-    #email {
-        padding: 0vw 6.5vw 0vw 17vw;
-    }
-
-    #senha {
-        width: 41.5vw;
-        padding: 0vw 13vw 0vw 17vw;
     }
 
     .circulo {
@@ -434,6 +444,10 @@ body {
     }
 
     #senha {
+        max-height: 65px;
+    }
+
+    .senha-campo {
         max-height: 65px;
     }
 }
@@ -480,13 +494,10 @@ body {
         font-size: 4vw;
     }
 
-    #email {
-        padding: 0vw 6.5vw 0vw 16vw;
-    }
+
 
     #senha {
         width: 42.5vw;
-        padding: 0vw 13vw 0vw 16vw;
     }
 
     .circulo {
@@ -524,6 +535,9 @@ body {
         max-height: 65px;
     }
 
+    .senha-campo {
+        max-height: 65px;
+    }
 }
 
 @media screen and (min-width:503px) and (max-width:690px) {
@@ -559,13 +573,10 @@ body {
         font-size: 3vw;
     }
 
-    #email {
-        padding: 0vw 6.5vw 0vw 15vw;
-    }
+
 
     #senha {
         width: 53.5vw;
-        padding: 0vw 10vw 0vw 15vw;
     }
 
     .olho {
@@ -600,6 +611,9 @@ body {
         max-height: 70px;
     }
 
+    .senha-campo {
+        max-height: 70px;
+    }
 }
 
 @media screen and (min-width:690px) and (max-width:937px) {
@@ -629,6 +643,10 @@ body {
         max-height: 80px;
     }
 
+    .senha-campo {
+        max-height: 80px;
+    }
+
     #btn_login {
         font-size: 40px;
         width: 100%;
@@ -653,13 +671,10 @@ body {
         font-size: 2.5vw;
     }
 
-    #email {
-        padding: 0vw 6.5vw 0vw 11vw;
-    }
+
 
     #senha {
         width: 53.5vw;
-        padding: 0vw 10vw 0vw 11vw;
     }
 
     .olho {
@@ -688,13 +703,10 @@ body {
         font-size: 1.6vw;
     }
 
-    #email {
-        padding: 0vw 3.5vw 0vw 10vw;
-    }
+
 
     #senha {
         width: 18.5vw;
-        padding: 0vw 8vw 0vw 10vw;
     }
 
     .circulo {
@@ -707,6 +719,10 @@ body {
     }
 
     #senha {
+        max-height: 80px;
+    }
+
+    .senha-campo {
         max-height: 80px;
     }
 }

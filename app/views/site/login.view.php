@@ -29,27 +29,34 @@
             <p id="titulo-login">Bem vindo de volta!</p>
             <div class="formulario">
                 <form action="efetuaLogin" method="post">
-                    <div class="campos">
-                        <div class="circulo">
-                            <img id="icone-email" src="/public/assets/icone-e-mail.svg"
-                                alt="Ícone de carta representando e-mail">
-                        </div>
-                        <label for="email"></label>
-                        <input id="email" oninput="apagaMsg()" type="email" name="email" placeholder="Digite seu e-mail"
-                            required>
-                    </div>
 
                     <div class="campos">
-                        <div class="circulo">
-                            <img id="icone-senha" src="/public/assets/icone-senha.svg"
-                                alt="Ícone de cadeado representando senha">
+                        <div class="senha-campo">
+                            <div class="circulo" style="position:unset;">
+                                <img id="icone-senha" src="/public/assets/icone-senha.svg"
+                                    alt="Ícone de cadeado representando senha">
+                            </div>
+
+                            <label for="email"></label>
+                            <input id="email" oninput="apagaMsg()" type="email" name="email"
+                                placeholder="Digite seu e-mail" required>
+
+
                         </div>
-                        <label for="senha"></label>
-                        <input id="senha" oninput="apagaMsg()" type="password" name="senha"
-                            placeholder="Digite sua senha" required>
-                        <div class="olho" onclick="mostrarSenha()">
-                            <img id="icone-olho" src="/public/assets/olho-aberto.svg"
-                                alt="Ícone de olho representando a visibilidade da senha">
+                    </div>
+                    <div class="campos">
+                        <div class="senha-campo">
+                            <div class="circulo" style="position:unset;">
+                                <img id="icone-senha" src="/public/assets/icone-senha.svg"
+                                    alt="Ícone de cadeado representando senha">
+                            </div>
+
+                            <input id="senha" oninput="apagaMsg()" type="password" name="senha"
+                                placeholder="Digite sua senha" required>
+                            <div onclick="mostrarSenha()">
+                                <img id="icone-olho" src="/public/assets/olho-aberto.svg"
+                                    alt="Ícone de olho representando a visibilidade da senha">
+                            </div>
                         </div>
                     </div>
                     <p id="valida"><?php
