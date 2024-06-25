@@ -52,13 +52,13 @@ input[type="submit"] {
   font-size: 24px;
 }
 
-.sdbar {
-  padding-left: 1%;
-}
-
 main {
   width: 100%;
   padding: 0 5% 0 5%;
+}
+
+.sdbar {
+  padding-left: 1%;
 }
 
 #crud-usuario {
@@ -615,6 +615,8 @@ table td button:hover {
     font-size: x-small;
   }
 
+  
+
   table i {
     font-size: 12px;
   }
@@ -818,6 +820,8 @@ table td button:hover {
     width: 30px;
   }
 
+  
+
 }
 
 @media screen and (min-width:0px) and (max-width:380px) {
@@ -837,7 +841,7 @@ table td button:hover {
 
   main {
     width: 100%;
-    padding: 0 10px 0 6%;
+    padding: 0 0 0 6%;
   }
 
   table {
@@ -874,6 +878,10 @@ table td button:hover {
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+  }
+
+  .sdbar {
+    padding-left: 0%;
   }
 
   .nome {
@@ -1124,9 +1132,13 @@ table td button:hover {
     display: none;
   }
 
+  body{
+    padding: 2%;
+  }
+
 }
 
-@media screen and (min-width:0px) and (max-width:350px) {
+@media screen and (min-width:330px) and (max-width:350px) {
 
   /*main{
   width: 100%;
@@ -1227,7 +1239,119 @@ table td button:hover {
     display: none;
   }
 
+  body{
+    padding: 9%;
+  }
+
 }
+
+@media screen and (min-width:0px) and (max-width:330px) {
+
+  /*main{
+  width: 100%;
+  margin-right: 3%;
+  margin-left: 15%;
+  overflow: hidden;
+}*/
+  input[type="submit"] {
+    font-size: medium;
+  }
+
+  .botoes-rm>button {
+    font-size: medium;
+  }
+
+  .linha-normal {
+    display: none;
+  }
+
+  .linha-mobile {
+    display: table-row;
+  }
+
+  .botoes-mobile {
+    display: table-row;
+  }
+
+  .linha-botoes {
+    padding: 5px 20px 5px 20px;
+    border-right: none;
+  }
+
+  .container-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30%;
+  }
+
+  .email {
+    border-right: none;
+    max-width: 22ch;
+  }
+
+  .botao-visualizar,
+  .botao-editar,
+  .botao-deletar {
+    margin: 0 15px;
+    height: 100%;
+    width: 35px;
+  }
+
+  /*.container-tabela{
+    width: 100%;
+    overflow-x: auto;
+    justify-content: start;///////////////
+}*/
+
+  /*table i{
+    font-size: 14px;
+}*/
+
+  /*thead{
+    font-size: 12px;
+}*/
+
+  /*tbody{
+    font-size: 13px;
+    text-wrap: nowrap;
+}*/
+
+  /*.tabela-posts{
+    border-radius: 1.7vh;
+}*/
+
+  .espaco-deletar {
+    display: none;
+  }
+
+  .paginacao-numeros {
+    display: flex;
+    font-size: x-small;
+  }
+
+
+  .espaco-editar {
+    display: none
+  }
+
+  .espaco-visualizar {
+    display: none
+  }
+
+  /*.linha-botoes{
+    border-right: none;
+}*/
+
+  .acoes {
+    display: none;
+  }
+
+  body{
+    padding: 9%;
+  }
+
+}
+
 
 @media only screen and (min-width: 0px) and (max-width: 600px) {
   .content {
