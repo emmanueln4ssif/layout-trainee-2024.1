@@ -309,7 +309,7 @@ body {
     }
 
     .campos input {
-        width: 100%;
+        width: max-content;
         height: 10vh;
         font-size: 4vw;
     }
@@ -399,7 +399,7 @@ body {
     }
 
     .campos input {
-        width: 100%;
+        width: max-content;
         height: 10vh;
         font-size: 4vw;
     }
@@ -485,19 +485,13 @@ body {
     }
 
     .campos input {
-        width: 49vw;
+        width: max-content;
         height: 10vh;
         font-size: 4vw;
     }
 
     .campos input::placeholder {
         font-size: 4vw;
-    }
-
-
-
-    #senha {
-        width: 42.5vw;
     }
 
     .circulo {
@@ -574,10 +568,6 @@ body {
     }
 
 
-
-    #senha {
-        width: 53.5vw;
-    }
 
     .olho {
         display: flex;
@@ -673,10 +663,6 @@ body {
 
 
 
-    #senha {
-        width: 53.5vw;
-    }
-
     .olho {
         display: flex;
         justify-content: center;
@@ -704,10 +690,6 @@ body {
     }
 
 
-
-    #senha {
-        width: 18.5vw;
-    }
 
     .circulo {
         max-width: 80px;

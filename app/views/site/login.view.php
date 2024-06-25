@@ -37,7 +37,11 @@
 
                             <label for="email"></label>
                             <input id="email" oninput="apagaMsg()" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <div>
+                                <div style="margin-right: 18px;width: 5vw;">
 
+                                </div>
+                            </div>
 
                         </div>
                     </div>
