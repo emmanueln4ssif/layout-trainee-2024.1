@@ -22,7 +22,8 @@
         <div class="direita">
             <div class="cabecalho">
                 <img id="marcador-de-livro" src="/public/assets/marcador-de-livro.svg" alt="Marcador de livro">
-                <img id="logo-imagem" src="/public/assets/logo-direita.svg" alt="Logo Story Stroll" onclick="window.location.href='/'">
+                <img id="logo-imagem" src="/public/assets/logo-direita.svg" alt="Logo Story Stroll"
+                    onclick="window.location.href='/'">
             </div>
 
             <p id="titulo-login">Bem vindo de volta!</p>
@@ -32,11 +33,13 @@
                     <div class="campos">
                         <div class="senha-campo">
                             <div class="circulo" style="position:unset;">
-                                <img id="icone-senha" src="/public/assets/icone-e-mail.svg" alt="Ícone de cadeado representando senha">
+                                <img id="icone-senha" src="/public/assets/icone-e-mail.svg"
+                                    alt="Ícone de cadeado representando senha">
                             </div>
 
                             <label for="email"></label>
-                            <input id="email" oninput="apagaMsg()" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <input style="padding-left: 10px;" id="email" oninput="apagaMsg()" type="email" name="email"
+                                placeholder="Digite seu e-mail" required>
                             <div>
                                 <div style="margin-right: 18px;width: 5vw;">
 
@@ -48,12 +51,15 @@
                     <div class="campos">
                         <div class="senha-campo">
                             <div class="circulo" style="position:unset;">
-                                <img id="icone-senha" src="/public/assets/icone-senha.svg" alt="Ícone de cadeado representando senha">
+                                <img id="icone-senha" src="/public/assets/icone-senha.svg"
+                                    alt="Ícone de cadeado representando senha">
                             </div>
 
-                            <input id="senha" oninput="apagaMsg()" type="password" name="senha" placeholder="Digite sua senha" required>
+                            <input id="senha" style="padding-left: 10px;" oninput="apagaMsg()" type="password"
+                                name="senha" placeholder="Digite sua senha" required>
                             <div onclick="mostrarSenha()">
-                                <img id="icone-olho" src="/public/assets/olho-aberto.svg" alt="Ícone de olho representando a visibilidade da senha">
+                                <img id="icone-olho" src="/public/assets/olho-aberto.svg"
+                                    alt="Ícone de olho representando a visibilidade da senha">
                             </div>
                         </div>
                     </div>
