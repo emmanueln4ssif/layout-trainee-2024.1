@@ -146,6 +146,14 @@ main {
     color: #453232;
 }
 
+.btn {
+    cursor: pointer;
+}
+
+.cs {
+    cursor: unset;
+}
+
 .usuario {
     display: flex;
     flex-direction: column;
@@ -157,7 +165,7 @@ main {
     padding-top: 2vh;
 }
 
-.usuario>h2{
+.usuario>h2 {
     color: #453232;
 }
 
@@ -428,7 +436,7 @@ main {
         display: none;
     }
 
-    .usuario>h2{
+    .usuario>h2 {
         font-size: 20px;
         padding-bottom: 5px;
     }
