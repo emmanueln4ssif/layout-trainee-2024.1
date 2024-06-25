@@ -154,6 +154,10 @@ main {
     cursor: unset;
 }
 
+h2 {
+    width: max-content;
+}
+
 .usuario {
     display: flex;
     flex-direction: column;

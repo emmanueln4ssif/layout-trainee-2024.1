@@ -38,7 +38,7 @@
                             </div>
 
                             <label for="email"></label>
-                            <input style="padding-left: 10px;" id="email" oninput="apagaMsg()" type="email" name="email"
+                            <input style="padding-left: 20px;" id="email" oninput="apagaMsg()" type="email" name="email"
                                 placeholder="Digite seu e-mail" required>
                             <div>
                                 <div style="margin-right: 18px;width: 5vw;">
@@ -55,7 +55,7 @@
                                     alt="Ícone de cadeado representando senha">
                             </div>
 
-                            <input id="senha" style="padding-left: 10px;" oninput="apagaMsg()" type="password"
+                            <input id="senha" style="padding-left: 20px;" oninput="apagaMsg()" type="password"
                                 name="senha" placeholder="Digite sua senha" required>
                             <div onclick="mostrarSenha()">
                                 <img id="icone-olho" src="/public/assets/olho-aberto.svg"
