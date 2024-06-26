@@ -408,3 +408,53 @@ span.icon1 {
         margin-top: 300px;
     }
 }
+
+@media screen and (min-width:0px) and (max-width:200px){
+    .titulo{
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .autor{
+        padding-top: 10px;
+        font-size: 17px;
+    }
+
+    .estrela_sinopse>.estrelas{
+        margin: 0px;
+    }
+
+    .data{
+        padding-top: 5px;
+    }
+
+    .resumo{
+        padding-top: 10px;
+        font-size: 14px;
+    }
+    
+    #bloco>p{
+        font-size: 14px;
+    }
+
+    .estrelas_data{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .estrelas_data>#data{
+        padding-top: 7px;
+    }
+
+    #img_user{
+        margin-left: 15px;
+    }
+    
+    #bloco{
+        margin-left: -19px;
+    }
+
+    .estrelas{
+        margin-left: 20px;
+    }
+}

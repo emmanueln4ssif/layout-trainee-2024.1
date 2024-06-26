@@ -16,8 +16,8 @@
 
         <a href="/" class="rede-social facebook">
           <div class="block-rede" style="display:flex;align-items: flex-start;flex-wrap:wrap;">
-            <img src="/public/assets/LOFO_FACEBOOK V1.png" style="margin:0;" alt="logo facebook">
-            <p class="footer-texto">Story Stroll</p>
+            <img id="logo-facebook-smart" src="/public/assets/LOFO_FACEBOOK V1.png" style="margin:0;" alt="logo facebook">
+            <p class="footer-texto">StoryStroll</p>
           </div>
         </a>
 

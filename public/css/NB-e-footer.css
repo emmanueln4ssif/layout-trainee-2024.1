@@ -1480,3 +1480,45 @@ footer {
   }
 
 }
+
+@media screen and (min-width:0px) and (max-width:200px){
+  .navbar{
+    padding-left: 0.5px;
+    font-size: 8px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #valores ul li {
+    font-size: 8px;
+    margin-right: 12px;
+  }
+
+  #lista-redes{
+    padding-right: 10px;
+  }
+
+  .rede-social p{
+    font-size: 6px;
+  }
+
+  .block-rede img{
+    padding-left: 9px;
+  }
+
+  .rede-social-facebook{
+    width: 31px;
+  }
+
+  #logo-facebook-smart{
+    padding-left: 5px;
+  }
+
+  #background-logo{
+    margin-right: 10px;
+  }
+
+  #creditos h1{
+    padding-left: 3px;
+  }
+}
