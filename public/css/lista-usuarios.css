@@ -615,7 +615,7 @@ table td button:hover {
     font-size: x-small;
   }
 
-  
+
 
   table i {
     font-size: 12px;
@@ -755,7 +755,7 @@ table td button:hover {
     padding-bottom: 2px;
   }
 
-  table-id{
+  table-id {
     width: 1px;
   }
 
@@ -820,7 +820,7 @@ table td button:hover {
     width: 30px;
   }
 
-  
+
 
 }
 
@@ -1032,6 +1032,8 @@ table td button:hover {
 
 }
 
+
+
 @media screen and (min-width:350px) and (max-width:380px) {
 
   /*main{
@@ -1132,7 +1134,7 @@ table td button:hover {
     display: none;
   }
 
-  body{
+  body {
     padding: 2%;
   }
 
@@ -1239,7 +1241,7 @@ table td button:hover {
     display: none;
   }
 
-  body{
+  body {
     padding: 9%;
   }
 
@@ -1346,7 +1348,7 @@ table td button:hover {
     display: none;
   }
 
-  body{
+  body {
     padding: 9%;
   }
 
@@ -1486,4 +1488,10 @@ a:visited {
   }
 
 
+}
+
+@media screen and (max-width:410px) {
+  body {
+    padding: 9%;
+  }
 }
